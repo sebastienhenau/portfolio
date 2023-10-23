@@ -1,38 +1,33 @@
-# create-svelte
+# Portfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repository contains the source code for my personal portfolio website.
+To summarize, the front-end is built using Sveltekit. At the moment, the
+data is static, in a future version I will save the data in a separate database.
 
-## Creating a project
+## Technologies
 
-If you're seeing this, you've probably already done this step. Congrats!
+| Name      | Technologies      |
+|-----------|-------------------|
+| Front-end | Sveltekit, svelte |
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Getting started
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. Run `nvm use` to make sure you are using the right node version
+2. Run `npm install` to install all dependencies
+3. Run `npm run dev` to start the development environment
 
-## Developing
+## Scripts
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+| Command | Task                                                |
+|---------|-----------------------------------------------------|
+| dev     | Start the development environment                   |
+| Build   | Start the build process for deploying on production |
+| Preview | Run the production build locally                    |
 
-```bash
-npm run dev
+## Open issues
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- Setup lint-staged
+- Setup commitlint
+- Setup husky
+- Complete README.md
+- Setup linters
