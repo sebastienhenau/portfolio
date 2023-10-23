@@ -7,7 +7,7 @@ data is static, in a future version I will save the data in a separate database.
 ## Technologies
 
 | Name      | Technologies      |
-|-----------|-------------------|
+| --------- | ----------------- |
 | Front-end | Sveltekit, svelte |
 
 ## Getting started
@@ -19,7 +19,7 @@ data is static, in a future version I will save the data in a separate database.
 ## Scripts
 
 | Command | Task                                                |
-|---------|-----------------------------------------------------|
+| ------- | --------------------------------------------------- |
 | dev     | Start the development environment                   |
 | Build   | Start the build process for deploying on production |
 | Preview | Run the production build locally                    |
