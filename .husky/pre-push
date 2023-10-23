@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx svelte-check --tsconfig ./tsconfig.json --fail-on-warnings --use-new-transformation
