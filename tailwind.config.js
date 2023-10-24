@@ -2,7 +2,9 @@
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {
-		extend: {},
+		colors: {
+			background: "hsl(var(--color-background) / <alpha-value>)",
+		},
 	},
 	plugins: [],
 };

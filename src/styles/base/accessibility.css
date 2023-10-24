@@ -1,0 +1,10 @@
+@layer base {
+	*:focus-visible {
+		/*outline: 3px dashed theme("colors.");
+		outline-offset: 2px;*/
+	}
+
+	*:focus:not(:focus-visible) {
+		outline: none;
+	}
+}

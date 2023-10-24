@@ -1,0 +1,14 @@
+@layer base {
+	:root {
+		--color-background: 216 56% 98%;
+	}
+
+	/**
+	 * TODO: once development is "done", replace html.dark by the
+	 * prefers-color-scheme:
+	 * @media (prefers-color-scheme: dark) { :root {} }
+	 */
+	html.dark {
+		--color-background: 222 47% 11%;
+	}
+}
