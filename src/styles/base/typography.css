@@ -2,6 +2,11 @@
 	h1 {
 	}
 
-	p {
+	p,
+	.typo-p {
+		font-family: "Inter", "sans-serif", "serif";
+		font-size: theme("fontSize.2");
+		line-height: theme("lineHeight.normal");
+		font-weight: theme("fontWeight.normal");
 	}
 }
