@@ -1,8 +1,21 @@
-import { convertToEm } from "./.styles/functions";
+import { convertToEm, convertToRem } from "./.styles/functions";
+import { container } from "./.styles/plugins";
 
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
+	corePlugins: {
+		container: false,
+	},
+	plugins: [
+		container({
+			width: convertToRem("1200px"),
+			spacing: {
+				DEFAULT: 3,
+				700: 5,
+			},
+		}),
+	],
 	theme: {
 		screens: {
 			600: convertToEm("640px"),
@@ -68,5 +81,4 @@ export default {
 			8: "clamp(6rem, 4.9286rem + 2.6786vw, 7.5rem)",
 		},
 	},
-	plugins: [],
 };
