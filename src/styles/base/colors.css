@@ -1,6 +1,15 @@
 @layer base {
 	:root {
-		--color-background: 216 56% 98%;
+		--color-site-1: 216 56% 98%;
+		--color-site-2: 247 89% 98%;
+
+		--color-text-1: 0 0% 0%;
+		--color-text-2: 215 16% 47%;
+		--color-text-3: 215 16% 67%;
+
+		--color-accent: 247 79% 68%;
+		--color-border: 220 13% 91%;
+		--color-shadow: 0 0 90% / 15;
 	}
 
 	/**
@@ -9,6 +18,15 @@
 	 * @media (prefers-color-scheme: dark) { :root {} }
 	 */
 	html.dark {
-		--color-background: 222 47% 11%;
+		--color-site-1: 222 47% 11%;
+		--color-site-2: 232 66% 20%;
+
+		--color-text-1: 0 0% 100%;
+		--color-text-2: 223 47% 65%;
+		--color-text-3: 223 47% 45%;
+
+		--color-accent: 247 79% 68%;
+		--color-border: 223 47% 25%;
+		--color-shadow: 0 0% 0% / 10;
 	}
 }
