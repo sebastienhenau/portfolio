@@ -1,7 +1,16 @@
+import { convertToEm } from "./.styles/functions";
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {
+		screens: {
+			600: convertToEm("640px"),
+			700: convertToEm("768px"),
+			1000: convertToEm("1024px"),
+			1200: convertToEm("1280px"),
+			1500: convertToEm("1536px"),
+		},
 		colors: {
 			site: {
 				1: "hsl(var(--color-site-1) / <alpha-value>)",
