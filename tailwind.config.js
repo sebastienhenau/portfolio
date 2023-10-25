@@ -12,7 +12,6 @@ export default {
 			width: convertToRem("1200px"),
 			spacing: {
 				DEFAULT: 3,
-				700: 5,
 			},
 		}),
 	],

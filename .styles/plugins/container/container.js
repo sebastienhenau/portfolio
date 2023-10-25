@@ -30,7 +30,10 @@ export default plugin.withOptions((options = {}) => {
 					var(--container-spacing) [bound-end]
 				`,
 			},
-			".container > *": {
+			[`
+				.container > *,
+				.container > .svelte-wrapper > *
+			`]: {
 				"grid-column": "container",
 			},
 		});
