@@ -82,12 +82,14 @@ export default {
 			// 96px → 120px
 			8: "clamp(6rem, 4.9286rem + 2.6786vw, 7.5rem)",
 		},
-		backgroundImage: {
-			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-			"gradient-radial-tl":
-				"radial-gradient(ellipse at left top, var(--tw-gradient-stops))",
-			"gradient-radial-br":
-				"radial-gradient(ellipse at right bottom, var(--tw-gradient-stops))",
+		extend: {
+			backgroundImage: {
+				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				"gradient-radial-tl":
+					"radial-gradient(ellipse at left top, var(--tw-gradient-stops))",
+				"gradient-radial-br":
+					"radial-gradient(ellipse at right bottom, var(--tw-gradient-stops))",
+			},
 		},
 	},
 };
