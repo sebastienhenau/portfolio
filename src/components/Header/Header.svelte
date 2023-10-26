@@ -1,10 +1,12 @@
 <script>
-	import Action from "$components/Action.svelte";
-	import Image from "$components/Image.svelte";
-	import NavigationItem from "$components/Header/NavigationItem.svelte";
+	import { Action, Image } from "$components";
+
+	import NavigationItem from "./NavigationItem.svelte";
 </script>
 
-<header class={`border-b border-border pt-3 ${$$props.class}`}>
+<header
+	class={`row-start-1 row-end-2 border-b border-border sticky top-0 ${$$props.class}`}
+>
 	<nav class="flex">
 		<Action href="/">
 			<Image
@@ -38,3 +40,5 @@
 		</ul>
 	</nav>
 </header>
+
+<div class="row-start-1 row-end-2 border-b border-border" />
