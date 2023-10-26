@@ -1,4 +1,4 @@
 <script>
 </script>
 
-<header></header>
+<header class={$$props.class}></header>

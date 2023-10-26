@@ -24,6 +24,9 @@ export default {
 			1500: convertToEm("1536px"),
 		},
 		colors: {
+			// Tailwind specific
+			transparent: "transparent",
+			// Custom colors
 			site: {
 				1: "hsl(var(--color-site-1) / <alpha-value>)",
 				2: "hsl(var(--color-site-2) / <alpha-value>)",
@@ -78,6 +81,13 @@ export default {
 			7: "clamp(4rem, 3.2857rem + 1.7857vw, 5rem)",
 			// 96px → 120px
 			8: "clamp(6rem, 4.9286rem + 2.6786vw, 7.5rem)",
+		},
+		backgroundImage: {
+			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+			"gradient-radial-tl":
+				"radial-gradient(ellipse at left top, var(--tw-gradient-stops))",
+			"gradient-radial-br":
+				"radial-gradient(ellipse at right bottom, var(--tw-gradient-stops))",
 		},
 	},
 };
