@@ -38,12 +38,13 @@
 	} as TActionWrapperContext);
 </script>
 
+<!-- TODO: fix div wrapper -->
 <div
 	class={clsx("relative cursor-pointer group", $$props.class)}
 	on:mousedown={onMouseDown}
 	on:mouseup={onMouseUp}
 	role="button"
-	tabindex=""
+	tabindex="0"
 >
 	<slot elevate="relative" />
 </div>
