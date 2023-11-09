@@ -1,37 +1,77 @@
-<script>
-	import { Button, ButtonText } from "$components";
+<script lang="ts">
+	import {
+		Button,
+		ButtonText,
+		ExperienceCard,
+		Intro,
+		RightSidebar,
+		RightSidebarSection,
+		StoryCard,
+	} from "$components";
 </script>
 
-<!--<div class="row-start-1 row-end-2 col-start-1 col-end-2">content</div>
-
-<div class="row-start-1 row-end-2 col-start-2 col-end-3 overflow-hidden">
-	sidebar
-</div>-->
-
-<div class="grid grid-cols-[auto,32rem] items-start">
-	<article class="sticky top-0">
-		<h1 class="text-text-1">Sébastien Henau</h1>
-
-		<p class="text-text-3">
-			Topic Lead / Front-End Developer at Little Miss Robot
-		</p>
-
-		<p class="text-text-2 mt-4">
-			I do something and I like to do this, I really hate Angular, but I
+<div class="grid grid-cols-[auto_37rem] items-stretch h-full gap-6">
+	<Intro
+		class="sticky top-10 self-start"
+		description="I do something and I like to do this, I really hate Angular, but I
 			do do do something. For real though, I do something. For real
-			though, I do something.
-		</p>
-
-		<Button class="mt-6">
+			though, I do something."
+		subtitle="Topic Lead / Front-End Developer at Little Miss Robot"
+		tag="article"
+		title="Sébastien Henau"
+	>
+		<Button class="mt-8">
 			<ButtonText>More about me</ButtonText>
 		</Button>
-	</article>
+	</Intro>
 
-	<aside
-		class="border-l border-r border-border"
-		style="height:
-	2000px;"
-	>
-		aside
-	</aside>
+	<RightSidebar>
+		<RightSidebarSection title="About">
+			<ul class="divide-y divide-border">
+				<li>
+					<ExperienceCard />
+				</li>
+
+				<li>
+					<ExperienceCard />
+				</li>
+
+				<li>
+					<ExperienceCard />
+				</li>
+			</ul>
+		</RightSidebarSection>
+
+		<RightSidebarSection title="Stories">
+			<ul class="divide-y divide-border">
+				<li>
+					<StoryCard />
+				</li>
+
+				<li>
+					<StoryCard />
+				</li>
+
+				<li>
+					<StoryCard />
+				</li>
+			</ul>
+		</RightSidebarSection>
+
+		<RightSidebarSection title="Projects">
+			<ul class="divide-y divide-border">
+				<li>
+					<ExperienceCard />
+				</li>
+
+				<li>
+					<ExperienceCard />
+				</li>
+
+				<li>
+					<ExperienceCard />
+				</li>
+			</ul>
+		</RightSidebarSection>
+	</RightSidebar>
 </div>

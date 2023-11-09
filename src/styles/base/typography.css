@@ -1,17 +1,2 @@
 @layer base {
-	h1,
-	.typo-h1 {
-		font-family: "Inter", "sans-serif", "serif";
-		font-size: theme("fontSize.6");
-		line-height: theme("lineHeight.normal");
-		font-weight: theme("fontWeight.semibold");
-	}
-
-	p,
-	.typo-p {
-		font-family: "Inter", "sans-serif", "serif";
-		font-size: theme("fontSize.3");
-		line-height: theme("lineHeight.normal");
-		font-weight: theme("fontWeight.normal");
-	}
 }

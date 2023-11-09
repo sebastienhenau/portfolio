@@ -1,0 +1,38 @@
+<script lang="ts">
+	import clsx from "clsx";
+	import { Action, Corner } from "$components";
+</script>
+
+<Action
+	class={clsx(
+		"relative p-5 bg-accent group hover:bg-accent/20 transition-colors shadow-border shadow-accent/40",
+		$$props.class
+	)}
+>
+	<!-- TODO: optimise this with card component -->
+	<Corner
+		class="opacity-0 group-hover:translate-y-[-4px] group-hover:translate-x-[-4px] group-hover:opacity-100 transition"
+		relative={false}
+		type="tl"
+	/>
+
+	<Corner
+		class="opacity-0 group-hover:translate-y-[-4px] group-hover:translate-x-[4px] group-hover:opacity-100 transition"
+		relative={false}
+		type="tr"
+	/>
+
+	<Corner
+		class="opacity-0 group-hover:translate-y-[4px] group-hover:translate-x-[4px] group-hover:opacity-100 transition"
+		relative={false}
+		type="br"
+	/>
+
+	<Corner
+		class="opacity-0 group-hover:translate-y-[4px] group-hover:translate-x-[-4px] group-hover:opacity-100 transition"
+		relative={false}
+		type="bl"
+	/>
+
+	<slot />
+</Action>

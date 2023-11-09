@@ -23,5 +23,10 @@
 		 * as fallback.
 		 */
 		min-height: 100vh;
+
+		font-family: "Inter", "sans-serif", "serif";
+		font-size: theme("fontSize.3");
+		line-height: theme("lineHeight.normal");
+		font-weight: theme("fontWeight.normal");
 	}
 }

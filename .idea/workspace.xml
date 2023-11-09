@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Action.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/NavigationItem.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Image.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.styles/functions/getFontSizeScale.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Line.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StoryCard/StoryCard.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StoryCard/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tag/Tag.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tag/TagText.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Tag/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styles/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.styles/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonText.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonText.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Corner.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Corner.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/NavigationItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/NavigationItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/root.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/typography.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +51,7 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2X84z5DZ6EBNmATq13cF7ftNJma" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,24 +60,24 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/prettier",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Header" />
@@ -78,6 +94,15 @@
       <updated>1697997633184</updated>
       <workItem from="1697997635960" duration="41958000" />
       <workItem from="1698311839895" duration="2461000" />
+      <workItem from="1698319850791" duration="25874000" />
+      <workItem from="1698755841412" duration="865000" />
+      <workItem from="1699256726487" duration="1291000" />
+      <workItem from="1699265881755" duration="66000" />
+      <workItem from="1699273408085" duration="23000" />
+      <workItem from="1699273469245" duration="15000" />
+      <workItem from="1699274204808" duration="105000" />
+      <workItem from="1699276071007" duration="147000" />
+      <workItem from="1699277297384" duration="21000" />
     </task>
     <servers />
   </component>
