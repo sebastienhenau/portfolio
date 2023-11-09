@@ -10,9 +10,11 @@
 	} from "$components";
 </script>
 
-<div class="grid grid-cols-[auto_37rem] items-stretch h-full gap-6">
+<div
+	class="1200:grid 1200:grid-cols-[auto_37rem] 1200:items-stretch h-full 1200:gap-6"
+>
 	<Intro
-		class="sticky top-10 self-start"
+		class="1200:sticky 1200:top-10 1200:self-start"
 		description="I do something and I like to do this, I really hate Angular, but I
 			do do do something. For real though, I do something. For real
 			though, I do something."
@@ -25,7 +27,7 @@
 		</Button>
 	</Intro>
 
-	<RightSidebar>
+	<RightSidebar class="max-1200:mt-10">
 		<RightSidebarSection title="About">
 			<ul class="divide-y divide-border">
 				<li>

@@ -8,7 +8,7 @@
 
 <header
 	class={clsx(
-		"row-start-1 row-end-2 sticky top-0 h-10 grid grid-rows-[1fr_1px]",
+		"1200:row-start-1 1200:row-end-2 1200:col-start-1 1200:col-end-2 sticky top-0 h-10 grid grid-rows-[1fr_1px]",
 		$$props.class
 	)}
 >
