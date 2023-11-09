@@ -17,7 +17,7 @@
 		/>
 
 		<h2 class="text-text-1 font-semibold mt-4">
-			<Action>Hylas</Action>
+			<Action class="text-left">Hylas</Action>
 		</h2>
 
 		<p class={`text-text-2 mt-2 ${elevate}`}>

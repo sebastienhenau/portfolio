@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="1200:grid 1200:grid-cols-[auto_37rem] 1200:items-stretch h-full 1200:gap-6"
+	class="1200:grid 1200:grid-cols-[auto_45%] 1200:items-stretch h-full 1200:gap-6"
 >
 	<Intro
 		class="1200:sticky 1200:top-10 1200:self-start"
@@ -29,7 +29,9 @@
 
 	<RightSidebar class="max-1200:mt-10">
 		<RightSidebarSection title="About">
-			<ul class="divide-y divide-border">
+			<ul
+				class="1200:divide-y 1200:divide-border 700:grid 700:grid-cols-2 1200:grid-cols-1"
+			>
 				<li>
 					<ExperienceCard />
 				</li>
@@ -45,7 +47,9 @@
 		</RightSidebarSection>
 
 		<RightSidebarSection title="Stories">
-			<ul class="divide-y divide-border">
+			<ul
+				class="1200:divide-y 1200:divide-border 700:grid 700:grid-cols-2 1200:grid-cols-1"
+			>
 				<li>
 					<StoryCard />
 				</li>
@@ -61,7 +65,9 @@
 		</RightSidebarSection>
 
 		<RightSidebarSection title="Projects">
-			<ul class="divide-y divide-border">
+			<ul
+				class="1200:divide-y 1200:divide-border 700:grid 700:grid-cols-2 1200:grid-cols-1"
+			>
 				<li>
 					<ExperienceCard />
 				</li>

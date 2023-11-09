@@ -12,7 +12,7 @@
 <BottomRightPageRadialGradient />
 
 <div
-	class="relative z-10 row-start-1 row-end-2 1200:grid 1200:grid-rows-[auto_1fr] 1200:grid-cols-[1fr_37rem] stretch-container"
+	class="relative z-10 row-start-1 row-end-2 1200:grid 1200:grid-rows-[auto_1fr] 1200:grid-cols-[1fr_45%] stretch-container"
 >
 	<Header />
 

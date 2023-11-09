@@ -15,8 +15,8 @@ export default {
 		container({
 			width: convertToRem("1366px"),
 			spacing: {
-				DEFAULT: 3,
-				700: 6,
+				DEFAULT: 5,
+				700: 8,
 				1200: 12,
 			},
 		}),

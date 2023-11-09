@@ -10,7 +10,7 @@
 
 <li class="grid grid-rows-[auto_1fr]">
 	<div
-		class="sticky top-0 z-20 col-start-1 col-end-2 row-start-1 row-end-2 grid grid-cols-[auto_1fr_auto]"
+		class="1200:sticky 1200:top-0 z-20 col-start-1 col-end-2 row-start-1 row-end-2 grid grid-cols-[auto_1fr_auto]"
 	>
 		<Line
 			class="col-start-1 col-end-2 row-start-1 row-end-2"
@@ -33,7 +33,7 @@
 		/>
 
 		<h2
-			class="col-start-2 col-end-3 row-start-1 row-end-2 border-b border-accent bg-accent/10 text-accent font-semibold px-4 py-3 backdrop-blur-md"
+			class="col-start-2 col-end-3 row-start-1 row-end-2 border-b border-accent bg-accent/10 text-accent font-semibold px-4 py-3 1200:backdrop-blur-md"
 		>
 			{title}
 		</h2>

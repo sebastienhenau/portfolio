@@ -16,8 +16,8 @@
 			type="Story"
 		/>
 
-		<h2 class="text-text-1 font-semibold mt-4">
-			<Action>
+		<h2 class="text-text-1 font-semibold mt-4 text-left">
+			<Action class="text-left">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 			</Action>
 		</h2>
