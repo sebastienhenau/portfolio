@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TRightSidebarSectionTitle = string;
+export type TSectionTitle = string;
 
-export interface TRightSidebarSection {
-	title: TRightSidebarSectionTitle;
+export interface TSection {
+	title: TSectionTitle;
 }

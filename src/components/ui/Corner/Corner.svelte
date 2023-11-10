@@ -31,7 +31,7 @@
 
 <span
 	class={clsx(
-		"pointer-events-none w-[10px] h-[10px] inline-grid",
+		"pointer-events-none min-w-[10px] min-h-[10px] inline-grid",
 		{
 			"grid-cols-[auto_1fr] grid-rows-[auto_1fr]": type === "tl",
 			"grid-cols-[1fr_auto] grid-rows-[1fr_auto]":

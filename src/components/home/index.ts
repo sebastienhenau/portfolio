@@ -1,2 +1,2 @@
-export { default as RightSidebar } from "./RightSidebar";
-export * from "./RightSidebar";
+export { default as Section } from "./Section";
+export * from "./Section";

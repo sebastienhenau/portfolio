@@ -86,6 +86,8 @@ export default {
 					"radial-gradient(ellipse at left top, var(--tw-gradient-stops))",
 				"gradient-radial-br":
 					"radial-gradient(ellipse at right bottom, var(--tw-gradient-stops))",
+				"gradient-striped":
+					"repeating-linear-gradient(45deg, transparent, transparent 8px, hsl(var(--color-accent) / 0.2) 8px, hsl(var(--color-accent) / 0.2) 9px )",
 			},
 		},
 	},
