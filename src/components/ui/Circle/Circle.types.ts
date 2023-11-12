@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TCircleType = "tl" | "tr" | "br" | "bl";
+export type TCircleType = "tl" | "tr" | "br" | "bl" | "bottom";
 
 export interface TCircle {
 	type: TCircleType;

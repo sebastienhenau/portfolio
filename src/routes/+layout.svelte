@@ -1,10 +1,18 @@
 <script lang="ts">
+	import clsx from "clsx";
+	import { page } from "$app/stores";
 	import "$styles/main.css";
 	import {
 		BottomRightPageRadialGradient,
 		Header,
 		TopLeftPageRadialGradient,
 	} from "$components";
+
+	// -------------------------------------------------------------------------
+	// Reactive statements
+	// -------------------------------------------------------------------------
+	// TODO: set in different hook
+	$: isHomePage = $page.url.pathname === "/";
 </script>
 
 <TopLeftPageRadialGradient />
@@ -17,7 +25,9 @@
 	<Header />
 
 	<main
-		class="1200:row-start-1 1200:row-end-3 1200:col-start-1 1200:col-end-2"
+		class={clsx("1200:col-start-1 1200:col-end-2", {
+			"1200:row-start-1 1200:row-end-3": isHomePage,
+		})}
 	>
 		<slot />
 	</main>

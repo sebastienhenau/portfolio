@@ -13,18 +13,14 @@
 		<CardMetadata
 			date="12/08/2023"
 			number="01"
-			type="Story"
+			type="Project"
 		/>
 
 		<h2 class="text-text-1 font-semibold mt-4">
 			<Action class="text-left">Hylas</Action>
 		</h2>
 
-		<p class={`text-text-2 mt-2 ${elevate}`}>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
-			ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,
-			pulvinar magna sit amet, ultrices ante.
-		</p>
+		<p class={`text-text-2 mt-2 ${elevate}`}>Made at Little Miss Robot</p>
 
 		<ul class={`flex flex-wrap gap-3 mt-6 ${elevate}`}>
 			<li>

@@ -22,6 +22,7 @@
 				type === "left",
 			"from-accent": theme === "default",
 			"from-text-3": theme === "text-3",
+			"from-border": theme === "border",
 		},
 		$$props.class
 	)}

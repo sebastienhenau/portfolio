@@ -11,7 +11,7 @@
 	} from "$components";
 </script>
 
-<!-- TODO: create grid with 100vh -->
+<!-- TODO: replace 64px -->
 <div
 	class="1200:grid 1200:grid-rows-1 1200:grid-cols-[1fr_auto_45%_6.25rem] 1200:grid-rows-[64px_calc(100vh-64px)_auto] 1200:items-stretch 1200:h-full"
 >
@@ -41,7 +41,7 @@
 	</div>-->
 
 	<aside
-		class="max-1200:mt-10 1200:col-start-3 1200:col-end-4 1200:row-start-1 1200:row-end-4"
+		class="max-1200:mt-10 1200:col-start-3 1200:col-end-4 1200:row-start-1 1200:row-end-4 1200:z-50"
 	>
 		<ul>
 			<li class="mt-[-1px]">

@@ -13,11 +13,14 @@
 	$: isHomePage = $page.url.pathname === "/";
 </script>
 
+<!-- TODO: refine isHomePage classes -->
 <header
 	class={clsx(
-		"sticky top-0 h-10 grid grid-rows-[1fr_1px] grid-cols-1 row-start-1 row-end-2 col-start-1 col-end-2 max-1200:container max-1200:backdrop-blur-md max-1200:z-50",
+		"sticky top-0 h-10 grid-rows-[1fr_1px] row-start-1 row-end-2 col-start-1 col-end-2 backdrop-blur-md z-40",
 		{
-			"1200:grid-cols-[1fr_45%_6.25rem]": isHomePage,
+			"1200:grid-cols-[1fr_45%_6.25rem] max-1200:container 1200:grid 1200:grid-cols-1":
+				isHomePage,
+			container: !isHomePage,
 		}
 	)}
 >

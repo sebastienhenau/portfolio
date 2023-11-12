@@ -8,17 +8,29 @@
 	export let type: TCircleType;
 </script>
 
-<div class={clsx("relative aspect-square overflow-hidden", $$props.class)}>
+<div
+	class={clsx(
+		"relative overflow-hidden",
+		{
+			"aspect-square": type !== "bottom",
+			"aspect-[2/1]": type === "bottom",
+		},
+		$$props.class
+	)}
+>
 	<svg
 		class={clsx("absolute", {
 			"top-0 left-0": type === "tl",
 			"top-0 right-0": type === "tr",
 			"bottom-0 right-0": type === "br",
-			"bottom-0 left-0": type === "bl",
+			"bottom-0 left-0": type === "bl" || type === "bottom",
 		})}
 		height="200%"
 		viewBox="0 0 100 100"
-		width="200%"
+		width={clsx({
+			"200%": type !== "bottom",
+			"100%": type === "bottom",
+		})}
 	>
 		<defs>
 			<radialGradient
