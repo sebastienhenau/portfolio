@@ -1,37 +1,51 @@
-<script>
+<script lang="ts">
 	import {
+		Block,
 		Button,
 		ButtonText,
-		ExperienceCard,
-		Intro,
-		Section,
-		StoryCard,
+		CardExperience,
+		CardProject,
+		CardStory,
+		Circle,
+		HomeSection,
 	} from "$components";
 </script>
 
+<!-- TODO: create grid with 100vh -->
 <div
-	class="1200:grid 1200:grid-rows-1 1200:grid-cols-[1fr_45%_6.25rem] 1200:items-stretch 1200:h-full"
+	class="1200:grid 1200:grid-rows-1 1200:grid-cols-[1fr_auto_45%_6.25rem] 1200:grid-rows-[64px_calc(100vh-64px)_auto] 1200:items-stretch 1200:h-full"
 >
-	<div class="1200:pt-10">
-		<Intro
-			class="1200:sticky 1200:top-10"
-			description="I do something and I like to do this, I really hate Angular, but I
+	<Block
+		class="1200:sticky 1200:top-10 1200:self-start 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-4"
+		description="I do something and I like to do this, I really hate Angular, but I
 			do do do something. For real though, I do something. For real
 			though, I do something."
-			subtitle="Topic Lead / Front-End Developer at Little Miss Robot"
-			tag="article"
-			title="Sébastien Henau"
-		>
-			<Button class="mt-6 1200:mt-8">
-				<ButtonText>More about me</ButtonText>
-			</Button>
-		</Intro>
-	</div>
+		subtitle="Topic Lead / Front-End Developer at Little Miss Robot"
+		tag="article"
+		title="Sébastien Henau"
+	>
+		<Button class="mt-6 1200:mt-8">
+			<ButtonText>More about me</ButtonText>
+		</Button>
+	</Block>
 
-	<aside class="max-1200:mt-10">
+	<Circle
+		class="max-1200:hidden 1200:sticky 1200:top-10 1200:col-start-2 1200:col-end-3 1200:row-start-2 1200:row-end-3 w-[100px]"
+		type="bl"
+	/>
+
+	<!--<div
+		class="max-1200:hidden 1200:sticky 1200:top-10 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-3 1200:flex 1200:items-end 1200:justify-end"
+	>
+		<HighlightWord />
+	</div>-->
+
+	<aside
+		class="max-1200:mt-10 1200:col-start-3 1200:col-end-4 1200:row-start-1 1200:row-end-4"
+	>
 		<ul>
 			<li class="mt-[-1px]">
-				<Section
+				<HomeSection
 					title="About"
 					topDivider={false}
 				>
@@ -41,69 +55,75 @@
 						<li
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
-							<ExperienceCard />
+							<CardExperience />
 						</li>
 
 						<li class="border-b border-border">
-							<ExperienceCard />
+							<CardExperience />
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<ExperienceCard />
+							<CardExperience />
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>
-				</Section>
+				</HomeSection>
 			</li>
 
 			<li class="mt-[-1px]">
-				<Section title="Stories">
+				<HomeSection title="Stories">
 					<ul
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
 					>
 						<li
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
-							<StoryCard />
+							<CardStory />
 						</li>
 
 						<li class="border-b border-border">
-							<StoryCard />
+							<CardStory />
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<StoryCard />
+							<CardStory />
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>
-				</Section>
+				</HomeSection>
 			</li>
 
 			<li>
-				<Section title="Stories">
+				<HomeSection title="Projects">
 					<ul
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
 					>
 						<li
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
-							<StoryCard />
+							<CardProject />
 						</li>
 
 						<li class="border-b border-border">
-							<StoryCard />
+							<CardProject />
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<StoryCard />
+							<CardProject />
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>
-				</Section>
+				</HomeSection>
 			</li>
 		</ul>
 	</aside>
+
+	<!--<div
+		class="max-1200:hidden 1200:col-start-4 1200:col-end-5 1200:row-start-2 1200:row-end-3 1200:self-center 1200:sticky 1200:top-10 1200:self-stretch 1200:flex 1200:items-center 1200:justify-end"
+	>
+		<HomeScrollProgress />
+	</div>-->
 </div>

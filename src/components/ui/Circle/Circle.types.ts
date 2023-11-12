@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TSectionTitle = string;
+export type TCircleType = "tl" | "tr" | "br" | "bl";
 
-export interface TSection {
-	title: TSectionTitle;
+export interface TCircle {
+	type: TCircleType;
 }

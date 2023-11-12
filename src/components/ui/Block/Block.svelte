@@ -1,19 +1,19 @@
 <script lang="ts">
 	import clsx from "clsx";
 	import type {
-		TIntroDescription,
-		TIntroSubtitle,
-		TIntroTag,
-		TIntroTitle,
-	} from "./Intro.types";
+		TBlockDescription,
+		TBlockSubtitle,
+		TBlockTag,
+		TBlockTitle,
+	} from "./Block.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let title: TIntroTitle;
-	export let subtitle: TIntroSubtitle = "";
-	export let description: TIntroDescription;
-	export let tag: TIntroTag = "div";
+	export let title: TBlockTitle;
+	export let subtitle: TBlockSubtitle = "";
+	export let description: TBlockDescription;
+	export let tag: TBlockTag = "div";
 </script>
 
 <svelte:element

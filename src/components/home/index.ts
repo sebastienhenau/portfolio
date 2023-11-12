@@ -1,2 +1,5 @@
-export { default as Section } from "./Section";
-export * from "./Section";
+export { default as HomeSection } from "./HomeSection";
+export * from "./HomeSection";
+
+export { default as HomeScrollProgress } from "./HomeScrollProgress";
+export * from "./HomeScrollProgress";

@@ -16,11 +16,17 @@ export * from "./Line";
 export { default as Corner } from "./Corner";
 export * from "./Corner";
 
-export { default as Intro } from "./Intro";
-export * from "./Intro";
+export { default as Block } from "./Block";
+export * from "./Block";
 
 export { default as Tag } from "./Tag";
 export * from "./Tag";
 
 export { default as Card } from "./Card";
 export * from "./Card";
+
+export { default as Circle } from "./Circle";
+export * from "./Circle";
+
+export { default as HighlightWord } from "./HighlightWord";
+export * from "./HighlightWord";

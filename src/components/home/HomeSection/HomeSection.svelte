@@ -1,13 +1,16 @@
 <script lang="ts">
 	import clsx from "clsx";
 	import { Corner, Line } from "$components";
-	import type { TSectionTitle } from "./Section.types";
+	import type {
+		THomeSectionTitle,
+		THomeSectionTopDivider,
+	} from "./HomeSection.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let title: TSectionTitle;
-	export let topDivider = true;
+	export let title: THomeSectionTitle;
+	export let topDivider: THomeSectionTopDivider = true;
 </script>
 
 <div>
@@ -20,26 +23,30 @@
 			}
 		)}
 	>
-		{#if topDivider}
-			<Corner
-				class="w-[100px] h-[150px] pointer-events-none"
-				relative={false}
-				type="tl"
-			/>
+		<Corner
+			class={clsx("w-[100px] h-[150px]", {
+				"1200:hidden": !topDivider,
+			})}
+			relative={false}
+			type="tl"
+		/>
 
-			<Corner
-				class="w-[100px] h-[150px] pointer-events-none"
-				relative={false}
-				type="tr"
-			/>
-		{:else}
+		<Corner
+			class={clsx("w-[100px] h-[150px]", {
+				"1200:hidden": !topDivider,
+			})}
+			relative={false}
+			type="tr"
+		/>
+
+		{#if !topDivider}
 			<Line
-				class="absolute top-0 left-0 h-[150px]"
+				class="absolute top-0 left-0 h-[150px] max-1200:hidden"
 				type="top"
 			/>
 
 			<Line
-				class="absolute top-0 right-0 h-[150px]"
+				class="absolute top-0 left-0 h-[150px] max-1200:hidden"
 				type="top"
 			/>
 		{/if}

@@ -1,3 +1,3 @@
-export { default as StoryCard } from "./StoryCard";
-export { default as ProjectCard } from "./ProjectCard";
-export { default as ExperienceCard } from "./ExperienceCard";
+export { default as CardStory } from "./CardStory";
+export { default as CardProject } from "./CardProject";
+export { default as CardExperience } from "./CardExperience";
