@@ -1,12 +1,25 @@
 <script lang="ts">
+	import clsx from "clsx";
+	import { page } from "$app/stores";
 	import HeaderLogo from "./HeaderLogo";
 	import HeaderMainBorder from "./HeaderMainBorder";
 	import HeaderSideBorder from "./HeaderSideBorder";
 	import HeaderNavigationItem from "./HeaderNavigationItem";
+
+	// -------------------------------------------------------------------------
+	// Reactive statements
+	// -------------------------------------------------------------------------
+	// TODO: set in different hook
+	$: isHomePage = $page.url.pathname === "/";
 </script>
 
 <header
-	class="sticky top-0 h-10 grid grid-rows-[1fr_1px] grid-cols-1 1200:grid-cols-[1fr_45%_6.25rem] row-start-1 row-end-2 col-start-1 col-end-2 max-1200:container max-1200:backdrop-blur-md max-1200:z-50"
+	class={clsx(
+		"sticky top-0 h-10 grid grid-rows-[1fr_1px] grid-cols-1 row-start-1 row-end-2 col-start-1 col-end-2 max-1200:container max-1200:backdrop-blur-md max-1200:z-50",
+		{
+			"1200:grid-cols-[1fr_45%_6.25rem]": isHomePage,
+		}
+	)}
 >
 	<nav
 		class="row-start-1 row-end-2 col-start-1 col-end-2 flex items-center gap-6 h-full"
@@ -34,7 +47,9 @@
 
 	<HeaderMainBorder />
 
-	<HeaderSideBorder />
+	{#if isHomePage}
+		<HeaderSideBorder />
+	{/if}
 </header>
 
 <!--<header
