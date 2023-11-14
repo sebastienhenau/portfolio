@@ -8,7 +8,7 @@ export type TActionElement = HTMLAnchorElement | HTMLButtonElement;
 // -----------------------------------------------------------------------------
 export type TActionHref = string;
 export type TActionType = "button" | "submit";
-export type TActionTarget = "_self" | "_blank";
+export type TActionTarget = "_blank" | null;
 
 export interface TAction {
 	href: TActionHref;

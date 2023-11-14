@@ -1,19 +1,35 @@
 <script lang="ts">
 	import { Card, Tag } from "$components";
+	import type {
+		TCardExperienceCompany,
+		TCardExperienceDate,
+		TCardExperienceDescription,
+		TCardExperienceRole,
+	} from "./CardExperience.types";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let time: TCardExperienceDate;
+	export let company: TCardExperienceCompany;
+	export let role: TCardExperienceRole;
+	export let description: TCardExperienceDescription;
 </script>
 
 <Card>
-	<Tag>2017 - 2024</Tag>
+	<Tag>
+		{time}
+	</Tag>
 
 	<h2 class="text-text-1 font-semibold mt-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		{company}
 	</h2>
 
-	<p class="text-text-3 mt-2">Topic Lead / Front-end developer</p>
+	<p class="text-text-3 mt-2">
+		{role}
+	</p>
 
 	<p class="text-text-2 mt-2">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula
-		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna
-		sit amet, ultrices ante.
+		{description}
 	</p>
 </Card>

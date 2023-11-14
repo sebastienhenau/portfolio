@@ -14,7 +14,7 @@
 	// -------------------------------------------------------------------------
 	export let href: TActionHref = "";
 	export let type: TActionType = "button";
-	export let target: TActionTarget = "_self";
+	export let target: TActionTarget = null;
 
 	// -------------------------------------------------------------------------
 	// DOM refs
@@ -53,9 +53,11 @@
 		class={classList}
 		{href}
 		{target}
-		rel={clsx({
-			"noopener noreferer": target === "_blank",
-		})}
+		rel={target
+			? clsx({
+					"noopener noreferer": target === "_blank",
+			  })
+			: null}
 	>
 		<slot />
 	</a>

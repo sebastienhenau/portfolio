@@ -3,6 +3,7 @@
 		Block,
 		Button,
 		ButtonText,
+		CardEducation,
 		CardExperience,
 		CardProject,
 		CardStory,
@@ -13,14 +14,12 @@
 
 <!-- TODO: replace 64px -->
 <div
-	class="1200:grid 1200:grid-rows-1 1200:grid-cols-[1fr_auto_45%_6.25rem] 1200:grid-rows-[64px_calc(100vh-64px)_auto] 1200:items-stretch 1200:h-full"
+	class="1200:grid 1200:grid-cols-[1fr_auto_45%_6.25rem] 1200:grid-rows-[64px_calc(100vh-64px)_auto] 1200:items-stretch 1200:h-full"
 >
 	<Block
 		class="1200:sticky 1200:top-10 1200:self-start 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-4"
-		description="I do something and I like to do this, I really hate Angular, but I
-			do do do something. For real though, I do something. For real
-			though, I do something."
-		subtitle="Topic Lead / Front-End Developer at Little Miss Robot"
+		description="I build digital, interactive and accessible products and work on improving the technical stack at Little Miss Robot."
+		subtitle="Front end lead at Little Miss Robot"
 		tag="article"
 		title="Sébastien Henau"
 	>
@@ -34,11 +33,7 @@
 		type="bl"
 	/>
 
-	<!--<div
-		class="max-1200:hidden 1200:sticky 1200:top-10 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-3 1200:flex 1200:items-end 1200:justify-end"
-	>
-		<HighlightWord />
-	</div>-->
+	<!--	<HighlightWord class="max-1200:hidden 1200:sticky 1200:top-10 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-3 1200:flex 1200:items-end 1200:justify-end" />-->
 
 	<aside
 		class="max-1200:mt-10 1200:col-start-3 1200:col-end-4 1200:row-start-1 1200:row-end-4 1200:z-50"
@@ -55,15 +50,25 @@
 						<li
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
-							<CardExperience />
+							<CardExperience
+								company="Little Miss Robot"
+								description="As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products."
+								role="Front end lead"
+								time="2022 - 2023"
+							/>
 						</li>
 
 						<li class="border-b border-border">
-							<CardExperience />
+							<CardExperience
+								company="Little Miss Robot"
+								description="After an internship I got offered a job at Little Miss Robot. I worked on various projects ranging from content sites to data driven web applications to experimental digital experiences. I was given the opportunity to work and experiment with different languages, libraries and frameworks with a focus on the front-end."
+								role="Front end developer"
+								time="2017 - 2022"
+							/>
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<CardExperience />
+							<CardEducation />
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
