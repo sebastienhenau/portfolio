@@ -9,17 +9,19 @@
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let number: TCardMetadataNumber;
+	export let number: TCardMetadataNumber = "";
 	export let date: TCardMetadataDate;
 	export let type: TCardMetadataType = "";
 </script>
 
 <div class="flex items-center">
-	<p
-		class="border-r border-border text-accent font-semibold pr-5 mr-5 text-1"
-	>
-		{number}
-	</p>
+	{#if number}
+		<p
+			class="border-r border-border text-accent font-semibold pr-5 mr-5 text-1"
+		>
+			{number}
+		</p>
+	{/if}
 
 	<time
 		class="flex-1 text-text-2 text-1"
