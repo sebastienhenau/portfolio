@@ -10,7 +10,7 @@
 	class={clsx(
 		"700:grid",
 		{
-			"700:grid-cols-[minmax(30px,1fr)_min(640px,100%-60px)_minmax(30px,1fr)]":
+			"700:grid-cols-[minmax(30px,1fr)_min(700px,100%-60px)_minmax(30px,1fr)]":
 				!extend,
 			"700:grid-cols-[minmax(30px,1fr)_min(1060px,100%-60px)_minmax(30px,1fr)]":
 				extend,

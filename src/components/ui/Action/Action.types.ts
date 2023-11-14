@@ -11,7 +11,7 @@ export type TActionType = "button" | "submit";
 export type TActionTarget = "_blank" | null;
 
 export interface TAction {
-	href: TActionHref;
+	href?: TActionHref;
 	type?: TActionType;
 	target?: TActionTarget;
 }

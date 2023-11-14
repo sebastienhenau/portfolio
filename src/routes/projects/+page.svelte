@@ -34,7 +34,13 @@
 			</li>
 
 			<li class="border border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://www.ikdoemee.be/en" }}
+					cardMetadata={{ number: "01", date: "2023" }}
+					company="Little Miss Robot"
+					name="Ik doe mee - AGII"
+					technologies={["Next"]}
+				/>
 			</li>
 
 			<li
@@ -62,7 +68,13 @@
 			</li>
 
 			<li class="border-b border-l border-r border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://hylasprovincieantwerpen.be/" }}
+					cardMetadata={{ number: "01", date: "2022 - 2023" }}
+					company="Little Miss Robot"
+					name="Hylas - content site"
+					technologies={["Next"]}
+				/>
 			</li>
 
 			<li class="max-700:hidden flex items-end">
@@ -82,7 +94,13 @@
 			</li>
 
 			<li class="border-b border-l border-r border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://mijn.hylasprovincieantwerpen.be" }}
+					cardMetadata={{ number: "01", date: "2022 - 2023" }}
+					company="Little Miss Robot"
+					name="Hylas - admin panel"
+					technologies={["Next"]}
+				/>
 			</li>
 
 			<li class="max-700:hidden flex items-end">
@@ -102,7 +120,13 @@
 			</li>
 
 			<li class="border-b border-l border-r border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://labo.hylasprovincieantwerpen.be" }}
+					cardMetadata={{ number: "01", date: "2022 - 2023" }}
+					company="Little Miss Robot"
+					name="Hylas - labo"
+					technologies={["Next"]}
+				/>
 			</li>
 
 			<li class="max-700:hidden flex items-end">
@@ -122,7 +146,39 @@
 			</li>
 
 			<li class="border-b border-l border-r border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://kansstad.be" }}
+					cardMetadata={{ number: "01", date: "2021 - 2022" }}
+					company="Little Miss Robot"
+					name="Kansstad - VDAB"
+					technologies={["Nuxt"]}
+				/>
+			</li>
+
+			<li class="max-700:hidden flex items-end">
+				<Line
+					class="w-full"
+					theme="border"
+					type="left"
+				/>
+			</li>
+
+			<li class="max-700:hidden flex items-end">
+				<Line
+					class="w-full"
+					theme="border"
+					type="right"
+				/>
+			</li>
+
+			<li class="border-l border-r border-b border-border">
+				<CardProject
+					action={{ href: "https://technotrailer.be/" }}
+					cardMetadata={{ number: "01", date: "2022" }}
+					company="Little Miss Robot"
+					name="Technotrailer - content website - Stad Antwerpen"
+					technologies={["Nuxt"]}
+				/>
 			</li>
 
 			<li class="max-700:hidden flex items-end">
@@ -136,7 +192,13 @@
 			<li></li>
 
 			<li class="border-l border-r border-border">
-				<CardProject />
+				<CardProject
+					action={{ href: "https://labo.technotrailer.be/" }}
+					cardMetadata={{ number: "01", date: "2022" }}
+					company="Little Miss Robot"
+					name="Technotrailer- labo - Stad Antwerpen"
+					technologies={["Nuxt"]}
+				/>
 			</li>
 
 			<li></li>

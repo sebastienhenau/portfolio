@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { TAction, TCardMetadata } from "$components";
 	import {
 		Action,
 		ActionWrapper,
@@ -6,38 +7,46 @@
 		CardMetadata,
 		Tag,
 	} from "$components";
+	import type {
+		TCardProjectCompany,
+		TCardProjectName,
+		TCardProjectTechnologies,
+	} from "./CardProject.types";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let action: TAction = {};
+	export let cardMetadata: TCardMetadata;
+	export let name: TCardProjectName;
+	export let company: TCardProjectCompany;
+	export let technologies: TCardProjectTechnologies;
 </script>
 
 <ActionWrapper let:elevate>
 	<Card>
-		<CardMetadata
-			date="12/08/2023"
-			number="01"
-			type="Project"
-		/>
+		<CardMetadata {...cardMetadata} />
 
 		<h2 class="text-text-1 font-semibold mt-4">
-			<Action class="text-left">Hylas</Action>
+			<Action
+				{...action}
+				class="text-left"
+				target="_blank"
+			>
+				{name}
+			</Action>
 		</h2>
 
-		<p class={`text-text-2 mt-2 ${elevate}`}>Made at Little Miss Robot</p>
+		<p class={`text-text-2 mt-2 ${elevate}`}>Made at {company}</p>
 
 		<ul class={`flex flex-wrap gap-3 mt-6 ${elevate}`}>
-			<li>
-				<Tag theme="text-3">Next</Tag>
-			</li>
-
-			<li>
-				<Tag theme="text-3">Nuxt</Tag>
-			</li>
-
-			<li>
-				<Tag theme="text-3">Sveltekit</Tag>
-			</li>
-
-			<li>
-				<Tag theme="text-3">SolidStart</Tag>
-			</li>
+			{#each technologies as technology}
+				<li>
+					<Tag theme="text-3">
+						{technology}
+					</Tag>
+				</li>
+			{/each}
 		</ul>
 	</Card>
 </ActionWrapper>

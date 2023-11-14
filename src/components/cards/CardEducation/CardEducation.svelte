@@ -1,21 +1,29 @@
 <script lang="ts">
+	import type { TCard, TCardMetadata } from "$components";
 	import { Card, CardMetadata } from "$components";
+	import type {
+		TCardEducationName,
+		TCardEducationSchool,
+	} from "./CardEducation.types";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let card: TCard = {};
+	export let cardMetaData: TCardMetadata;
+	export let name: TCardEducationName;
+	export let school: TCardEducationSchool;
 </script>
 
 <!-- TODO: refine card meta data -->
-<Card>
-	<CardMetadata
-		date="12/08/2023"
-		type="Bachelor"
-	/>
+<Card {...card}>
+	<CardMetadata {...cardMetaData} />
 
 	<h2 class="text-text-1 font-semibold mt-4">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		{name}
 	</h2>
 
 	<p class="text-text-2 mt-2">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula
-		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna
-		sit amet, ultrices ante.
+		{school}
 	</p>
 </Card>

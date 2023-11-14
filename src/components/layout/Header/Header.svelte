@@ -18,7 +18,7 @@
 	class={clsx(
 		"sticky top-0 h-10 grid-rows-[1fr_1px] row-start-1 row-end-2 col-start-1 col-end-2 backdrop-blur-md z-40",
 		{
-			"1200:grid-cols-[1fr_45%_6.25rem] max-1200:container 1200:grid 1200:grid-cols-1":
+			"1200:grid-cols-[1fr_45%_6.25rem] max-1200:container 1200:grid":
 				isHomePage,
 			container: !isHomePage,
 		}

@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { getContext } from "svelte";
+	import clsx from "clsx";
 	import type { TActionWrapperContext } from "$components";
 	import { Corner } from "$components";
+	import type { TCardInset } from "./Card.types";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let inset: TCardInset = true;
 
 	// -------------------------------------------------------------------------
 	// Context getters
@@ -9,7 +16,14 @@
 	const actionWrapper: TActionWrapperContext = getContext("actionWrapper");
 </script>
 
-<article class={`p-8 ${$$props.class}`}>
+<article
+	class={clsx(
+		{
+			"p-8": inset,
+		},
+		$$props.class
+	)}
+>
 	{#if !!actionWrapper}
 		<div
 			class="absolute inset-0 pointer-events-none bg-gradient-to-l from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"

@@ -6,9 +6,9 @@
 		CardEducation,
 		CardExperience,
 		CardProject,
-		CardStory,
 		Circle,
 		HomeSection,
+		Tag,
 	} from "$components";
 </script>
 
@@ -51,6 +51,7 @@
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
 							<CardExperience
+								compact={true}
 								company="Little Miss Robot"
 								description="As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products."
 								role="Front end lead"
@@ -60,6 +61,7 @@
 
 						<li class="border-b border-border">
 							<CardExperience
+								compact={true}
 								company="Little Miss Robot"
 								description="After an internship I got offered a job at Little Miss Robot. I worked on various projects ranging from content sites to data driven web applications to experimental digital experiences. I was given the opportunity to work and experiment with different languages, libraries and frameworks with a focus on the front-end."
 								role="Front end developer"
@@ -68,7 +70,14 @@
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<CardEducation />
+							<CardEducation
+								cardMetaData={{
+									date: "2014 - 2017",
+									type: "bachelor",
+								}}
+								name="Digital Design & Development (Devine)"
+								school="Howest University college West-Flanders"
+							/>
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
@@ -82,17 +91,21 @@
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
 					>
 						<li
-							class="border-b border-border 700:border-r 1200:border-r-0"
+							class="border-b border-border 700:border-r 1200:border-r-0 bg-gradient-striped flex justify-center items-center h-14"
 						>
-							<CardStory />
+							<Tag>Coming soon</Tag>
 						</li>
 
-						<li class="border-b border-border">
-							<CardStory />
+						<li
+							class="border-b border-border bg-gradient-striped flex justify-center items-center h-14"
+						>
+							<Tag>Coming soon</Tag>
 						</li>
 
-						<li class="border-border 700:border-r 1200:border-r-0">
-							<CardStory />
+						<li
+							class="border-border 700:border-r 1200:border-r-0 bg-gradient-striped flex justify-center items-center h-14"
+						>
+							<Tag>Coming soon</Tag>
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />
@@ -108,15 +121,49 @@
 						<li
 							class="border-b border-border 700:border-r 1200:border-r-0"
 						>
-							<CardProject />
+							<CardProject
+								action={{
+									href: "https://labo.hylasprovincieantwerpen.be",
+								}}
+								cardMetadata={{
+									number: "01",
+									date: "2022 - 2023",
+									type: "project",
+								}}
+								company="Little Miss Robot"
+								name="Hylas - labo"
+								technologies={["Next"]}
+							/>
 						</li>
 
 						<li class="border-b border-border">
-							<CardProject />
+							<CardProject
+								action={{ href: "https://kansstad.be" }}
+								cardMetadata={{
+									number: "02",
+									date: "2021 - 2022",
+									type: "project",
+								}}
+								company="Little Miss Robot"
+								name="Kansstad - VDAB"
+								technologies={["Nuxt"]}
+							/>
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
-							<CardProject />
+							<CardProject
+								action={{
+									href: "https://labo.technotrailer.be/",
+								}}
+								cardMetadata={{
+									number: "03",
+									date: "2022",
+									type: "project",
+								}}
+								company="Little Miss Robot"
+								name="Technotrailer- labo - Stad Antwerpen"
+								technologies={["Nuxt"]}
+							/>
 						</li>
 
 						<li class="bg-gradient-striped 1200:hidden" />

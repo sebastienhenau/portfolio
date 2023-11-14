@@ -6,7 +6,7 @@ export type TCardMetadataDate = string;
 export type TCardMetadataType = string;
 
 export interface TCardMetadata {
-	number: TCardMetadataNumber;
+	number?: TCardMetadataNumber;
 	date: TCardMetadataDate;
 	type?: TCardMetadataType;
 }
