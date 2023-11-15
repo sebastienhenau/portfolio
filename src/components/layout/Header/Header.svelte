@@ -38,12 +38,12 @@
 				About
 			</HeaderNavigationItem>
 
-			<HeaderNavigationItem action={{ href: "/stories" }}>
-				Stories
-			</HeaderNavigationItem>
-
 			<HeaderNavigationItem action={{ href: "/projects" }}>
 				Projects
+			</HeaderNavigationItem>
+
+			<HeaderNavigationItem action={{ href: "/stories" }}>
+				Stories
 			</HeaderNavigationItem>
 		</ul>
 	</nav>
