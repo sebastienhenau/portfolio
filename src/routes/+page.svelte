@@ -85,6 +85,24 @@
 			</li>
 
 			<li class="mt-[-1px]">
+				<HomeSection title="Projects">
+					<ul
+						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
+					>
+						{#each topProjects as topProject, index}
+							<HomeProjectsItem
+								{...topProject}
+								{index}
+								total={topProjects.length - 1}
+							/>
+						{/each}
+
+						<li class="bg-gradient-striped 1200:hidden" />
+					</ul>
+				</HomeSection>
+			</li>
+
+			<li>
 				<HomeSection title="Stories">
 					<ul
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
@@ -106,24 +124,6 @@
 						>
 							<Tag>Coming soon</Tag>
 						</li>
-
-						<li class="bg-gradient-striped 1200:hidden" />
-					</ul>
-				</HomeSection>
-			</li>
-
-			<li>
-				<HomeSection title="Projects">
-					<ul
-						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
-					>
-						{#each topProjects as topProject, index}
-							<HomeProjectsItem
-								{...topProject}
-								{index}
-								total={topProjects.length - 1}
-							/>
-						{/each}
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>
