@@ -10,6 +10,7 @@ import type {
 // Props
 // -----------------------------------------------------------------------------
 export type TProjectsItemIndex = number;
+export type TProjectsItemTotal = number;
 export type TProjectsItemName = TCardProjectName;
 export type TProjectsItemDate = TCardMetadataDate;
 export type TProjectsItemCompany = TCardProjectCompany;
@@ -18,6 +19,7 @@ export type TProjectsItemTechnologies = TCardProjectTechnologies;
 
 export interface TProjectsItem {
 	index: TProjectsItemIndex;
+	total: TProjectsItemTotal;
 	name: TProjectsItemName;
 	date: TProjectsItemDate;
 	company: TProjectsItemCompany;

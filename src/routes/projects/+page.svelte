@@ -21,6 +21,7 @@
 			{#each projects as project, index}
 				<ProjectsItem
 					{index}
+					total={projects.length - 1}
 					{...project}
 				/>
 			{/each}

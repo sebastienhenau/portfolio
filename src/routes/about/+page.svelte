@@ -1,10 +1,12 @@
 <script lang="ts">
+	import clsx from "clsx";
 	import {
 		AboutBlock,
 		AboutBurstBlock,
 		CardEducation,
 		CardExperience,
 	} from "$components";
+	import { educations, experiences } from "$content";
 </script>
 
 <article>
@@ -27,6 +29,7 @@
 		</p>
 	</AboutBlock>
 
+	<!-- TODO: replace by actual image/short video -->
 	<AboutBurstBlock extend>
 		<ul class="grid grid-cols-3">
 			<li
@@ -61,55 +64,22 @@
 			</p>
 
 			<ul class="space-y-8 mt-8">
-				<li class="border-border border-b pb-8">
-					<CardExperience
-						card={{ inset: false }}
-						company="Little Miss Robot"
-						description="As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products."
-						role="Front end lead"
-						time="2022 - 2023"
-					/>
-				</li>
-
-				<li class="border-border border-b pb-8">
-					<CardExperience
-						card={{ inset: false }}
-						company="Little Miss Robot"
-						description="After an internship I got offered a job at Little Miss Robot. I worked on various projects ranging from content sites to data driven web applications to experimental digital experiences. I was given the opportunity to work and experiment with different languages, libraries and frameworks with a focus on the front-end."
-						role="Front end developer"
-						time="2017 - 2022"
-					/>
-				</li>
-
-				<li class="border-border border-b pb-8">
-					<CardExperience
-						card={{ inset: false }}
-						company="Little Miss Robot"
-						description="In the course of my studies I landed a three-month internship at Little Miss Robot. This opportunity shifted my focus, leading me more into the role of a front-end developer."
-						role="Intern front end developer"
-						time="2017"
-					/>
-				</li>
-
-				<li class="border-border border-b pb-8">
-					<CardExperience
-						card={{ inset: false }}
-						company="Endare"
-						description="During my studies I was able to secure a student job for a little over a month at Endare, where my focus was mainly on translating the visual layer to an interactive experience in a browser."
-						role="Student job"
-						time="2017"
-					/>
-				</li>
-
-				<li>
-					<CardExperience
-						card={{ inset: false }}
-						company="Open Summer of Code (2015)"
-						description="Back in 2015, I participated in one of the projects offered in the 2015 version of Open Summer of Code. Over the span of 3 weeks, I got introduced to a new topic: open data."
-						role="Student job"
-						time="2015"
-					/>
-				</li>
+				{#each experiences as { company, role, time, description }, index}
+					<li
+						class={clsx({
+							"border-border border-b pb-8":
+								index !== experiences.length - 1,
+						})}
+					>
+						<CardExperience
+							card={{ inset: false }}
+							{company}
+							{description}
+							{role}
+							{time}
+						/>
+					</li>
+				{/each}
 			</ul>
 		</section>
 
@@ -124,29 +94,24 @@
 			</p>
 
 			<ul class="mt-8 space-y-8">
-				<li class="border-b border-border pb-8">
-					<CardEducation
-						card={{ inset: false }}
-						cardMetaData={{
-							date: "2014 - 2017",
-							type: "bachelor",
-						}}
-						name="Digital Design & Development (Devine)"
-						school="Howest University college West-Flanders"
-					/>
-				</li>
-
-				<li>
-					<CardEducation
-						card={{ inset: false }}
-						cardMetaData={{
-							date: "2011 - 2014",
-							type: "bachelor",
-						}}
-						name="Graphic Design and Digital Media"
-						school="Artevelde University College"
-					/>
-				</li>
+				{#each educations as { time, type, name, school }, index}
+					<li
+						class={clsx({
+							"border-b border-border pb-8":
+								index !== educations.length - 1,
+						})}
+					>
+						<CardEducation
+							card={{ inset: false }}
+							cardMetaData={{
+								date: time,
+								type,
+							}}
+							{name}
+							{school}
+						/>
+					</li>
+				{/each}
 			</ul>
 		</section>
 	</AboutBlock>

@@ -5,11 +5,19 @@
 		ButtonText,
 		CardEducation,
 		CardExperience,
-		CardProject,
 		Circle,
+		HomeProjectsItem,
 		HomeSection,
 		Tag,
 	} from "$components";
+	import { educations, experiences, projects } from "$content";
+
+	// -------------------------------------------------------------------------
+	// Variables
+	// -------------------------------------------------------------------------
+	const topProjects = projects.slice(0, 3);
+	const currentExperience = experiences[0];
+	const lastEducation = educations[0];
 </script>
 
 <!-- TODO: replace 64px -->
@@ -55,35 +63,23 @@
 						>
 							<CardExperience
 								compact={true}
-								company="Little Miss Robot"
-								description="As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products."
-								role="Front end lead"
-								time="2022 - 2023"
-							/>
-						</li>
-
-						<li class="border-b border-border">
-							<CardExperience
-								compact={true}
-								company="Little Miss Robot"
-								description="After an internship I got offered a job at Little Miss Robot. I worked on various projects ranging from content sites to data driven web applications to experimental digital experiences. I was given the opportunity to work and experiment with different languages, libraries and frameworks with a focus on the front-end."
-								role="Front end developer"
-								time="2017 - 2022"
+								company={currentExperience.company}
+								description={currentExperience.description}
+								role={currentExperience.role}
+								time={currentExperience.time}
 							/>
 						</li>
 
 						<li class="border-border 700:border-r 1200:border-r-0">
 							<CardEducation
 								cardMetaData={{
-									date: "2014 - 2017",
-									type: "bachelor",
+									date: lastEducation.time,
+									type: lastEducation.type,
 								}}
-								name="Digital Design & Development (Devine)"
-								school="Howest University college West-Flanders"
+								name={lastEducation.name}
+								school={lastEducation.school}
 							/>
 						</li>
-
-						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>
 				</HomeSection>
 			</li>
@@ -121,53 +117,13 @@
 					<ul
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
 					>
-						<li
-							class="border-b border-border 700:border-r 1200:border-r-0"
-						>
-							<CardProject
-								action={{
-									href: "https://labo.hylasprovincieantwerpen.be",
-								}}
-								cardMetadata={{
-									number: "01",
-									date: "2022 - 2023",
-									type: "project",
-								}}
-								company="Little Miss Robot"
-								name="Hylas - labo"
-								technologies={["Next"]}
+						{#each topProjects as topProject, index}
+							<HomeProjectsItem
+								{...topProject}
+								{index}
+								total={topProjects.length - 1}
 							/>
-						</li>
-
-						<li class="border-b border-border">
-							<CardProject
-								action={{ href: "https://kansstad.be" }}
-								cardMetadata={{
-									number: "02",
-									date: "2021 - 2022",
-									type: "project",
-								}}
-								company="Little Miss Robot"
-								name="Kansstad - VDAB"
-								technologies={["Nuxt"]}
-							/>
-						</li>
-
-						<li class="border-border 700:border-r 1200:border-r-0">
-							<CardProject
-								action={{
-									href: "https://labo.technotrailer.be/",
-								}}
-								cardMetadata={{
-									number: "03",
-									date: "2022",
-									type: "project",
-								}}
-								company="Little Miss Robot"
-								name="Technotrailer- labo - Stad Antwerpen"
-								technologies={["Nuxt"]}
-							/>
-						</li>
+						{/each}
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>

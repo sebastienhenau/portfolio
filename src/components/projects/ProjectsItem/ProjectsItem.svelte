@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { projects } from "$content";
 	import clsx from "clsx";
 	import { CardProject, Line } from "$components";
 	import type {
@@ -9,12 +8,14 @@
 		TProjectsItemLink,
 		TProjectsItemName,
 		TProjectsItemTechnologies,
+		TProjectsItemTotal,
 	} from "./ProjectsItem.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
 	export let index: TProjectsItemIndex;
+	export let total: TProjectsItemTotal;
 	export let name: TProjectsItemName;
 	export let date: TProjectsItemDate;
 	export let company: TProjectsItemCompany;
@@ -25,7 +26,7 @@
 	// Variables
 	// -------------------------------------------------------------------------
 	const first = index === 0;
-	const last = index === projects.length - 1;
+	const last = index === total;
 	const middle = !first && !last;
 </script>
 
