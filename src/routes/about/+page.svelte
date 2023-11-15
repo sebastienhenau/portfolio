@@ -9,6 +9,15 @@
 	import { educations, experiences } from "$content";
 </script>
 
+<svelte:head>
+	<title>About | Sébastien Henau</title>
+
+	<meta
+		content="Welcome to Sébastien Henau's personal site. I'm a 30-year-old Belgian front-end developer toggling my way into front-end architectures with my faithful cup of coffee next to me."
+		name="description"
+	/>
+</svelte:head>
+
 <article>
 	<AboutBlock class="pt-12 pb-8">
 		<h1 class="text-text-1 text-7 font-semibold">Hello there 👋</h1>

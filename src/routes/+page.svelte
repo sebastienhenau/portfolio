@@ -20,6 +20,15 @@
 	const lastEducation = educations[0];
 </script>
 
+<svelte:head>
+	<title>Home | Sébastien Henau</title>
+
+	<meta
+		content="Welcome to Sébastien Henau's personal site. I'm a 30-year-old Belgian front-end developer toggling my way into front-end architectures with my faithful cup of coffee next to me."
+		name="description"
+	/>
+</svelte:head>
+
 <!-- TODO: replace 64px -->
 <div
 	class="1200:grid 1200:grid-cols-[1fr_auto_45%_6.25rem] 1200:grid-rows-[64px_calc(100vh-64px)_auto] 1200:items-stretch 1200:h-full"

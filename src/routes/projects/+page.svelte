@@ -3,6 +3,15 @@
 	import { projects } from "$content";
 </script>
 
+<svelte:head>
+	<title>Projects | Sébastien Henau</title>
+
+	<meta
+		content="Welcome to Sébastien Henau's personal site. I'm a 30-year-old Belgian front-end developer toggling my way into front-end architectures with my faithful cup of coffee next to me."
+		name="description"
+	/>
+</svelte:head>
+
 <div class="700:grid 700:grid-cols-[1fr_auto_50px] 700:grid-rows-[auto_1fr]">
 	<!-- TODO: px to rem -->
 	<Circle
