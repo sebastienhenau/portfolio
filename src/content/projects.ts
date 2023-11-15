@@ -1,0 +1,51 @@
+export default [
+	{
+		name: "Ik doe mee - AGII",
+		date: "2023",
+		company: "Little Miss Robot",
+		link: "https://www.ikdoemee.be/en",
+		technologies: ["Next"],
+	},
+	{
+		name: "Hylas",
+		date: "2022 - 2023",
+		company: "Little Miss Robot",
+		link: "https://hylasprovincieantwerpen.be/",
+		technologies: ["Next"],
+	},
+	{
+		name: "Hylas - labo",
+		date: "2022 - 2023",
+		company: "Little Miss Robot",
+		link: "https://labo.hylasprovincieantwerpen.be/",
+		technologies: ["Next"],
+	},
+	{
+		name: "Hylas - admin",
+		date: "2022 - 2023",
+		company: "Little Miss Robot",
+		link: "https://mijn.hylasprovincieantwerpen.be/",
+		technologies: ["Next"],
+	},
+	{
+		name: "Kansstad - VDAB",
+		date: "2021 - 2022",
+		company: "Little Miss Robot",
+		link: "https://kansstad.be",
+		technologies: ["Next"],
+	},
+	{
+		name: "Technotrailer",
+		date: "2022",
+		company: "Little Miss Robot",
+		link: "https://technotrailer.be/",
+		technologies: ["Next"],
+	},
+	{
+		name: "Technotrailer - labo",
+		date: "2022",
+		company: "Little Miss Robot",
+		link: "https://labo.technotrailer.be/",
+		technologies: ["Next"],
+	},
+];

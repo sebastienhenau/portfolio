@@ -1,11 +1,18 @@
 <script lang="ts">
 	import clsx from "clsx";
+	import type { TAction } from "$components";
 	import { Action, Corner } from "$components";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let action: TAction = {};
 </script>
 
 <Action
+	{...action}
 	class={clsx(
-		"relative p-5 bg-accent group hover:bg-accent/20 transition-colors shadow-border shadow-accent/40",
+		"relative p-5 bg-accent group hover:bg-accent/20 transition-colors shadow-border shadow-accent/40 inline-flex justify-center items-center text-center",
 		$$props.class
 	)}
 >

@@ -85,7 +85,7 @@
 					<CardExperience
 						card={{ inset: false }}
 						company="Little Miss Robot"
-						description="In the course of my studies I landed a three-month internship at Little Miss Robot. The opportunity shifted my focus, leading me more into the role of a front-end developer."
+						description="In the course of my studies I landed a three-month internship at Little Miss Robot. This opportunity shifted my focus, leading me more into the role of a front-end developer."
 						role="Intern front end developer"
 						time="2017"
 					/>
@@ -96,7 +96,7 @@
 						card={{ inset: false }}
 						company="Endare"
 						description="During my studies I was able to secure a student job for a little over a month at Endare, where my focus was mainly on translating the visual layer to an interactive experience in a browser."
-						role="Intern front end developer"
+						role="Student job"
 						time="2017"
 					/>
 				</li>
@@ -106,7 +106,7 @@
 						card={{ inset: false }}
 						company="Open Summer of Code (2015)"
 						description="Back in 2015, I participated in one of the projects offered in the 2015 version of Open Summer of Code. Over the span of 3 weeks, I got introduced to a new topic: open data."
-						role="Intern"
+						role="Student job"
 						time="2015"
 					/>
 				</li>

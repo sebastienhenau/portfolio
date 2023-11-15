@@ -26,7 +26,7 @@
 		</h1>
 
 		{#if !!subtitle}
-			<p class="text-text-3 text-3 mt-2">
+			<p class="text-text-3 text-3">
 				{subtitle}
 			</p>
 		{/if}

@@ -23,7 +23,10 @@
 		tag="article"
 		title="Sébastien Henau"
 	>
-		<Button class="mt-6 1200:mt-8">
+		<Button
+			action={{ href: "/about" }}
+			class="mt-6 1200:mt-8"
+		>
 			<ButtonText>More about me</ButtonText>
 		</Button>
 	</Block>
