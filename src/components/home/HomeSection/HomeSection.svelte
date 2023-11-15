@@ -46,7 +46,7 @@
 			/>
 
 			<Line
-				class="absolute top-0 left-0 h-[150px] max-1200:hidden"
+				class="absolute top-0 right-0 h-[150px] max-1200:hidden"
 				type="top"
 			/>
 		{/if}
