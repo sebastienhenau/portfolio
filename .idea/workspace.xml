@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cards/CardExperience/CardExperience.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardExperience/CardExperience.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardExperience/CardExperience.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/HighlightWord/HighlightWord.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/HighlightWord/HighlightWord.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/experiences.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/experiences.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/about/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/about/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +103,7 @@
       <workItem from="1699277297384" duration="21000" />
       <workItem from="1699343090028" duration="71513000" />
       <workItem from="1699962057761" duration="1207000" />
+      <workItem from="1700071413940" duration="474000" />
     </task>
     <servers />
   </component>

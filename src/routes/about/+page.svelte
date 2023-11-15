@@ -25,7 +25,7 @@
 			When I am not losing myself in lines of code you'll likely catch me
 			navigating running trails, attempting to conquer climbing walls (or
 			just gracefully descend from them), playing some games on my trusty
-			Playstation or if I have some time left, read a book.
+			PlayStation or if I have some time left, read a book.
 		</p>
 	</AboutBlock>
 

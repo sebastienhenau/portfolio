@@ -1,27 +1,21 @@
 export default [
 	{
-		role: "Front end lead",
-		company: "Little Miss robot",
+		role: "Front-end lead",
+		company: "Little Miss Robot",
 		description: `As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products.`,
 		time: "2022 - 2023",
 	},
 	{
-		role: "Front end developer",
-		company: "Little Miss robot",
+		role: "Front-end developer",
+		company: "Little Miss Robot",
 		description: `After an internship I got offered a job at Little Miss Robot. I worked on various projects ranging from content sites to data driven web applications to experimental digital experiences. I was given the opportunity to work and experiment with different languages, libraries and frameworks with a focus on the front-end.`,
-		time: "2107 - 2022",
+		time: "2017 - 2022",
 	},
 	{
-		role: "Intern front end developer",
-		company: "Little Miss robot",
+		role: "Intern front-end developer",
+		company: "Little Miss Robot",
 		description: `In the course of my studies I landed a three-month internship at Little Miss Robot. This opportunity shifted my focus, leading me more into the role of a front-end developer.`,
 		time: "2017",
-	},
-	{
-		role: "Front end lead",
-		company: "Little Miss robot",
-		description: `As I saw the company grow, after 5 years, I was given the opportunity to grow into more of a lead role. My responsibilities shifted more and I had to combine managing, guiding and maintaining a development team, while still building digital products.`,
-		time: "2022 - 2023",
 	},
 	{
 		role: "Student job",

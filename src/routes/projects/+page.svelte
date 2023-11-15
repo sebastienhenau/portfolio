@@ -13,7 +13,7 @@
 	<!-- TODO: max-w-[960px] mx-auto -->
 	<Block
 		class="col-start-1 col-end-4 row-start-1 row-end-3"
-		description="I do something and I like to do this, I really hate Angular, but I do do do something. For real though, I do something. For real though, I do something."
+		description=""
 		title="Projects"
 	>
 		<ul

@@ -27,7 +27,7 @@
 	<Block
 		class="1200:sticky 1200:top-10 1200:self-start 1200:col-start-1 1200:col-end-3 1200:row-start-2 1200:row-end-4"
 		description="I build digital, interactive and accessible products and work on improving the technical stack at Little Miss Robot."
-		subtitle="Front end lead at Little Miss Robot"
+		subtitle="Front-end lead at Little Miss Robot"
 		tag="article"
 		title="Sébastien Henau"
 	>
