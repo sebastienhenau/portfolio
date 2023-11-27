@@ -4,29 +4,32 @@ export * from "./Action";
 export { default as ActionWrapper } from "./ActionWrapper";
 export * from "./ActionWrapper";
 
-export { default as Button } from "./Button";
-export * from "./Button";
-
 export { default as Image } from "./Image";
 export * from "./Image";
-
-export { default as Line } from "./Line";
-export * from "./Line";
-
-export { default as Corner } from "./Corner";
-export * from "./Corner";
-
-export { default as Block } from "./Block";
-export * from "./Block";
-
-export { default as Tag } from "./Tag";
-export * from "./Tag";
 
 export { default as Card } from "./Card";
 export * from "./Card";
 
-export { default as Circle } from "./Circle";
-export * from "./Circle";
+export { default as Button } from "./Button";
+export * from "./Button";
 
-export { default as HighlightWord } from "./HighlightWord";
-export * from "./HighlightWord";
+export { default as Badge } from "./Badge";
+export * from "./Badge";
+
+export { default as Divider } from "./Divider";
+export * from "./Divider";
+
+export { default as Item } from "./Item";
+export * from "./Item";
+
+export { default as Tag } from "./Tag";
+export * from "./Tag";
+
+export { default as Link } from "./Link";
+export * from "./Link";
+
+export { default as Dot } from "./Dot";
+export * from "./Dot";
+
+export { default as Cta } from "./Cta";
+export * from "./Cta";

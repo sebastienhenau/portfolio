@@ -1,7 +1,7 @@
 @font-face {
-	font-family: "Inter";
+	font-family: "DM Sans";
 	src:
-		url("/fonts/inter.woff2") format("woff2 supports variations"),
-		url("/fonts/inter.woff2") format("woff2-variations");
+		url("/fonts/dm-sans.woff2") format("woff2 supports variations"),
+		url("/fonts/dm-sans.woff2") format("woff2-variations");
 	font-weight: 100 900;
 }

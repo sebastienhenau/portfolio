@@ -1,56 +1,30 @@
 <script lang="ts">
-	import clsx from "clsx";
-	import { page } from "$app/stores";
 	import HeaderLogo from "./HeaderLogo";
-	import HeaderMainBorder from "./HeaderMainBorder";
-	import HeaderSideBorder from "./HeaderSideBorder";
-	import HeaderNavigationItem from "./HeaderNavigationItem";
-
-	// -------------------------------------------------------------------------
-	// Reactive statements
-	// -------------------------------------------------------------------------
-	// TODO: set in different hook
-	$: isHomePage = $page.url.pathname === "/";
+	import HeaderNavigation from "./HeaderNavigation";
 </script>
 
-<!-- TODO: refine isHomePage classes -->
 <header
-	class={clsx(
-		"sticky top-0 h-10 grid-rows-[1fr_1px] row-start-1 row-end-2 col-start-1 col-end-2 backdrop-blur-md z-40",
-		{
-			"1200:grid-cols-[1fr_45%_6.25rem] max-1200:container 1200:grid":
-				isHomePage,
-			container: !isHomePage,
-		}
-	)}
+	class="col-start-1 col-end-2 row-start-1 row-end-2 1000:sticky 1000:top-0 1000:self-start max-1000:flex max-1000:justify-between max-1000:items-center py-7"
 >
-	<nav
-		class="row-start-1 row-end-2 col-start-1 col-end-2 flex items-center gap-6 h-full"
-	>
-		<HeaderLogo />
+	<div class="flex justify-between items-center">
+		<div class="flex items-center gap-4">
+			<HeaderLogo />
 
-		<ul class="flex row-start-1 row-end-2 h-full">
-			<HeaderNavigationItem action={{ href: "/" }}>
-				Home
-			</HeaderNavigationItem>
+			<!-- TODO: typo font style -->
+			<div class="space-y-2">
+				<p class="font-bold leading-none">Sébastien Henau</p>
 
-			<HeaderNavigationItem action={{ href: "/about" }}>
-				About
-			</HeaderNavigationItem>
+				<!-- TODO: typo font style -->
+				<p
+					class="font-semibold text-3 leading-none text-site-contrast-2"
+				>
+					Front-end lead at Little Miss Robot
+				</p>
+			</div>
+		</div>
 
-			<HeaderNavigationItem action={{ href: "/projects" }}>
-				Projects
-			</HeaderNavigationItem>
+		<!-- TODO: dark mode switcher -->
+	</div>
 
-			<HeaderNavigationItem action={{ href: "/stories" }}>
-				Stories
-			</HeaderNavigationItem>
-		</ul>
-	</nav>
-
-	<HeaderMainBorder />
-
-	{#if isHomePage}
-		<HeaderSideBorder />
-	{/if}
+	<HeaderNavigation />
 </header>

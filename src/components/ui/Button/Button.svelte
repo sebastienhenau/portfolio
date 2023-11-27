@@ -1,45 +1,23 @@
 <script lang="ts">
 	import clsx from "clsx";
-	import type { TAction } from "$components";
-	import { Action, Corner } from "$components";
+	import { Action } from "$components";
+	import type { TButtonAction } from "./Button.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let action: TAction = {};
+	export let action: TButtonAction;
 </script>
 
 <Action
 	{...action}
-	class={clsx(
-		"relative p-5 bg-accent group hover:bg-accent/20 transition-colors shadow-border shadow-accent/40 inline-flex justify-center items-center text-center",
-		$$props.class
-	)}
+	class={clsx("relative py-3 px-6", $$props.class)}
 >
-	<!-- TODO: optimise this with card component -->
-	<Corner
-		class="opacity-0 group-hover:translate-y-[-4px] group-hover:translate-x-[-4px] group-hover:opacity-100 transition"
-		relative={false}
-		type="tl"
+	<div
+		class="absolute inset-0 z-0 bg-accent rounded-lg translate-x-2 translate-y-2"
 	/>
 
-	<Corner
-		class="opacity-0 group-hover:translate-y-[-4px] group-hover:translate-x-[4px] group-hover:opacity-100 transition"
-		relative={false}
-		type="tr"
-	/>
-
-	<Corner
-		class="opacity-0 group-hover:translate-y-[4px] group-hover:translate-x-[4px] group-hover:opacity-100 transition"
-		relative={false}
-		type="br"
-	/>
-
-	<Corner
-		class="opacity-0 group-hover:translate-y-[4px] group-hover:translate-x-[-4px] group-hover:opacity-100 transition"
-		relative={false}
-		type="bl"
-	/>
+	<div class="absolute inset-0 z-0 border border-border-alt rounded-lg" />
 
 	<slot />
 </Action>

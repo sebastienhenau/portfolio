@@ -1,8 +1,10 @@
+import type { TImage } from "$components";
+
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TCardInset = boolean;
+export type TCardImage = TImage;
 
 export interface TCard {
-	inset?: TCardInset;
+	image: TCardImage;
 }

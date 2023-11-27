@@ -1,7 +1,7 @@
 import convertToRem from "./convertToRem.js";
 
 export default (steps) => {
-	const y0 = 12;
+	const y0 = 8;
 	const sizes = [y0];
 
 	for (let step = 2; step <= steps; step++) {

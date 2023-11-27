@@ -35,23 +35,24 @@ export default {
 			inherit: "inherit",
 			// Custom colors
 			site: {
-				1: "hsl(var(--color-site-1) / <alpha-value>)",
-				2: "hsl(var(--color-site-2) / <alpha-value>)",
-			},
-			text: {
-				1: "hsl(var(--color-text-1) / <alpha-value>)",
-				2: "hsl(var(--color-text-2) / <alpha-value>)",
-				3: "hsl(var(--color-text-3) / <alpha-value>)",
+				background: "hsl(var(--color-site-background) / <alpha-value>)",
+				accent: "hsl(var(--color-site-accent))",
+				"contrast-1":
+					"hsl(var(--color-site-contrast-1) / <alpha-value>)",
+				"contrast-2":
+					"hsl(var(--color-site-contrast-2) / <alpha-value>)",
 			},
 			accent: "hsl(var(--color-accent) / <alpha-value>)",
+			"accent-contrast":
+				"hsl(var(--color-accent-contrast) / <alpha-value>)",
 			border: "hsl(var(--color-border) / <alpha-value>)",
-			shadow: "hsl(var(--color-border))",
+			"border-alt": "hsl(var(--color-border-alt) / <alpha-value>)",
 		},
 		/**
 		 * Font size scale based on Carbon Design System
 		 * https://carbondesignsystem.com/guidelines/typography/overview/#scale
 		 */
-		fontSize: getFontSizeScale(20),
+		fontSize: getFontSizeScale(22),
 		/**
 		 * Spacing scale based on Carbon Design System: multiples of 2, 4
 		 * and 8.
@@ -76,18 +77,25 @@ export default {
 			13: convertToRem("120px"),
 			14: convertToRem("160px"),
 		},
-		boxShadow: {
-			border: "inset 0px 0px 0px 1px var(--tw-shadow-color)",
+		borderRadius: {
+			sm: "2px",
+			DEFAULT: "4px",
+			lg: "8px",
+			xl: "16px",
+			full: "100vmax",
+		},
+		borderWidth: {
+			DEFAULT: "2px",
 		},
 		extend: {
 			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-radial-tl":
 					"radial-gradient(ellipse at left top, var(--tw-gradient-stops))",
-				"gradient-radial-br":
-					"radial-gradient(ellipse at right bottom, var(--tw-gradient-stops))",
 				"gradient-striped":
-					"repeating-linear-gradient(45deg, transparent, transparent 8px, hsl(var(--color-accent) / 0.2) 8px, hsl(var(--color-accent) / 0.2) 9px )",
+					"repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent) / 0.2) 2px, hsl(var(--color-site-background) / 0.2) 4px )",
+			},
+			gridTemplateRows: {
+				"3-auto": "repeat(3, auto)",
 			},
 		},
 	},

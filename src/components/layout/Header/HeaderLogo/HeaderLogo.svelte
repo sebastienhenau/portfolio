@@ -1,9 +1,10 @@
 <script lang="ts">
+	import clsx from "clsx";
 	import { Action, Image } from "$components";
 </script>
 
 <Action
-	class="p-4"
+	class={clsx("inline-block p-4", $$props.class)}
 	href="/"
 >
 	<Image

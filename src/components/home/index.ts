@@ -1,8 +1,5 @@
-export { default as HomeSection } from "./HomeSection";
-export * from "./HomeSection";
+export { default as HomeAboutCard } from "./HomeAboutCard";
+export * from "./HomeAboutCard";
 
-export { default as HomeScrollProgress } from "./HomeScrollProgress";
-export * from "./HomeScrollProgress";
-
-export { default as HomeProjectsItem } from "./HomeProjectsItem";
-export * from "./HomeProjectsItem";
+export { default as HomeStoryFlowItem } from "./HomeStoryFlowItem";
+export * from "./HomeStoryFlowItem";
