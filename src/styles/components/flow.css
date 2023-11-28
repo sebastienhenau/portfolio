@@ -1,0 +1,51 @@
+/* TODO: fix prettier-ignore */
+/* prettier-ignore */
+@layer components {
+	/* ---------------------------------------------------------------------- */
+	/* flow */
+	/* ---------------------------------------------------------------------- */
+	.flow {
+		--flow-side-width: 1.25rem;
+		--flow-side-border: theme("borderWidth.DEFAULT");
+		--flow-side-offset-width: calc((var(--flow-side-width) - var(--flow-side-border)) * 0.5);
+		--flow-left-spacing: theme("space.7");
+		--flow-left-spacing-from-line: calc(var(--flow-left-spacing) + var(--flow-side-offset-width));
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-section */
+	/* ---------------------------------------------------------------------- */
+	.flow-section {
+		--flow-section-first-column: calc(var(--flow-side-offset-width) + var(--flow-side-border));
+	}
+
+	.flow-section-grid-cols {
+		grid-template-columns: var(--flow-section-first-column) var(--flow-side-offset-width) 1fr;
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-content */
+	/* ---------------------------------------------------------------------- */
+	.flow-content-pl {
+		padding-left: var(--flow-left-spacing-from-line);
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-item */
+	/* ---------------------------------------------------------------------- */
+	.flow-item {
+		--flow-dot-left: calc((var(--item-image-to-content-spacing) * -1) - var(--item-image-max-width) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
+	}
+
+	/* TODO: explain important */
+	.flow-item-pl {
+		padding-left: var(--flow-left-spacing-from-line) !important;
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-dot */
+	/* ---------------------------------------------------------------------- */
+	.flow-dot {
+		left: var(--flow-dot-left, 0);
+	}
+}

@@ -15,9 +15,6 @@
     "prettier-plugin-svelte",
     "@trivago/prettier-plugin-sort-imports"
   ],
-  "pluginSearchDirs": [
-    "."
-  ],
   "singleAttributePerLine": true,
   "importOrder": [
     "^w",

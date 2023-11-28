@@ -5,6 +5,7 @@
 		Divider,
 		Flow,
 		FlowSection,
+		FlowTitle,
 		HomeAboutCard,
 		HomeStoryFlowItem,
 	} from "$components";
@@ -22,7 +23,7 @@
 		>
 			<Badge theme="accent">22</Badge>
 
-			<h2 class="font-bold">Stories</h2>
+			<FlowTitle>Stories</FlowTitle>
 		</div>
 
 		<HomeStoryFlowItem />
@@ -49,7 +50,7 @@
 		>
 			<Badge theme="accent">22</Badge>
 
-			<h2 class="font-bold">Projects</h2>
+			<FlowTitle>Projects</FlowTitle>
 		</div>
 
 		<Cta

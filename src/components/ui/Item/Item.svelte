@@ -13,9 +13,9 @@
 <!-- TODO: change name Item -->
 <article
 	class={clsx(
-		"relative p-7 group",
+		"item item-gap relative p-7 group item",
 		{
-			"flex gap-6 items-start": !!image,
+			"flex items-start gap-item-image-to-content-spacing": !!image,
 		},
 		$$props.class
 	)}
@@ -27,7 +27,7 @@
 	{#if !!image}
 		<Image
 			{...image}
-			class="z-10 max-w-[9.5rem] w-full"
+			class="z-10 w-full item-image-max-w"
 		/>
 
 		<div class="flex-1 z-10">

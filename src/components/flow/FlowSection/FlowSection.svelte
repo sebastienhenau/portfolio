@@ -12,7 +12,7 @@
 <!--  TODO: link width to badge -->
 <section
 	class={clsx(
-		"grid grid-cols-[0.6875rem_0.5625rem_1fr] grid-rows-3-auto items-start",
+		"flow-section grid flow-section-grid-cols grid-rows-3-auto items-start",
 		$$props.class
 	)}
 >
