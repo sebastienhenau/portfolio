@@ -13,9 +13,10 @@
 <!-- TODO: change name Item -->
 <article
 	class={clsx(
-		"item item-gap relative p-7 group item",
+		"relative p-7 group item",
 		{
-			"flex items-start gap-item-image-to-content-spacing": !!image,
+			"item-with-image item-with-image-gap flex items-start gap-item-image-to-content-spacing":
+				!!image,
 		},
 		$$props.class
 	)}

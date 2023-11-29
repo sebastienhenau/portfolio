@@ -43,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/Flow",
+    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/home/HomeAboutCard",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,18 +63,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/home/HomeAboutCard" />
+      <recent name="$PROJECT_DIR$/src/components/flow-items" />
       <recent name="$PROJECT_DIR$/src/components/Flow" />
       <recent name="$PROJECT_DIR$/src/components/Flow/FlowSection" />
       <recent name="$PROJECT_DIR$/src/components/ui/Content" />
-      <recent name="$PROJECT_DIR$/src/components/layout/Header" />
-      <recent name="$PROJECT_DIR$/src/components/cards" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/flow-items/FlowItemStory" />
+      <recent name="$PROJECT_DIR$/src/components/flow-items" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/flow/Flow" />
       <recent name="$PROJECT_DIR$/src/components/Flow" />
-      <recent name="$PROJECT_DIR$/src/components/lists/ListTags" />
-      <recent name="$PROJECT_DIR$/src/components/contents" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -100,6 +100,7 @@
       <workItem from="1699962057761" duration="1207000" />
       <workItem from="1700071413940" duration="4732000" />
       <workItem from="1700663160504" duration="39795000" />
+      <workItem from="1701090298194" duration="14680000" />
     </task>
     <servers />
   </component>

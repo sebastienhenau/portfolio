@@ -39,7 +39,7 @@
 	/* flow-item */
 	/* ---------------------------------------------------------------------- */
 	.flow-item {
-		--flow-subtitle-dot-left: calc((var(--item-image-to-content-spacing) * -1) - var(--item-image-max-width) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
+		--flow-subtitle-dot-left: calc((var(--item-image-to-content-spacing, 0rem) * -1) - var(--item-image-max-width, 0rem) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
 	}
 
 	/* TODO: explain important */
