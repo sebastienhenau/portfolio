@@ -5,3 +5,4 @@ export * from "./flow-items";
 export * from "./flow";
 export * from "./home";
 export * from "./about";
+export * from "./story";

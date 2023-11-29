@@ -37,7 +37,11 @@
 		)}
 	/>
 
-	<div class="row-start-2 row-end-3 col-start-2 col-end-4 mt-5">
+	<div
+		class={clsx("row-start-2 row-end-3 col-start-2 col-end-4", {
+			"mt-5": !!$$slots.header,
+		})}
+	>
 		<slot />
 	</div>
 
