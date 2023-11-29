@@ -1,15 +1,11 @@
 <script>
-	import { FlowDot, Tag } from "$components";
+	import { FlowSubtitle, Tag } from "$components";
 </script>
 
 <article>
 	<header class="flex justify-between items-start gap-x-6">
 		<div class="flex-1">
-			<h4 class="font-bold relative">
-				<FlowDot class="left-[calc(-2rem-1px-9px)]" />
-
-				Little Miss Robot
-			</h4>
+			<FlowSubtitle>Little Miss Robot</FlowSubtitle>
 
 			<!-- TODO: datetime -->
 			<time

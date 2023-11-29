@@ -4,10 +4,9 @@
 		Cta,
 		Divider,
 		Flow,
-		FlowSection,
+		FlowItemStory,
 		FlowTitle,
 		HomeAboutCard,
-		HomeStoryFlowItem,
 	} from "$components";
 </script>
 
@@ -15,52 +14,123 @@
 
 <Divider />
 
-<Flow>
-	<FlowSection index="1">
-		<div
-			class="flex items-center gap-x-5"
-			slot="header"
-		>
-			<Badge theme="accent">22</Badge>
+<Flow index="1">
+	<div
+		class="flex items-center gap-x-5"
+		slot="header"
+	>
+		<Badge theme="accent">22</Badge>
 
-			<FlowTitle>Stories</FlowTitle>
-		</div>
+		<FlowTitle>Stories</FlowTitle>
+	</div>
 
-		<HomeStoryFlowItem />
+	<ul>
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
+	</ul>
 
-		<Cta
-			button={{
-				action: {
-					href: "/",
-				},
-			}}
-			slot="footer"
-			text="Show all stories"
-		/>
-	</FlowSection>
+	<Cta
+		button={{
+			action: {
+				href: "/",
+			},
+		}}
+		slot="footer"
+		text="Show all stories"
+	/>
+</Flow>
 
-	<FlowSection index="2">
-		<div
-			class="flex items-center gap-x-5"
-			slot="header"
-		>
-			<Badge theme="accent">22</Badge>
+<Divider />
 
-			<FlowTitle>Projects</FlowTitle>
-		</div>
+<Flow index="2">
+	<div
+		class="flex items-center gap-x-5"
+		slot="header"
+	>
+		<Badge theme="accent">22</Badge>
 
-		<Cta
-			button={{
-				action: {
-					href: "/",
-				},
-			}}
-			slot="footer"
-			text="Show all projects"
-		/>
-	</FlowSection>
+		<FlowTitle>Projects</FlowTitle>
+	</div>
+
+	<Cta
+		button={{
+			action: {
+				href: "/",
+			},
+		}}
+		slot="footer"
+		text="Show all projects"
+	/>
 </Flow>

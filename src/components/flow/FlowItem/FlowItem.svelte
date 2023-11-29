@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FlowDot, Item } from "$components";
+	import { FlowSubtitle, Item } from "$components";
 	import type { TFlowItemItem, TFlowItemTitle } from "./FlowItem.types";
 
 	// -------------------------------------------------------------------------
@@ -13,11 +13,9 @@
 	{...item}
 	class="flow-item flow-item-pl"
 >
-	<h3 class="font-bold relative">
-		<FlowDot clas="relative" />
-
+	<FlowSubtitle>
 		{title}
-	</h3>
+	</FlowSubtitle>
 
 	<slot />
 </Item>

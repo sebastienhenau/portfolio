@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TFlowSectionIndex = string;
+export type TFlowIndex = string;
 
-export interface TFlowSection {
-	index: TFlowSectionIndex;
+export interface TFlow {
+	index?: TFlowIndex;
 }

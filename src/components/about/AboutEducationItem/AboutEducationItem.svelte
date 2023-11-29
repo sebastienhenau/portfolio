@@ -1,5 +1,5 @@
 <script>
-	import { FlowDot, Tag } from "$components";
+	import { FlowSubtitle, Tag } from "$components";
 </script>
 
 <article>
@@ -13,11 +13,7 @@
 				2014 - 2017
 			</time>
 
-			<h4 class="font-bold relative">
-				<FlowDot class="left-[calc(-2rem-1px-9px)]" />
-
-				Digital Design & Development (Devine)
-			</h4>
+			<FlowSubtitle>Digital Design & Development (Devine)</FlowSubtitle>
 		</div>
 
 		<Tag>Bachelor</Tag>

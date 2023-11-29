@@ -10,17 +10,22 @@
 		--flow-side-offset-width: calc((var(--flow-side-width) - var(--flow-side-border)) * 0.5);
 		--flow-left-spacing: theme("space.7");
 		--flow-left-spacing-from-line: calc(var(--flow-left-spacing) + var(--flow-side-offset-width));
+		--flow-first-column: calc(var(--flow-side-offset-width) + var(--flow-side-border));
+	}
+
+	.flow-grid-cols {
+		grid-template-columns: var(--flow-first-column) var(--flow-side-offset-width) 1fr;
+	}
+
+	.flow-line-w {
+		width: var(--flow-side-border);
 	}
 
 	/* ---------------------------------------------------------------------- */
-	/* flow-section */
+	/* flow-subtitle */
 	/* ---------------------------------------------------------------------- */
-	.flow-section {
-		--flow-section-first-column: calc(var(--flow-side-offset-width) + var(--flow-side-border));
-	}
-
-	.flow-section-grid-cols {
-		grid-template-columns: var(--flow-section-first-column) var(--flow-side-offset-width) 1fr;
+	.flow-subtitle-dot {
+		left: var(--flow-subtitle-dot-left, calc((var(--flow-left-spacing-from-line) * -1) - (var(--flow-side-border) * 0.5)));
 	}
 
 	/* ---------------------------------------------------------------------- */
@@ -34,18 +39,11 @@
 	/* flow-item */
 	/* ---------------------------------------------------------------------- */
 	.flow-item {
-		--flow-dot-left: calc((var(--item-image-to-content-spacing) * -1) - var(--item-image-max-width) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
+		--flow-subtitle-dot-left: calc((var(--item-image-to-content-spacing) * -1) - var(--item-image-max-width) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
 	}
 
 	/* TODO: explain important */
 	.flow-item-pl {
 		padding-left: var(--flow-left-spacing-from-line) !important;
-	}
-
-	/* ---------------------------------------------------------------------- */
-	/* flow-dot */
-	/* ---------------------------------------------------------------------- */
-	.flow-dot {
-		left: var(--flow-dot-left, 0);
 	}
 }

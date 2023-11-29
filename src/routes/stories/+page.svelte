@@ -1,29 +1,166 @@
 <script lang="ts">
-	import { Badge, Flow, FlowSection, HomeStoryFlowItem } from "$components";
+	import { Badge, Flow, FlowItemStory, FlowTitle } from "$components";
 </script>
 
-<!-- TODO: tag & structure -->
 <Flow>
-	<FlowSection index="1">
-		<div
-			class="flex items-center gap-x-5"
-			slot="header"
-		>
-			<Badge theme="accent">22</Badge>
+	<div
+		class="flex items-center gap-x-5"
+		slot="header"
+	>
+		<Badge theme="accent">22</Badge>
 
-			<h2 class="font-bold text-6">Stories</h2>
-		</div>
+		<FlowTitle>Stories</FlowTitle>
+	</div>
 
-		<HomeStoryFlowItem />
+	<ul>
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
 
-		<HomeStoryFlowItem />
-	</FlowSection>
+		<li>
+			<FlowItemStory
+				date="12 augustus 2023"
+				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				flowItem={{
+					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					item: {
+						image: {
+							border: true,
+							src: "/images/placeholder.jpg",
+							alt: "",
+						},
+					},
+				}}
+				link={{
+					action: {
+						href: "/",
+					},
+				}}
+				listTags={{
+					items: ["React", "Next.js", "Vue"],
+				}}
+			/>
+		</li>
+	</ul>
 </Flow>
