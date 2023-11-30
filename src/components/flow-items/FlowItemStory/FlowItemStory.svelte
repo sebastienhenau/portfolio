@@ -1,24 +1,34 @@
 <script lang="ts">
 	import { FlowItem, Link, ListTags } from "$components";
-	import type {
-		TFlowItemStoryDate,
-		TFlowItemStoryDescription,
-		TFlowItemStoryFlowItem,
-		TFlowItemStoryLink,
-		TFlowItemStoryListTags,
-	} from "./FlowItemStory.types";
+	import { useStory } from "$hooks";
+	import type { TStory } from "$types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let flowItem: TFlowItemStoryFlowItem;
-	export let date: TFlowItemStoryDate;
-	export let description: TFlowItemStoryDescription;
-	export let listTags: TFlowItemStoryListTags;
-	export let link: TFlowItemStoryLink;
+	export let story: TStory;
+
+	// -------------------------------------------------------------------------
+	// Hooks
+	// -------------------------------------------------------------------------
+	const { storyRoute } = useStory(story);
+
+	// -------------------------------------------------------------------------
+	// Variables
+	// -------------------------------------------------------------------------
+	const { title, image, date, description, tags } = story;
 </script>
 
-<FlowItem {...flowItem}>
+<FlowItem
+	item={{
+		image: {
+			border: true,
+			src: image,
+			alt: title,
+		},
+	}}
+	{title}
+>
 	<time
 		class="text-site-contrast-2 text-3 block"
 		datetime=""
@@ -31,8 +41,14 @@
 	</p>
 
 	<footer class="mt-7 flex justify-between gap-x-7">
-		<ListTags {...listTags} />
+		<ListTags items={tags} />
 
-		<Link {...link}>Read more</Link>
+		<Link
+			action={{
+				href: storyRoute,
+			}}
+		>
+			Read more
+		</Link>
 	</footer>
 </FlowItem>

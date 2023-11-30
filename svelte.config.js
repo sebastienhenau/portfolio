@@ -26,6 +26,10 @@ const config = {
 			$styles: "src/styles",
 			$components: "src/components",
 			$content: "src/content",
+			$hooks: "src/hooks",
+			$types: "src/types",
+			$constants: "src/constants",
+			$utilities: "src/utilities",
 		},
 	},
 };
