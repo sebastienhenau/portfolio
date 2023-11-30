@@ -1,4 +1,6 @@
-export default [
+import type { TStories } from "$types";
+
+const stories: TStories = [
 	{
 		slug: "lorem",
 		date: "12 augustus 2023",
@@ -9,3 +11,5 @@ export default [
 		tags: ["React", "Next.js", "Vue"],
 	},
 ];
+
+export default stories;

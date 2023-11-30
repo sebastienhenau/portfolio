@@ -4,7 +4,6 @@
 		Cta,
 		Divider,
 		Flow,
-		FlowItemStory,
 		FlowTitle,
 		HomeAboutCard,
 	} from "$components";
@@ -26,7 +25,7 @@
 
 	<ul>
 		<li>
-			<FlowItemStory
+			<!--<FlowItemStory
 				date="12 augustus 2023"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 				flowItem={{
@@ -47,11 +46,11 @@
 				listTags={{
 					items: ["React", "Next.js", "Vue"],
 				}}
-			/>
+			/>-->
 		</li>
 
 		<li>
-			<FlowItemStory
+			<!--<FlowItemStory
 				date="12 augustus 2023"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 				flowItem={{
@@ -72,11 +71,11 @@
 				listTags={{
 					items: ["React", "Next.js", "Vue"],
 				}}
-			/>
+			/>-->
 		</li>
 
 		<li>
-			<FlowItemStory
+			<!--<FlowItemStory
 				date="12 augustus 2023"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 				flowItem={{
@@ -97,7 +96,7 @@
 				listTags={{
 					items: ["React", "Next.js", "Vue"],
 				}}
-			/>
+			/>-->
 		</li>
 	</ul>
 
