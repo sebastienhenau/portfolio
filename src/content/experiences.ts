@@ -1,4 +1,6 @@
-export default [
+import type { TExperiences } from "$components";
+
+const experiences: TExperiences = [
 	{
 		role: "Front-end lead",
 		company: "Little Miss Robot",
@@ -30,3 +32,5 @@ export default [
 		time: "2015",
 	},
 ];
+
+export default experiences;

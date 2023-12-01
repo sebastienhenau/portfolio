@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeaderLogo from "./HeaderLogo";
 	import HeaderNavigation from "./HeaderNavigation";
+	import HeaderDarkModeToggle from "./HeaderDarkModeToggle";
 </script>
 
 <header
@@ -23,7 +24,7 @@
 			</div>
 		</div>
 
-		<!-- TODO: dark mode switcher -->
+		<HeaderDarkModeToggle />
 	</div>
 
 	<HeaderNavigation />

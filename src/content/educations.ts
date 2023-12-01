@@ -1,4 +1,6 @@
-export default [
+import type { TEducations } from "$types";
+
+const educations: TEducations = [
 	{
 		name: "Digital Design & Development (Devine)",
 		school: "Howest University college West-Flanders",
@@ -12,3 +14,5 @@ export default [
 		time: "2011 - 2014",
 	},
 ];
+
+export default educations;

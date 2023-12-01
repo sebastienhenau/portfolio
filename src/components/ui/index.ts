@@ -33,3 +33,6 @@ export * from "./Dot";
 
 export { default as Cta } from "./Cta";
 export * from "./Cta";
+
+export { default as Icon } from "./Icon";
+export * from "./Icon";
