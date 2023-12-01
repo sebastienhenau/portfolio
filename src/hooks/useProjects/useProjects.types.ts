@@ -1,10 +1,10 @@
-import type { TStory } from "$types";
+import type { TProjects } from "$types";
 
 // -----------------------------------------------------------------------------
-// Props
+// Return
 // -----------------------------------------------------------------------------
-export type TFlowItemStoryStory = TStory;
-
-export interface TFlowItemStory {
-	story: TFlowItemStoryStory;
+export interface TUseProjects {
+	projects: TProjects;
+	projectsAmount: number;
+	latestProjects: TProjects;
 }

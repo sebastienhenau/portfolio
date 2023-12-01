@@ -1,26 +1,28 @@
 <script lang="ts">
 	import { FlowItem, Link, ListTags } from "$components";
-	import type {
-		TFlowItemProjectCompany,
-		TFlowItemProjectDate,
-		TFlowItemProjectFlowItem,
-		TFlowItemProjectLink,
-		TFlowItemProjectListTags,
-		TFlowItemProjectRole,
-	} from "./FlowItemProject.types";
+	import type { TFlowItemProjectProject } from "./FlowItemProject.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let flowItem: TFlowItemProjectFlowItem;
-	export let date: TFlowItemProjectDate;
-	export let company: TFlowItemProjectCompany;
-	export let role: TFlowItemProjectRole;
-	export let listTags: TFlowItemProjectListTags;
-	export let link: TFlowItemProjectLink;
+	export let project: TFlowItemProjectProject;
+
+	// -------------------------------------------------------------------------
+	// Variables
+	// -------------------------------------------------------------------------
+	const { name, image, company, role, date, technologies, link } = project;
 </script>
 
-<FlowItem {...flowItem}>
+<FlowItem
+	item={{
+		image: {
+			border: true,
+			src: image,
+			alt: name,
+		},
+	}}
+	title={name}
+>
 	<ul class="space-y-2 mt-2">
 		<li class="text-site-contrast-2">
 			<time
@@ -41,8 +43,15 @@
 	</ul>
 
 	<footer class="mt-7 flex justify-between gap-x-7">
-		<ListTags {...listTags} />
+		<ListTags items={technologies} />
 
-		<Link {...link}>Check it out</Link>
+		<Link
+			action={{
+				href: link,
+				target: "_blank",
+			}}
+		>
+			Check it out
+		</Link>
 	</footer>
 </FlowItem>

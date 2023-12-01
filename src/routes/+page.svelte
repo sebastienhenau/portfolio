@@ -4,9 +4,19 @@
 		Cta,
 		Divider,
 		Flow,
+		FlowItemProject,
+		FlowItemStory,
 		FlowTitle,
 		HomeAboutCard,
 	} from "$components";
+	import { useProjects, useStories } from "$hooks";
+	import { ROUTES_PROJECTS, ROUTES_STORIES } from "$constants";
+
+	// -------------------------------------------------------------------------
+	// Hooks
+	// -------------------------------------------------------------------------
+	const { storiesAmount, latestStories } = useStories();
+	const { projectsAmount, latestProjects } = useProjects();
 </script>
 
 <HomeAboutCard />
@@ -18,92 +28,23 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">22</Badge>
+		<Badge theme="accent">{storiesAmount}</Badge>
 
 		<FlowTitle>Stories</FlowTitle>
 	</div>
 
 	<ul>
-		<li>
-			<!--<FlowItemStory
-				date="12 augustus 2023"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-				flowItem={{
-					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-					item: {
-						image: {
-							border: true,
-							src: "/images/placeholder.jpg",
-							alt: "",
-						},
-					},
-				}}
-				link={{
-					action: {
-						href: "/",
-					},
-				}}
-				listTags={{
-					items: ["React", "Next.js", "Vue"],
-				}}
-			/>-->
-		</li>
-
-		<li>
-			<!--<FlowItemStory
-				date="12 augustus 2023"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-				flowItem={{
-					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-					item: {
-						image: {
-							border: true,
-							src: "/images/placeholder.jpg",
-							alt: "",
-						},
-					},
-				}}
-				link={{
-					action: {
-						href: "/",
-					},
-				}}
-				listTags={{
-					items: ["React", "Next.js", "Vue"],
-				}}
-			/>-->
-		</li>
-
-		<li>
-			<!--<FlowItemStory
-				date="12 augustus 2023"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-				flowItem={{
-					title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-					item: {
-						image: {
-							border: true,
-							src: "/images/placeholder.jpg",
-							alt: "",
-						},
-					},
-				}}
-				link={{
-					action: {
-						href: "/",
-					},
-				}}
-				listTags={{
-					items: ["React", "Next.js", "Vue"],
-				}}
-			/>-->
-		</li>
+		{#each latestStories as story}
+			<li>
+				<FlowItemStory {story} />
+			</li>
+		{/each}
 	</ul>
 
 	<Cta
 		button={{
 			action: {
-				href: "/",
+				href: ROUTES_STORIES,
 			},
 		}}
 		slot="footer"
@@ -118,15 +59,23 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">22</Badge>
+		<Badge theme="accent">{projectsAmount}</Badge>
 
 		<FlowTitle>Projects</FlowTitle>
 	</div>
 
+	<ul>
+		{#each latestProjects as project}
+			<li>
+				<FlowItemProject {project} />
+			</li>
+		{/each}
+	</ul>
+
 	<Cta
 		button={{
 			action: {
-				href: "/",
+				href: ROUTES_PROJECTS,
 			},
 		}}
 		slot="footer"

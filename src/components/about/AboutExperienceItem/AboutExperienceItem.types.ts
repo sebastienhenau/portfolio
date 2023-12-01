@@ -1,10 +1,10 @@
-import type { TProject } from "$types";
+import type { TExperience } from "$types";
 
 // -----------------------------------------------------------------------------
 // Props
 // -----------------------------------------------------------------------------
-export type TFlowItemProjectProject = TProject;
+export type TAboutExperienceItemExperience = TExperience;
 
-export interface TFlowItemProject {
-	project: TFlowItemProjectProject;
+export interface TAboutExperienceItem {
+	experience: TExperience;
 }

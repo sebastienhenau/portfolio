@@ -1,5 +1,6 @@
 <script>
 	import { Button, ButtonText, Card } from "$components";
+	import { ROUTES_ABOUT } from "$constants";
 </script>
 
 <!-- TODO: add link Little Miss Robot -->
@@ -27,7 +28,7 @@
 	<footer class="mt-7 flex justify-between gap-x-7">
 		<ul></ul>
 
-		<Button action={{ href: "/" }}>
+		<Button action={{ href: ROUTES_ABOUT }}>
 			<ButtonText>More about me</ButtonText>
 		</Button>
 	</footer>

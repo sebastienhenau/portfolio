@@ -6,4 +6,5 @@ import type { TStories } from "$types";
 export interface TUseStories {
 	stories: TStories;
 	storiesAmount: number;
+	latestStories: TStories;
 }

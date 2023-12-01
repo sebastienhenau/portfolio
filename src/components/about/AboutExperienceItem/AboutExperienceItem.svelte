@@ -1,28 +1,36 @@
-<script>
+<script lang="ts">
 	import { FlowSubtitle, Tag } from "$components";
+	import type { TAboutExperienceItemExperience } from "./AboutExperienceItem.types";
+
+	// -------------------------------------------------------------------------
+	// Props
+	// -------------------------------------------------------------------------
+	export let experience: TAboutExperienceItemExperience;
+
+	// -------------------------------------------------------------------------
+	// Variables
+	// -------------------------------------------------------------------------
+	const { role, company, description, time } = experience;
 </script>
 
 <article>
 	<header class="flex justify-between items-start gap-x-6">
 		<div class="flex-1">
-			<FlowSubtitle>Little Miss Robot</FlowSubtitle>
+			<FlowSubtitle>{company}</FlowSubtitle>
 
 			<!-- TODO: datetime -->
 			<time
 				class="text-site-contrast-2 text-3 leading-none block"
 				datetime=""
 			>
-				2022 - 2023
+				{time}
 			</time>
 		</div>
 
-		<Tag>Front-end lead</Tag>
+		<Tag>{role}</Tag>
 	</header>
 
 	<p class="mt-4">
-		Na vijf jaar als front-end developer kreeg ik de kans een leidinggevende
-		rol op me te nemen, waarbij ik mijn focus behield op het ontwikkelen en
-		onderhouden van digitale producten, terwijl ik tevens het development
-		team begeleidde en leidde.
+		{description}
 	</p>
 </article>

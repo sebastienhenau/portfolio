@@ -10,6 +10,7 @@
 		FlowContent,
 		FlowTitle,
 	} from "$components";
+	import { educations, experiences } from "$content";
 </script>
 
 <AboutIntroCard />
@@ -31,13 +32,11 @@
 		</p>
 
 		<ul class="mt-6 space-y-6">
-			<li>
-				<AboutExperienceItem />
-			</li>
-
-			<li>
-				<AboutExperienceItem />
-			</li>
+			{#each experiences as experience}
+				<li>
+					<AboutExperienceItem {experience} />
+				</li>
+			{/each}
 		</ul>
 	</FlowContent>
 </Flow>
@@ -79,13 +78,11 @@
 		</p>
 
 		<ul class="mt-6 space-y-6">
-			<li>
-				<AboutEducationItem />
-			</li>
-
-			<li>
-				<AboutEducationItem />
-			</li>
+			{#each educations as education}
+				<li>
+					<AboutEducationItem {education} />
+				</li>
+			{/each}
 		</ul>
 	</FlowContent>
 </Flow>

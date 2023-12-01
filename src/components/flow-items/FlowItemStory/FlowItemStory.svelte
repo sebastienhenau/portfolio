@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { FlowItem, Link, ListTags } from "$components";
 	import { useStory } from "$hooks";
-	import type { TStory } from "$types";
+	import type { TFlowItemStoryStory } from "./FlowItemStory.types";
 
 	// -------------------------------------------------------------------------
 	// Props
 	// -------------------------------------------------------------------------
-	export let story: TStory;
+	export let story: TFlowItemStoryStory;
 
 	// -------------------------------------------------------------------------
 	// Hooks
