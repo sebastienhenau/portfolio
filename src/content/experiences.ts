@@ -1,4 +1,4 @@
-import type { TExperiences } from "$components";
+import type { TExperiences } from "$types";
 
 const experiences: TExperiences = [
 	{
