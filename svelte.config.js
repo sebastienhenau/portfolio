@@ -30,6 +30,7 @@ const config = {
 			$types: "src/types",
 			$constants: "src/constants",
 			$utilities: "src/utilities",
+			$stores: "src/stores",
 		},
 	},
 };
