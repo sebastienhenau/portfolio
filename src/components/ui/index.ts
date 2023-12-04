@@ -4,6 +4,9 @@ export * from "./Action";
 export { default as ActionWrapper } from "./ActionWrapper";
 export * from "./ActionWrapper";
 
+export { default as ActionIcon } from "./ActionIcon";
+export * from "./ActionIcon";
+
 export { default as Image } from "./Image";
 export * from "./Image";
 

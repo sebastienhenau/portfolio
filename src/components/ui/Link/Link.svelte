@@ -11,7 +11,7 @@
 
 <Action
 	{...action}
-	class={clsx("font-bold text-accent leading-none", $$props.class)}
+	class={clsx("inline-flex items-center gap-3 text-accent", $$props.class)}
 >
 	<slot />
 </Action>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FlowItem, Link, ListTags } from "$components";
+	import { FlowItem, Link, LinkIcon, LinkText, ListTags } from "$components";
 	import type { TFlowItemProjectProject } from "./FlowItemProject.types";
 
 	// -------------------------------------------------------------------------
@@ -51,7 +51,12 @@
 				target: "_blank",
 			}}
 		>
-			Check it out
+			<LinkText>Check it out</LinkText>
+
+			<LinkIcon
+				class="w-6"
+				icon={{ name: "ChevronRight" }}
+			/>
 		</Link>
 	</footer>
 </FlowItem>

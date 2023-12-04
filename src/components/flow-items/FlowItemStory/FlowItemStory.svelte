@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FlowItem, Link, ListTags } from "$components";
+	import { FlowItem, Link, LinkIcon, LinkText, ListTags } from "$components";
 	import { useStory } from "$hooks";
 	import type { TFlowItemStoryStory } from "./FlowItemStory.types";
 
@@ -48,7 +48,12 @@
 				href: storyRoute,
 			}}
 		>
-			Read more
+			<LinkText>Read more</LinkText>
+
+			<LinkIcon
+				class="w-6"
+				icon={{ name: "ChevronRight" }}
+			/>
 		</Link>
 	</footer>
 </FlowItem>

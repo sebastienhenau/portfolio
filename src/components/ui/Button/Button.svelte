@@ -11,7 +11,10 @@
 
 <Action
 	{...action}
-	class={clsx("relative py-3 px-6", $$props.class)}
+	class={clsx(
+		"inline-flex justify-center items-center gap-3 relative py-3 px-6",
+		$$props.class
+	)}
 >
 	<div
 		class="absolute inset-0 z-0 bg-accent rounded-lg translate-x-2 translate-y-2"

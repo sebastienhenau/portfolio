@@ -1,5 +1,11 @@
 <script>
-	import { Button, ButtonText, Card } from "$components";
+	import {
+		ActionIcon,
+		Button,
+		ButtonIcon,
+		ButtonText,
+		Card,
+	} from "$components";
 	import { ROUTES_ABOUT } from "$constants";
 </script>
 
@@ -26,10 +32,41 @@
 
 	<!-- TODO: github & linked in icons -->
 	<footer class="mt-7 flex justify-between gap-x-7">
-		<ul></ul>
+		<ul class="flex items-center gap-3">
+			<li>
+				<ActionIcon
+					action={{
+						href: "https://github.com/sebastienhenau",
+						target: "_blank",
+					}}
+					icon={{
+						class: "w-6",
+						name: "Github",
+					}}
+				/>
+			</li>
+
+			<li>
+				<ActionIcon
+					action={{
+						href: "https://linkedin.com/in/sébastien-henau",
+						target: "_blank",
+					}}
+					icon={{
+						class: "w-6",
+						name: "Linkedin",
+					}}
+				/>
+			</li>
+		</ul>
 
 		<Button action={{ href: ROUTES_ABOUT }}>
 			<ButtonText>More about me</ButtonText>
+
+			<ButtonIcon
+				class="w-6"
+				icon={{ name: "ChevronRight" }}
+			/>
 		</Button>
 	</footer>
 </Card>

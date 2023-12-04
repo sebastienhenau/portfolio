@@ -33,9 +33,7 @@
 
 		<ul class="mt-6 space-y-6">
 			{#each experiences as experience}
-				<li>
-					<AboutExperienceItem {experience} />
-				</li>
+				<AboutExperienceItem {experience} />
 			{/each}
 		</ul>
 	</FlowContent>

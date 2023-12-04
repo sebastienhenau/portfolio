@@ -16,7 +16,9 @@
 <article>
 	<header class="flex justify-between items-start gap-x-6">
 		<div class="flex-1">
-			<FlowSubtitle>{company}</FlowSubtitle>
+			<FlowSubtitle>
+				{company}
+			</FlowSubtitle>
 
 			<!-- TODO: datetime -->
 			<time
