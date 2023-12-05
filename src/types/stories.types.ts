@@ -5,6 +5,7 @@ export interface TStory {
 	title: string;
 	image: string;
 	tags: string[];
+	published?: boolean;
 }
 
 export type TStories = TStory[];

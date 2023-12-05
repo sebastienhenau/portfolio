@@ -5,17 +5,16 @@
 		Divider,
 		Flow,
 		FlowItemProject,
-		FlowItemStory,
 		FlowTitle,
 		HomeAboutCard,
 	} from "$components";
-	import { useProjects, useStories } from "$hooks";
+	import { useProjects } from "$hooks";
 	import { ROUTES_PROJECTS, ROUTES_STORIES } from "$constants";
 
 	// -------------------------------------------------------------------------
 	// Hooks
 	// -------------------------------------------------------------------------
-	const { storiesAmount, latestStories } = useStories();
+	// const { storiesAmount, latestStories } = useStories();
 	const { projectsAmount, latestProjects } = useProjects();
 </script>
 
@@ -28,18 +27,18 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">{storiesAmount}</Badge>
+		<Badge theme="accent"></Badge>
 
 		<FlowTitle>Stories</FlowTitle>
 	</div>
 
-	<ul>
-		{#each latestStories as story}
-			<li>
-				<FlowItemStory {story} />
-			</li>
-		{/each}
-	</ul>
+	<!--	<ul>-->
+	<!--		{#each latestStories as story}-->
+	<!--			<li>-->
+	<!--				<FlowItemStory {story} />-->
+	<!--			</li>-->
+	<!--		{/each}-->
+	<!--	</ul>-->
 
 	<Cta
 		button={{

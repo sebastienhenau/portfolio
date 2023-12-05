@@ -34,26 +34,26 @@
 	<footer class="mt-7 flex justify-between gap-x-7">
 		<ul class="flex items-center gap-3">
 			<li>
+				<!-- TODO: class: "w-6", -->
 				<ActionIcon
 					action={{
 						href: "https://github.com/sebastienhenau",
 						target: "_blank",
 					}}
 					icon={{
-						class: "w-6",
 						name: "Github",
 					}}
 				/>
 			</li>
 
 			<li>
+				<!-- TODO: class: "w-6", -->
 				<ActionIcon
 					action={{
 						href: "https://linkedin.com/in/sébastien-henau",
 						target: "_blank",
 					}}
 					icon={{
-						class: "w-6",
 						name: "Linkedin",
 					}}
 				/>

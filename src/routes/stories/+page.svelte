@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { Badge, Flow, FlowItemStory, FlowTitle } from "$components";
-	import { useStories } from "$hooks";
+	import type { TPageData } from "./page.types";
 
 	// -------------------------------------------------------------------------
-	// hooks
+	// Server
 	// -------------------------------------------------------------------------
-	const { storiesAmount, stories } = useStories();
+	export let data: TPageData;
 </script>
 
 <Flow>
@@ -13,13 +13,13 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">{storiesAmount}</Badge>
+		<Badge theme="accent">{data.stories.length}</Badge>
 
 		<FlowTitle>Stories</FlowTitle>
 	</div>
 
 	<ul>
-		{#each stories as story}
+		{#each data.stories as story}
 			<li>
 				<FlowItemStory {story} />
 			</li>

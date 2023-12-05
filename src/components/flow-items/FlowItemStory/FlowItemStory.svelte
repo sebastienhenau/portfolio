@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { FlowItem, Link, LinkIcon, LinkText, ListTags } from "$components";
-	import { useStory } from "$hooks";
+	import { insertDynamicRouteParam } from "$utilities";
+	import { ROUTES_STORY } from "$constants";
 	import type { TFlowItemStoryStory } from "./FlowItemStory.types";
 
 	// -------------------------------------------------------------------------
@@ -9,14 +10,9 @@
 	export let story: TFlowItemStoryStory;
 
 	// -------------------------------------------------------------------------
-	// Hooks
-	// -------------------------------------------------------------------------
-	const { storyRoute } = useStory(story);
-
-	// -------------------------------------------------------------------------
 	// Variables
 	// -------------------------------------------------------------------------
-	const { title, image, date, description, tags } = story;
+	const { slug, title, image, date, description, tags } = story;
 </script>
 
 <FlowItem
@@ -45,7 +41,7 @@
 
 		<Link
 			action={{
-				href: storyRoute,
+				href: insertDynamicRouteParam(ROUTES_STORY, "slug", slug),
 			}}
 		>
 			<LinkText>Read more</LinkText>

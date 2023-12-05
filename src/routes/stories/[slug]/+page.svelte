@@ -1,101 +1,101 @@
 <script lang="ts">
-	import {
-		Divider,
-		Flow,
-		FlowContent,
-		FlowSubtitle,
-		Image,
-		StoryHeader,
-		StoryIntro,
-		StoryOutro,
-	} from "$components";
+	import { StoryHeader } from "$components";
+	import type { TPageData } from "./page.types";
+
+	// -------------------------------------------------------------------------
+	// Server
+	// -------------------------------------------------------------------------
+	export let data: TPageData;
 </script>
 
+<!-- TODO: detail page -->
 <article>
 	<StoryHeader
-		date="12 augustus 2023"
+		date={data.metadata.date}
 		listTags={{
-			items: ["React", "Vue", "Next.js"],
+			items: data.metadata.tags,
 		}}
-		title="Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet,
-		consectetur."
+		title={data.metadata.title}
 	/>
 
-	<StoryIntro>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula
-		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna
-		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur
-		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
-		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh
-		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit
-		amet, consectetur adipiscing elit.
-	</StoryIntro>
+	<svelte:component this={data.content} />
 
-	<Divider />
+	<!--	-->
+	<!--	<StoryIntro>-->
+	<!--		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
+	<!--		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
+	<!--		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+	<!--		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
+	<!--		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
+	<!--		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+	<!--		amet, consectetur adipiscing elit.-->
+	<!--	</StoryIntro>-->
 
-	<Flow>
-		<FlowContent>
-			<FlowSubtitle>Lorem ipsum dolor sit amet.</FlowSubtitle>
+	<!--	<Divider />-->
 
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
-				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,
-				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. In eget ligula vel ligula imperdiet
-				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,
-				ultrices ante. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit.
-			</p>
+	<!--	<Flow>-->
+	<!--		<FlowContent>-->
+	<!--			<FlowSubtitle>Lorem ipsum dolor sit amet.</FlowSubtitle>-->
 
-			<Image
-				alt=""
-				border
-				class="w-full mt-6 h-[250px]"
-				src="/images/placeholder.jpg"
-			/>
+	<!--			<p>-->
+	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+	<!--				adipiscing elit.-->
+	<!--			</p>-->
 
-			<FlowSubtitle class="mt-6">
-				Lorem ipsum dolor sit amet.
-			</FlowSubtitle>
+	<!--			<Image-->
+	<!--				alt=""-->
+	<!--				border-->
+	<!--				class="w-full mt-6 h-[250px]"-->
+	<!--				src="/images/placeholder.jpg"-->
+	<!--			/>-->
 
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
-				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,
-				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. In eget ligula vel ligula imperdiet
-				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,
-				ultrices ante. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit.
-			</p>
+	<!--			<FlowSubtitle class="mt-6">-->
+	<!--				Lorem ipsum dolor sit amet.-->
+	<!--			</FlowSubtitle>-->
 
-			<FlowSubtitle class="mt-6">
-				Lorem ipsum dolor sit amet.
-			</FlowSubtitle>
+	<!--			<p>-->
+	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+	<!--				adipiscing elit.-->
+	<!--			</p>-->
 
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget
-				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,
-				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. In eget ligula vel ligula imperdiet
-				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,
-				ultrices ante. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit.
-			</p>
-		</FlowContent>
-	</Flow>
+	<!--			<FlowSubtitle class="mt-6">-->
+	<!--				Lorem ipsum dolor sit amet.-->
+	<!--			</FlowSubtitle>-->
 
-	<Divider />
+	<!--			<p>-->
+	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+	<!--				adipiscing elit.-->
+	<!--			</p>-->
+	<!--		</FlowContent>-->
+	<!--	</Flow>-->
 
-	<StoryOutro>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula
-		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna
-		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur
-		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
-		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh
-		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit
-		amet, consectetur adipiscing elit.
-	</StoryOutro>
+	<!--	<Divider />-->
+
+	<!--	<StoryOutro>-->
+	<!--		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
+	<!--		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
+	<!--		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+	<!--		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
+	<!--		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
+	<!--		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+	<!--		amet, consectetur adipiscing elit.-->
+	<!--	</StoryOutro>-->
 </article>
