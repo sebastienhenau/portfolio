@@ -5,17 +5,23 @@
 		Divider,
 		Flow,
 		FlowItemProject,
+		FlowItemStory,
 		FlowTitle,
 		HomeAboutCard,
 	} from "$components";
-	import { useProjects } from "$hooks";
 	import { ROUTES_PROJECTS, ROUTES_STORIES } from "$constants";
+	import type { TPageData } from "./page.types";
+	import { projects } from "$content";
 
 	// -------------------------------------------------------------------------
-	// Hooks
+	// Server
 	// -------------------------------------------------------------------------
-	// const { storiesAmount, latestStories } = useStories();
-	const { projectsAmount, latestProjects } = useProjects();
+	export let data: TPageData;
+
+	// -------------------------------------------------------------------------
+	// Variables
+	// -------------------------------------------------------------------------
+	const lastProjects = [...projects].splice(0, 3);
 </script>
 
 <HomeAboutCard />
@@ -27,18 +33,18 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent"></Badge>
+		<Badge theme="accent">{data.stories.length}</Badge>
 
 		<FlowTitle>Stories</FlowTitle>
 	</div>
 
-	<!--	<ul>-->
-	<!--		{#each latestStories as story}-->
-	<!--			<li>-->
-	<!--				<FlowItemStory {story} />-->
-	<!--			</li>-->
-	<!--		{/each}-->
-	<!--	</ul>-->
+	<ul>
+		{#each data.stories as story}
+			<li>
+				<FlowItemStory {story} />
+			</li>
+		{/each}
+	</ul>
 
 	<Cta
 		button={{
@@ -58,13 +64,13 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">{projectsAmount}</Badge>
+		<Badge theme="accent">{projects.length}</Badge>
 
 		<FlowTitle>Projects</FlowTitle>
 	</div>
 
 	<ul>
-		{#each latestProjects as project}
+		{#each lastProjects as project}
 			<li>
 				<FlowItemProject {project} />
 			</li>

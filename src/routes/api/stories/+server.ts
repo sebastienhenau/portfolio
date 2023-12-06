@@ -1,8 +1,14 @@
 import { getStories } from "$services";
 import { json } from "@sveltejs/kit";
 
-export const GET = async () => {
-	const stories = await getStories();
+import type { RequestEvent } from "./$types";
+
+export const GET = async ({ url }: RequestEvent) => {
+	const limit = url.searchParams.get("limit");
+
+	const stories = await getStories({
+		limit: Number(limit),
+	});
 
 	return json(stories);
 };

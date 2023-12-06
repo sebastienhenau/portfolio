@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="" />
+    <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/routes/+page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/page.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/stories/getStories/getStories.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/useProjects.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/useProjects.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/api/stories/+server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/stories/+server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/projects/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/projects/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/stories/getStories/getStories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/stories/getStories/getStories.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/story/Intro",
+    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/routes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,11 +76,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$/src/stories" />
       <recent name="$PROJECT_DIR$/src/components/story/Intro" />
       <recent name="$PROJECT_DIR$/src/components/flow-items/FlowItemProject" />
       <recent name="$PROJECT_DIR$/src/components/home/HomeAboutCard" />
-      <recent name="$PROJECT_DIR$/src/components/flow-items" />
-      <recent name="$PROJECT_DIR$/src/components/Flow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/flow-items/FlowItemStory" />
@@ -102,6 +115,8 @@
       <workItem from="1700663160504" duration="39795000" />
       <workItem from="1701090298194" duration="14680000" />
       <workItem from="1701255062245" duration="3210000" />
+      <workItem from="1701785977664" duration="578000" />
+      <workItem from="1701789466572" duration="3429000" />
     </task>
     <servers />
   </component>

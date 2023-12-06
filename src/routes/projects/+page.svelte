@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { Badge, Flow, FlowItemProject, FlowTitle } from "$components";
-	import { useProjects } from "$hooks";
-
-	// -------------------------------------------------------------------------
-	// hooks
-	// -------------------------------------------------------------------------
-	const { projectsAmount, projects } = useProjects();
+	import { projects } from "$content";
 </script>
 
 <!-- TODO: link projects by companies -->
@@ -14,7 +9,7 @@
 		class="flex items-center gap-x-5"
 		slot="header"
 	>
-		<Badge theme="accent">{projectsAmount}</Badge>
+		<Badge theme="accent">{projects.length}</Badge>
 
 		<FlowTitle>Made at Little Miss Robot</FlowTitle>
 	</div>

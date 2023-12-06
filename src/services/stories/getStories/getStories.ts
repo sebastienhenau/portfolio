@@ -1,33 +1,47 @@
 import type { TStories, TStory } from "$types";
 
-const getStories = async () => {
-	const stories: TStories = [];
+import type { TGetStoriesOptions } from "./getStories.types";
+
+const getStories = async ({ limit = null }: TGetStoriesOptions) => {
+	// const stories: TStories = [];
 
 	const paths = import.meta.glob("/src/stories/*.md", {
 		eager: true,
 	});
 
-	for (const path in paths) {
-		const file = paths[path];
-		const slug = path.split("/").at(-1)?.replace(".md", "") || "";
+	const stories = Object.entries(paths)
+		.reduce<TStories>((result, [path, file]) => {
+			const slug = path.split("/").at(-1)?.replace(".md", "") || "";
 
-		if (!(file && typeof file === "object" && "metadata" in file && slug)) {
-			continue;
-		}
+			if (
+				!(
+					file &&
+					typeof file === "object" &&
+					"metadata" in file &&
+					slug
+				)
+			) {
+				return result;
+			}
 
-		const story = {
-			slug,
-			...(file.metadata as Omit<TStory, "slug">),
-		};
+			const story = {
+				slug,
+				...(file.metadata as Omit<TStory, "slug">),
+			};
 
-		if (!story.published) {
-			continue;
-		}
+			if (!story.published) {
+				return result;
+			}
 
-		stories.push(story);
-	}
+			return [...result, story];
+		}, [])
+		.toSorted((first, second) => {
+			return (
+				new Date(second.date).getTime() - new Date(first.date).getTime()
+			);
+		});
 
-	return stories;
+	return limit !== null ? [...stories].slice(0, limit) : stories;
 };
 
 export default getStories;
