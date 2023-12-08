@@ -12,3 +12,6 @@ export * from "./FlowTitle";
 
 export { default as FlowSubtitle } from "./FlowSubtitle";
 export * from "./FlowSubtitle";
+
+export { default as FlowTable } from "./FlowTable";
+export * from "./FlowTable";

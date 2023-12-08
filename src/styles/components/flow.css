@@ -25,7 +25,7 @@
 	/* flow-subtitle */
 	/* ---------------------------------------------------------------------- */
 	.flow-subtitle-dot {
-		left: var(--flow-subtitle-dot-left, calc((var(--flow-left-spacing-from-line) * -1) - (var(--flow-side-border) * 0.5)));
+		left: calc((var(--flow-left-spacing-from-line) * -1) - (var(--flow-side-border) * 0.5));
 	}
 
 	/* ---------------------------------------------------------------------- */
@@ -38,12 +38,32 @@
 	/* ---------------------------------------------------------------------- */
 	/* flow-item */
 	/* ---------------------------------------------------------------------- */
-	.flow-item {
-		--flow-subtitle-dot-left: calc((var(--item-image-to-content-spacing, 0rem) * -1) - var(--item-image-max-width, 0rem) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
+	.flow-item-dot {
+		left: calc((var(--item-image-to-content-spacing, 0rem) * -1) - var(--item-image-max-width, 0rem) - var(--flow-left-spacing) - (var(--flow-side-border) * 0.5) - var(--flow-side-offset-width));
 	}
 
 	/* TODO: explain important */
 	.flow-item-pl {
 		padding-left: var(--flow-left-spacing-from-line) !important;
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-table */
+	/* ---------------------------------------------------------------------- */
+	.flow-table-pl {
+		padding-left: var(--flow-left-spacing-from-line);
+	}
+
+	/* ---------------------------------------------------------------------- */
+	/* flow-table-body-row */
+	/* ---------------------------------------------------------------------- */
+	/* TODO: explain important */
+	.flow-table-body-row::before {
+		width: calc(100% + var(--flow-left-spacing-from-line));
+		left: calc(var(--flow-left-spacing-from-line) * -1) !important;
+	}
+
+	.flow-table-body-row-dot-column {
+		left: calc((var(--flow-left-spacing-from-line) * -1) - (var(--flow-side-border) * 0.5));
 	}
 }

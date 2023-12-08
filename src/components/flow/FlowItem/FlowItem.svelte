@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { FlowSubtitle, Item } from "$components";
+	import clsx from "clsx";
+	import { Dot, Item } from "$components";
 	import type { TFlowItemItem, TFlowItemTitle } from "./FlowItem.types";
 
 	// -------------------------------------------------------------------------
@@ -13,9 +14,11 @@
 	{...item}
 	class="flow-item flow-item-pl"
 >
-	<FlowSubtitle>
+	<h3 class={clsx("font-bold relative", $$props.class)}>
+		<Dot class="flow-item-dot absolute top-[0.4375rem] -translate-x-1/2" />
+
 		{title}
-	</FlowSubtitle>
+	</h3>
 
 	<slot />
 </Item>

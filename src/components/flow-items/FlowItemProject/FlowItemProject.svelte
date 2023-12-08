@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { FlowItem, Link, LinkIcon, LinkText, ListTags } from "$components";
 	import type { TFlowItemProjectProject } from "./FlowItemProject.types";
+	import { FlowItem, Link, LinkIcon, LinkText, ListTags } from "$components";
 
 	// -------------------------------------------------------------------------
 	// Props

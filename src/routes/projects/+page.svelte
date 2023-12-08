@@ -1,5 +1,12 @@
 <script lang="ts">
-	import { Badge, Flow, FlowItemProject, FlowTitle } from "$components";
+	import {
+		Badge,
+		Flow,
+		FlowTable,
+		FlowTableBodyRowProject,
+		FlowTitle,
+		TableHeaderColumn,
+	} from "$components";
 	import { projects } from "$content";
 </script>
 
@@ -14,11 +21,17 @@
 		<FlowTitle>Made at Little Miss Robot</FlowTitle>
 	</div>
 
-	<ul>
+	<FlowTable>
+		<svelte:fragment slot="header">
+			<TableHeaderColumn spacing={false}>Year</TableHeaderColumn>
+
+			<TableHeaderColumn>Name</TableHeaderColumn>
+
+			<TableHeaderColumn>Technologies</TableHeaderColumn>
+		</svelte:fragment>
+
 		{#each projects as project}
-			<li>
-				<FlowItemProject {project} />
-			</li>
+			<FlowTableBodyRowProject {project} />
 		{/each}
-	</ul>
+	</FlowTable>
 </Flow>

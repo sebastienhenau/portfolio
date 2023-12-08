@@ -1,6 +1,5 @@
 <script lang="ts">
 	import {
-		Badge,
 		Cta,
 		Divider,
 		Flow,
@@ -29,14 +28,7 @@
 <Divider />
 
 <Flow index="1">
-	<div
-		class="flex items-center gap-x-5"
-		slot="header"
-	>
-		<Badge theme="accent">{data.stories.length}</Badge>
-
-		<FlowTitle>Stories</FlowTitle>
-	</div>
+	<FlowTitle slot="header">Stories</FlowTitle>
 
 	<ul>
 		{#each data.stories as story}
@@ -60,14 +52,7 @@
 <Divider />
 
 <Flow index="2">
-	<div
-		class="flex items-center gap-x-5"
-		slot="header"
-	>
-		<Badge theme="accent">{projects.length}</Badge>
-
-		<FlowTitle>Projects</FlowTitle>
-	</div>
+	<FlowTitle slot="header">Projects</FlowTitle>
 
 	<ul>
 		{#each lastProjects as project}

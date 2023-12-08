@@ -2,9 +2,8 @@ import type { TStories, TStory } from "$types";
 
 import type { TGetStoriesOptions } from "./getStories.types";
 
-const getStories = async ({ limit = null }: TGetStoriesOptions) => {
-	// const stories: TStories = [];
-
+/* TODO: add pagination */
+const getStories = async ({ limit = 0 }: TGetStoriesOptions) => {
 	const paths = import.meta.glob("/src/stories/*.md", {
 		eager: true,
 	});
@@ -41,7 +40,7 @@ const getStories = async ({ limit = null }: TGetStoriesOptions) => {
 			);
 		});
 
-	return limit !== null ? [...stories].slice(0, limit) : stories;
+	return limit ? [...stories].slice(0, limit) : stories;
 };
 
 export default getStories;

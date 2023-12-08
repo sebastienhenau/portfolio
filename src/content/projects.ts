@@ -20,7 +20,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Hylas",
-		date: "2022 - 2023",
+		date: "2023",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -36,7 +36,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Hylas - labo",
-		date: "2022 - 2023",
+		date: "2023",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -53,7 +53,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Hylas - admin",
-		date: "2022 - 2023",
+		date: "2023",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -78,7 +78,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Kansstad - VDAB",
-		date: "2021 - 2022",
+		date: "2022",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -201,7 +201,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Bebat - Villa pila",
-		date: "2017 - 2018",
+		date: "2018",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -210,7 +210,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Zedelgem",
-		date: "2017 - 2018",
+		date: "2018",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -219,7 +219,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Woningkwaliteit",
-		date: "2017 - 2018",
+		date: "2018",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",
@@ -228,7 +228,7 @@ const projects: TProjects = [
 	},
 	{
 		name: "Woningpas",
-		date: "2017 - 2018",
+		date: "2018",
 		company: "Little Miss Robot",
 		image: "/images/placeholder.jpg",
 		role: "Front-end developer",

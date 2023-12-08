@@ -39,3 +39,6 @@ export * from "./Cta";
 
 export { default as Icon } from "./Icon";
 export * from "./Icon";
+
+export { default as Table } from "./Table";
+export * from "./Table";

@@ -5,18 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes/+page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/page.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/stories/getStories/getStories.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow-table-body-rows/FlowTableBodyRowProject/FlowTableBodyRowProject.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow-table-body-rows/FlowTableBodyRowProject/FlowTableBodyRowProject.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow-table-body-rows/FlowTableBodyRowProject/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow-table-body-rows/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow/FlowTable/FlowTable.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow/FlowTable/FlowTableBodyRow/FlowTableBodyRow.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow/FlowTable/FlowTableBodyRow/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/flow/FlowTable/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/Table.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableBodyColumn/TableBodyColumn.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableBodyColumn/TableBodyColumn.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableBodyColumn/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableBodyRow/TableBodyRow.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableBodyRow/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableHeaderColumn/TableHeaderColumn.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableHeaderColumn/TableHeaderColumn.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/TableHeaderColumn/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Table/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/useProjects.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useProjects/useProjects.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/flow-items/FlowItemProject/FlowItemProject.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/flow-items/FlowItemProject/FlowItemProject.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/flow/FlowItem/FlowItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/flow/FlowItem/FlowItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/flow/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/flow/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/projects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/projects.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/api/stories/+server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/stories/+server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/projects/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/projects/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/stories/getStories/getStories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/stories/getStories/getStories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/flow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/flow.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/routes",
+    "last_opened_file_path": "/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/ui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,18 +95,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ui" />
+      <recent name="$PROJECT_DIR$/src/components/flow-table-rows/FlowTableRowProject" />
+      <recent name="$PROJECT_DIR$/src/components/flow" />
       <recent name="$PROJECT_DIR$/src/routes" />
       <recent name="$PROJECT_DIR$/src/stories" />
-      <recent name="$PROJECT_DIR$/src/components/story/Intro" />
-      <recent name="$PROJECT_DIR$/src/components/flow-items/FlowItemProject" />
-      <recent name="$PROJECT_DIR$/src/components/home/HomeAboutCard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/flow/FlowTable" />
+      <recent name="$PROJECT_DIR$/src/components/flow" />
       <recent name="$PROJECT_DIR$/src/components/flow-items/FlowItemStory" />
       <recent name="$PROJECT_DIR$/src/components/flow-items" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/components/flow/Flow" />
-      <recent name="$PROJECT_DIR$/src/components/Flow" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -116,7 +135,9 @@
       <workItem from="1701090298194" duration="14680000" />
       <workItem from="1701255062245" duration="3210000" />
       <workItem from="1701785977664" duration="578000" />
-      <workItem from="1701789466572" duration="3429000" />
+      <workItem from="1701789466572" duration="3787000" />
+      <workItem from="1701953768700" duration="8137000" />
+      <workItem from="1702048793442" duration="4676000" />
     </task>
     <servers />
   </component>
