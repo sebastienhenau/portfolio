@@ -1,3 +1,3 @@
-import FlowSubtitle from "./FlowSubtitle.svelte";
+import FlowSubtitle from './FlowSubtitle.svelte';
 
 export default FlowSubtitle;

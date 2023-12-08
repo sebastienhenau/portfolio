@@ -1,4 +1,4 @@
-import type { TProject } from "$types";
+import type { TProject } from '$types';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TProject } from "$types";
 export type TFlowItemProjectProject = TProject;
 
 export interface TFlowItemProject {
-	project: TFlowItemProjectProject;
+    project: TFlowItemProjectProject;
 }

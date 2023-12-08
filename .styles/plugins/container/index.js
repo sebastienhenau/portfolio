@@ -1,3 +1,3 @@
-import container from "./container.js";
+import container from './container.js';
 
 export default container;

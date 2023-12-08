@@ -1,8 +1,8 @@
-import Link from "./Link.svelte";
+import Link from './Link.svelte';
 
-export * from "./Link.types";
+export * from './Link.types';
 
-export { default as LinkText } from "./LinkText";
-export { default as LinkIcon } from "./LinkIcon";
+export { default as LinkText } from './LinkText';
+export { default as LinkIcon } from './LinkIcon';
 
 export default Link;

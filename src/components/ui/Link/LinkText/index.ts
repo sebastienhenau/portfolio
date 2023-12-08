@@ -1,3 +1,3 @@
-import LinkText from "./LinkText.svelte";
+import LinkText from './LinkText.svelte';
 
 export default LinkText;

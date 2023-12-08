@@ -1,34 +1,34 @@
 <script lang="ts">
-	import { FlowSubtitle, Tag } from "$components";
-	import type { TAboutEducationItemEducation } from "./AboutEducationItem.types";
+    import { FlowSubtitle, Tag } from '$components';
+    import type { TAboutEducationItemEducation } from './AboutEducationItem.types';
 
-	// -------------------------------------------------------------------------
-	// Props
-	// -------------------------------------------------------------------------
-	export let education: TAboutEducationItemEducation;
+    // -------------------------------------------------------------------------
+    // Props
+    // -------------------------------------------------------------------------
+    export let education: TAboutEducationItemEducation;
 
-	// -------------------------------------------------------------------------
-	// Variables
-	// -------------------------------------------------------------------------
-	const { name, school, type, time } = education;
+    // -------------------------------------------------------------------------
+    // Variables
+    // -------------------------------------------------------------------------
+    const { name, school, type, time } = education;
 </script>
 
 <article>
-	<header class="flex justify-between gap-x-6 items-start">
-		<div class="flex-1">
-			<!-- TODO: datetime -->
-			<time
-				class="text-site-contrast-2 text-3 leading-none block"
-				datetime=""
-			>
-				{time}
-			</time>
+    <header class="flex justify-between gap-x-6 items-start">
+        <div class="flex-1">
+            <!-- TODO: datetime -->
+            <time
+                class="text-site-contrast-2 text-3 leading-none block"
+                datetime=""
+            >
+                {time}
+            </time>
 
-			<FlowSubtitle>{name}</FlowSubtitle>
-		</div>
+            <FlowSubtitle>{name}</FlowSubtitle>
+        </div>
 
-		<Tag>{type}</Tag>
-	</header>
+        <Tag>{type}</Tag>
+    </header>
 
-	<p class="mt-1">{school}</p>
+    <p class="mt-1">{school}</p>
 </article>

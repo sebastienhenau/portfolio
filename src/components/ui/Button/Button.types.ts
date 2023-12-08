@@ -1,4 +1,4 @@
-import type { TAction } from "$components";
+import type { TAction } from '$components';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TAction } from "$components";
 export type TButtonAction = TAction;
 
 export interface TButton {
-	action: TAction;
+    action: TAction;
 }

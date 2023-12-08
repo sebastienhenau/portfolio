@@ -1,3 +1,3 @@
-import ButtonIcon from "./ButtonIcon.svelte";
+import ButtonIcon from './ButtonIcon.svelte';
 
 export default ButtonIcon;

@@ -4,5 +4,5 @@
 export type TListTagsItems = string[];
 
 export interface TListTags {
-	items: TListTagsItems;
+    items: TListTagsItems;
 }

@@ -1,3 +1,3 @@
-import Flow from "./Flow.svelte";
+import Flow from './Flow.svelte';
 
 export default Flow;

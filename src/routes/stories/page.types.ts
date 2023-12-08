@@ -1,5 +1,5 @@
-import type { TStories } from "$types";
+import type { TStories } from '$types';
 
 export interface TPageData {
-	stories: TStories;
+    stories: TStories;
 }

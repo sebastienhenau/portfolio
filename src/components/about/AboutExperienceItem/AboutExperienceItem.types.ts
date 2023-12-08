@@ -1,4 +1,4 @@
-import type { TExperience } from "$types";
+import type { TExperience } from '$types';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TExperience } from "$types";
 export type TAboutExperienceItemExperience = TExperience;
 
 export interface TAboutExperienceItem {
-	experience: TExperience;
+    experience: TExperience;
 }

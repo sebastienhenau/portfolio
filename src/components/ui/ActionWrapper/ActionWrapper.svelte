@@ -1,50 +1,50 @@
 <script lang="ts">
-	import { setContext } from "svelte";
-	import clsx from "clsx";
-	import type { TActionElement } from "$components";
-	import type { TActionWrapperContext } from "./ActionWrapper.types";
+    import { setContext } from 'svelte';
+    import clsx from 'clsx';
+    import type { TActionElement } from '$components';
+    import type { TActionWrapperContext } from './ActionWrapper.types';
 
-	// -------------------------------------------------------------------------
-	// Variables
-	// -------------------------------------------------------------------------
-	let actionElement: TActionElement;
-	let mouseDownTimeStamp: number;
-	let mouseUpTimeStamp: number;
+    // -------------------------------------------------------------------------
+    // Variables
+    // -------------------------------------------------------------------------
+    let actionElement: TActionElement;
+    let mouseDownTimeStamp: number;
+    let mouseUpTimeStamp: number;
 
-	// -------------------------------------------------------------------------
-	// Methods
-	// -------------------------------------------------------------------------
-	const setElement = (element: TActionElement) => {
-		actionElement = element;
-	};
+    // -------------------------------------------------------------------------
+    // Methods
+    // -------------------------------------------------------------------------
+    const setElement = (element: TActionElement) => {
+        actionElement = element;
+    };
 
-	const onMouseDown = () => {
-		mouseDownTimeStamp = +new Date();
-	};
+    const onMouseDown = () => {
+        mouseDownTimeStamp = +new Date();
+    };
 
-	const onMouseUp = () => {
-		mouseUpTimeStamp = +new Date();
+    const onMouseUp = () => {
+        mouseUpTimeStamp = +new Date();
 
-		if (mouseUpTimeStamp - mouseDownTimeStamp < 200) {
-			actionElement.click();
-		}
-	};
+        if (mouseUpTimeStamp - mouseDownTimeStamp < 200) {
+            actionElement.click();
+        }
+    };
 
-	// -------------------------------------------------------------------------
-	// Context setters
-	// -------------------------------------------------------------------------
-	setContext("actionWrapper", {
-		setElement,
-	} as TActionWrapperContext);
+    // -------------------------------------------------------------------------
+    // Context setters
+    // -------------------------------------------------------------------------
+    setContext('actionWrapper', {
+        setElement,
+    } as TActionWrapperContext);
 </script>
 
 <!-- TODO: fix div wrapper -->
 <div
-	class={clsx("relative cursor-pointer group", $$props.class)}
-	on:mousedown={onMouseDown}
-	on:mouseup={onMouseUp}
-	role="button"
-	tabindex="0"
+    class={clsx('relative cursor-pointer group', $$props.class)}
+    on:mousedown={onMouseDown}
+    on:mouseup={onMouseUp}
+    role="button"
+    tabindex="0"
 >
-	<slot elevate="relative" />
+    <slot elevate="relative" />
 </div>

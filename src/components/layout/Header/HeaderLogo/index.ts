@@ -1,3 +1,3 @@
-import HeaderLogo from "./HeaderLogo.svelte";
+import HeaderLogo from './HeaderLogo.svelte';
 
 export default HeaderLogo;

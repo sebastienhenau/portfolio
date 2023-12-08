@@ -1,3 +1,3 @@
-import TableBodyColumn from "./TableBodyColumn.svelte";
+import TableBodyColumn from './TableBodyColumn.svelte';
 
 export default TableBodyColumn;

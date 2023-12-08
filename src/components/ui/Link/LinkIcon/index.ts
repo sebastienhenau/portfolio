@@ -1,3 +1,3 @@
-import LinkIcon from "./LinkIcon.svelte";
+import LinkIcon from './LinkIcon.svelte';
 
 export default LinkIcon;

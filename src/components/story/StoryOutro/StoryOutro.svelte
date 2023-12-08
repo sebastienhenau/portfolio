@@ -1,9 +1,9 @@
 <script>
-	import { Card } from "$components";
+    import { Card } from '$components';
 </script>
 
 <Card>
-	<p>
-		<slot />
-	</p>
+    <p>
+        <slot />
+    </p>
 </Card>

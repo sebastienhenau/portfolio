@@ -1,3 +1,3 @@
-import TopLeftPageRadialGradient from "./TopLeftPageRadialGradient.svelte";
+import TopLeftPageRadialGradient from './TopLeftPageRadialGradient.svelte';
 
 export default TopLeftPageRadialGradient;

@@ -1,3 +1,3 @@
-import FlowTableBodyRowProject from "./FlowTableBodyRowProject.svelte";
+import FlowTableBodyRowProject from './FlowTableBodyRowProject.svelte';
 
 export default FlowTableBodyRowProject;

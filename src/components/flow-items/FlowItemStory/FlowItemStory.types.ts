@@ -1,4 +1,4 @@
-import type { TStory } from "$types";
+import type { TStory } from '$types';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TStory } from "$types";
 export type TFlowItemStoryStory = TStory;
 
 export interface TFlowItemStory {
-	story: TFlowItemStoryStory;
+    story: TFlowItemStoryStory;
 }

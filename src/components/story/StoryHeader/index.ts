@@ -1,3 +1,3 @@
-import StoryHeader from "./StoryHeader.svelte";
+import StoryHeader from './StoryHeader.svelte';
 
 export default StoryHeader;

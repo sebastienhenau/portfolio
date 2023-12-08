@@ -4,5 +4,5 @@
 export type TFlowIndex = string | undefined;
 
 export interface TFlow {
-	index?: TFlowIndex;
+    index?: TFlowIndex;
 }

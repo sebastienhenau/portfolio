@@ -1,3 +1,3 @@
-import FlowTableBodyRow from "./FlowTableBodyRow.svelte";
+import FlowTableBodyRow from './FlowTableBodyRow.svelte';
 
 export default FlowTableBodyRow;

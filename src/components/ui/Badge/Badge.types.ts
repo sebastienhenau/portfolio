@@ -1,10 +1,10 @@
 // -------------------------------------------------------------------------
 // Props
 // -------------------------------------------------------------------------
-export type TBadgeTheme = "default" | "accent";
+export type TBadgeTheme = 'default' | 'accent';
 export type TBadgeInherit = boolean;
 
 export interface TBadge {
-	theme?: TBadgeTheme;
-	inherit?: TBadgeInherit;
+    theme?: TBadgeTheme;
+    inherit?: TBadgeInherit;
 }

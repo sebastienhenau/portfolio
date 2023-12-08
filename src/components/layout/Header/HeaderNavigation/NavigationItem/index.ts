@@ -1,3 +1,3 @@
-import NavigationItem from "./NavigationItem.svelte";
+import NavigationItem from './NavigationItem.svelte';
 
 export default NavigationItem;

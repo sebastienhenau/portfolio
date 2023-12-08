@@ -1,5 +1,5 @@
-import Item from "./Item.svelte";
+import Item from './Item.svelte';
 
-export * from "./Item.types";
+export * from './Item.types';
 
 export default Item;

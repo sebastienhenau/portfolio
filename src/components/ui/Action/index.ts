@@ -1,5 +1,5 @@
-import Action from "./Action.svelte";
+import Action from './Action.svelte';
 
-export * from "./Action.types";
+export * from './Action.types';
 
 export default Action;

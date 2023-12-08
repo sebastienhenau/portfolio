@@ -1,3 +1,3 @@
-import HeaderNavigation from "./HeaderNavigation.svelte";
+import HeaderNavigation from './HeaderNavigation.svelte';
 
 export default HeaderNavigation;

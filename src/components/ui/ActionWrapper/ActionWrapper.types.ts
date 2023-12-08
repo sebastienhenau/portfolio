@@ -1,5 +1,5 @@
-import type { TActionElement } from "$components";
+import type { TActionElement } from '$components';
 
 export interface TActionWrapperContext {
-	setElement: (element: TActionElement) => void;
+    setElement: (element: TActionElement) => void;
 }

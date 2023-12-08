@@ -1,5 +1,5 @@
-import Image from "./Image.svelte";
+import Image from './Image.svelte';
 
-export * from "./Image.types";
+export * from './Image.types';
 
 export default Image;

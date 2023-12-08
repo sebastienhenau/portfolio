@@ -1,4 +1,4 @@
 /* eslint-disable */
 export interface TIcons {
-	[key: string]: any;
+    [key: string]: any;
 }

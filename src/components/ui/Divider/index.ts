@@ -1,3 +1,3 @@
-import Divider from "./Divider.svelte";
+import Divider from './Divider.svelte';
 
 export default Divider;

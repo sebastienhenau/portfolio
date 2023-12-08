@@ -1,4 +1,4 @@
-import type { TImage } from "$components";
+import type { TImage } from '$components';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TImage } from "$components";
 export type TCardImage = TImage | undefined;
 
 export interface TCard {
-	image: TCardImage;
+    image: TCardImage;
 }

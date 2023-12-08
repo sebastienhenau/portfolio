@@ -1,4 +1,4 @@
-import type { TIcon } from "$components";
+import type { TIcon } from '$components';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TIcon } from "$components";
 export type TLinkIconIcon = TIcon;
 
 export interface TLinkIcon {
-	icon: TLinkIconIcon;
+    icon: TLinkIconIcon;
 }

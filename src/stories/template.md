@@ -1,8 +1,8 @@
 ---
 title: title
 description: description
-date: "1/1/2023"
-image: "/images/placeholder.jpg"
+date: '1/1/2023'
+image: '/images/placeholder.jpg'
 tags:
   - tag 1
   - tag 2

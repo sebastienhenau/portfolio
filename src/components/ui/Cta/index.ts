@@ -1,3 +1,3 @@
-import Cta from "./Cta.svelte";
+import Cta from './Cta.svelte';
 
 export default Cta;

@@ -1,3 +1,3 @@
-import FlowContent from "./FlowContent.svelte";
+import FlowContent from './FlowContent.svelte';
 
 export default FlowContent;

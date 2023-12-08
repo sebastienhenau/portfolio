@@ -1,5 +1,5 @@
-import ListTags from "./ListTags.svelte";
+import ListTags from './ListTags.svelte';
 
-export * from "./ListTags.types";
+export * from './ListTags.types';
 
 export default ListTags;

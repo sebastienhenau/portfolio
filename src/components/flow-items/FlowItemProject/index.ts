@@ -1,3 +1,3 @@
-import FlowItemProject from "./FlowItemProject.svelte";
+import FlowItemProject from './FlowItemProject.svelte';
 
 export default FlowItemProject;

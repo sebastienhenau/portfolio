@@ -1,101 +1,101 @@
 <script lang="ts">
-	import { StoryHeader } from "$components";
-	import type { TPageData } from "./page.types";
+    import { StoryHeader } from '$components';
+    import type { TPageData } from './page.types';
 
-	// -------------------------------------------------------------------------
-	// Server
-	// -------------------------------------------------------------------------
-	export let data: TPageData;
+    // -------------------------------------------------------------------------
+    // Server
+    // -------------------------------------------------------------------------
+    export let data: TPageData;
 </script>
 
 <!-- TODO: detail page -->
 <article>
-	<StoryHeader
-		date={data.metadata.date}
-		listTags={{
-			items: data.metadata.tags,
-		}}
-		title={data.metadata.title}
-	/>
+    <StoryHeader
+        date={data.metadata.date}
+        listTags={{
+            items: data.metadata.tags,
+        }}
+        title={data.metadata.title}
+    />
 
-	<svelte:component this={data.content} />
+    <svelte:component this={data.content} />
 
-	<!--	-->
-	<!--	<StoryIntro>-->
-	<!--		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
-	<!--		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
-	<!--		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
-	<!--		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
-	<!--		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
-	<!--		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
-	<!--		amet, consectetur adipiscing elit.-->
-	<!--	</StoryIntro>-->
+    <!--    -->
+    <!--    <StoryIntro>-->
+    <!--        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
+    <!--        vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
+    <!--        sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+    <!--        adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
+    <!--        elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
+    <!--        lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+    <!--        amet, consectetur adipiscing elit.-->
+    <!--    </StoryIntro>-->
 
-	<!--	<Divider />-->
+    <!--    <Divider />-->
 
-	<!--	<Flow>-->
-	<!--		<FlowContent>-->
-	<!--			<FlowSubtitle>Lorem ipsum dolor sit amet.</FlowSubtitle>-->
+    <!--    <Flow>-->
+    <!--        <FlowContent>-->
+    <!--            <FlowSubtitle>Lorem ipsum dolor sit amet.</FlowSubtitle>-->
 
-	<!--			<p>-->
-	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
-	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
-	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
-	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
-	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
-	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
-	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
-	<!--				adipiscing elit.-->
-	<!--			</p>-->
+    <!--            <p>-->
+    <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+    <!--                ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+    <!--                pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+    <!--                amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+    <!--                consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+    <!--                tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+    <!--                ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+    <!--                adipiscing elit.-->
+    <!--            </p>-->
 
-	<!--			<Image-->
-	<!--				alt=""-->
-	<!--				border-->
-	<!--				class="w-full mt-6 h-[250px]"-->
-	<!--				src="/images/placeholder.jpg"-->
-	<!--			/>-->
+    <!--            <Image-->
+    <!--                alt='-->
+    <!--                border-->
+    <!--                class='w-full mt-6 h-[250px]'-->
+    <!--                src='/images/placeholder.jpg'-->
+    <!--            />-->
 
-	<!--			<FlowSubtitle class="mt-6">-->
-	<!--				Lorem ipsum dolor sit amet.-->
-	<!--			</FlowSubtitle>-->
+    <!--            <FlowSubtitle class='mt-6'>-->
+    <!--                Lorem ipsum dolor sit amet.-->
+    <!--            </FlowSubtitle>-->
 
-	<!--			<p>-->
-	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
-	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
-	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
-	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
-	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
-	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
-	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
-	<!--				adipiscing elit.-->
-	<!--			</p>-->
+    <!--            <p>-->
+    <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+    <!--                ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+    <!--                pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+    <!--                amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+    <!--                consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+    <!--                tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+    <!--                ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+    <!--                adipiscing elit.-->
+    <!--            </p>-->
 
-	<!--			<FlowSubtitle class="mt-6">-->
-	<!--				Lorem ipsum dolor sit amet.-->
-	<!--			</FlowSubtitle>-->
+    <!--            <FlowSubtitle class='mt-6'>-->
+    <!--                Lorem ipsum dolor sit amet.-->
+    <!--            </FlowSubtitle>-->
 
-	<!--			<p>-->
-	<!--				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
-	<!--				ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
-	<!--				pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
-	<!--				amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
-	<!--				consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
-	<!--				tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
-	<!--				ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
-	<!--				adipiscing elit.-->
-	<!--			</p>-->
-	<!--		</FlowContent>-->
-	<!--	</Flow>-->
+    <!--            <p>-->
+    <!--                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget-->
+    <!--                ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,-->
+    <!--                pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+    <!--                amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,-->
+    <!--                consectetur adipiscing elit. In eget ligula vel ligula imperdiet-->
+    <!--                tempor. Vivamus nec nibh lacinia, pulvinar magna sit amet,-->
+    <!--                ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+    <!--                adipiscing elit.-->
+    <!--            </p>-->
+    <!--        </FlowContent>-->
+    <!--    </Flow>-->
 
-	<!--	<Divider />-->
+    <!--    <Divider />-->
 
-	<!--	<StoryOutro>-->
-	<!--		Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
-	<!--		vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
-	<!--		sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
-	<!--		adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
-	<!--		elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
-	<!--		lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
-	<!--		amet, consectetur adipiscing elit.-->
-	<!--	</StoryOutro>-->
+    <!--    <StoryOutro>-->
+    <!--        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget ligula-->
+    <!--        vel ligula imperdiet tempor. Vivamus nec nibh lacinia, pulvinar magna-->
+    <!--        sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur-->
+    <!--        adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing-->
+    <!--        elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh-->
+    <!--        lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit-->
+    <!--        amet, consectetur adipiscing elit.-->
+    <!--    </StoryOutro>-->
 </article>

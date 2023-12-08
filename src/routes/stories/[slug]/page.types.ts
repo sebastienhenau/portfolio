@@ -1,7 +1,7 @@
-import type { TStory } from "$types";
-import type { SvelteComponent } from "svelte";
+import type { TStory } from '$types';
+import type { SvelteComponent } from 'svelte';
 
 export interface TPageData {
-	metadata: TStory;
-	content: typeof SvelteComponent;
+    metadata: TStory;
+    content: typeof SvelteComponent;
 }

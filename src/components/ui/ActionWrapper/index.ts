@@ -1,5 +1,5 @@
-import ActionWrapper from "./ActionWrapper.svelte";
+import ActionWrapper from './ActionWrapper.svelte';
 
-export * from "./ActionWrapper.types";
+export * from './ActionWrapper.types';
 
 export default ActionWrapper;

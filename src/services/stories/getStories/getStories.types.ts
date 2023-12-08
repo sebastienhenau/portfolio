@@ -1,3 +1,3 @@
 export interface TGetStoriesOptions {
-	limit?: number | null;
+    limit?: number | null;
 }

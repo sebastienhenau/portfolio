@@ -1,3 +1,3 @@
-import AboutEducationItem from "./AboutEducationItem.svelte";
+import AboutEducationItem from './AboutEducationItem.svelte';
 
 export default AboutEducationItem;

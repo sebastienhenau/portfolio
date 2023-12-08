@@ -1,3 +1,3 @@
-import HomeAboutCard from "./HomeAboutCard.svelte";
+import HomeAboutCard from './HomeAboutCard.svelte';
 
 export default HomeAboutCard;

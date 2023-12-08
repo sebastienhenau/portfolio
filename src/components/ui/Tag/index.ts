@@ -1,3 +1,3 @@
-import Tag from "./Tag.svelte";
+import Tag from './Tag.svelte';
 
 export default Tag;

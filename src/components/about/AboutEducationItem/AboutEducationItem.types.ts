@@ -1,4 +1,4 @@
-import type { TEducation } from "$types";
+import type { TEducation } from '$types';
 
 // -----------------------------------------------------------------------------
 // Props
@@ -6,5 +6,5 @@ import type { TEducation } from "$types";
 export type TAboutEducationItemEducation = TEducation;
 
 export interface TAboutEducationItem {
-	education: TEducation;
+    education: TEducation;
 }

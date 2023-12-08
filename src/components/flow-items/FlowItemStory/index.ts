@@ -1,3 +1,3 @@
-import FlowItemStory from "./FlowItemStory.svelte";
+import FlowItemStory from './FlowItemStory.svelte';
 
 export default FlowItemStory;
