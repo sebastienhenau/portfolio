@@ -6,16 +6,15 @@
 		CardEducation,
 		CardExperience,
 		Circle,
-		HomeProjectsItem,
 		HomeSection,
 		Tag,
 	} from "$components";
-	import { educations, experiences, projects } from "$content";
+	import { educations, experiences } from "$content";
 
 	// -------------------------------------------------------------------------
 	// Variables
 	// -------------------------------------------------------------------------
-	const topProjects = projects.slice(0, 3);
+	// const topProjects = projects.slice(0, 3);
 	const currentExperience = experiences[0];
 	const lastEducation = educations[0];
 </script>
@@ -98,13 +97,13 @@
 					<ul
 						class="border-l border-r border-border grid 700:grid-cols-2 1200:grid-cols-1"
 					>
-						{#each topProjects as topProject, index}
+						<!--{#each topProjects as topProject, index}
 							<HomeProjectsItem
 								{...topProject}
 								{index}
 								total={topProjects.length - 1}
 							/>
-						{/each}
+						{/each}-->
 
 						<li class="bg-gradient-striped 1200:hidden" />
 					</ul>

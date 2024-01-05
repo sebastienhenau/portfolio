@@ -1,6 +1,5 @@
 <script>
-	import { Block, Circle, ProjectsItem } from "$components";
-	import { projects } from "$content";
+	import { Block, Circle } from "$components";
 </script>
 
 <svelte:head>
@@ -28,13 +27,13 @@
 		<ul
 			class="mt-10 grid grid-cols-1 700:grid-cols-[minmax(30px,1fr)_min(640px,100%-60px)_minmax(30px,1fr)]"
 		>
-			{#each projects as project, index}
+			<!--{#each projects as project, index}
 				<ProjectsItem
 					{index}
 					total={projects.length - 1}
 					{...project}
 				/>
-			{/each}
+			{/each}-->
 		</ul>
 	</Block>
 </div>
