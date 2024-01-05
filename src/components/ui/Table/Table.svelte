@@ -4,7 +4,7 @@
 
 <table class={clsx('w-full', $$props.class)}>
     <thead>
-        <tr class="relative border-b border-border border-dotted">
+        <tr class="relative border-b border-border border-dotted before:content-empty">
             <slot name="header" />
         </tr>
     </thead>

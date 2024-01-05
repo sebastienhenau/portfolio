@@ -4,7 +4,7 @@
 </script>
 
 <div
-    class="stretch-container row-start-1 row-end-2 1000:grid 1000:grid-cols-[1fr_65%] 1200:grid-cols-[1fr_51rem] grid-rows-1 gap-x-10"
+    class="stretch-container row-start-1 row-end-2 1000:grid 1000:grid-cols-[1fr_65%] 1200:grid-cols-[1fr_51rem] grid-rows-1 1000:gap-x-7 1200:gap-x-10"
 >
     <Header />
 

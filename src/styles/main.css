@@ -7,9 +7,6 @@
 @import './base/root.css';
 @import './base/accessibility.css';
 
-@import './components/flow.css';
-@import './components/item.css';
-
 /* -------------------------------------------------------------------------- */
 /* Tailwind */
 /* -------------------------------------------------------------------------- */

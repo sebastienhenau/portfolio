@@ -1,10 +1,10 @@
 <script lang="ts">
-    import { Badge, Flow, FlowItemStory, FlowTitle } from '$components';
+    import { Badge, Flow, FlowTitle, ItemStory } from '$components';
     import type { TPageData } from './page.types';
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     // Server
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     export let data: TPageData;
 </script>
 
@@ -21,7 +21,7 @@
     <ul>
         {#each data.stories as story}
             <li>
-                <FlowItemStory {story} />
+                <ItemStory {story} />
             </li>
         {/each}
     </ul>

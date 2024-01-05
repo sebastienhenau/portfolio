@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Badge, Flow, FlowTable, FlowTableBodyRowProject, FlowTitle, TableHeaderColumn } from '$components';
+    import { Badge, Flow, FlowTitle, Table, TableBodyRowProject, TableHeaderColumn } from '$components';
     import { projects } from '$content';
 </script>
 
@@ -11,20 +11,22 @@
     >
         <Badge theme="accent">{projects.length}</Badge>
 
-        <FlowTitle>Made at Little Miss Robot</FlowTitle>
+        <FlowTitle>Little Miss Robot</FlowTitle>
     </div>
 
-    <FlowTable>
-        <svelte:fragment slot="header">
-            <TableHeaderColumn spacing={false}>Year</TableHeaderColumn>
+    <div class="@container/projects-table">
+        <Table>
+            <svelte:fragment slot="header">
+                <TableHeaderColumn spacing={false}>Year</TableHeaderColumn>
 
-            <TableHeaderColumn>Name</TableHeaderColumn>
+                <TableHeaderColumn>Name</TableHeaderColumn>
 
-            <TableHeaderColumn>Technologies</TableHeaderColumn>
-        </svelte:fragment>
+                <TableHeaderColumn class="hidden @550/projects-table:table-cell">Technologies</TableHeaderColumn>
+            </svelte:fragment>
 
-        {#each projects as project}
-            <FlowTableBodyRowProject {project} />
-        {/each}
-    </FlowTable>
+            {#each projects as project}
+                <TableBodyRowProject {project} />
+            {/each}
+        </Table>
+    </div>
 </Flow>

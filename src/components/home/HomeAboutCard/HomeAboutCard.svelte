@@ -23,7 +23,7 @@
     </p>
 
     <!-- TODO: github & linked in icons -->
-    <footer class="mt-7 flex justify-between gap-x-7">
+    <footer class="mt-7 flex max-500:flex-col justify-between gap-7">
         <ul class="flex items-center gap-3">
             <li>
                 <!-- TODO: class: 'w-6', -->
@@ -33,6 +33,7 @@
                         target: '_blank',
                     }}
                     icon={{
+                        class: 'w-6',
                         name: 'Github',
                     }}
                 />
@@ -46,6 +47,7 @@
                         target: '_blank',
                     }}
                     icon={{
+                        class: 'w-6',
                         name: 'Linkedin',
                     }}
                 />

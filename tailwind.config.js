@@ -1,3 +1,5 @@
+import tailwindCssContainerQueries from '@tailwindcss/container-queries';
+
 import { convertToEm, convertToRem, getFontSizeScale } from './.styles/functions';
 import { container } from './.styles/plugins';
 
@@ -8,6 +10,7 @@ export default {
         container: false,
     },
     plugins: [
+        tailwindCssContainerQueries,
         container({
             width: convertToRem('1366px'),
             spacing: {
@@ -19,11 +22,27 @@ export default {
     ],
     theme: {
         screens: {
+            300: convertToEm('375px'),
+            500: convertToEm('576px'),
             600: convertToEm('640px'),
             700: convertToEm('768px'),
+            900: convertToEm('992px'),
             1000: convertToEm('1024px'),
             1200: convertToEm('1280px'),
             1500: convertToEm('1536px'),
+        },
+        containers: {
+            300: convertToRem('320px'),
+            350: convertToRem('384px'),
+            400: convertToRem('448px'),
+            500: convertToRem('512px'),
+            550: convertToRem('576px'),
+            600: convertToRem('672px'),
+            700: convertToRem('768px'),
+            800: convertToRem('896px'),
+            1000: convertToRem('1024px'),
+            1100: convertToRem('1152px'),
+            1200: convertToRem('1280px'),
         },
         colors: {
             // Tailwind specific
@@ -87,6 +106,7 @@ export default {
                     'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent) / 0.2) 2px, hsl(var(--color-site-background) / 0.2) 4px )',
             },
             gridTemplateRows: {
+                '2-auto': 'repeat(2, auto)',
                 '3-auto': 'repeat(3, auto)',
             },
             content: {

@@ -10,6 +10,7 @@
 >
     <Image
         alt="Sébastien Henau"
+        class="min-w-[1.75rem] lg:min-w-[2.125rem] aspect-square h-auto"
         src="/images/logo.svg"
     />
 </Action>

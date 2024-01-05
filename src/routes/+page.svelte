@@ -1,17 +1,17 @@
 <script lang="ts">
-    import { Cta, Divider, Flow, FlowItemProject, FlowItemStory, FlowTitle, HomeAboutCard } from '$components';
+    import { Cta, Divider, Flow, FlowTitle, HomeAboutCard, ItemProject, ItemStory } from '$components';
+    import { projects } from '$content';
     import { ROUTES_PROJECTS, ROUTES_STORIES } from '$constants';
     import type { TPageData } from './page.types';
-    import { projects } from '$content';
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     // Server
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     export let data: TPageData;
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     // Variables
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     const lastProjects = [...projects].splice(0, 3);
 </script>
 
@@ -22,10 +22,10 @@
 <Flow index="1">
     <FlowTitle slot="header">Stories</FlowTitle>
 
-    <ul>
+    <ul class="space-y-6">
         {#each data.stories as story}
             <li>
-                <FlowItemStory {story} />
+                <ItemStory {story} />
             </li>
         {/each}
     </ul>
@@ -46,10 +46,10 @@
 <Flow index="2">
     <FlowTitle slot="header">Projects</FlowTitle>
 
-    <ul>
+    <ul class="space-y-6">
         {#each lastProjects as project}
             <li>
-                <FlowItemProject {project} />
+                <ItemProject {project} />
             </li>
         {/each}
     </ul>

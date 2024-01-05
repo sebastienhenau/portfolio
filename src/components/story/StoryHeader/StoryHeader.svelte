@@ -2,9 +2,9 @@
     import { ListTags } from '$components';
     import type { TStoryHeaderDate, TStoryHeaderListTags, TStoryHeaderTitle } from './StoryHeader.types';
 
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     // Props
-    // -------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     export let title: TStoryHeaderTitle;
     export let date: TStoryHeaderDate;
     export let listTags: TStoryHeaderListTags;
