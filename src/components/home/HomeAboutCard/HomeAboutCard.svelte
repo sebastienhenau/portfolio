@@ -33,7 +33,6 @@
                         target: '_blank',
                     }}
                     icon={{
-                        class: 'w-6',
                         name: 'Github',
                     }}
                 />
@@ -47,7 +46,6 @@
                         target: '_blank',
                     }}
                     icon={{
-                        class: 'w-6',
                         name: 'Linkedin',
                     }}
                 />
