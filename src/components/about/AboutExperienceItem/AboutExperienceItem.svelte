@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Tag } from '$components';
+    import { ListItem, Tag } from '$components';
     import type { TAboutExperienceItemExperience } from './AboutExperienceItem.types';
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -13,26 +13,36 @@
     const { role, company, description, time } = experience;
 </script>
 
-<article>
-    <header class="flex justify-between items-start gap-x-6">
-        <div class="flex-1">
-            <h3 class="font-bold">
-                {company}
-            </h3>
-
-            <!-- TODO: datetime -->
-            <time
-                class="text-site-contrast-2 text-3 leading-none block"
-                datetime=""
+<li class="@container/about-experience-item">
+    <article>
+        <ListItem>
+            <header
+                class="flex flex-col @550/about-experience-item:flex-row flex-wrap justify-between items-start gap-y-4 gap-x-6"
+                slot="main"
             >
-                {time}
-            </time>
-        </div>
+                <div class="flex-1">
+                    <h3 class="font-bold">
+                        {company}
+                    </h3>
 
-        <Tag>{role}</Tag>
-    </header>
+                    <!-- TODO: datetime -->
+                    <time
+                        class="text-site-contrast-2 text-3 leading-none block"
+                        datetime=""
+                    >
+                        {time}
+                    </time>
+                </div>
 
-    <p class="mt-4">
-        {description}
-    </p>
-</article>
+                <Tag>{role}</Tag>
+            </header>
+
+            <p
+                class="mt-4"
+                slot="sub"
+            >
+                {description}
+            </p>
+        </ListItem>
+    </article>
+</li>

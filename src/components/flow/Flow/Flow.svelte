@@ -31,7 +31,12 @@
             </Badge>
         {/if}
 
-        <div class="col-start-2 col-end-3 row-start-1 row-end-2 self-center">
+        <div
+            class={clsx('col-end-3 row-start-1 row-end-2 self-center', {
+                'col-start-2': !!index,
+                'col-start-1 600:col-start-2': !index,
+            })}
+        >
             <slot name="header" />
         </div>
     </header>

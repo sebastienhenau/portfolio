@@ -42,3 +42,6 @@ export * from './Icon';
 
 export { default as Table } from './Table';
 export * from './Table';
+
+export { default as ListItem } from './ListItem';
+export * from './ListItem';

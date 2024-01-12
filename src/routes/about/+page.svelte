@@ -69,9 +69,7 @@
 
     <ul class="mt-6 space-y-6">
         {#each educations as education}
-            <li>
-                <AboutEducationItem {education} />
-            </li>
+            <AboutEducationItem {education} />
         {/each}
     </ul>
 </Flow>

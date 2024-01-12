@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Tag } from '$components';
+    import { ListItem, Tag } from '$components';
     import type { TAboutEducationItemEducation } from './AboutEducationItem.types';
 
     // -----------------------------------------------------------------------------------------------------------------
@@ -13,22 +13,34 @@
     const { name, school, type, time } = education;
 </script>
 
-<article>
-    <header class="flex justify-between gap-x-6 items-start">
-        <div class="flex-1">
-            <!-- TODO: datetime -->
-            <time
-                class="text-site-contrast-2 text-3 leading-none block"
-                datetime=""
+<li class="@container/about-education-item">
+    <article>
+        <ListItem>
+            <header
+                class="flex flex-col @550/about-education-item:flex-row justify-between gap-y-2 gap-x-6 items-start"
+                slot="main"
             >
-                {time}
-            </time>
+                <h3 class="font-bold">{name}</h3>
 
-            <h3 class="font-bold">{name}</h3>
-        </div>
+                <Tag>{type}</Tag>
+            </header>
 
-        <Tag>{type}</Tag>
-    </header>
+            <div
+                class="space-y-2 mt-3 @550/about-education-item:mt-0"
+                slot="sub"
+            >
+                <p>
+                    {school}
+                </p>
 
-    <p class="mt-1">{school}</p>
-</article>
+                <!-- TODO: datetime -->
+                <time
+                    class="text-site-contrast-2 text-3 leading-none block"
+                    datetime=""
+                >
+                    {time}
+                </time>
+            </div>
+        </ListItem>
+    </article>
+</li>
