@@ -70,7 +70,7 @@
     // Life cycle
     // -----------------------------------------------------------------------------------------------------------------
     onMount(() => {
-        const localTheme = localStorage.getItem('theme');
+        const localTheme = localStorage.getItem('theme') || '';
         const hasLocalTheme = !!localStorage.theme;
         const systemThemeMatcher = window.matchMedia('(prefers-color-scheme: dark)');
 
