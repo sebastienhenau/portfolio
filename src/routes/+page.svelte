@@ -1,5 +1,7 @@
 <script lang="ts">
-    import { HomeAboutCard } from '$components';
+    import { Divider, HomeAboutCard } from '$components';
 </script>
 
 <HomeAboutCard />
+
+<Divider />
