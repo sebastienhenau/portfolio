@@ -23,7 +23,11 @@
 
         border: theme('borderWidth.DEFAULT') solid theme('colors.border');
 
-        transition: transform 0.1s ease-in-out;
+        transition:
+            background-color,
+            color,
+            opacity,
+            transform 0.1s ease-in-out;
     }
 
     .interactive-background {
@@ -35,7 +39,11 @@
     }
 
     .interactive-content {
-        transition: transform 0.1s ease-in-out;
+        transition:
+            background-color,
+            color,
+            opacity,
+            transform 0.1s ease-in-out;
     }
 
     .interactive-root,

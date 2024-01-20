@@ -11,8 +11,10 @@
     export let fit: TImageFit = 'cover';
 </script>
 
+<!-- TODO: fix flex -->
 <div
     class={clsx(
+        'flex',
         {
             panel: border,
         },
