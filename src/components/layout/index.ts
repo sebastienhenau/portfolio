@@ -1,2 +1,2 @@
-export { default as TopLeftPageRadialGradient } from './TopLeftPageRadialGradient';
-export { default as Header } from './Header';
+export * from './Header';
+export * from './Navigation';

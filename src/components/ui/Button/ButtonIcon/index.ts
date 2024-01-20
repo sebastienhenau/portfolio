@@ -1,3 +1,2 @@
-import ButtonIcon from './ButtonIcon.svelte';
-
-export default ButtonIcon;
+export { default as ButtonIcon } from './ButtonIcon.svelte';
+export * from './ButtonIcon.types';

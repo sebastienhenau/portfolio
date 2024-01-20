@@ -1,5 +1,7 @@
 import type { TIcons } from '$types';
+import Search from '~icons/ic/baseline-search';
 import ChevronRight from '~icons/ic/round-chevron-right';
+import HalfCircle from '~icons/mdi/circle-half-full';
 import Github from '~icons/mdi/github';
 import Linkedin from '~icons/mdi/linkedin';
 import Moon from '~icons/ph/moon-bold';
@@ -13,6 +15,8 @@ const icons: TIcons = {
     Linkedin,
     ChevronRight,
     ExternalLink,
+    Search,
+    HalfCircle,
 };
 
 export default icons;

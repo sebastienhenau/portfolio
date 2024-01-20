@@ -1,16 +1,14 @@
 <script lang="ts">
     import '$styles/main.css';
-    import { Header, TopLeftPageRadialGradient } from '$components';
+    import { Header, Navigation } from '$components';
 </script>
 
-<div
-    class="stretch-container row-start-1 row-end-2 1000:grid 1000:grid-cols-[1fr_65%] 1200:grid-cols-[1fr_51rem] grid-rows-1 1000:gap-x-7 1200:gap-x-10"
->
-    <Header />
+<div class="stretch-container grid grid-cols-[11rem_1fr] grid-rows-[auto_1fr] gap-x-9">
+    <Header class="col-start-2 col-end-3 row-start-1 row-end-2" />
 
-    <main class="pb-7 1000:py-7">
+    <Navigation class="col-start-1 col-end-2 row-start-2 row-end-3 self-start" />
+
+    <main class="col-start-2 col-end-3 row-start-2 row-end-3">
         <slot />
     </main>
 </div>
-
-<TopLeftPageRadialGradient />

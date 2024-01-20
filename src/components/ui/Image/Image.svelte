@@ -6,20 +6,26 @@
     // Props
     // -----------------------------------------------------------------------------------------------------------------
     export let src: TImageSrc;
-    export let alt: TImageAlt = '';
     export let border: TImageBorder = false;
+    export let alt: TImageAlt = '';
     export let fit: TImageFit = 'cover';
 </script>
 
-<img
-    {alt}
+<div
     class={clsx(
         {
-            'border border-border rounded-lg': border,
-            'object-center object-cover': fit === 'cover',
-            'object-center object-contain': fit === 'cover',
+            panel: border,
         },
         $$props.class
     )}
-    {src}
-/>
+>
+    <img
+        {alt}
+        class={clsx('w-full', {
+            'border rounded': border,
+            'object-center object-cover': fit === 'cover',
+            'object-center object-contain': fit === 'cover',
+        })}
+        {src}
+    />
+</div>

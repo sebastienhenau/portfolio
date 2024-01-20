@@ -1,3 +1,1 @@
-import HeaderDarkModeToggle from './HeaderDarkModeToggle.svelte';
-
-export default HeaderDarkModeToggle;
+export { default as HeaderDarkModeToggle } from './HeaderDarkModeToggle.svelte';

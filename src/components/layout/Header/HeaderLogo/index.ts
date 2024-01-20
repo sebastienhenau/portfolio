@@ -1,3 +1,1 @@
-import HeaderLogo from './HeaderLogo.svelte';
-
-export default HeaderLogo;
+export { default as HeaderLogo } from './HeaderLogo.svelte';

@@ -1,58 +1,83 @@
 <script lang="ts">
     import clsx from 'clsx';
     import { onMount } from 'svelte';
-    import { Action, Icon } from '$components';
+    import { Button, ButtonGroup, ButtonIcon } from '$components';
+    import type { THeaderDarkModeToggleTheme } from './HeaderDarkModeToggle.types';
 
     // -----------------------------------------------------------------------------------------------------------------
     // Variables
     // -----------------------------------------------------------------------------------------------------------------
-    let dark: boolean | undefined;
-    let interacted: boolean = false;
-
-    // -----------------------------------------------------------------------------------------------------------------
-    // Reactive statements
-    // -----------------------------------------------------------------------------------------------------------------
-    $: isDarkDefined = dark !== undefined;
+    let theme: THeaderDarkModeToggleTheme = '';
+    let isWatchingSystem = true;
 
     // -----------------------------------------------------------------------------------------------------------------
     // Event methods
     // -----------------------------------------------------------------------------------------------------------------
-    const onClick = () => {
-        setMode();
+    const onSystemClick = () => {
+        theme = '';
+        isWatchingSystem = true;
+
+        localStorage.removeItem('theme');
+
+        setSystemMode();
+    };
+
+    const onLightModeClick = () => {
+        theme = 'light';
+        isWatchingSystem = false;
+
+        localStorage.setItem('theme', 'light');
+
+        setLightModeOnDocument();
+    };
+
+    const onDarkModeClick = () => {
+        theme = 'dark';
+        isWatchingSystem = false;
+
+        localStorage.setItem('theme', 'dark');
+
+        setDarkModeOnDocument();
     };
 
     const onSystemThemeChange = () => {
-        setMode();
-    };
-
-    // -----------------------------------------------------------------------------------------------------------------
-    // Event methods
-    // -----------------------------------------------------------------------------------------------------------------
-    const setMode = () => {
-        if (!isDarkDefined) {
+        if (!isWatchingSystem) {
             return;
         }
 
-        dark = !dark;
-        interacted = true;
+        setSystemMode();
+    };
 
-        if (dark) {
-            localStorage.setItem('theme', 'dark');
-            document.documentElement.classList.add('dark');
+    const setSystemMode = () => {
+        const isSystemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (isSystemDarkMode) {
+            setDarkModeOnDocument();
         } else {
-            localStorage.setItem('theme', 'light');
-            document.documentElement.classList.remove('dark');
+            setLightModeOnDocument();
         }
+    };
+
+    const setLightModeOnDocument = () => {
+        document.documentElement.classList.remove('dark');
+    };
+
+    const setDarkModeOnDocument = () => {
+        document.documentElement.classList.add('dark');
     };
 
     // -----------------------------------------------------------------------------------------------------------------
     // Life cycle
     // -----------------------------------------------------------------------------------------------------------------
     onMount(() => {
-        const hasDocumentAlreadyDarkMode = document.documentElement.classList.contains('dark');
+        const localTheme = localStorage.getItem('theme');
+        const hasLocalTheme = !!localStorage.theme;
         const systemThemeMatcher = window.matchMedia('(prefers-color-scheme: dark)');
 
-        dark = hasDocumentAlreadyDarkMode;
+        if (hasLocalTheme) {
+            theme = localTheme;
+            isWatchingSystem = false;
+        }
 
         systemThemeMatcher.addEventListener('change', onSystemThemeChange);
 
@@ -77,38 +102,34 @@
     </script>
 </svelte:head>
 
-<Action
-    class={clsx(
-        '1000:start-col-2 1000:end-col-3 1000:row-start-1 1000:row-end-2',
-        'relative hidden 600:flex items-stretch justify-between border border-border-alt rounded-lg min-h-[2.25rem] h-[2.25rem] min-w-[4.5rem] w-[4.5rem] overflow-hidden',
-        {
-            'cursor-not-allowed': !isDarkDefined,
-        },
-        $$props.class
-    )}
-    on:click={onClick}
->
-    <span
-        class={clsx('absolute z-0 top-0 left-0 w-1/2 h-full bg-border-alt transition-opacity', {
-            'translate-x-full': dark && isDarkDefined,
-            'opacity-0': !isDarkDefined,
-            'transition-transform': interacted,
-        })}
-    />
-
-    <span
-        class={clsx('z-10 flex items-center justify-center flex-1 transition-colors', {
-            'text-site-background': !dark && isDarkDefined,
-        })}
+<ButtonGroup>
+    <Button
+        class={clsx()}
+        form="square"
+        on:click={onSystemClick}
+        size="sm"
+        variant={theme === '' && isWatchingSystem ? 'default' : 'neutral'}
     >
-        <Icon name="Sun" />
-    </span>
+        <ButtonIcon icon={{ name: 'HalfCircle' }} />
+    </Button>
 
-    <span
-        class={clsx('z-10 flex items-center justify-center flex-1 transition-colors', {
-            'text-site-background': dark && isDarkDefined,
-        })}
+    <Button
+        class={clsx()}
+        form="square"
+        on:click={onLightModeClick}
+        size="sm"
+        variant={theme === 'light' && !isWatchingSystem ? 'default' : 'neutral'}
     >
-        <Icon name="Moon" />
-    </span>
-</Action>
+        <ButtonIcon icon={{ name: 'Sun' }} />
+    </Button>
+
+    <Button
+        class={clsx()}
+        form="square"
+        on:click={onDarkModeClick}
+        size="sm"
+        variant={theme === 'dark' && !isWatchingSystem ? 'default' : 'neutral'}
+    >
+        <ButtonIcon icon={{ name: 'Moon' }} />
+    </Button>
+</ButtonGroup>

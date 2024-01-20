@@ -12,7 +12,7 @@ export default {
     plugins: [
         tailwindCssContainerQueries,
         container({
-            width: convertToRem('1366px'),
+            width: convertToRem('1152px'),
             spacing: {
                 DEFAULT: 5,
                 700: 8,
@@ -50,15 +50,15 @@ export default {
             inherit: 'inherit',
             // Custom colors
             site: {
-                background: 'hsl(var(--color-site-background) / <alpha-value>)',
-                accent: 'hsl(var(--color-site-accent))',
+                base: 'hsl(var(--color-site-base) / <alpha-value>)',
                 'contrast-1': 'hsl(var(--color-site-contrast-1) / <alpha-value>)',
                 'contrast-2': 'hsl(var(--color-site-contrast-2) / <alpha-value>)',
             },
-            accent: 'hsl(var(--color-accent) / <alpha-value>)',
-            'accent-contrast': 'hsl(var(--color-accent-contrast) / <alpha-value>)',
+            accent: {
+                base: 'hsl(var(--color-accent-base) / <alpha-value>)',
+                contrast: 'hsl(var(--color-accent-contrast) / <alpha-value>)',
+            },
             border: 'hsl(var(--color-border) / <alpha-value>)',
-            'border-alt': 'hsl(var(--color-border-alt) / <alpha-value>)',
         },
         /**
          * Font size scale based on Carbon Design System
@@ -90,10 +90,7 @@ export default {
             14: convertToRem('160px'),
         },
         borderRadius: {
-            sm: '2px',
-            DEFAULT: '4px',
-            lg: '8px',
-            xl: '16px',
+            DEFAULT: '2px',
             full: '100vmax',
         },
         borderWidth: {
@@ -101,13 +98,8 @@ export default {
         },
         extend: {
             backgroundImage: {
-                'gradient-radial-tl': 'radial-gradient(ellipse at left top, var(--tw-gradient-stops))',
                 'gradient-striped':
-                    'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent) / 0.2) 2px, hsl(var(--color-site-background) / 0.2) 4px )',
-            },
-            gridTemplateRows: {
-                '2-auto': 'repeat(2, auto)',
-                '3-auto': 'repeat(3, auto)',
+                    'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent-base) / 0.2) 2px, hsl(var(--color-site-base) / 0.2) 4px )',
             },
             content: {
                 empty: "''",
