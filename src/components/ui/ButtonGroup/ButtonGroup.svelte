@@ -1,4 +1,5 @@
 <script lang="ts">
+    import clsx from 'clsx';
     import { setContext } from 'svelte';
     import type { TButtonGroupContext } from './ButtonGroup.types';
 
@@ -8,7 +9,7 @@
     setContext('buttonGroup', true) as TButtonGroupContext;
 </script>
 
-<div class="interactive">
+<div class={clsx('interactive', $$props.class)}>
     <div class="interactive-background" />
 
     <!-- TODO: link margin to border default -->

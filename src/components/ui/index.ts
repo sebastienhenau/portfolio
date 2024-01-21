@@ -11,3 +11,4 @@ export * from './ListItem';
 export * from './Item';
 export * from './Card';
 export * from './Cta';
+export * from './Table';

@@ -4,8 +4,8 @@
     import { NavigationItem } from './NavigationItem';
 </script>
 
-<nav class={clsx('panel p-6', $$props.class)}>
-    <ul class="space-y-3">
+<nav class={clsx('max-500:hidden', $$props.class)}>
+    <ul class="panel p-4 900:p-6 flex 900:flex-col gap-3">
         <NavigationItem
             action={{
                 href: ROUTES_HOME,

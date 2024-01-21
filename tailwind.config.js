@@ -104,6 +104,10 @@ export default {
             content: {
                 empty: "''",
             },
+            gridTemplateRows: {
+                '2-auto': 'repeat(2, auto)',
+                '3-auto': 'repeat(3, auto)',
+            },
         },
     },
 };

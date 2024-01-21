@@ -1,5 +1,4 @@
 <script lang="ts">
-    import clsx from 'clsx';
     import { onMount } from 'svelte';
     import { Button, ButtonGroup, ButtonIcon } from '$components';
     import type { THeaderDarkModeToggleTheme } from './HeaderDarkModeToggle.types';
@@ -104,7 +103,6 @@
 
 <ButtonGroup>
     <Button
-        class={clsx()}
         form="square"
         on:click={onSystemClick}
         size="sm"
@@ -114,7 +112,6 @@
     </Button>
 
     <Button
-        class={clsx()}
         form="square"
         on:click={onLightModeClick}
         size="sm"
@@ -124,7 +121,6 @@
     </Button>
 
     <Button
-        class={clsx()}
         form="square"
         on:click={onDarkModeClick}
         size="sm"
