@@ -1,32 +1,39 @@
 @layer base {
-	:root {
-		/**
-		 * Ensure the page always fills up the entire height of the viewport.
-		 */
-		min-height: 100%;
-		/**
-		 * Force vertical scrollbars to always be visible to prevent awkward
-		 * jumps when navigating between pages that do/do not have content to
-		 * produce scrollbars naturally.
-		 */
-		overflow-y: scroll;
+    :root {
+        /**
+         * Ensure the page always fills up the entire height of the viewport.
+         */
+        min-height: 100%;
+        /**
+         * Force vertical scrollbars to always be visible to prevent awkward
+         * jumps when navigating between pages that do/do not have content to
+         * produce scrollbars naturally.
+         */
+        overflow-y: scroll;
 
-		/**
-		 * Makes sure that 1rem = 16px, all rem scale along this percentage.
-		 */
-		font-size: 100%;
-	}
+        /**
+         * Makes sure that 1rem = 16px, all rem scale along this percentage.
+         */
+        font-size: 100%;
+    }
 
-	body {
-		/**
-		 * Fix for 100vh issue on safari mobile browsers, use min-height 100vh
-		 * as fallback.
-		 */
-		min-height: 100vh;
+    /**
+     * Customize the default font in tailwind:
+     * https://tailwindcss.com/docs/font-family#customizing-the-default-font
+     */
+    html {
+        font-family: 'DM Sans', system-ui, sans-serif;
 
-		font-family: "Inter", "sans-serif", "serif";
-		font-size: theme("fontSize.3");
-		line-height: theme("lineHeight.normal");
-		font-weight: theme("fontWeight.normal");
-	}
+        &:has(.dialog[open]) {
+            overflow: hidden;
+        }
+    }
+
+    body {
+        /**
+         * Fix for 100vh issue on safari mobile browsers, use min-height 100vh
+         * as fallback.
+         */
+        min-height: 100vh;
+    }
 }

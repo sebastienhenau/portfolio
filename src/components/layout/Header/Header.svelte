@@ -1,56 +1,30 @@
 <script lang="ts">
-	import clsx from "clsx";
-	import { page } from "$app/stores";
-	import HeaderLogo from "./HeaderLogo";
-	import HeaderMainBorder from "./HeaderMainBorder";
-	import HeaderSideBorder from "./HeaderSideBorder";
-	import HeaderNavigationItem from "./HeaderNavigationItem";
-
-	// -------------------------------------------------------------------------
-	// Reactive statements
-	// -------------------------------------------------------------------------
-	// TODO: set in different hook
-	$: isHomePage = $page.url.pathname === "/";
+    import clsx from 'clsx';
+    import { HeaderLogo } from './HeaderLogo';
+    import { HeaderDarkModeToggle } from './HeaderDarkModeToggle';
+    import { HeaderHamburgerMenu } from './HeaderHamburgerMenu';
 </script>
 
-<!-- TODO: refine isHomePage classes -->
-<header
-	class={clsx(
-		"sticky top-0 h-10 grid-rows-[1fr_1px] row-start-1 row-end-2 col-start-1 col-end-2 backdrop-blur-md z-40",
-		{
-			"1200:grid-cols-[1fr_45%_6.25rem] max-1200:container 1200:grid":
-				isHomePage,
-			container: !isHomePage,
-		}
-	)}
->
-	<nav
-		class="row-start-1 row-end-2 col-start-1 col-end-2 flex items-center gap-6 h-full"
-	>
-		<HeaderLogo />
+<header class={clsx('flex justify-between items-center gap-6', $$props.class)}>
+    <div class="flex items-center gap-5">
+        <HeaderLogo />
 
-		<ul class="flex row-start-1 row-end-2 h-full">
-			<HeaderNavigationItem action={{ href: "/" }}>
-				Home
-			</HeaderNavigationItem>
+        <p class="font-bold leading-none text-6">Sébastien Henau</p>
+    </div>
 
-			<HeaderNavigationItem action={{ href: "/about" }}>
-				About
-			</HeaderNavigationItem>
+    <div class="flex items-center gap-5 max-500:hidden">
+        <!-- TODO: search -->
+        <!--<Button
+            size='sm'
+            variant='neutral'
+        >
+            <ButtonText>Search</ButtonText>
 
-			<HeaderNavigationItem action={{ href: "/projects" }}>
-				Projects
-			</HeaderNavigationItem>
+            <ButtonIcon icon={{ name: 'Search' }} />
+        </Button>-->
 
-			<HeaderNavigationItem action={{ href: "/stories" }}>
-				Stories
-			</HeaderNavigationItem>
-		</ul>
-	</nav>
+        <HeaderDarkModeToggle />
+    </div>
 
-	<HeaderMainBorder />
-
-	{#if isHomePage}
-		<HeaderSideBorder />
-	{/if}
+    <HeaderHamburgerMenu />
 </header>

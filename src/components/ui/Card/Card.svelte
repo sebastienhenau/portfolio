@@ -1,58 +1,27 @@
 <script lang="ts">
-	import { getContext } from "svelte";
-	import clsx from "clsx";
-	import type { TActionWrapperContext } from "$components";
-	import { Corner } from "$components";
-	import type { TCardInset } from "./Card.types";
+    import clsx from 'clsx';
 
-	// -------------------------------------------------------------------------
-	// Props
-	// -------------------------------------------------------------------------
-	export let inset: TCardInset = true;
-
-	// -------------------------------------------------------------------------
-	// Context getters
-	// -------------------------------------------------------------------------
-	const actionWrapper: TActionWrapperContext = getContext("actionWrapper");
+    // -----------------------------------------------------------------------------------------------------------------
+    // Props
+    // -----------------------------------------------------------------------------------------------------------------
 </script>
 
-<article
-	class={clsx(
-		{
-			"p-8": inset,
-		},
-		$$props.class
-	)}
->
-	{#if !!actionWrapper}
-		<div
-			class="absolute inset-0 pointer-events-none bg-gradient-to-l from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-		/>
+<article class={clsx('@container/card', $$props.class)}>
+    <div
+        class={clsx('highlight p-6', {
+            'flex items-start gap-6 flex-col @550/card:flex-row': !!$$slots.image,
+        })}
+    >
+        {#if !!$$slots.image}
+            <slot name="image" />
+        {/if}
 
-		<Corner
-			class="opacity-0 group-hover:translate-y-[-8px] group-hover:translate-x-[-16px] group-hover:opacity-100 transition"
-			relative={false}
-			type="tl"
-		/>
-
-		<Corner
-			class="opacity-0 group-hover:translate-y-[-8px] group-hover:translate-x-[16px] group-hover:opacity-100 transition"
-			relative={false}
-			type="tr"
-		/>
-
-		<Corner
-			class="opacity-0 group-hover:translate-y-[8px] group-hover:translate-x-[16px] group-hover:opacity-100 transition"
-			relative={false}
-			type="br"
-		/>
-
-		<Corner
-			class="opacity-0 group-hover:translate-y-[8px] group-hover:translate-x-[-16px] group-hover:opacity-100 transition"
-			relative={false}
-			type="bl"
-		/>
-	{/if}
-
-	<slot />
+        <div class="flex-1">
+            {#if !!$$slots.image}
+                <slot name="content" />
+            {:else}
+                <slot />
+            {/if}
+        </div>
+    </div>
 </article>

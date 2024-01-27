@@ -1,13 +1,16 @@
 <script lang="ts">
-	import { Action, Image } from "$components";
+    import clsx from 'clsx';
+    import { Action, Image } from '$components';
+    import { ROUTES_HOME } from '$constants';
 </script>
 
 <Action
-	class="p-4"
-	href="/"
+    class={clsx('inline-block', $$props.class)}
+    href={ROUTES_HOME}
 >
-	<Image
-		alt="Sébastien Henau"
-		src="/images/logo.svg"
-	/>
+    <Image
+        alt="Sébastien Henau"
+        class="min-w-[1.75rem] lg:min-w-[2.125rem] aspect-square h-auto"
+        src="/images/logo.svg"
+    />
 </Action>

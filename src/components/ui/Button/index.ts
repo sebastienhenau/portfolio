@@ -1,5 +1,5 @@
-import Button from "./Button.svelte";
+export { default as Button } from './Button.svelte';
+export * from './Button.types';
 
-export { default as ButtonText } from "./ButtonText";
-
-export default Button;
+export * from './ButtonText';
+export * from './ButtonIcon';

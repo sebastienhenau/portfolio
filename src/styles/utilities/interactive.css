@@ -1,0 +1,65 @@
+/* TODO: centralize animation */
+@layer utilities {
+    .interactive,
+    .interactive-root {
+        position: relative;
+        z-index: 0;
+    }
+
+    .interactive-background,
+    .interactive-foreground {
+        content: theme('content.empty');
+
+        position: absolute;
+        inset: 0;
+
+        border-radius: theme('borderRadius.DEFAULT');
+
+        pointer-events: none;
+    }
+
+    .interactive-foreground {
+        z-index: -10;
+
+        border: theme('borderWidth.DEFAULT') solid theme('colors.border');
+
+        transition:
+            background-color,
+            color,
+            opacity,
+            transform 0.1s ease-in-out;
+    }
+
+    .interactive-background {
+        z-index: -20;
+
+        background-color: theme('colors.border');
+
+        transform: translateX(theme('translate.2')) translateY(theme('translate.2'));
+    }
+
+    .interactive-content {
+        transition:
+            background-color,
+            color,
+            opacity,
+            transform 0.1s ease-in-out;
+    }
+
+    .interactive-root,
+    .interactive:not(:has(.interactive-root)) {
+        &:hover {
+            .interactive-content,
+            .interactive-foreground {
+                transform: translateX(calc(theme('translate.1') * -1)) translateY(calc(theme('translate.1') * -1));
+            }
+        }
+
+        &:active {
+            .interactive-content,
+            .interactive-foreground {
+                transform: translateX(theme('translate.2')) translateY(theme('translate.2'));
+            }
+        }
+    }
+}

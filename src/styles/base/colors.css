@@ -1,32 +1,38 @@
 @layer base {
-	:root {
-		--color-site-1: 216 56% 98%;
-		--color-site-2: 247 89% 98%;
+    :root {
+        --color-site-base: 0 100% 100%;
+        --color-site-contrast-1: 222 30% 16%;
+        --color-site-contrast-2: 215 16% 47%;
 
-		--color-text-1: 0 0% 0%;
-		--color-text-2: 215 16% 47%;
-		--color-text-3: 215 16% 67%;
+        --color-accent-base: 14 83% 66%;
+        --color-accent-contrast: 222 30% 16%;
 
-		--color-accent: 247 79% 68%;
-		--color-border: 220 13% 91%;
-		--color-shadow: 0 0 90% / 15;
-	}
+        --color-border: 222 30% 16%;
+    }
 
-	/**
-	 * TODO: once development is "done", replace html.dark by the
-	 * prefers-color-scheme:
-	 * @media (prefers-color-scheme: dark) { :root {} }
-	 */
-	html.dark {
-		--color-site-1: 222 47% 11%;
-		--color-site-2: 232 66% 20%;
+    ::backdrop {
+        /* TODO: explain why? */
+        --color: hsl(222 30% 16% / 50%);
+    }
 
-		--color-text-1: 0 0% 100%;
-		--color-text-2: 223 47% 65%;
-		--color-text-3: 223 47% 45%;
+    /**
+     * TODO: once development is "done", replace html.dark by the
+     * prefers-color-scheme:
+     * @media (prefers-color-scheme: dark) { :root {} }
+     */
+    html.dark {
+        --color-site-base: 223 30% 18%;
+        --color-site-contrast-1: 30 100% 99%;
+        --color-site-contrast-2: 215 16% 70%;
 
-		--color-accent: 247 79% 68%;
-		--color-border: 223 47% 25%;
-		--color-shadow: 0 0% 0% / 10;
-	}
+        --color-accent-base: 11 68% 59%;
+        --color-accent-contrast: 0 0% 0%;
+
+        /* TODO: decide color */
+        --color-border: 0 0% 0%;
+
+        ::backdrop {
+            /* TODO: decide color */
+        }
+    }
 }

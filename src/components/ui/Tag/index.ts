@@ -1,5 +1,1 @@
-import Tag from "./Tag.svelte";
-
-export * from "./Tag.types";
-
-export default Tag;
+export { default as Tag } from './Tag.svelte';

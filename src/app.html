@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<!-- TODO: remove dark once development is "done" -->
-<html class="dark" lang="en">
-	<head>
-		<meta charset="utf-8" />
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8' />
 
-		<link
-			href="%sveltekit.assets%/favicon.png"
-			rel="icon"
-		/>
+        <link
+            href='%sveltekit.assets%/favicon.png'
+            rel='icon'
+        />
 
-		<meta
-			content="width=device-width, initial-scale=1"
-			name="viewport"
-		/>
+        <meta
+            content='width=device-width, initial-scale=1'
+            name='viewport'
+        />
 
-		%sveltekit.head%
-	</head>
+        %sveltekit.head%
+    </head>
 
-	<body
-		class="bg-site-1 typo-p text-text-1 container relative"
-		data-sveltekit-preload-data="hover"
-	>
-		<div class="svelte-wrapper" style="display: contents">
-			%sveltekit.body%
-		</div>
-	</body>
+    <body
+        class='bg-site-base text-site-contrast-1 text-5 leading-normal font-normal container'
+        data-sveltekit-preload-data='hover'
+    >
+        <div
+            class='svelte-wrapper'
+            style='display: contents'
+        >
+            %sveltekit.body%
+        </div>
+    </body>
 </html>

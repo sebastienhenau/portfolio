@@ -1,18 +1,37 @@
 <script lang="ts">
-	import { Block } from "$components";
+    import { Flow, FlowTitle } from '$components';
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // Server
+    // -----------------------------------------------------------------------------------------------------------------
+    // export let data: TPageData;
 </script>
 
-<Block
-	description="This section is currently in the works. Check back anytime!"
-	tag="section"
-	title="Coming soon"
-></Block>
+<Flow index="1">
+    <!-- TODO: header with filter -->
+    <!--<div
+        class="flex justify-between items-center gap-6"
+        slot="header"
+    >
+        <FlowTitle>Stories</FlowTitle>
 
-<svelte:head>
-	<title>Stories | Sébastien Henau</title>
+        <Button
+            size="sm"
+            variant="neutral"
+        >
+            <ButtonText>Filter</ButtonText>
 
-	<meta
-		content="Welcome to Sébastien Henau's personal site. I'm a 30-year-old Belgian front-end developer toggling my way into front-end architectures with my faithful cup of coffee next to me."
-		name="description"
-	/>
-</svelte:head>
+            <ButtonIcon icon={{ name: 'Filter' }} />
+        </Button>
+    </div>-->
+    <FlowTitle slot="header">Stories</FlowTitle>
+
+    <!--<ul>
+        {#each data.stories as story}
+            <li>
+                <ItemStory {story} />
+            </li>
+        {/each}
+    </ul>-->
+    <p>Coming soon...</p>
+</Flow>

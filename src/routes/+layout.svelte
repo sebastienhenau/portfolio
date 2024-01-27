@@ -1,34 +1,19 @@
 <script lang="ts">
-	import clsx from "clsx";
-	import { page } from "$app/stores";
-	import "$styles/main.css";
-	import {
-		BottomRightPageRadialGradient,
-		Header,
-		TopLeftPageRadialGradient,
-	} from "$components";
-
-	// -------------------------------------------------------------------------
-	// Reactive statements
-	// -------------------------------------------------------------------------
-	// TODO: set in different hook
-	$: isHomePage = $page.url.pathname === "/";
+    import '$styles/main.css';
+    import { Header, Menu } from '$components';
+    import { MobileMenu } from '$dialogs';
 </script>
 
-<TopLeftPageRadialGradient />
-
-<BottomRightPageRadialGradient />
-
 <div
-	class="relative z-10 row-start-1 row-end-2 stretch-container 1200:grid 1200:grid-rows-[auto_1fr] 1200:grid-cols-1"
+    class="stretch-container 900:grid 900:grid-cols-[11rem_1fr] 900:grid-rows-[auto_1fr] max-900:space-y-7 900:gap-x-9 900:gap-y-7 py-7"
 >
-	<Header />
+    <Header class="900:col-start-2 900:col-end-3" />
 
-	<main
-		class={clsx("1200:col-start-1 1200:col-end-2", {
-			"1200:row-start-1 1200:row-end-3": isHomePage,
-		})}
-	>
-		<slot />
-	</main>
+    <Menu class="900:row-start-2 900:row-end-3 900:self-start" />
+
+    <main class="900:col-start-2 900:col-end-3 900:row-start-2 900:row-end-3">
+        <slot />
+    </main>
 </div>
+
+<MobileMenu />

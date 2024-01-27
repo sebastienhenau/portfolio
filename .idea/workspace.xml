@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa6c2bd-d59e-4247-b71e-fe25e81bd229" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Navigation/NavigationItem/NavigationItem.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Dialog/Dialog.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Dialog/Dialog.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Dialog/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Action/Action.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Action/Action.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Header/HeaderHamburgerMenu/HeaderHamburgerMenu.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Header/HeaderHamburgerMenu/HeaderHamburgerMenu.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Navigation/Navigation.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navigation/Navigation.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Navigation/NavigationItem/NavigationItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navigation/NavigationItem/NavigationItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/icons.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/layout/Header&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/src/components/ui&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -54,7 +63,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/prettier&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.CSS&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/sebastienhenau/Documents/SEBA/projects/portfolio/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -66,18 +75,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/layout/Header" />
-      <recent name="$PROJECT_DIR$/src/components/cards" />
       <recent name="$PROJECT_DIR$/src/components/ui" />
-      <recent name="$PROJECT_DIR$/src/components/layout" />
-      <recent name="$PROJECT_DIR$/src/components/cards/StoryCard" />
+      <recent name="$PROJECT_DIR$/src/components/buttons/MultiButton" />
+      <recent name="$PROJECT_DIR$/src/components/buttons/ActionButton" />
+      <recent name="$PROJECT_DIR$/src/components/ui/ImagePanel" />
+      <recent name="$PROJECT_DIR$/src/components/ui/Highlight" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/home/Section" />
-      <recent name="$PROJECT_DIR$/src/components/home" />
+      <recent name="$PROJECT_DIR$/src/components/ui/ButtonGroup" />
+      <recent name="$PROJECT_DIR$/src/components/ui/Action" />
+      <recent name="$PROJECT_DIR$/src/components/buttons" />
       <recent name="$PROJECT_DIR$/src/components/layout" />
-      <recent name="$PROJECT_DIR$/src/components/Header/Logo" />
-      <recent name="$PROJECT_DIR$/src/components/ui" />
+      <recent name="$PROJECT_DIR$/src/components/Navigation" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -101,7 +110,23 @@
       <workItem from="1699277297384" duration="21000" />
       <workItem from="1699343090028" duration="71513000" />
       <workItem from="1699962057761" duration="1207000" />
-      <workItem from="1700071413940" duration="3263000" />
+      <workItem from="1700071413940" duration="4732000" />
+      <workItem from="1700663160504" duration="39795000" />
+      <workItem from="1701090298194" duration="14680000" />
+      <workItem from="1701255062245" duration="3210000" />
+      <workItem from="1701785977664" duration="578000" />
+      <workItem from="1701789466572" duration="3787000" />
+      <workItem from="1701953768700" duration="8137000" />
+      <workItem from="1702048793442" duration="7220000" />
+      <workItem from="1702057213740" duration="4618000" />
+      <workItem from="1702375685337" duration="399000" />
+      <workItem from="1704197186853" duration="312000" />
+      <workItem from="1704269752206" duration="783000" />
+      <workItem from="1704281797913" duration="15363000" />
+      <workItem from="1704981683744" duration="3931000" />
+      <workItem from="1705434493624" duration="556000" />
+      <workItem from="1705497609044" duration="23987000" />
+      <workItem from="1706026737833" duration="341000" />
     </task>
     <servers />
   </component>
@@ -118,6 +143,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/about/AboutEducationItem/AboutEducationItem.svelte</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

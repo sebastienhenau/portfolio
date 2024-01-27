@@ -1,3 +1,1 @@
-import ButtonText from "./ButtonText.svelte";
-
-export default ButtonText;
+export { default as ButtonText } from './ButtonText.svelte';
