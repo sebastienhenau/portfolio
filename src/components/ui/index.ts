@@ -1,5 +1,5 @@
-export * from './Icon';
 export * from './Action';
+export * from './Icon';
 export * from './Image';
 export * from './Link';
 export * from './Button';
