@@ -37,12 +37,6 @@
     // -----------------------------------------------------------------------------------------------------------------
     onMount(() => {
         dialogs.registerDialog(id, element);
-
-        element.addEventListener(onDialogClick);
-
-        return () => {
-            element.removeEventListener(onDialogClick);
-        };
     });
 </script>
 
