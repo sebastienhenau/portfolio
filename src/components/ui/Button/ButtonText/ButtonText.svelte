@@ -7,12 +7,17 @@
     // Context getters
     // -----------------------------------------------------------------------------------------------------------------
     const button: TButtonContext = getContext('button');
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // Reactive statements
+    // -----------------------------------------------------------------------------------------------------------------
+    $: variant = button.variant;
 </script>
 
 <span
-    class={clsx('text-inherit font-bold interactive-content', {
-        'text-accent-contrast': button.variant === 'default',
-        'text-site-contrast-1': button.variant === 'neutral',
+    class={clsx('font-bold interactive-content', {
+        'text-accent-contrast': variant === 'default',
+        'text-site-contrast-1': variant === 'neutral',
     })}
 >
     <slot />

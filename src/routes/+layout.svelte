@@ -1,6 +1,7 @@
 <script lang="ts">
     import '$styles/main.css';
-    import { Header, Navigation } from '$components';
+    import { Header, Menu } from '$components';
+    import { MobileMenu } from '$dialogs';
 </script>
 
 <div
@@ -8,9 +9,11 @@
 >
     <Header class="900:col-start-2 900:col-end-3" />
 
-    <Navigation class="900:row-start-2 900:row-end-3 900:self-start" />
+    <Menu class="900:row-start-2 900:row-end-3 900:self-start" />
 
     <main class="900:col-start-2 900:col-end-3 900:row-start-2 900:row-end-3">
         <slot />
     </main>
 </div>
+
+<MobileMenu />

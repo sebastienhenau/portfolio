@@ -23,6 +23,10 @@
      */
     html {
         font-family: 'DM Sans', system-ui, sans-serif;
+
+        &:has(.dialog[open]) {
+            overflow: hidden;
+        }
     }
 
     body {

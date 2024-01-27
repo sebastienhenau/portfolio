@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 
-/** @type {import("mdsvex").MdsvexOptions} */
+/** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
     extensions: ['.md'],
 };
@@ -40,6 +40,7 @@ const config = {
             $utilities: 'src/utilities',
             $stores: 'src/stores',
             $services: 'src/services',
+            $dialogs: 'src/dialogs',
         },
     },
 };

@@ -24,7 +24,7 @@
     <img
         {alt}
         class={clsx('w-full', {
-            'border rounded': border,
+            'border border-border rounded': border,
             'object-center object-cover': fit === 'cover',
             'object-center object-contain': fit === 'cover',
         })}

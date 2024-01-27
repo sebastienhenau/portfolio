@@ -14,15 +14,21 @@
     // Props
     // -----------------------------------------------------------------------------------------------------------------
     export let icon: TButtonIconIcon;
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // Reactive statements
+    // -----------------------------------------------------------------------------------------------------------------
+    $: variant = button.variant;
 </script>
 
+<!-- TODO: remove important -->
 <Icon
     {...icon}
     class={clsx(
         'interactive-content',
         {
-            'text-accent-contrast': button.variant === 'default',
-            'text-site-contrast-1': button.variant === 'neutral',
+            '!text-accent-contrast': variant === 'default',
+            '!text-site-contrast-1': variant === 'neutral',
         },
         $$props.class
     )}

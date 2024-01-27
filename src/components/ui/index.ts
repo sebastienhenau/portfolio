@@ -12,3 +12,4 @@ export * from './Item';
 export * from './Card';
 export * from './Cta';
 export * from './Table';
+export * from './Dialog';

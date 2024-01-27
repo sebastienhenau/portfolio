@@ -10,6 +10,11 @@
         --color-border: 222 30% 16%;
     }
 
+    ::backdrop {
+        /* TODO: explain why? */
+        --color: hsl(222 30% 16% / 50%);
+    }
+
     /**
      * TODO: once development is "done", replace html.dark by the
      * prefers-color-scheme:
@@ -21,10 +26,13 @@
         --color-site-contrast-2: 215 16% 70%;
 
         --color-accent-base: 11 68% 59%;
-        --color-accent-contrast: 30 100% 99%;
+        --color-accent-contrast: 0 0% 0%;
 
         /* TODO: decide color */
-        /*--color-border: 0 0% 0%;*/
-        --color-border: 0 100% 100%;
+        --color-border: 0 0% 0%;
+
+        ::backdrop {
+            /* TODO: decide color */
+        }
     }
 }

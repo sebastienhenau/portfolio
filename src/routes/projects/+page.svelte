@@ -1,20 +1,11 @@
 <script lang="ts">
-    import {
-        Button,
-        ButtonIcon,
-        ButtonText,
-        Flow,
-        FlowTitle,
-        Table,
-        TableBodyRowProject,
-        TableHeaderColumn,
-    } from '$components';
-    import { projects } from '$content';
+    import { Flow, FlowTitle } from '$components';
 </script>
 
 <!-- TODO: link projects by companies -->
 <Flow index="1">
-    <div
+    <!-- TODO: header with filter -->
+    <!--<div
         class="flex justify-between items-center gap-6"
         slot="header"
     >
@@ -28,21 +19,23 @@
 
             <ButtonIcon icon={{ name: 'Filter' }} />
         </Button>
-    </div>
+    </div>-->
+    <FlowTitle slot="header">Projects</FlowTitle>
 
-    <div class="@container/projects-table">
+    <!--<div class='@container/projects-table'>
         <Table>
-            <svelte:fragment slot="header">
+            <svelte:fragment slot='header'>
                 <TableHeaderColumn spacing={false}>Year</TableHeaderColumn>
 
                 <TableHeaderColumn>Name</TableHeaderColumn>
 
-                <TableHeaderColumn class="hidden @550/projects-table:table-cell">Technologies</TableHeaderColumn>
+                <TableHeaderColumn class='hidden @550/projects-table:table-cell'>Technologies</TableHeaderColumn>
             </svelte:fragment>
 
             {#each projects as project}
                 <TableBodyRowProject {project} />
             {/each}
         </Table>
-    </div>
+    </div>-->
+    <p>Coming soon...</p>
 </Flow>
