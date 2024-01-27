@@ -1,5 +1,6 @@
 export * from './Action';
-export * from './Icon';
+export { default as Icon } from './Icon/Icon.svelte';
+export * from './Icon/Icon.types';
 export * from './Image';
 export * from './Link';
 export * from './Button';
