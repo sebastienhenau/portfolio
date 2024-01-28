@@ -1,6 +1,0 @@
-@layer utilities {
-    .highlight {
-        border-radius: theme('borderRadius.DEFAULT');
-        background-image: theme('backgroundImage.gradient-striped');
-    }
-}
