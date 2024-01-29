@@ -1,7 +1,6 @@
 import tailwindCssContainerQueries from '@tailwindcss/container-queries';
 
 import { convertToEm, convertToRem, getFontSizeScale } from './.styles/functions';
-import { container } from './.styles/plugins';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,17 +8,7 @@ export default {
     corePlugins: {
         container: false,
     },
-    plugins: [
-        tailwindCssContainerQueries,
-        container({
-            width: convertToRem('1152px'),
-            spacing: {
-                DEFAULT: 5,
-                700: 8,
-                1200: 12,
-            },
-        }),
-    ],
+    plugins: [tailwindCssContainerQueries],
     theme: {
         screens: {
             300: convertToEm('375px'),
@@ -58,7 +47,19 @@ export default {
                 base: 'hsl(var(--color-accent-base) / <alpha-value>)',
                 contrast: 'hsl(var(--color-accent-contrast) / <alpha-value>)',
             },
-            border: 'hsl(var(--color-border) / <alpha-value>)',
+            line: 'hsl(var(--color-line) / <alpha-value>)',
+        },
+        fontFamily: {
+            sans: [
+                'DM Sans',
+                'ui-sans-serif',
+                'system-ui',
+                'sans-serif',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji',
+            ],
         },
         /**
          * Font size scale based on Carbon Design System

@@ -1,0 +1,35 @@
+@layer base {
+    :root {
+        /**
+         * Ensure the page always fills up the entire height of the viewport.
+         */
+        min-height: 100%;
+        /**
+         * Force vertical scrollbars to always be visible to prevent awkward
+         * jumps when navigating between pages that do/do not have content to
+         * produce scrollbars naturally.
+         */
+        overflow-y: scroll;
+
+        /**
+         * Makes sure that 1rem = 16px, all rem scale along this percentage.
+         */
+        font-size: 100%;
+    }
+
+    /**
+     * Customize the default font in tailwind:
+     * https://tailwindcss.com/docs/font-family#customizing-the-default-font
+     */
+    html {
+        font-family: theme('fontFamily.sans');
+    }
+
+    body {
+        /**
+         * Fix for 100vh issue on safari mobile browsers, use min-height 100vh
+         * as fallback.
+         */
+        min-height: 100vh;
+    }
+}

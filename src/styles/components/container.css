@@ -1,0 +1,20 @@
+@layer components {
+    .container {
+        --container-spacing: theme('spacing.5');
+
+        max-width: 72rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--container-spacing);
+        padding-right: var(--container-spacing);
+
+        @media screen(700) {
+            --container-spacing: theme('spacing.8');
+        }
+
+        @media screen(1200) {
+            --container-spacing: theme('spacing.12');
+        }
+    }
+}
