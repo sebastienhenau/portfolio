@@ -2,23 +2,23 @@
     context="module"
     lang="ts"
 >
-    export type TImagePropSrc = string;
-    export type TImagePropAlt = string;
-    export type TImagePropFit = 'cover' | 'contain';
+    export type TImageSrc = string;
+    export type TImageAlt = string;
+    export type TImageFit = 'cover' | 'contain';
 
     export interface TImageProps {
-        src: TImagePropSrc;
-        alt?: TImagePropAlt;
-        fit?: TImagePropFit;
+        src: TImageSrc;
+        alt?: TImageAlt;
+        fit?: TImageFit;
     }
 </script>
 
 <script lang="ts">
     import clsx from 'clsx';
 
-    export let src: TImagePropSrc;
-    export let alt: TImagePropAlt = '';
-    export let fit: TImagePropFit = 'cover';
+    export let src: TImageSrc;
+    export let alt: TImageAlt = '';
+    export let fit: TImageFit = 'cover';
 </script>
 
 <!-- TODO: fix flex -->

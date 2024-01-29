@@ -2,23 +2,23 @@
     context="module"
     lang="ts"
 >
-    export type TActionPropHref = string;
-    export type TActionPropType = 'button' | 'submit';
-    export type TActionPropTarget = '_blank' | null;
+    export type TActionHref = string;
+    export type TActionType = 'button' | 'submit';
+    export type TActionTarget = '_blank' | null;
 
     export interface TActionProps {
-        href?: TActionPropHref;
-        type?: TActionPropType;
-        target?: TActionPropTarget;
+        href?: TActionHref;
+        type?: TActionType;
+        target?: TActionTarget;
     }
 </script>
 
 <script lang="ts">
     import clsx from 'clsx';
 
-    export let href: TActionPropHref = '';
-    export let type: TActionPropType = 'button';
-    export let target: TActionPropTarget = null;
+    export let href: TActionHref = '';
+    export let type: TActionType = 'button';
+    export let target: TActionTarget = null;
 </script>
 
 {#if !!href}
