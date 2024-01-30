@@ -30,7 +30,10 @@
         size="sm"
         variant="neutral"
     >
-        <ButtonIcon icon={{ name: icon }} />
+        <ButtonIcon
+            class="max-500:hidden"
+            icon={{ name: icon }}
+        />
 
         <ButtonText>
             <slot />

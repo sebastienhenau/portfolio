@@ -23,7 +23,7 @@
     setContext<TButtonGroupContext>('buttonGroup', true);
 </script>
 
-<div class={clsx('relative z-0', $$props.class)}>
+<div class={clsx('relative z-0 inline-block', $$props.class)}>
     <div class="absolute inset-0 -z-20 bg-line rounded pointer-events-none translate-x-2 translate-y-2" />
 
     <menu

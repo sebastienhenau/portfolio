@@ -7,6 +7,7 @@
 
 <nav class={clsx('panel p-4 900:p-6', $$props.class)}>
     <ButtonGroup
+        class="900:w-full"
         customDirectionClass="max-900:[&>*:not(:first-child)]:ml-[-2px] 900:flex-col 900:[&>*:not(:first-child)]:mt-[-2px]"
     >
         <MenuItem
