@@ -1,2 +1,3 @@
-export { default as Header } from './Header.svelte';
-export * from './Header.svelte';
+export * from './Header';
+
+export * from './Menu';

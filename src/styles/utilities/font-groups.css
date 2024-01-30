@@ -1,3 +1,4 @@
+/* TODO: Part of Text component or keep here? */
 @layer utilities {
     .fg-title {
         font-family: theme('fontFamily.sans');

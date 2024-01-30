@@ -7,4 +7,9 @@ export * from './Action.svelte';
 export { default as Icon } from './Icon.svelte';
 export * from './Icon.svelte';
 
+export { default as Text } from './Text.svelte';
+export * from './Text.svelte';
+
 export * from './Button';
+
+export * from './ButtonGroup';

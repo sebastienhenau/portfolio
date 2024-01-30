@@ -12,6 +12,7 @@
 </script>
 
 <script lang="ts">
+    import clsx from 'clsx';
     import { Icon } from '$components';
 
     export let icon: TButtonIconIcon;
@@ -19,5 +20,8 @@
 
 <Icon
     {...icon}
-    class="group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-2 group-active:translate-y-2 transition-transform"
+    class={clsx(
+        'group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-2 group-active:translate-y-2 transition-transform',
+        $$props.class
+    )}
 />

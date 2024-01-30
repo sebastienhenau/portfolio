@@ -1,6 +1,6 @@
 <script lang="ts">
     import clsx from 'clsx';
-    import { Button, ButtonIcon, ButtonText } from '$components';
+    import { Button, ButtonIcon, ButtonText, Text } from '$components';
     import HeaderLogo from './HeaderLogo.svelte';
 </script>
 
@@ -8,7 +8,12 @@
     <div class="flex items-center gap-5">
         <HeaderLogo />
 
-        <p class="fg-title fgv-flat">Sébastien Henau</p>
+        <Text
+            type="title"
+            variant="flat"
+        >
+            Sébastien Henau
+        </Text>
     </div>
 
     <div class="flex items-center gap-5 max-500:hidden">
