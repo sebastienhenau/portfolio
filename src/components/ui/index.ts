@@ -13,3 +13,12 @@ export * from './Text.svelte';
 export * from './Button';
 
 export * from './ButtonGroup';
+
+export { default as Card } from './Card.svelte';
+export * from './Card.svelte';
+
+export { default as Panel } from './Panel.svelte';
+export * from './Panel.svelte';
+
+export { default as Container } from './Container.svelte';
+export * from './Container.svelte';

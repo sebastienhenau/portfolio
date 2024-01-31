@@ -1,3 +1,5 @@
 <script lang="ts">
-    import '$styles/main.css';
+    import { HomeAboutCard } from '$components';
 </script>
+
+<HomeAboutCard />

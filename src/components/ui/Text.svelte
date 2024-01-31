@@ -1,3 +1,4 @@
+<!-- TODO: font groups in this file? -->
 <script
     context="module"
     lang="ts"

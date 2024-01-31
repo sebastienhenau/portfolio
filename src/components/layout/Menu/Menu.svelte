@@ -1,11 +1,14 @@
 <script lang="ts">
     import clsx from 'clsx';
     import { ROUTES_ABOUT, ROUTES_BLOG, ROUTES_HOME, ROUTES_PROJECTS } from '$constants';
-    import { ButtonGroup } from '$components';
+    import { ButtonGroup, Panel } from '$components';
     import MenuItem from './MenuItem.svelte';
 </script>
 
-<nav class={clsx('panel p-4 900:p-6', $$props.class)}>
+<Panel
+    class={clsx('panel p-4 900:p-6', $$props.class)}
+    tag="nav"
+>
     <ButtonGroup
         class="900:w-full"
         customDirectionClass="max-900:[&>*:not(:first-child)]:ml-[-2px] 900:flex-col 900:[&>*:not(:first-child)]:mt-[-2px]"
@@ -38,4 +41,4 @@
             Projects
         </MenuItem>
     </ButtonGroup>
-</nav>
+</Panel>

@@ -21,14 +21,15 @@
     export let fit: TImageFit = 'cover';
 </script>
 
-<!-- TODO: fix flex -->
-<div class={clsx($$props.class)}>
-    <img
-        {alt}
-        class={clsx('w-full', {
+<img
+    {alt}
+    class={clsx(
+        'w-full',
+        {
             'object-center object-cover': fit === 'cover',
-            'object-center object-contain': fit === 'cover',
-        })}
-        {src}
-    />
-</div>
+            'object-center object-contain': fit === 'contain',
+        },
+        $$props.class
+    )}
+    {src}
+/>
