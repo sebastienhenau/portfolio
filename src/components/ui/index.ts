@@ -10,8 +10,14 @@ export * from './Icon.svelte';
 export { default as Text } from './Text.svelte';
 export * from './Text.svelte';
 
+export { default as Date } from './Date.svelte';
+export * from './Date.svelte';
+
 export { default as Badge } from './Badge.svelte';
 export * from './Badge.svelte';
+
+export { default as Tag } from './Tag.svelte';
+export * from './Tag.svelte';
 
 export { default as Card } from './Card.svelte';
 export * from './Card.svelte';

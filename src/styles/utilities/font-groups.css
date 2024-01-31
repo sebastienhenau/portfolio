@@ -28,7 +28,18 @@
         line-height: theme('lineHeight.normal');
     }
 
+    .fg-label {
+        font-family: theme('fontFamily.sans');
+        font-weight: theme('fontWeight.bold');
+        font-size: theme('fontSize.4');
+        line-height: theme('lineHeight.normal');
+    }
+
     .fgv-flat {
         line-height: theme('lineHeight.none');
+    }
+
+    .fgv-fat {
+        font-weight: theme('fontWeight.bold');
     }
 }
