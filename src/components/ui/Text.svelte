@@ -4,7 +4,7 @@
     lang="ts"
 >
     export type TTextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-    export type TTextType = 'title' | 'text' | 'action';
+    export type TTextType = 'title' | 'text' | 'action' | 'number';
     export type TTextVariant = 'none' | 'flat';
 
     export interface TTextProps {
@@ -30,6 +30,7 @@
             'fg-title': type === 'title',
             'fg-text': type === 'text',
             'fg-action': type === 'action',
+            'fg-number': type === 'number',
             'fgv-flat': variant === 'flat',
         },
         $$props.class

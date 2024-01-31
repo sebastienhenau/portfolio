@@ -105,6 +105,12 @@ export default {
             content: {
                 empty: "''",
             },
+            width: {
+                border: '2px',
+            },
+            gridTemplateRows: {
+                '3-auto': 'repeat(3, auto)',
+            },
         },
     },
 };
