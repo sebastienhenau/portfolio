@@ -7,25 +7,27 @@
     export interface TPanelProps {
         tag?: TPanelTag;
     }
+
+    export type TPanelContext = boolean;
 </script>
 
 <script lang="ts">
     import clsx from 'clsx';
+    import { setContext } from 'svelte';
 
     export let tag: TPanelTag = 'div';
+
+    setContext<TPanelContext>('panel', true);
 </script>
 
 <svelte:element
     this={tag}
-    class={clsx('relative z-0', $$props.class)}
+    class={clsx(
+        'relative z-0',
+        'before:content-empty before:absolute before:inset-0 before:-z-20 before:bg-site-base before:border before:border-line before:rounded before:pointer-events-none before:translate-x-2 before:translate-y-2',
+        'after:content-empty after:absolute after:inset-0 after:-z-10 after:bg-site-base after:border after:border-line after:rounded after:pointer-events-none',
+        $$props.class
+    )}
 >
-    <div class="absolute inset-0 -z-20 bg-site-base border rounded pointer-events-none translate-x-2 translate-y-2" />
-
-    <div class="absolute inset-0 -z-10 bg-site-base rounded" />
-
-    <div class="relative z-0">
-        <slot />
-    </div>
-
-    <div class="absolute inset-0 z-10 border rounded bg-transparent pointer-events-none" />
+    <slot />
 </svelte:element>

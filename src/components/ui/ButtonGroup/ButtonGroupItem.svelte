@@ -28,7 +28,9 @@
     });
 
     afterUpdate(() => {
-        $reactiveSelected = selected;
+        if ($reactiveSelected !== selected) {
+            $reactiveSelected = selected;
+        }
     });
 </script>
 

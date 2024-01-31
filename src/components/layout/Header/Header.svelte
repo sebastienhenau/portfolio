@@ -1,7 +1,8 @@
 <script lang="ts">
     import clsx from 'clsx';
-    import { Button, ButtonIcon, ButtonText, Text } from '$components';
+    import { Text } from '$components';
     import HeaderLogo from './HeaderLogo.svelte';
+    import HeaderThemeToggle from './HeaderThemeToggle.svelte';
 </script>
 
 <header class={clsx('flex justify-between items-center gap-6', $$props.class)}>
@@ -16,14 +17,17 @@
         </Text>
     </div>
 
-    <div class="flex items-center gap-5 max-500:hidden">
-        <Button
-            size="sm"
-            variant="neutral"
+    <div class="flex items-center gap-5">
+        <!-- TODO: add search button with feature -->
+        <!--<Button
+            size='sm'
+            variant='neutral'
         >
             <ButtonText>Search</ButtonText>
 
             <ButtonIcon icon={{ name: 'Search' }} />
-        </Button>
+        </Button>-->
+
+        <HeaderThemeToggle />
     </div>
 </header>

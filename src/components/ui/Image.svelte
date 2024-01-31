@@ -15,10 +15,14 @@
 
 <script lang="ts">
     import clsx from 'clsx';
+    import { getContext } from 'svelte';
+    import type { TPanelContext } from '$components';
 
     export let src: TImageSrc;
     export let alt: TImageAlt = '';
     export let fit: TImageFit = 'cover';
+
+    const panelContext = getContext<TPanelContext>('panel');
 </script>
 
 <img
@@ -28,6 +32,7 @@
         {
             'object-center object-cover': fit === 'cover',
             'object-center object-contain': fit === 'contain',
+            'rounded border border-line': panelContext,
         },
         $$props.class
     )}
