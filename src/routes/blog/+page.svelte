@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
     import {
+        BlogPostPreview,
         Button,
         ButtonIcon,
         ButtonText,
@@ -7,8 +8,10 @@
         SectionContent,
         SectionHeader,
         SectionTitle,
-        Text,
     } from '$components';
+    import type { TPageData } from './+page';
+
+    export let data: TPageData;
 </script>
 
 <Section number="1">
@@ -27,6 +30,14 @@
     </SectionHeader>
 
     <SectionContent class="mt-7">
-        <Text>Coming soon...</Text>
+        <!--<Text>Coming soon...</Text>-->
+
+        <ul>
+            {#each data.stories as story}
+                <li>
+                    <BlogPostPreview {story} />
+                </li>
+            {/each}
+        </ul>
     </SectionContent>
 </Section>

@@ -16,9 +16,6 @@ export * from './Date.svelte';
 export { default as Badge } from './Badge.svelte';
 export * from './Badge.svelte';
 
-export { default as Tag } from './Tag.svelte';
-export * from './Tag.svelte';
-
 export { default as Card } from './Card.svelte';
 export * from './Card.svelte';
 
@@ -30,5 +27,8 @@ export * from './Divider.svelte';
 
 export { default as Cta } from './Cta.svelte';
 export * from './Cta.svelte';
+
+export { default as Preview } from './Preview.svelte';
+export * from './Preview.svelte';
 
 export * from './Section';

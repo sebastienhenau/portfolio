@@ -1,5 +1,6 @@
 <script lang="ts">
     import {
+        BlogPostPreview,
         Button,
         ButtonIcon,
         ButtonText,
@@ -13,8 +14,9 @@
         Text,
     } from '$components';
     import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
+    import type { TPageData } from './+page';
 
-    // export let data: TPageData;
+    export let data: TPageData;
 </script>
 
 <HomeAboutCard />
@@ -25,7 +27,14 @@
     <SectionTitle>Blog</SectionTitle>
 
     <SectionContent class="mt-7">
-        <Text>Coming soon...</Text>
+        <!-- <Text>Coming soon...</Text>-->
+        <ul class="space-y-6">
+            {#each data.stories as story}
+                <li>
+                    <BlogPostPreview {story} />
+                </li>
+            {/each}
+        </ul>
     </SectionContent>
 
     <SectionFooter class="mt-7">
