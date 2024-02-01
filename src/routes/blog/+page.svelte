@@ -14,13 +14,13 @@
     export let data: TPageData;
 </script>
 
-<Section number="1">
-    <SectionHeader>
-        <SectionTitle slot="left">Blog</SectionTitle>
+<Section>
+    <SectionHeader number="1">
+        <SectionTitle slot="start">Blog</SectionTitle>
 
         <Button
             size="sm"
-            slot="right"
+            slot="end"
             variant="neutral"
         >
             <ButtonText>Filter</ButtonText>

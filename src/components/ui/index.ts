@@ -32,3 +32,5 @@ export { default as Preview } from './Preview.svelte';
 export * from './Preview.svelte';
 
 export * from './Section';
+
+export * from './Table';

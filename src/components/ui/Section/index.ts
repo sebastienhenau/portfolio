@@ -1,6 +1,9 @@
 export { default as Section } from './Section.svelte';
 export * from './Section.svelte';
 
+export { default as SectionPart } from './SectionPart.svelte';
+export * from './SectionPart.svelte';
+
 export { default as SectionHeader } from './SectionHeader.svelte';
 export * from './SectionHeader.svelte';
 

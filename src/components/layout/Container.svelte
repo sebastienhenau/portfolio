@@ -17,7 +17,7 @@
 
 <svelte:element
     this={tag}
-    class={clsx('max-w-[72rem] w-full mx-auto px-5 700:px-8 1200:px-12', $$props.class)}
+    class={clsx('max-w-[75rem] w-full mx-auto px-5 700:px-8', $$props.class)}
 >
     <slot />
 </svelte:element>

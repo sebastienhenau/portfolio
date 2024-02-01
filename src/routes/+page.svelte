@@ -10,6 +10,7 @@
         Section,
         SectionContent,
         SectionFooter,
+        SectionHeader,
         SectionTitle,
         Text,
     } from '$components';
@@ -23,8 +24,10 @@
 
 <Divider />
 
-<Section number="1">
-    <SectionTitle>Blog</SectionTitle>
+<Section>
+    <SectionHeader number="1">
+        <SectionTitle slot="start">Blog</SectionTitle>
+    </SectionHeader>
 
     <SectionContent class="mt-7">
         <!-- <Text>Coming soon...</Text>-->
@@ -53,8 +56,10 @@
 
 <Divider />
 
-<Section number="2">
-    <SectionTitle>Projects</SectionTitle>
+<Section>
+    <SectionHeader number="2">
+        <SectionTitle slot="start">Projects</SectionTitle>
+    </SectionHeader>
 
     <SectionContent class="mt-7">
         <Text>Coming soon...</Text>

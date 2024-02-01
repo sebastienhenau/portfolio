@@ -2,34 +2,32 @@
     context="module"
     lang="ts"
 >
-    export type TSectionNumber = string;
+    export type TSectionParts = boolean;
 
     export interface TSectionProps {
-        number: TSectionNumber;
+        parts?: TSectionParts;
+    }
+
+    export interface TSectionContext {
+        parts: TSectionParts;
     }
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { Badge } from '$components';
+    import { setContext } from 'svelte';
+    import SectionPart from './SectionPart.svelte';
 
-    export let number: TSectionNumber;
+    export let parts: TSectionParts = false;
+
+    setContext<TSectionContext>('section', {
+        parts,
+    });
 </script>
 
-<!-- TODO: link 1.25rem to badge or inherit badge -->
-<section
-    class={clsx(
-        'grid grid-cols-[auto_1fr] 600:grid-cols-[1.25rem_1fr] grid-rows-3-auto gap-x-4 700:gap-x-6',
-        $$props.class
-    )}
+<SectionPart
+    class={$$props.class}
+    root
+    tag="section"
 >
-    <div
-        class="col-start-1 col-end-2 row-start-2 row-end-4 max-600:hidden w-border rounded-full bg-line self-stretch justify-self-center pointer-events-none"
-    />
-
-    <Badge class="col-start-1 col-end-2 row-start-1 row-end-2 self-center">
-        {number}
-    </Badge>
-
     <slot />
-</section>
+</SectionPart>

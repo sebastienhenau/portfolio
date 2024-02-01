@@ -9,6 +9,7 @@
         Divider,
         Section,
         SectionContent,
+        SectionHeader,
         SectionTitle,
     } from '$components';
     import { educations, experiences } from '$content';
@@ -19,8 +20,10 @@
 
 <Divider />
 
-<Section number="1">
-    <SectionTitle>Experience</SectionTitle>
+<Section>
+    <SectionHeader number="1">
+        <SectionTitle slot="start">Experience</SectionTitle>
+    </SectionHeader>
 
     <SectionContent class="mt-4">
         <p>
@@ -43,7 +46,9 @@
 <Divider />
 
 <Section number="2">
-    <SectionTitle>Education</SectionTitle>
+    <SectionHeader number="2">
+        <SectionTitle slot="start">Education</SectionTitle>
+    </SectionHeader>
 
     <SectionContent class="mt-4">
         <p>
@@ -64,7 +69,9 @@
 <Divider />
 
 <Section number="3">
-    <SectionTitle>Projects</SectionTitle>
+    <SectionHeader number="3">
+        <SectionTitle slot="start">Projects</SectionTitle>
+    </SectionHeader>
 
     <SectionContent class="mt-4">
         <p>
