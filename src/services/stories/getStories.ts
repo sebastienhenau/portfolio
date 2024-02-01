@@ -1,11 +1,7 @@
 import type { TStories, TStory } from '$types';
 
-export interface TGetStoriesOptions {
-    limit?: number | null;
-}
-
 /* TODO: add pagination */
-const getStories = async ({ limit = 0 }: TGetStoriesOptions) => {
+const getStories = async () => {
     const paths = import.meta.glob('/src/content/stories/*.md', {
         eager: true,
     });
@@ -33,7 +29,7 @@ const getStories = async ({ limit = 0 }: TGetStoriesOptions) => {
             return new Date(second.date).getTime() - new Date(first.date).getTime();
         });
 
-    return limit ? [...stories].slice(0, limit) : stories;
+    return stories;
 };
 
 export default getStories;

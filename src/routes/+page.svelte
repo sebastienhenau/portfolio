@@ -18,6 +18,8 @@
     import type { TPageData } from './+page';
 
     export let data: TPageData;
+
+    const topStories = [...data.stories].slice(0, 3);
 </script>
 
 <HomeAboutCard />
@@ -32,7 +34,7 @@
     <SectionContent class="mt-7">
         <!-- <Text>Coming soon...</Text>-->
         <ul class="space-y-6">
-            {#each data.stories as story}
+            {#each topStories as story}
                 <li>
                     <BlogPostPreview {story} />
                 </li>
