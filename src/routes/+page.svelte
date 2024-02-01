@@ -16,10 +16,12 @@
     } from '$components';
     import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
     import type { TPageData } from './+page';
+    /*import { projects } from '$content';*/
 
     export let data: TPageData;
 
     const topStories = [...data.stories].slice(0, 3);
+    /*const topProjects = [...projects].slice(0, 3);*/
 </script>
 
 <HomeAboutCard />
@@ -32,7 +34,6 @@
     </SectionHeader>
 
     <SectionContent class="mt-7">
-        <!-- <Text>Coming soon...</Text>-->
         <ul class="space-y-6">
             {#each topStories as story}
                 <li>
@@ -63,8 +64,15 @@
         <SectionTitle slot="start">Projects</SectionTitle>
     </SectionHeader>
 
-    <SectionContent class="mt-7">
+    <SectionContent>
         <Text>Coming soon...</Text>
+        <!--<Table>
+            <TableBody>
+                {#each topProjects as project}
+                    <ProjectTableBodyRow {project} />
+                {/each}
+            </TableBody>
+        </Table>-->
     </SectionContent>
 
     <SectionFooter class="mt-7">
