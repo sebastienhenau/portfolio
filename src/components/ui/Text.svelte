@@ -5,7 +5,7 @@
 >
     export type TTextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
     export type TTextType = 'title' | 'text' | 'label' | 'action' | 'number';
-    export type TTextVariant = 'none' | 'flat' | 'fat';
+    export type TTextVariant = 'none' | 'flat' | 'fat' | 'lg';
 
     export interface TTextProps {
         tag?: TTextTag;
@@ -28,6 +28,7 @@
         'font-sans',
         {
             'fg-title': type === 'title',
+            'fgv-title-lg': type === 'title' && variant === 'lg',
             'fg-text': type === 'text',
             'fg-action': type === 'action',
             'fg-number': type === 'number',

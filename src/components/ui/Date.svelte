@@ -17,7 +17,7 @@
 
 <!-- TODO/ datetime -->
 <time
-    class={clsx('fg-text fgv-flat', $$props.class)}
+    class={clsx('inline-block fg-text fgv-flat', $$props.class)}
     datetime=""
 >
     {value}

@@ -3,6 +3,7 @@
         Button,
         ButtonIcon,
         ButtonText,
+        ProjectTableBodyRow,
         Section,
         SectionContent,
         SectionHeader,
@@ -14,7 +15,7 @@
         TableHeaderColumn,
         Text,
     } from '$components';
-    /*import { projects } from '$content';*/
+    import { projects } from '$content';
 </script>
 
 <Section
@@ -59,9 +60,9 @@
         </TableHeader>
 
         <TableBody>
-            <!--{#each projects as project}
+            {#each projects as project}
                 <ProjectTableBodyRow {project} />
-            {/each}-->
+            {/each}
         </TableBody>
     </Table>
 </Section>

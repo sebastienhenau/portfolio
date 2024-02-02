@@ -2,6 +2,7 @@ import type { TIcons } from '$types';
 import User from '~icons/bx/user';
 import HamburgerMenu from '~icons/ci/hamburger-md';
 import Search from '~icons/ic/baseline-search';
+import ChevronLeft from '~icons/ic/round-chevron-left';
 import ChevronRight from '~icons/ic/round-chevron-right';
 import Close from '~icons/iconamoon/close-bold';
 import Home from '~icons/iconamoon/home-bold';
@@ -21,6 +22,7 @@ const icons: TIcons = {
     Github,
     Linkedin,
     ChevronRight,
+    ChevronLeft,
     ExternalLink,
     Search,
     HalfCircle,

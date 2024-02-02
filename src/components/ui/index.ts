@@ -31,6 +31,9 @@ export * from './Cta.svelte';
 export { default as Preview } from './Preview.svelte';
 export * from './Preview.svelte';
 
+export { default as Highlight } from './Highlight.svelte';
+export * from './Highlight.svelte';
+
 export * from './Section';
 
 export * from './Table';

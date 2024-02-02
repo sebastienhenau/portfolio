@@ -4,7 +4,7 @@ import { convertToEm, convertToRem, getFontSizeScale } from './.styles/functions
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
+    content: ['./src/**/*.{html,js,svelte,ts,md}'],
     corePlugins: {
         container: false,
     },

@@ -5,9 +5,11 @@
     import type { TActionProps } from '$components';
 
     export type TLinkAction = TActionProps;
+    export type TLinkVariant = 'default' | 'neutral';
 
     export interface TLink {
         action: TLinkAction;
+        variant: TLinkVariant;
     }
 </script>
 
@@ -19,11 +21,19 @@
     // Props
     // -----------------------------------------------------------------------------------------------------------------
     export let action: TLinkAction = {};
+    export let variant: TLinkVariant = 'default';
 </script>
 
 <Action
     {...action}
-    class={clsx('inline-flex items-center gap-3 text-accent-base', $$props.class)}
+    class={clsx(
+        'inline-flex items-center gap-3',
+        {
+            'text-accent-base': variant === 'default',
+            'text-site-contrast-1 hover:text-accent-base transition-colors': variant === 'neutral',
+        },
+        $$props.class
+    )}
 >
     <slot />
 </Action>

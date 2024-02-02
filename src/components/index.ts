@@ -6,3 +6,4 @@ export * from './previews';
 export * from './table-body-rows';
 export * from './home';
 export * from './about';
+export * from './blogpost';

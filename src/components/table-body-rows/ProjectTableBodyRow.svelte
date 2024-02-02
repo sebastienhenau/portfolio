@@ -1,9 +1,20 @@
 <script lang="ts">
-    import { Date, TableBodyColumn, TableBodyRow, Tag, TagGroup, TagGroupItem, Text } from '$components';
+    import {
+        Date,
+        Link,
+        LinkIcon,
+        LinkText,
+        TableBodyColumn,
+        TableBodyRow,
+        Tag,
+        TagGroup,
+        TagGroupItem,
+        Text,
+    } from '$components';
 
     export let project;
 
-    const { name, date, technologies, company } = project;
+    const { name, date, technologies, link, company } = project;
 
     const limitedTechnologies = [...technologies].splice(0, 3);
     const remainingTechnologiesAmount = technologies.length - limitedTechnologies.length;
@@ -19,13 +30,23 @@
     </TableBodyColumn>
 
     <TableBodyColumn>
-        <Text
+        <!--<Text
             tag="p"
             type="text"
             variant="fat"
         >
             {name}
-        </Text>
+        </Text>-->
+        <Link
+            action={{ href: link, target: '_blank' }}
+            variant="neutral"
+        >
+            <LinkText>
+                {name}
+            </LinkText>
+
+            <LinkIcon icon={{ name: 'ExternalLink' }} />
+        </Link>
 
         <Text
             tag="p"
