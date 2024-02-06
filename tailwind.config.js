@@ -42,14 +42,16 @@ export default {
                 '--color-accent-base': '14 83% 66%',
                 '--color-accent-contrast': '222 30% 16%',
                 '--color-line': '222 30% 16%',
+                '--color-outline': '0 0% 0%',
             },
             dark: {
                 '--color-site-base': '223 30% 18%',
                 '--color-site-contrast-1': '30 100% 99%',
                 '--color-site-contrast-2': '215 16% 70%',
-                '--color-accent-base': '11 68% 59%',
+                '--color-accent-base': '14 83% 66%',
                 '--color-accent-contrast': '0 0% 0%',
                 '--color-line': '0 0% 0%',
+                '--color-outline': '30 100% 99%',
             },
         },
         colors: {
@@ -67,6 +69,7 @@ export default {
                 contrast: 'hsl(var(--color-accent-contrast) / <alpha-value>)',
             },
             line: 'hsl(var(--color-line) / <alpha-value>)',
+            outline: 'hsl(var(--color-outline) / <alpha-value>)',
         },
         fontFamily: {
             sans: [
