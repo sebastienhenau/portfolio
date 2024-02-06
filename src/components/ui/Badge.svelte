@@ -11,8 +11,8 @@
 >
     <Text
         tag="p"
-        type="number"
-        variant="flat"
+        type="label"
+        variants={['flat', 'sm']}
     >
         <slot />
     </Text>

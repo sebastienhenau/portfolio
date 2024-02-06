@@ -10,8 +10,8 @@
         <HeaderLogo />
 
         <Text
-            type="title"
-            variant="flat"
+            type="title-2"
+            variants={['flat']}
         >
             Sébastien Henau
         </Text>

@@ -7,7 +7,7 @@
         class="truncate"
         tag="p"
         type="label"
-        variant="flat"
+        variants={['flat']}
     >
         <slot />
     </Text>

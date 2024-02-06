@@ -1,6 +1,7 @@
 import tailwindCssContainerQueries from '@tailwindcss/container-queries';
 
 import { convertToEm, convertToRem, getFontSizeScale } from './.styles/functions';
+import { fontStyles, themes } from './.styles/plugins';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,7 +9,7 @@ export default {
     corePlugins: {
         container: false,
     },
-    plugins: [tailwindCssContainerQueries],
+    plugins: [themes, fontStyles, tailwindCssContainerQueries],
     theme: {
         screens: {
             300: convertToEm('375px'),
@@ -32,6 +33,24 @@ export default {
             1000: convertToRem('1024px'),
             1100: convertToRem('1152px'),
             1200: convertToRem('1280px'),
+        },
+        themes: {
+            light: {
+                '--color-site-base': '0 100% 100%',
+                '--color-site-contrast-1': '222 30% 16%',
+                '--color-site-contrast-2': '215 16% 47%',
+                '--color-accent-base': '14 83% 66%',
+                '--color-accent-contrast': '222 30% 16%',
+                '--color-line': '222 30% 16%',
+            },
+            dark: {
+                '--color-site-base': '223 30% 18%',
+                '--color-site-contrast-1': '30 100% 99%',
+                '--color-site-contrast-2': '215 16% 70%',
+                '--color-accent-base': '11 68% 59%',
+                '--color-accent-contrast': '0 0% 0%',
+                '--color-line': '0 0% 0%',
+            },
         },
         colors: {
             // Tailwind specific
@@ -66,6 +85,113 @@ export default {
          * https://carbondesignsystem.com/guidelines/typography/overview/#scale
          */
         fontSize: getFontSizeScale(22),
+        fontStyles: ({ theme }) => ({
+            config: [
+                {
+                    className: 'title-1',
+                    base: 'h1',
+                    properties: {
+                        'font-weight': theme('fontWeight.bold'),
+                        'font-size': theme('fontSize.6'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                    breakpoints: [
+                        {
+                            name: 700,
+                            properties: {
+                                'font-size': theme('fontSize.8'),
+                            },
+                        },
+                    ],
+                },
+                {
+                    className: 'title-2',
+                    base: 'h2',
+                    properties: {
+                        'font-weight': theme('fontWeight.bold'),
+                        'font-size': theme('fontSize.6'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                },
+                {
+                    className: 'title-3',
+                    base: 'h3',
+                    properties: {
+                        'font-weight': theme('fontWeight.bold'),
+                        'font-size': theme('fontSize.5'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                },
+                {
+                    className: 'text',
+                    base: 'p',
+                    properties: {
+                        'font-weight': theme('fontWeight.normal'),
+                        'font-size': theme('fontSize.5'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                    children: [
+                        {
+                            base: 'strong',
+                            properties: {
+                                'font-weight': theme('fontWeight.bold'),
+                                'font-size': 'inherit',
+                                'line-height': 'inherit',
+                            },
+                        },
+                        {
+                            base: 'a',
+                            properties: {
+                                'font-weight': 'inherit',
+                                'font-size': 'inherit',
+                                'line-height': 'inherit',
+                                'text-decoration': 'underline',
+                            },
+                        },
+                    ],
+                    variants: [
+                        {
+                            className: 'fat',
+                            properties: {
+                                'font-weight': theme('fontWeight.bold'),
+                            },
+                        },
+                    ],
+                },
+                {
+                    className: 'action',
+                    properties: {
+                        'font-weight': theme('fontWeight.bold'),
+                        'font-size': theme('fontSize.5'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                },
+                {
+                    className: 'label',
+                    properties: {
+                        'font-weight': theme('fontWeight.bold'),
+                        'font-size': theme('fontSize.4'),
+                        'line-height': theme('lineHeight.normal'),
+                    },
+                    variants: [
+                        {
+                            className: 'sm',
+                            properties: {
+                                'font-size': theme('fontSize.2'),
+                            },
+                        },
+                    ],
+                },
+            ],
+            variants: [
+                {
+                    className: 'flat',
+                    properties: {
+                        'line-height': theme('lineHeight.none'),
+                    },
+                },
+            ],
+        }),
         /**
          * Spacing scale based on Carbon Design System: multiples of 2, 4
          * and 8.

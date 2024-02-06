@@ -30,13 +30,6 @@
     </TableBodyColumn>
 
     <TableBodyColumn>
-        <!--<Text
-            tag="p"
-            type="text"
-            variant="fat"
-        >
-            {name}
-        </Text>-->
         <Link
             action={{ href: link, target: '_blank' }}
             variant="neutral"

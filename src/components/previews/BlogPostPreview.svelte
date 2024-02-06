@@ -29,8 +29,7 @@
 >
     <Text
         tag="h3"
-        type="text"
-        variant="fat"
+        type="title-3"
     >
         {title}
     </Text>

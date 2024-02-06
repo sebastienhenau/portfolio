@@ -17,7 +17,7 @@
     <svelte:fragment slot="content">
         <Text
             tag="h1"
-            type="title"
+            type="title-2"
         >
             Sébastien Henau
         </Text>

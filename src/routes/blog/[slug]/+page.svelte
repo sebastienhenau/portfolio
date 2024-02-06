@@ -26,8 +26,8 @@
     <header class="space-y-4">
         <Text
             tag="h1"
-            type="title"
-            variant="lg"
+            type="title-1"
+            variants={['lg']}
         >
             {title}
         </Text>

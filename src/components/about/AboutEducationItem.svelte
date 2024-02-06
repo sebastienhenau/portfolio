@@ -32,7 +32,7 @@
             <Text
                 tag="h3"
                 type="text"
-                variant="fat"
+                variants={['fat']}
             >
                 {name}
             </Text>

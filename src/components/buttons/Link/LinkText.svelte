@@ -6,7 +6,7 @@
     class="text-inherit whitespace-nowrap"
     tag="span"
     type="action"
-    variant="flat"
+    variants={['flat']}
 >
     <slot />
 </Text>

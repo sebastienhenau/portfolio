@@ -4,13 +4,14 @@
     lang="ts"
 >
     export type TTextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-    export type TTextType = 'title' | 'text' | 'label' | 'action' | 'number';
-    export type TTextVariant = 'none' | 'flat' | 'fat' | 'lg';
+    export type TTextType = 'title-1' | 'title-2' | 'title-3' | 'text' | 'label' | 'action';
+    export type TTextVariant = 'none' | 'flat' | 'fat' | 'lg' | 'sm';
+    export type TTextVariants = TTextVariant[];
 
     export interface TTextProps {
         tag?: TTextTag;
         type?: TTextType;
-        variant?: TTextVariant;
+        variants?: TTextVariants;
     }
 </script>
 
@@ -19,7 +20,7 @@
 
     export let tag: TTextTag = 'p';
     export let type: TTextType = 'text';
-    export let variant: TTextVariant = 'none';
+    export let variants: TTextVariants = ['none'];
 </script>
 
 <svelte:element
@@ -27,14 +28,15 @@
     class={clsx(
         'font-sans',
         {
-            'fg-title': type === 'title',
-            'fgv-title-lg': type === 'title' && variant === 'lg',
-            'fg-text': type === 'text',
-            'fg-action': type === 'action',
-            'fg-number': type === 'number',
-            'fg-label': type === 'label',
-            'fgv-flat': variant === 'flat',
-            'fgv-fat': variant === 'fat',
+            'fs-title-1': type === 'title-1',
+            'fs-title-2': type === 'title-2',
+            'fs-title-3': type === 'title-3',
+            'fs-text': type === 'text',
+            'fsv-fat': type === 'text' && variants.includes('fat'),
+            'fs-action': type === 'action',
+            'fs-label': type === 'label',
+            'fsv-sm': type === 'label' && variants.includes('sm'),
+            'fsv-flat': variants.includes('flat'),
         },
         $$props.class
     )}

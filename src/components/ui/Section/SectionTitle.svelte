@@ -5,7 +5,7 @@
 <Text
     class={$$props.class}
     tag="h2"
-    type="title"
+    type="title-2"
 >
     <slot />
 </Text>
