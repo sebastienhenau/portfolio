@@ -3,19 +3,14 @@
         Button,
         ButtonIcon,
         ButtonText,
-        ProjectTableBodyRow,
         Section,
         SectionContent,
         SectionHeader,
         SectionPart,
         SectionTitle,
-        Table,
-        TableBody,
-        TableHeader,
-        TableHeaderColumn,
         Text,
     } from '$components';
-    import { projects } from '$content';
+    /*import { projects } from '$content';*/
 </script>
 
 <svelte:head>
@@ -59,7 +54,7 @@
         </SectionContent>
     </SectionPart>
 
-    <Table class="mt-8">
+    <!--<Table class="mt-8">
         <TableHeader>
             <TableHeaderColumn>Year</TableHeaderColumn>
 
@@ -73,5 +68,5 @@
                 <ProjectTableBodyRow {project} />
             {/each}
         </TableBody>
-    </Table>
+    </Table>-->
 </Section>
