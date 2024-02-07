@@ -24,6 +24,15 @@
     /*const topProjects = [...projects].slice(0, 3);*/
 </script>
 
+<svelte:head>
+    <title>Home | Sébastien Henau</title>
+
+    <meta
+        content="I'm a front-end developer from Belgium. I build websites and web applications with HTML, CSS and JavaScript."
+        name="description"
+    />
+</svelte:head>
+
 <HomeAboutCard />
 
 <Divider />

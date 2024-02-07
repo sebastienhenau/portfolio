@@ -18,6 +18,15 @@
     import { projects } from '$content';
 </script>
 
+<svelte:head>
+    <title>Projects | Sébastien Henau</title>
+
+    <meta
+        content="I work on projects ranging from content websites to data driven applications to experimental digital experiences."
+        name="description"
+    />
+</svelte:head>
+
 <Section
     number="1"
     parts

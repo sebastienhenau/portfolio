@@ -16,6 +16,15 @@
     import { ROUTES_PROJECTS } from '$constants';
 </script>
 
+<svelte:head>
+    <title>About | Sébastien Henau</title>
+
+    <meta
+        content="I'm a front-end developer from Belgium working at Little Miss Robot. I build websites and web applications with HTML, CSS and JavaScript."
+        name="description"
+    />
+</svelte:head>
+
 <AboutIntroCard />
 
 <Divider />

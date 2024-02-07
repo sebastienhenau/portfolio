@@ -14,6 +14,15 @@
     export let data: TPageData;
 </script>
 
+<svelte:head>
+    <title>Blog | Sébastien Henau</title>
+
+    <meta
+        content="I write about building websites and interfaces or hobbies like books or games."
+        name="description"
+    />
+</svelte:head>
+
 <Section>
     <SectionHeader number="1">
         <SectionTitle slot="start">Blog</SectionTitle>
