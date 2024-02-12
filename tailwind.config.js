@@ -227,11 +227,14 @@ export default {
             DEFAULT: '2px',
         },
         extend: {
+            /* TODO: remove gradient-diagonal-striped once development is done */
             backgroundImage: {
                 'gradient-striped':
-                    'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent-base) / 0.2) 2px, hsl(var(--color-site-base) / 0.2) 4px )',
+                    'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent-base) / 0.2) 2px, hsl(var(--color-site-base) / 0.2) 4px)',
                 'gradient-vertical-dashed':
                     'repeating-linear-gradient(to bottom,transparent 0 4px, hsl(var(--color-line)) 4px 8px)',
+                'gradient-diagonal-striped':
+                    'repeating-linear-gradient(45deg, hsl(var(--color-site-base)), hsl(var(--color-site-base)) 8px, hsl(var(--color-line)) 8px, hsl(var(--color-line)) 16px)',
             },
             content: {
                 empty: "''",

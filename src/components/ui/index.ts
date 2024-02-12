@@ -37,6 +37,9 @@ export * from './Preview.svelte';
 export { default as Highlight } from './Highlight.svelte';
 export * from './Highlight.svelte';
 
+export { default as Announcement } from './Announcement.svelte';
+export * from './Announcement.svelte';
+
 export * from './Section';
 
 export * from './Table';
