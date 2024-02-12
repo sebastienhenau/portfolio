@@ -1,6 +1,6 @@
 <script lang="ts">
     import '$styles/main.css';
-    import { Container, Header, Menu } from '$components';
+    import { Container, Header, Menu, Main } from '$components';
 </script>
 
 <Container
@@ -10,7 +10,7 @@
 
     <Menu class="900:row-start-2 900:row-end-3 900:self-start" />
 
-    <main class="900:col-start-2 900:col-end-3 900:row-start-2 900:row-end-3">
+    <Main class="900:col-start-2 900:col-end-3 900:row-start-2 900:row-end-3">
         <slot />
-    </main>
+    </Main>
 </Container>

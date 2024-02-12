@@ -8,7 +8,6 @@
         ButtonText,
         Divider,
         Section,
-        SectionContent,
         SectionHeader,
         SectionTitle,
     } from '$components';
@@ -34,7 +33,7 @@
         <SectionTitle slot="start">Experience</SectionTitle>
     </SectionHeader>
 
-    <SectionContent class="mt-4">
+    <div class="mt-4">
         <p>
             I've been fortunate enough to have had the opportunity to learn and work on some challenging projects at
             Little Miss Robot. Ranging from content websites to data driven web applications to experimental digital
@@ -49,17 +48,17 @@
                 </li>
             {/each}
         </ul>
-    </SectionContent>
+    </div>
 </Section>
 
 <Divider />
 
-<Section number="2">
+<Section>
     <SectionHeader number="2">
         <SectionTitle slot="start">Education</SectionTitle>
     </SectionHeader>
 
-    <SectionContent class="mt-4">
+    <div class="mt-4">
         <p>
             During my education I landed 2 bachelor degrees. Both degrees complemented each other where I was able to
             explore UX, visual design, motion design, back-end and front-end development.
@@ -72,17 +71,17 @@
                 </li>
             {/each}
         </ul>
-    </SectionContent>
+    </div>
 </Section>
 
 <Divider />
 
-<Section number="3">
+<Section>
     <SectionHeader number="3">
         <SectionTitle slot="start">Projects</SectionTitle>
     </SectionHeader>
 
-    <SectionContent class="mt-4">
+    <div class="mt-4">
         <p>
             Mijn leergierigheid, gedrevenheid en oog voor detail komt tot uiting in mijn projecten, van contentwebsites
             tot data-driven web-applicaties en experimentele digitale ervaringen. Een deel van de projecten staan
@@ -102,5 +101,5 @@
                 icon={{ name: 'ChevronRight' }}
             />
         </Button>
-    </SectionContent>
+    </div>
 </Section>

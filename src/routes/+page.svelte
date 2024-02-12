@@ -8,7 +8,6 @@
         Divider,
         HomeAboutCard,
         Section,
-        SectionContent,
         SectionFooter,
         SectionHeader,
         SectionTitle,
@@ -16,12 +15,10 @@
     } from '$components';
     import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
     import type { TPageData } from './+page';
-    /*import { projects } from '$content';*/
 
     export let data: TPageData;
 
     const topStories = [...data.stories].slice(0, 3);
-    /*const topProjects = [...projects].slice(0, 3);*/
 </script>
 
 <svelte:head>
@@ -42,15 +39,13 @@
         <SectionTitle slot="start">Blog</SectionTitle>
     </SectionHeader>
 
-    <SectionContent class="mt-7">
-        <ul class="space-y-6">
-            {#each topStories as story}
-                <li>
-                    <BlogPostPreview {story} />
-                </li>
-            {/each}
-        </ul>
-    </SectionContent>
+    <ul class="space-y-6 mt-7">
+        {#each topStories as story}
+            <li>
+                <BlogPostPreview {story} />
+            </li>
+        {/each}
+    </ul>
 
     <SectionFooter class="mt-7">
         <Cta>
@@ -73,16 +68,7 @@
         <SectionTitle slot="start">Projects</SectionTitle>
     </SectionHeader>
 
-    <SectionContent>
-        <Text>Coming soon...</Text>
-        <!--<Table>
-            <TableBody>
-                {#each topProjects as project}
-                    <ProjectTableBodyRow {project} />
-                {/each}
-            </TableBody>
-        </Table>-->
-    </SectionContent>
+    <Text class="mt-7">Coming soon...</Text>
 
     <SectionFooter class="mt-7">
         <Cta>

@@ -230,6 +230,8 @@ export default {
             backgroundImage: {
                 'gradient-striped':
                     'repeating-linear-gradient(45deg, transparent, transparent 2px, hsl(var(--color-accent-base) / 0.2) 2px, hsl(var(--color-site-base) / 0.2) 4px )',
+                'gradient-vertical-dashed':
+                    'repeating-linear-gradient(to bottom,transparent 0 4px, hsl(var(--color-line)) 4px 8px)',
             },
             content: {
                 empty: "''",
