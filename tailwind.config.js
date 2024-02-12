@@ -234,7 +234,7 @@ export default {
                 'gradient-vertical-dashed':
                     'repeating-linear-gradient(to bottom,transparent 0 4px, hsl(var(--color-line)) 4px 8px)',
                 'gradient-diagonal-striped':
-                    'repeating-linear-gradient(45deg, hsl(var(--color-site-base)), hsl(var(--color-site-base)) 8px, hsl(var(--color-line)) 8px, hsl(var(--color-line)) 16px)',
+                    'repeating-linear-gradient(45deg, hsl(var(--color-site-base)), hsl(var(--color-site-base)) 8px, hsl(var(--color-site-contrast-1)) 8px, hsl(var(--color-site-contrast-1)) 16px)',
             },
             content: {
                 empty: "''",
