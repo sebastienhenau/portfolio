@@ -22,9 +22,6 @@ export * from './Badge.svelte';
 export { default as Card } from './Card.svelte';
 export * from './Card.svelte';
 
-export { default as Panel } from './Panel.svelte';
-export * from './Panel.svelte';
-
 export { default as Divider } from './Divider.svelte';
 export * from './Divider.svelte';
 
@@ -39,6 +36,8 @@ export * from './Highlight.svelte';
 
 export { default as Announcement } from './Announcement.svelte';
 export * from './Announcement.svelte';
+
+export * from './Panel';
 
 export * from './Section';
 
