@@ -30,7 +30,6 @@
             DEFAULT: 'center',
             500: 'left',
         }}
-        size="sm"
         variant="neutral"
     >
         <ButtonIcon

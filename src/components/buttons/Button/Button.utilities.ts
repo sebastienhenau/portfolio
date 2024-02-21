@@ -7,6 +7,7 @@ import type {
     TButtonHorizontalAlignValues,
 } from './Button.svelte';
 
+/* TODO: refine or find a more simplistic way */
 export const getHorizontalAlign = (value: TButtonHorizontalAlign) => {
     return getComponentProp<TButtonHorizontalAlignBreakpoints, TButtonHorizontalAlignValues>(
         value,
@@ -18,6 +19,7 @@ export const getHorizontalAlign = (value: TButtonHorizontalAlign) => {
                     });
 
                 case 'center':
+                default:
                     return clsx({
                         'justify-center': breakpoint === 'DEFAULT',
                     });
