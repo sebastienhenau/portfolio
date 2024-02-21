@@ -14,15 +14,13 @@ export const getHorizontalAlign = (value: TButtonHorizontalAlign) => {
             switch (property) {
                 case 'left':
                     return clsx({
-                        '500:justify-start': breakpoint === 500,
+                        '500:justify-start': breakpoint === '500',
                     });
-                    break;
 
                 case 'center':
                     return clsx({
                         'justify-center': breakpoint === 'DEFAULT',
                     });
-                    break;
             }
         }
     );
