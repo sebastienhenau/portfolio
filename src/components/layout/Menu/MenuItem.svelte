@@ -26,7 +26,10 @@
 <ButtonGroupItem selected={isActive}>
     <Button
         action={{ href }}
-        horizontalAlign="left"
+        horizontalAlign={{
+            DEFAULT: 'center',
+            500: 'left',
+        }}
         size="sm"
         variant="neutral"
     >

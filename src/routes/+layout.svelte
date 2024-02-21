@@ -13,18 +13,20 @@
     </Text>
 </Announcement>
 
-<SkipLink href="main">Skip to main content</SkipLink>
-
 <SkipLink href="menu">Skip to menu</SkipLink>
 
+<SkipLink href="main">Skip to main content</SkipLink>
+
 <Container
-    class="900:grid 900:grid-cols-[12rem_1fr] 900:grid-rows-[auto_1fr] max-900:space-y-7 900:gap-x-9 900:gap-y-7 py-7"
+    class="flex-1 grid grid-cols-1 grid-rows-[auto_1fr_auto] 500:grid-rows-[auto_auto_1fr] 900:grid-cols-[12rem_1fr] 900:grid-rows-[auto_1fr] gap-y-7 900:gap-x-9 900:gap-y-7 pt-5 900:py-7"
 >
-    <Header class="900:col-start-2 900:col-end-3" />
+    <Header class="row-start-1 row-end-2 900:col-start-2 900:col-end-3" />
 
-    <Menu class="900:row-start-2 900:row-end-3 900:self-start" />
+    <Menu class="row-start-3 row-end-4 500:row-start-2 500:row-end-3 900:row-start-2 900:row-end-3 900:self-start" />
 
-    <Main class="900:col-start-2 900:col-end-3 900:row-start-2 900:row-end-3">
+    <Main
+        class="900:col-start-2 900:col-end-3 row-start-2 row-end-3 500:row-start-3 500:row-end-4 900:row-start-2 900:row-end-3 max-900:pb-5"
+    >
         <slot />
     </Main>
 </Container>

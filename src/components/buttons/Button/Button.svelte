@@ -3,6 +3,7 @@
     lang="ts"
 >
     import type { TActionProps } from '$components';
+    import type { TComponentBreakpointsProp } from '$types';
 
     export type TButtonAction = TActionProps;
     export type TButtonVariant = 'default' | 'neutral';
@@ -10,7 +11,9 @@
     export type TButtonShade = boolean;
     export type TButtonSize = 'default' | 'sm';
     export type TButtonForm = 'default' | 'square';
-    export type TButtonHorizontalAlign = 'left' | 'center';
+    export type TButtonHorizontalAlignValues = 'left' | 'center';
+    export type TButtonHorizontalAlignBreakpoints = TComponentBreakpointsProp<TButtonHorizontalAlignValues>;
+    export type TButtonHorizontalAlign = TButtonHorizontalAlignValues | TButtonHorizontalAlignBreakpoints;
 
     export interface TButtonProps {
         action: TButtonAction;
@@ -28,6 +31,7 @@
     import { getContext } from 'svelte';
     import { Action } from '$components';
     import type { TButtonGroupContext, TButtonGroupItemContext } from '$components';
+    import { getHorizontalAlign } from './Button.utilities';
 
     export let action: TButtonAction = {};
     export let variant: TButtonVariant = 'default';
@@ -46,9 +50,8 @@
     {...action}
     class={clsx(
         'inline-flex items-center gap-3 relative z-0 group',
+        getHorizontalAlign(horizontalAlign),
         {
-            'justify-start': horizontalAlign === 'left',
-            'justify-center': horizontalAlign === 'center',
             'px-5': size === 'default' && form === 'default',
             'h-[2.5rem]': size === 'default',
             'px-3': size === 'sm' && form === 'default',
