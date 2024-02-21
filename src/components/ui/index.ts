@@ -16,6 +16,9 @@ export * from './Text.svelte';
 export { default as Date } from './Date.svelte';
 export * from './Date.svelte';
 
+export { default as SkipLink } from './SkipLink.svelte';
+export * from './SkipLink.svelte';
+
 export { default as Badge } from './Badge.svelte';
 export * from './Badge.svelte';
 

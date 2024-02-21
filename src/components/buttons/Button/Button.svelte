@@ -6,6 +6,8 @@
 
     export type TButtonAction = TActionProps;
     export type TButtonVariant = 'default' | 'neutral';
+    export type TButtonInverse = boolean;
+    export type TButtonShade = boolean;
     export type TButtonSize = 'default' | 'sm';
     export type TButtonForm = 'default' | 'square';
     export type TButtonHorizontalAlign = 'left' | 'center';
@@ -13,8 +15,10 @@
     export interface TButtonProps {
         action: TButtonAction;
         variant?: TButtonVariant;
+        inverse?: TButtonInverse;
         size?: TButtonSize;
         form?: TButtonForm;
+        shade?: TButtonShade;
         horizontalAlign?: TButtonHorizontalAlign;
     }
 </script>
@@ -27,8 +31,10 @@
 
     export let action: TButtonAction = {};
     export let variant: TButtonVariant = 'default';
+    export let inverse: TButtonInverse = false;
     export let size: TButtonSize = 'default';
     export let form: TButtonForm = 'default';
+    export let shade: TButtonShade = true;
     export let horizontalAlign: TButtonHorizontalAlign = 'center';
 
     const buttonGroupContext = getContext<TButtonGroupContext>('buttonGroup') || false;
@@ -49,23 +55,33 @@
             'h-[2rem]': size === 'sm',
             'aspect-square': form === 'square',
             'w-full': !!buttonGroupItemContext,
-            'text-accent-contrast': variant === 'default' || $selected,
-            'text-site-contrast-1': variant === 'neutral' && !$selected,
+            'text-accent-contrast': (variant === 'default' && !inverse) || $selected,
+            'text-site-contrast-1': variant === 'neutral' && !inverse && !$selected,
+            'text-accent-base': (variant === 'default' && inverse) || $selected,
+            'text-site-base': variant === 'neutral' && inverse && !$selected,
         },
         $$props.class
     )}
     on:click
 >
-    {#if !buttonGroupContext}
-        <span class="absolute inset-0 -z-20 bg-line rounded pointer-events-none translate-x-2 translate-y-2" />
+    {#if !buttonGroupContext && shade}
+        <span
+            class={clsx('absolute inset-0 -z-20 rounded pointer-events-none translate-x-2 translate-y-2', {
+                'bg-line': !inverse,
+                'bg-accent-base border border-line': variant === 'default' && inverse,
+                'bg-site-base border border-line': variant === 'neutral' && inverse,
+            })}
+        />
     {/if}
 
     <span
         class={clsx(
             'absolute inset-0 -z-10 rounded border border-line pointer-events-none group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-2 group-active:translate-y-2 transition-transform',
             {
-                'bg-accent-base': variant === 'default' || $selected,
-                'bg-site-base': variant === 'neutral' && !$selected,
+                'bg-accent-base': (variant === 'default' && !inverse) || $selected,
+                'bg-site-base': variant === 'neutral' && !inverse && !$selected,
+                'bg-accent-contrast': variant === 'default' && inverse && $selected,
+                'bg-site-contrast-1': variant === 'neutral' && inverse && !selected,
             }
         )}
     />

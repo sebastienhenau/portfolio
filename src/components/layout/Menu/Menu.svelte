@@ -1,11 +1,13 @@
 <script lang="ts">
+    import clsx from 'clsx';
     import { ROUTES_ABOUT, ROUTES_BLOG, ROUTES_HOME, ROUTES_PROJECTS } from '$constants';
     import { ButtonGroup, Panel, PanelHeader, PanelContent } from '$components';
     import MenuItem from './MenuItem.svelte';
 </script>
 
 <Panel
-    class={$$props.class}
+    id="menu"
+    class={clsx('900:sticky 900:top-6 900:z-40', $$props.class)}
     tag="nav"
     title="Menu"
 >

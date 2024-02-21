@@ -22,6 +22,7 @@
 
 <svelte:element
     this={tag}
+    id={$$props.id}
     class={clsx(
         'relative z-0',
         'before:content-empty before:absolute before:inset-0 before:-z-20 before:bg-site-base before:border before:border-line before:rounded before:pointer-events-none before:translate-x-2 before:translate-y-2',
