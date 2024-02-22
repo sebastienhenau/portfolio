@@ -40,6 +40,8 @@ export * from './Highlight.svelte';
 export { default as Announcement } from './Announcement.svelte';
 export * from './Announcement.svelte';
 
+export * from './Picture';
+
 export * from './Panel';
 
 export * from './Section';

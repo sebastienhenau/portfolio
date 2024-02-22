@@ -3,7 +3,7 @@
     lang="ts"
 >
     import type { TActionProps } from '$components';
-    import type { TComponentBreakpointsProp } from '$types';
+    import type { TBreakpointsOptions } from '$types';
 
     export type TButtonAction = TActionProps;
     export type TButtonVariant = 'default' | 'neutral';
@@ -12,7 +12,7 @@
     export type TButtonSize = 'default' | 'sm';
     export type TButtonForm = 'default' | 'square';
     export type TButtonHorizontalAlignValues = 'left' | 'center';
-    export type TButtonHorizontalAlignBreakpoints = TComponentBreakpointsProp<TButtonHorizontalAlignValues>;
+    export type TButtonHorizontalAlignBreakpoints = TBreakpointsOptions<TButtonHorizontalAlignValues>;
     export type TButtonHorizontalAlign = TButtonHorizontalAlignValues | TButtonHorizontalAlignBreakpoints;
 
     export interface TButtonProps {

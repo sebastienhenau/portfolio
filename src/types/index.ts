@@ -3,4 +3,4 @@ export * from './stories';
 export * from './experiences';
 export * from './educations';
 export * from './projects';
-export * from './components';
+export * from './breakpoints';

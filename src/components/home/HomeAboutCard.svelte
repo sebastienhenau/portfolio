@@ -1,5 +1,5 @@
 <script>
-    import { Button, ButtonIcon, ButtonText, Card, Image, Panel, Text } from '$components';
+    import { Button, ButtonIcon, ButtonText, Card, Panel, Text, Picture } from '$components';
     import { ROUTES_ABOUT } from '$constants';
 </script>
 
@@ -8,10 +8,8 @@
         class="max-w-[7rem] w-full"
         slot="image"
     >
-        <Image
-            alt="Sébastien Henau"
-            src="/images/profile.jpg"
-        />
+        <!-- TODO: create more responsive images -->
+        <Picture image={{ src: '/images/profile.jpg', alt: 'Sébastien Henau' }} />
     </Panel>
 
     <svelte:fragment slot="content">
