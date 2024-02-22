@@ -26,8 +26,8 @@
 <ButtonGroupItem selected={isActive}>
     <Button
         action={{ href }}
-        horizontalAlign={{
-            DEFAULT: 'center',
+        horizontalAlign="center"
+        horizontalAlignBreakpoints={{
             500: 'left',
         }}
         variant="neutral"

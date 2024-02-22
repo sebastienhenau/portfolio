@@ -1,16 +1,50 @@
-import type { TBreakpointIdentifier, TBreakpointsOptions } from '$types';
+import type { TBreakpointIdentifier } from '$types';
 import clsx from 'clsx';
 
-/* TODO: typescript */
-export const getComponentProp = <TBreakpoints, TValues>(
-    value: TBreakpoints | TValues,
-    callback: (breakpoint: TBreakpointIdentifier, value: TValues) => string
+type TGetComponentResponsiveClassConfig<TKeys extends string> = {
+    [key in TKeys]?: {
+        defaultValue?: string;
+        breakpoints?: {
+            [key in TBreakpointIdentifier]?: string;
+        };
+    };
+};
+
+export const getComponentResponsiveClass = <TValue extends string, TBreakpoints extends object>(
+    defaultValue: TValue,
+    breakpoints: TBreakpoints,
+    config: TGetComponentResponsiveClassConfig<TValue>
 ): string => {
-    const config = (typeof value !== 'object' ? { DEFAULT: value } : value) as TBreakpointsOptions<TValues>;
+    const defaultClass = getComponentClassByDefaultValue<TValue>(config, defaultValue);
 
-    return Object.entries(config).reduce((result, [breakpoint, value]) => {
-        const className = callback(breakpoint as TBreakpointIdentifier, value);
+    const breakpointsClass = Object.entries(breakpoints).reduce((result, [breakpoint, breakpointValue]) => {
+        const breakpointClass = getComponentClassByBreakpoint<TValue>(
+            config,
+            breakpointValue as TValue,
+            breakpoint as TBreakpointIdentifier
+        );
 
-        return clsx(result, className);
+        return clsx(result, breakpointClass);
     }, '');
+
+    return clsx(defaultClass, breakpointsClass);
+};
+
+export const getComponentClassByDefaultValue = <TKey extends string>(
+    config: TGetComponentResponsiveClassConfig<TKey>,
+    key: TKey
+): string => {
+    const { defaultValue = '' } = config[key] || {};
+
+    return defaultValue;
+};
+
+export const getComponentClassByBreakpoint = <TKey extends string>(
+    config: TGetComponentResponsiveClassConfig<TKey>,
+    key: TKey,
+    breakpoint: TBreakpointIdentifier
+): string => {
+    const { breakpoints = {} } = config[key] || {};
+
+    return breakpoints[breakpoint] ?? '';
 };

@@ -11,9 +11,8 @@
     export type TButtonShade = boolean;
     export type TButtonSize = 'default' | 'sm';
     export type TButtonForm = 'default' | 'square';
-    export type TButtonHorizontalAlignValues = 'left' | 'center';
-    export type TButtonHorizontalAlignBreakpoints = TBreakpointsOptions<TButtonHorizontalAlignValues>;
-    export type TButtonHorizontalAlign = TButtonHorizontalAlignValues | TButtonHorizontalAlignBreakpoints;
+    export type TButtonHorizontalAlign = 'left' | 'center';
+    export type TButtonHorizontalAlignBreakpoints = TBreakpointsOptions<TButtonHorizontalAlign>;
 
     export interface TButtonProps {
         action: TButtonAction;
@@ -23,6 +22,7 @@
         form?: TButtonForm;
         shade?: TButtonShade;
         horizontalAlign?: TButtonHorizontalAlign;
+        horizontalAlignBreakpoints?: TButtonHorizontalAlignBreakpoints;
     }
 </script>
 
@@ -31,7 +31,7 @@
     import { getContext } from 'svelte';
     import { Action } from '$components';
     import type { TButtonGroupContext, TButtonGroupItemContext } from '$components';
-    import { getHorizontalAlign } from './Button.utilities';
+    import { getComponentResponsiveClass } from '$utilities';
 
     export let action: TButtonAction = {};
     export let variant: TButtonVariant = 'default';
@@ -40,6 +40,7 @@
     export let form: TButtonForm = 'default';
     export let shade: TButtonShade = true;
     export let horizontalAlign: TButtonHorizontalAlign = 'center';
+    export let horizontalAlignBreakpoints: TButtonHorizontalAlignBreakpoints = {};
 
     const buttonGroupContext = getContext<TButtonGroupContext>('buttonGroup') || false;
     const buttonGroupItemContext = getContext<TButtonGroupItemContext>('buttonGroupItem') || null;
@@ -50,7 +51,20 @@
     {...action}
     class={clsx(
         'inline-flex items-center gap-3 relative z-0 group',
-        getHorizontalAlign(horizontalAlign),
+        getComponentResponsiveClass < TButtonHorizontalAlign,
+        TButtonHorizontalAlignBreakpoints >
+            (horizontalAlign,
+            horizontalAlignBreakpoints,
+            {
+                left: {
+                    breakpoints: {
+                        '500': '500:justify-start',
+                    },
+                },
+                center: {
+                    defaultValue: 'justify-center',
+                },
+            }),
         {
             'px-5': size === 'default' && form === 'default',
             'h-[2.5rem]': size === 'default',

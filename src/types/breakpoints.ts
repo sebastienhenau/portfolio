@@ -24,6 +24,6 @@ export type TBreakpointsConfig = {
     [key in TBreakpoint]: TBreakpointConfig;
 };
 
-export type TBreakpointsOptions<value> = {
-    [key in TBreakpointIdentifier]?: value;
+export type TBreakpointsOptions<TValue> = {
+    [key in TBreakpointIdentifier]?: TValue;
 };
