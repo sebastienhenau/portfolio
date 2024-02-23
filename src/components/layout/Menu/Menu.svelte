@@ -14,12 +14,16 @@
         class="max-500:relative max-500:z-10"
         title="Menu"
     >
-        <PanelHeader>Menu</PanelHeader>
+        <PanelHeader class="max-500:hidden">Menu</PanelHeader>
 
         <PanelContent>
             <ButtonGroup
                 class="max-500:w-full 900:w-full"
-                customDirectionClass="max-900:[&>*:not(:first-child)]:ml-[-2px] 900:flex-col 900:[&>*:not(:first-child)]:mt-[-2px]"
+                layout="1/2"
+                layoutBreakpoints={{
+                    500: 'row',
+                    900: 'column',
+                }}
             >
                 <MenuItem
                     href={ROUTES_HOME}

@@ -1,4 +1,4 @@
-import type { TBreakpointIdentifier } from '$types';
+import type { TBreakpoint, TBreakpointIdentifier } from '$types';
 import clsx from 'clsx';
 
 type TGetComponentResponsiveClassConfig<TKeys extends string> = {
@@ -15,19 +15,41 @@ export const getComponentResponsiveClass = <TValue extends string, TBreakpoints 
     breakpoints: TBreakpoints,
     config: TGetComponentResponsiveClassConfig<TValue>
 ): string => {
-    const defaultClass = getComponentClassByDefaultValue<TValue>(config, defaultValue);
+    const initialBreakpointsArray = Object.entries(breakpoints || {}) as [TBreakpoint, TValue][];
+    const breakpointsLength = initialBreakpointsArray.length;
 
-    const breakpointsClass = Object.entries(breakpoints).reduce((result, [breakpoint, breakpointValue]) => {
-        const breakpointClass = getComponentClassByBreakpoint<TValue>(
-            config,
-            breakpointValue as TValue,
-            breakpoint as TBreakpointIdentifier
-        );
+    if (breakpointsLength === 0) {
+        return getComponentClassByDefaultValue<TValue>(config, defaultValue);
+    }
+
+    const breakpointsArrayWithStartingBreakpoint = [
+        [initialBreakpointsArray[0][0], defaultValue],
+        ...initialBreakpointsArray,
+    ] as [TBreakpoint, TValue][];
+    const breakpointsArrayWithStartingBreakpointLength = breakpointsArrayWithStartingBreakpoint.length;
+
+    return breakpointsArrayWithStartingBreakpoint.reduce((result, [breakpoint, breakpointValue], index) => {
+        const isFirstItem = index === 0;
+        const isLastItem = index === breakpointsArrayWithStartingBreakpointLength - 1;
+
+        let breakpointKey: TBreakpointIdentifier | undefined;
+
+        if (isFirstItem) {
+            breakpointKey = `max-${breakpoint}`;
+        } else if (isLastItem) {
+            breakpointKey = breakpoint;
+        } else {
+            const nextBreakpoint = breakpointsArrayWithStartingBreakpoint[index + 1][0];
+
+            breakpointKey = nextBreakpoint
+                ? (`${breakpoint}:max-${nextBreakpoint}` as TBreakpointIdentifier)
+                : breakpoint;
+        }
+
+        const breakpointClass = getComponentClassByBreakpoint<TValue>(config, breakpointValue, breakpointKey);
 
         return clsx(result, breakpointClass);
     }, '');
-
-    return clsx(defaultClass, breakpointsClass);
 };
 
 export const getComponentClassByDefaultValue = <TKey extends string>(

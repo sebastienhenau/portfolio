@@ -57,6 +57,9 @@
             },
             center: {
                 defaultValue: 'justify-center',
+                breakpoints: {
+                    'max-500': 'max-500:justify-center',
+                },
             },
         }
     );

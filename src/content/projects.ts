@@ -56,7 +56,7 @@ const projects: TProjects = [
         technologies: ['Nuxt', 'Vue', 'Headless Craft CMS', 'Phaser'],
     },
     {
-        name: 'Technotrailer',
+        name: 'Technotrailer - website',
         date: '2022',
         company: 'Little Miss Robot',
         image: '/images/placeholder.jpg',
@@ -101,7 +101,7 @@ const projects: TProjects = [
         technologies: ['Nuxt', 'Vue', 'Pixi'],
     },
     {
-        name: 'Teamleader - 2020 editie',
+        name: 'Teamleader - 2020 edition',
         date: '2020',
         company: 'Little Miss Robot',
         image: '/images/placeholder.jpg',
@@ -180,24 +180,6 @@ const projects: TProjects = [
         role: 'Front-end developer',
         link: 'https://www.zedelgem.be/',
         technologies: ['Drupal'],
-    },
-    {
-        name: 'Woningkwaliteit',
-        date: '2018',
-        company: 'Little Miss Robot',
-        image: '/images/placeholder.jpg',
-        role: 'Front-end developer',
-        link: 'https://woningpas.vlaanderen.be/',
-        technologies: [],
-    },
-    {
-        name: 'Woningpas',
-        date: '2018',
-        company: 'Little Miss Robot',
-        image: '/images/placeholder.jpg',
-        role: 'Front-end developer',
-        link: 'https://woningpas.vlaanderen.be/web/woningkwaliteit/overzicht',
-        technologies: [],
     },
 ];
 

@@ -1,21 +1,26 @@
 <script lang="ts">
     import clsx from 'clsx';
-    import { Text } from '$components';
+    import { Action, Text } from '$components';
     import HeaderLogo from './HeaderLogo.svelte';
     import HeaderThemeToggle from './HeaderThemeToggle.svelte';
+    import { ROUTES_HOME } from '$constants';
 </script>
 
 <header class={clsx('flex justify-between items-center gap-6', $$props.class)}>
-    <div class="flex items-center gap-5">
+    <Action
+        class="flex items-center gap-5"
+        href={ROUTES_HOME}
+    >
         <HeaderLogo />
 
         <Text
             type="title-2"
+            tag="span"
             variants={['flat']}
         >
             Sébastien Henau
         </Text>
-    </div>
+    </Action>
 
     <div class="flex items-center gap-5">
         <!-- TODO: add search button with feature -->

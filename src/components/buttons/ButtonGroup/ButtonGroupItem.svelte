@@ -16,6 +16,7 @@
 </script>
 
 <script lang="ts">
+    import clsx from 'clsx';
     import { setContext, afterUpdate } from 'svelte';
     import { writable } from 'svelte/store';
 
@@ -34,6 +35,6 @@
     });
 </script>
 
-<li class="flex-1">
+<li class={clsx('', $$props.class)}>
     <slot />
 </li>
