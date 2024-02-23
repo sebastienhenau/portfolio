@@ -45,26 +45,28 @@
     const buttonGroupContext = getContext<TButtonGroupContext>('buttonGroup') || false;
     const buttonGroupItemContext = getContext<TButtonGroupItemContext>('buttonGroupItem') || null;
     const { selected } = buttonGroupItemContext || {};
+
+    const horizontalAlignClass = getComponentResponsiveClass<TButtonHorizontalAlign, TButtonHorizontalAlignBreakpoints>(
+        horizontalAlign,
+        horizontalAlignBreakpoints,
+        {
+            left: {
+                breakpoints: {
+                    '500': '500:justify-start',
+                },
+            },
+            center: {
+                defaultValue: 'justify-center',
+            },
+        }
+    );
 </script>
 
 <Action
     {...action}
     class={clsx(
         'inline-flex items-center gap-3 relative z-0 group',
-        getComponentResponsiveClass < TButtonHorizontalAlign,
-        TButtonHorizontalAlignBreakpoints >
-            (horizontalAlign,
-            horizontalAlignBreakpoints,
-            {
-                left: {
-                    breakpoints: {
-                        '500': '500:justify-start',
-                    },
-                },
-                center: {
-                    defaultValue: 'justify-center',
-                },
-            }),
+        horizontalAlignClass,
         {
             'px-5': size === 'default' && form === 'default',
             'h-[2.5rem]': size === 'default',
