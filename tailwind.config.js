@@ -168,6 +168,14 @@ export default {
                         'font-size': theme('fontSize.5'),
                         'line-height': theme('lineHeight.normal'),
                     },
+                    variants: [
+                        {
+                            className: 'sm',
+                            properties: {
+                                'font-size': theme('fontSize.4'),
+                            },
+                        },
+                    ],
                 },
                 {
                     className: 'label',

@@ -1,11 +1,12 @@
 <script lang="ts">
     import {
-        AboutEducationItem,
-        AboutExperienceItem,
-        AboutIntroCard,
+        AboutEducationTimelineItem,
+        AboutExperienceTimelineItem,
+        Timeline,
         Button,
-        ButtonIcon,
         ButtonText,
+        AboutIntroCard,
+        ButtonIcon,
         Divider,
         Section,
         SectionHeader,
@@ -41,13 +42,11 @@
             great teamwork with great people!
         </p>
 
-        <ul class="mt-6 space-y-6">
+        <Timeline class="mt-6">
             {#each experiences as experience}
-                <li>
-                    <AboutExperienceItem {experience} />
-                </li>
+                <AboutExperienceTimelineItem {experience} />
             {/each}
-        </ul>
+        </Timeline>
     </div>
 </Section>
 
@@ -64,13 +63,13 @@
             explore UX, visual design, motion design, back-end and front-end development.
         </p>
 
-        <ul class="space-y-6 mt-6">
+        <Timeline class="mt-6">
             {#each educations as education}
                 <li>
-                    <AboutEducationItem {education} />
+                    <AboutEducationTimelineItem {education} />
                 </li>
             {/each}
-        </ul>
+        </Timeline>
     </div>
 </Section>
 

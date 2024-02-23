@@ -1,5 +1,5 @@
 export * from './ui';
-export * from './buttons';
+export * from './interactives';
 export * from './tags';
 export * from './layout';
 export * from './previews';

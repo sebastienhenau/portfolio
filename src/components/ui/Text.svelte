@@ -32,10 +32,10 @@
             'fs-title-2': type === 'title-2',
             'fs-title-3': type === 'title-3',
             'fs-text': type === 'text',
-            'fsv-fat': type === 'text' && variants.includes('fat'),
             'fs-action': type === 'action',
             'fs-label': type === 'label',
-            'fsv-sm': type === 'label' && variants.includes('sm'),
+            'fsv-sm': (type === 'label' || type === 'action') && variants.includes('sm'),
+            'fsv-fat': type === 'text' && variants.includes('fat'),
             'fsv-flat': variants.includes('flat'),
         },
         $$props.class

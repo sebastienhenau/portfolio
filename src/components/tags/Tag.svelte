@@ -1,8 +1,9 @@
 <script lang="ts">
+    import clsx from 'clsx';
     import { Panel, Text } from '$components';
 </script>
 
-<Panel class="inline-block p-3">
+<Panel class={clsx('inline-block p-3', $$props.class)}>
     <Text
         class="truncate"
         tag="p"

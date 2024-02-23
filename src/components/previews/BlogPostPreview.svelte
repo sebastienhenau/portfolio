@@ -28,6 +28,7 @@
     }}
 >
     <Text
+        class="relative z-50"
         tag="h3"
         type="title-3"
     >

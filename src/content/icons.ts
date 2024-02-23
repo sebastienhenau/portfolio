@@ -13,6 +13,8 @@ import Linkedin from '~icons/mdi/linkedin';
 import Book from '~icons/ph/book-bold';
 import Moon from '~icons/ph/moon-bold';
 import Sun from '~icons/ph/sun-bold';
+import ChevronDown from '~icons/tabler/chevron-down';
+import ChevronUp from '~icons/tabler/chevron-up';
 import ExternalLink from '~icons/tabler/external-link';
 import Table from '~icons/uil/table';
 
@@ -23,6 +25,8 @@ const icons: TIcons = {
     Linkedin,
     ChevronRight,
     ChevronLeft,
+    ChevronDown,
+    ChevronUp,
     ExternalLink,
     Search,
     HalfCircle,
