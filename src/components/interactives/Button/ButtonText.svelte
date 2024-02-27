@@ -11,7 +11,7 @@
 
 <Text
     class={clsx(
-        'text-inherit transition-transform',
+        'text-inherit transition-transform transition-colors',
         {
             'group-hover:-translate-x-1 group-hover:-translate-y-1': !actionWrapperContext,
             'group-hover/action-wrapper:-translate-x-1 group-hover/action-wrapper:-translate-y-1': actionWrapperContext,

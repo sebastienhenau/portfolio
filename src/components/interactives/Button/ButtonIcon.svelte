@@ -27,7 +27,7 @@
 <Icon
     {...icon}
     class={clsx(
-        'transition-transform',
+        'transition-transform transition-colors',
         {
             'group-hover:-translate-x-1 group-hover:-translate-y-1': !actionWrapperContext,
             'group-hover/action-wrapper:-translate-x-1 group-hover/action-wrapper:-translate-y-1': actionWrapperContext,

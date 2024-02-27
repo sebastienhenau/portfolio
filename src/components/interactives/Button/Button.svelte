@@ -78,7 +78,7 @@
 <Action
     {...action}
     class={clsx(
-        'inline-flex items-center relative z-0 group',
+        'inline-flex items-center relative z-0 group transition-colors',
         horizontalAlignClass,
         {
             'px-5': size === 'default' && form === 'default',
@@ -113,21 +113,25 @@
     {/if}
 
     <span
-        class={clsx('absolute inset-0 -z-10 rounded border border-line pointer-events-none transition-transform', {
-            'bg-accent-base': (variant === 'default' && !inverse) || $selected,
-            'bg-site-base': variant === 'neutral' && !inverse && !$selected,
-            'bg-accent-contrast': variant === 'default' && inverse && $selected,
-            'bg-site-contrast-1': variant === 'neutral' && inverse && !selected,
-            'group-hover:-translate-x-1 group-hover:-translate-y-1': !actionWrapperContext,
-            'group-hover/action-wrapper:-translate-x-1 group-hover/action-wrapper:-translate-y-1': actionWrapperContext,
-            'group-active:translate-x-2 group-active:translate-y-2':
-                (size === 'default' || size === 'sm') && !actionWrapperContext,
-            'group-active/action-wrapper:translate-x-2 group-active/action-wrapper:translate-y-2':
-                (size === 'default' || size === 'sm') && actionWrapperContext,
-            'group-active:translate-x-1 group-active:translate-y-1': size === 'xs' && !actionWrapperContext,
-            'group-active/action-wrapper:translate-x-1 group-active/action-wrapper:translate-y-1':
-                size === 'xs' && actionWrapperContext,
-        })}
+        class={clsx(
+            'absolute inset-0 -z-10 rounded border border-line pointer-events-none transition-transform transition-colors',
+            {
+                'bg-accent-base': (variant === 'default' && !inverse) || $selected,
+                'bg-site-base': variant === 'neutral' && !inverse && !$selected,
+                'bg-accent-contrast': variant === 'default' && inverse && $selected,
+                'bg-site-contrast-1': variant === 'neutral' && inverse && !selected,
+                'group-hover:-translate-x-1 group-hover:-translate-y-1': !actionWrapperContext,
+                'group-hover/action-wrapper:-translate-x-1 group-hover/action-wrapper:-translate-y-1':
+                    actionWrapperContext,
+                'group-active:translate-x-2 group-active:translate-y-2':
+                    (size === 'default' || size === 'sm') && !actionWrapperContext,
+                'group-active/action-wrapper:translate-x-2 group-active/action-wrapper:translate-y-2':
+                    (size === 'default' || size === 'sm') && actionWrapperContext,
+                'group-active:translate-x-1 group-active:translate-y-1': size === 'xs' && !actionWrapperContext,
+                'group-active/action-wrapper:translate-x-1 group-active/action-wrapper:translate-y-1':
+                    size === 'xs' && actionWrapperContext,
+            }
+        )}
     />
 
     <slot />

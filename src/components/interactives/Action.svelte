@@ -39,7 +39,6 @@
     <a
         bind:this={element}
         class={clsx(
-            'focus:z-50',
             {
                 'before:content-empty before:absolute before:inset-0': actionWrapperContext,
             },
@@ -57,7 +56,7 @@
     </div>
 {:else}
     <button
-        class={clsx('focus:z-50', $$props.class)}
+        class={$$props.class}
         {type}
         on:click
     >

@@ -1,5 +1,18 @@
 <script lang="ts">
-    import { Button, ButtonIcon, ButtonText, Section, SectionHeader, SectionTitle, Text } from '$components';
+    import {
+        Button,
+        ButtonIcon,
+        ButtonText,
+        Section,
+        SectionHeader,
+        SectionTitle,
+        Text,
+        Table,
+        TableHeader,
+        TableHeaderColumn,
+        TableBody,
+        /*ProjectTableBodyRow*/
+    } from '$components';
     /*import { projects } from '$content';*/
 </script>
 
@@ -39,7 +52,7 @@
         </Text>
     </div>
 
-    <!--<Table class="mt-8">
+    <Table class="mt-8">
         <TableHeader>
             <TableHeaderColumn>Year</TableHeaderColumn>
 
@@ -49,9 +62,9 @@
         </TableHeader>
 
         <TableBody>
-            {#each projects as project}
+            <!--{#each projects as project}
                 <ProjectTableBodyRow {project} />
-            {/each}
+            {/each}-->
         </TableBody>
-    </Table>-->
+    </Table>
 </Section>

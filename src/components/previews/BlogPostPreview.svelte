@@ -12,7 +12,7 @@
 </script>
 
 <script lang="ts">
-    import { Date, Link, LinkIcon, LinkText, Preview, Tag, TagGroup, TagGroupItem, Text } from '$components';
+    import { Date, Preview, Tag, TagGroup, TagGroupItem, Text, Button, ButtonText, ButtonIcon } from '$components';
     import { insertDynamicRouteParam } from '$utilities';
     import { ROUTES_BLOG_ITEM } from '$constants';
 
@@ -57,17 +57,19 @@
             {/each}
         </TagGroup>
 
-        <Link
+        <Button
+            variant="neutral"
+            size="sm"
             action={{
                 href: insertDynamicRouteParam(ROUTES_BLOG_ITEM, 'slug', slug),
             }}
         >
-            <LinkText>Read more</LinkText>
+            <ButtonText>Read more</ButtonText>
 
-            <LinkIcon
+            <ButtonIcon
                 class="w-6"
                 icon={{ name: 'ChevronRight' }}
             />
-        </Link>
+        </Button>
     </footer>
 </Preview>
