@@ -1,11 +1,11 @@
-import type { TStory } from '$types';
+import type { TBlogPost } from '$types';
 import { error } from '@sveltejs/kit';
 import type { SvelteComponent } from 'svelte';
 
 import type { PageLoad } from './$types';
 
 export interface TPageData {
-    metadata: TStory;
+    metadata: TBlogPost;
     content: typeof SvelteComponent;
 }
 
