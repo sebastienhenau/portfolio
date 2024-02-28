@@ -250,6 +250,9 @@ export default {
             width: {
                 border: '2px',
             },
+            gridTemplateColumns: {
+                '2-auto': 'repeat(2, auto)',
+            },
             gridTemplateRows: {
                 '2-auto': 'repeat(2, auto)',
                 '3-auto': 'repeat(3, auto)',

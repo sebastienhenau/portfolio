@@ -5,12 +5,14 @@
         Timeline,
         Button,
         ButtonText,
-        AboutIntroCard,
         ButtonIcon,
         Divider,
         Section,
         SectionHeader,
         SectionTitle,
+        Panel,
+        Image,
+        Highlight,
     } from '$components';
     import { educations, experiences } from '$content';
     import { ROUTES_PROJECTS } from '$constants';
@@ -20,12 +22,49 @@
     <title>About | Sébastien Henau</title>
 
     <meta
-        content="I'm a front-end developer from Belgium working at Little Miss Robot. I build websites and web applications with HTML, CSS and JavaScript."
+        content="I am a front-end developer from Belgium working at Little Miss Robot. I build websites and web applications with HTML, CSS and JavaScript."
         name="description"
     />
 </svelte:head>
 
-<AboutIntroCard />
+<div class="@container/about-intro-section">
+    <Section
+        class="@600/about-intro-section:grid @600/about-intro-section:grid-cols-2-auto @600/about-intro-section:gap-6 space-y-6 @600/about-intro-section:space-y-0"
+    >
+        <div
+            class="@600/about-intro-section:col-start-2 @600/about-intro-section:col-end-3 @600/about-intro-section:row-span-full"
+        >
+            <SectionTitle>Hello there 👋</SectionTitle>
+
+            <p class="mt-3">
+                I'm a 30-year-old Belgian developer toggling my way into front-end architectures with my faithful cup of
+                coffee next to me. Located in the heart of Belgium, I wear the hat as one of the lead developers at
+                Little Miss Robot. Together with a great team, I am fortunate enough to contribute to making the
+                internet a better place!
+            </p>
+
+            <p class="mt-3">
+                When I am not losing myself in lines of code you'll likely catch me navigating running trails,
+                attempting to conquer climbing walls (or just gracefully descend from them), playing some games on my
+                trusty PlayStation or if I have some time left, read a book.
+            </p>
+        </div>
+
+        <Highlight
+            class="@600/about-intro-section:col-start-1 @600/about-intro-section:col-end-2 @600/about-intro-section:row-span-full"
+            horizontalAlignment="center"
+            verticalAlignment="center"
+        >
+            <Panel>
+                <Image
+                    class="max-w-[6rem]"
+                    alt="Sébastien Henau"
+                    src="/images/profile.jpg"
+                />
+            </Panel>
+        </Highlight>
+    </Section>
+</div>
 
 <Divider />
 
@@ -43,8 +82,11 @@
         </p>
 
         <Timeline class="mt-6">
-            {#each experiences as experience}
-                <AboutExperienceTimelineItem {experience} />
+            {#each experiences as experience, index}
+                <AboutExperienceTimelineItem
+                    {index}
+                    {experience}
+                />
             {/each}
         </Timeline>
     </div>

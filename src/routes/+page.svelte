@@ -4,7 +4,7 @@
         Button,
         ButtonIcon,
         ButtonText,
-        Cta,
+        Highlight,
         Divider,
         HomeAboutGrid,
         /*ProjectTableBodyRow,*/
@@ -54,7 +54,10 @@
     </ul>
 
     <SectionFooter class="mt-7">
-        <Cta>
+        <Highlight
+            verticalAlignment="center"
+            horizontalAlignment="center"
+        >
             <Button action={{ href: ROUTES_BLOG }}>
                 <ButtonText>Go to all posts</ButtonText>
 
@@ -63,7 +66,7 @@
                     icon={{ name: 'ChevronRight' }}
                 />
             </Button>
-        </Cta>
+        </Highlight>
     </SectionFooter>
 </Section>
 
@@ -91,7 +94,10 @@
     </Table>
 
     <SectionFooter class="mt-7">
-        <Cta>
+        <Highlight
+            verticalAlignment="center"
+            horizontalAlignment="center"
+        >
             <Button action={{ href: ROUTES_PROJECTS }}>
                 <ButtonText>Go to all projects</ButtonText>
 
@@ -100,6 +106,6 @@
                     icon={{ name: 'ChevronRight' }}
                 />
             </Button>
-        </Cta>
+        </Highlight>
     </SectionFooter>
 </Section>

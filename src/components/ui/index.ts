@@ -25,9 +25,6 @@ export * from './Card.svelte';
 export { default as Divider } from './Divider.svelte';
 export * from './Divider.svelte';
 
-export { default as Cta } from './Cta.svelte';
-export * from './Cta.svelte';
-
 export { default as Preview } from './Preview.svelte';
 export * from './Preview.svelte';
 
