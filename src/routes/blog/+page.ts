@@ -7,7 +7,7 @@ export interface TPageData {
 }
 
 export const load: PageLoad = async ({ fetch }): Promise<TPageData> => {
-    const response = await fetch('api/blogPosts?limit=3');
+    const response = await fetch('api/blog-posts?limit=3');
     const blogPosts: TBlogPosts = await response.json();
 
     return {
