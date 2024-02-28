@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { BlogPostPreview, Button, ButtonIcon, ButtonText, Section, SectionHeader, SectionTitle } from '$components';
+    import { BlogPostPreview, Section, SectionHeader, SectionTitle } from '$components';
     import type { TPageData } from './+page';
 
     export let data: TPageData;
@@ -18,7 +18,7 @@
     <SectionHeader number="1">
         <SectionTitle slot="start">Blog</SectionTitle>
 
-        <Button
+        <!--<Button
             size="sm"
             slot="end"
             variant="neutral"
@@ -26,7 +26,7 @@
             <ButtonText>Filter</ButtonText>
 
             <ButtonIcon icon={{ name: 'Filter' }} />
-        </Button>
+        </Button>-->
     </SectionHeader>
 
     <div class="mt-7">

@@ -1,8 +1,5 @@
 <script lang="ts">
     import {
-        Button,
-        ButtonIcon,
-        ButtonText,
         Section,
         SectionHeader,
         SectionTitle,
@@ -29,7 +26,7 @@
     <SectionHeader number="1">
         <SectionTitle slot="start">Projects</SectionTitle>
 
-        <Button
+        <!--<Button
             size="sm"
             slot="end"
             variant="neutral"
@@ -37,7 +34,7 @@
             <ButtonText>Filter</ButtonText>
 
             <ButtonIcon icon={{ name: 'Filter' }} />
-        </Button>
+        </Button>-->
     </SectionHeader>
 
     <div class="mt-4">
