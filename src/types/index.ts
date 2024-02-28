@@ -1,5 +1,5 @@
 export * from './icons';
-export * from './stories';
+export * from './blogposts';
 export * from './experiences';
 export * from './educations';
 export * from './projects';

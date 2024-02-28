@@ -1,35 +1,35 @@
-import type { TStories, TStory } from '$types';
+import type { TBlogPost, TBlogPosts } from '$types';
 
 /* TODO: add pagination */
-const getStories = async () => {
-    const paths = import.meta.glob('/src/content/stories/*.md', {
+const getBlogPosts = async () => {
+    const paths = import.meta.glob('/src/content/blogPosts/*.md', {
         eager: true,
     });
 
-    const stories = Object.entries(paths)
-        .reduce<TStories>((result, [path, file]) => {
+    const blogPosts = Object.entries(paths)
+        .reduce<TBlogPosts>((result, [path, file]) => {
             const slug = path.split('/').at(-1)?.replace('.md', '') || '';
 
             if (!(file && typeof file === 'object' && 'metadata' in file && slug)) {
                 return result;
             }
 
-            const story = {
+            const blogPost = {
                 slug,
-                ...(file.metadata as Omit<TStory, 'slug'>),
+                ...(file.metadata as Omit<TBlogPost, 'slug'>),
             };
 
-            if (!story.published) {
+            if (!blogPost.published) {
                 return result;
             }
 
-            return [...result, story];
+            return [...result, blogPost];
         }, [])
         .toSorted((first, second) => {
             return new Date(second.date).getTime() - new Date(first.date).getTime();
         });
 
-    return stories;
+    return blogPosts;
 };
 
-export default getStories;
+export default getBlogPosts;

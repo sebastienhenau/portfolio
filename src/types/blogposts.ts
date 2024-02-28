@@ -1,4 +1,4 @@
-export interface TStory {
+export interface TBlogPost {
     slug: string;
     date: string;
     description: string;
@@ -8,4 +8,4 @@ export interface TStory {
     published?: boolean;
 }
 
-export type TStories = TStory[];
+export type TBlogPosts = TBlogPost[];

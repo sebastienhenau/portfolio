@@ -31,9 +31,9 @@
 
     <div class="mt-7">
         <ul>
-            {#each data.stories as story}
+            {#each data.blogPosts as blogPost}
                 <li>
-                    <BlogPostPreview {story} />
+                    <BlogPostPreview {blogPost} />
                 </li>
             {/each}
         </ul>

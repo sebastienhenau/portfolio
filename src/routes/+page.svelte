@@ -23,7 +23,7 @@
 
     export let data: TPageData;
 
-    const topStories = [...data.stories].slice(0, 3);
+    const topBlogPosts = [...data.blogPosts].slice(0, 3);
     /*const topProjects = [...projects].slice(0, 3);*/
 </script>
 
@@ -46,9 +46,9 @@
     </SectionHeader>
 
     <ul class="space-y-6 mt-7">
-        {#each topStories as story}
+        {#each topBlogPosts as blogPost}
             <li>
-                <BlogPostPreview {story} />
+                <BlogPostPreview {blogPost} />
             </li>
         {/each}
     </ul>

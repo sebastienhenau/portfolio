@@ -16,7 +16,7 @@ export interface TPageData {
  */
 export const load: PageLoad = async ({ params }): Promise<TPageData> => {
     try {
-        const story = await import(`../../../content/stories/${params.slug}.md`);
+        const story = await import(`../../../content/blogposts/${params.slug}.md`);
 
         return {
             metadata: story.metadata,
