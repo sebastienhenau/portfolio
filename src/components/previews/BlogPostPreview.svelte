@@ -45,9 +45,9 @@
     </p>
 
     <footer
-        class="mt-5 flex @700/item:flex-wrap flex-col @700/item:flex-row @700/item:justify-end items-end @700/item:items-baseline gap-5 @700/item:gap-7"
+        class="mt-5 flex @700/preview:flex-wrap flex-col @700/preview:flex-row @700/preview:justify-end items-end @700/preview:items-baseline gap-5 @700/preview:gap-7"
     >
-        <TagGroup class="w-full @700/item:w-auto @700/item:flex-1">
+        <TagGroup class="w-full @700/preview:w-auto @700/preview:flex-1">
             {#each tags as tag}
                 <TagGroupItem>
                     <Tag>

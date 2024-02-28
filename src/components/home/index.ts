@@ -1,2 +1,2 @@
-export { default as HomeAboutCard } from './HomeAboutCard.svelte';
-export * from './HomeAboutCard.svelte';
+export { default as HomeAboutGrid } from './HomeAboutGrid.svelte';
+export * from './HomeAboutGrid.svelte';

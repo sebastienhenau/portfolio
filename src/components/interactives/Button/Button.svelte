@@ -27,6 +27,9 @@
 
     export interface TButtonContext {
         size: TButtonSize;
+        hasLeftSlot: boolean;
+        hasRightSlot: boolean;
+        childAnimationClass: string;
     }
 </script>
 
@@ -70,8 +73,23 @@
         }
     );
 
+    const childAnimationClass = clsx({
+        'group-hover:-translate-x-1 group-hover:-translate-y-1': !actionWrapperContext,
+        'group-hover/action-wrapper:-translate-x-1 group-hover/action-wrapper:-translate-y-1': actionWrapperContext,
+        'group-active:translate-x-2 group-active:translate-y-2':
+            (size === 'default' || size === 'sm') && !actionWrapperContext,
+        'group-active/action-wrapper:translate-x-2 group-active/action-wrapper:translate-y-2':
+            (size === 'default' || size === 'sm') && actionWrapperContext,
+        'group-active:translate-x-1 group-active:translate-y-1': size === 'xs' && !actionWrapperContext,
+        'group-active/action-wrapper:translate-x-1 group-active/action-wrapper:translate-y-1':
+            size === 'xs' && actionWrapperContext,
+    });
+
     setContext<TButtonContext>('button', {
         size,
+        hasLeftSlot: !!$$slots.left,
+        hasRightSlot: !!$$slots.right,
+        childAnimationClass,
     });
 </script>
 
@@ -79,13 +97,15 @@
     {...action}
     class={clsx(
         'inline-flex items-center relative z-0 group transition-colors',
-        horizontalAlignClass,
+        (!$$slots.left || !$$slots.right) && horizontalAlignClass,
         {
             'px-5': size === 'default' && form === 'default',
             'h-[2.5rem]': size === 'default',
-            'px-3': size === 'sm' && form === 'default',
+            'pl-3': size === 'sm' && form === 'default' && !$$slots.left,
+            'pr-3': size === 'sm' && form === 'default' && !$$slots.right,
             'h-[2rem]': size === 'sm',
-            'px-2': size === 'xs' && form === 'default',
+            'pl-2': size === 'xs' && form === 'default' && !$$slots.left,
+            'pr-2': size === 'xs' && form === 'default' && !$$slots.right,
             'h-[1.5rem]': size === 'xs',
             'gap-3': size === 'default' || size === 'sm',
             'gap-2': size === 'xs',
@@ -134,5 +154,47 @@
         )}
     />
 
-    <slot />
+    {#if $$slots.left}
+        <span
+            class={clsx(
+                'self-stretch border-r border-line flex items-center transition-transform',
+                horizontalAlignClass,
+                childAnimationClass,
+                {
+                    'px-3': size === 'sm' && form === 'default',
+                    'px-2': size === 'xs' && form === 'default',
+                }
+            )}
+        >
+            <slot name="left" />
+        </span>
+    {/if}
+
+    {#if $$slots.center && ($$slots.left || $$slots.right)}
+        <span
+            class={clsx('flex-1 flex items-center justify-center transition-transform', childAnimationClass, {
+                'gap-3': size === 'default' || size === 'sm',
+                'gap-2': size === 'xs',
+            })}
+        >
+            <slot name="center" />
+        </span>
+    {:else}
+        <slot />
+    {/if}
+
+    {#if $$slots.right}
+        <span
+            class={clsx(
+                'self-stretch border-l border-line flex items-center justify-center transition-transform',
+                childAnimationClass,
+                {
+                    'px-3': size === 'sm' && form === 'default',
+                    'px-2': size === 'xs' && form === 'default',
+                }
+            )}
+        >
+            <slot name="right" />
+        </span>
+    {/if}
 </Action>

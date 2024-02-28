@@ -6,7 +6,7 @@
         ButtonText,
         Cta,
         Divider,
-        HomeAboutCard,
+        HomeAboutGrid,
         /*ProjectTableBodyRow,*/
         Section,
         SectionFooter,
@@ -36,7 +36,7 @@
     />
 </svelte:head>
 
-<HomeAboutCard />
+<HomeAboutGrid />
 
 <Divider />
 

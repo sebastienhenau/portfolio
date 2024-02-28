@@ -13,6 +13,7 @@ import Linkedin from '~icons/mdi/linkedin';
 import Book from '~icons/ph/book-bold';
 import Moon from '~icons/ph/moon-bold';
 import Sun from '~icons/ph/sun-bold';
+import TwitterX from '~icons/ri/twitter-x-fill';
 import ChevronDown from '~icons/tabler/chevron-down';
 import ChevronUp from '~icons/tabler/chevron-up';
 import ExternalLink from '~icons/tabler/external-link';
@@ -37,6 +38,7 @@ const icons: TIcons = {
     Book,
     Table,
     Close,
+    TwitterX,
 };
 
 export default icons;

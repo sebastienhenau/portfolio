@@ -2,7 +2,7 @@
     context="module"
     lang="ts"
 >
-    export type TPanelTag = 'div' | 'nav' | 'tr';
+    export type TPanelTag = 'div' | 'nav' | 'tr' | 'article';
 
     export interface TPanelProps {
         tag?: TPanelTag;

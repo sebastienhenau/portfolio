@@ -30,8 +30,8 @@
     class={clsx(
         'w-full',
         {
-            'object-center object-cover': fit === 'cover',
-            'object-center object-contain': fit === 'contain',
+            'object-center object-cover h-full': fit === 'cover',
+            'object-center object-contain h-full': fit === 'contain',
             'rounded border border-line': panelContext,
         },
         $$props.class

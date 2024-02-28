@@ -251,6 +251,7 @@ export default {
                 border: '2px',
             },
             gridTemplateRows: {
+                '2-auto': 'repeat(2, auto)',
                 '3-auto': 'repeat(3, auto)',
             },
         },
