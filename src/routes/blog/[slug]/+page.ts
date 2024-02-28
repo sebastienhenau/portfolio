@@ -16,11 +16,11 @@ export interface TPageData {
  */
 export const load: PageLoad = async ({ params }): Promise<TPageData> => {
     try {
-        const story = await import(`../../../content/blogposts/${params.slug}.md`);
+        const blogPost = await import(`../../../content/blogPosts/${params.slug}.md`);
 
         return {
-            metadata: story.metadata,
-            content: story.default,
+            metadata: blogPost.metadata,
+            content: blogPost.default,
         };
     } catch (e) {
         throw error(404, `Could not find ${params.slug}`);
