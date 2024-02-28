@@ -1,7 +1,8 @@
 <script lang="ts">
+    import clsx from 'clsx';
 </script>
 
-<div class="w-full flex justify-center my-8">
+<div class={clsx('w-full flex justify-center my-8', $$props.class)}>
     <svg
         fill="none"
         height="6"

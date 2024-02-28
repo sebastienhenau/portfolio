@@ -2,12 +2,12 @@
     context="module"
     lang="ts"
 >
-    import type { TBlogPost } from '$types';
+    import type { TPost } from '$types';
 
-    export type TBlogPostPreviewBlogPost = TBlogPost;
+    export type TPostPreviewPost = TPost;
 
     export interface TBlogPostPreview {
-        blogPost: TBlogPostPreviewBlogPost;
+        post: TPostPreviewPost;
     }
 </script>
 
@@ -16,9 +16,9 @@
     import { insertDynamicRouteParam } from '$utilities';
     import { ROUTES_BLOG_ITEM } from '$constants';
 
-    export let blogPost: TBlogPostPreviewBlogPost;
+    export let post: TPostPreviewPost;
 
-    const { slug, title, image, date, description, tags } = blogPost;
+    const { slug, title, image, date, description, tags } = post;
 </script>
 
 <Preview

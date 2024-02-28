@@ -1,4 +1,4 @@
-export interface TBlogPost {
+export interface TPost {
     slug: string;
     date: string;
     description: string;
@@ -8,4 +8,4 @@ export interface TBlogPost {
     published?: boolean;
 }
 
-export type TBlogPosts = TBlogPost[];
+export type TPosts = TPost[];

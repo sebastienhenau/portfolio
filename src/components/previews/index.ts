@@ -1,2 +1,2 @@
-export { default as BlogPostPreview } from './BlogPostPreview.svelte';
-export * from './BlogPostPreview.svelte';
+export { default as PostPreview } from './PostPreview.svelte';
+export * from './PostPreview.svelte';

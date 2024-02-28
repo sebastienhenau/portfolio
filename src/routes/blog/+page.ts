@@ -1,16 +1,16 @@
-import type { TBlogPosts } from '$types';
+import type { TPosts } from '$types';
 
 import type { PageLoad } from './$types';
 
 export interface TPageData {
-    blogPosts: TBlogPosts;
+    posts: TPosts;
 }
 
 export const load: PageLoad = async ({ fetch }): Promise<TPageData> => {
-    const response = await fetch('api/blog-posts?limit=3');
-    const blogPosts: TBlogPosts = await response.json();
+    const response = await fetch('api/posts?limit=3');
+    const posts: TPosts = await response.json();
 
     return {
-        blogPosts,
+        posts,
     };
 };

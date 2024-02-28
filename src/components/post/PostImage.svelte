@@ -18,6 +18,6 @@
     export let image: TBlogpostImageImage;
 </script>
 
-<Panel class={clsx('blog-post-image flex', $$props.class)}>
+<Panel class={clsx('post-image flex', $$props.class)}>
     <Image {...image} />
 </Panel>

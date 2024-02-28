@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { BlogPostPreview, Section, SectionHeader, SectionTitle } from '$components';
+    import { PostPreview, Section, SectionHeader, SectionTitle } from '$components';
     import type { TPageData } from './+page';
 
     export let data: TPageData;
@@ -31,9 +31,9 @@
 
     <div class="mt-7">
         <ul>
-            {#each data.blogPosts as blogPost}
+            {#each data.posts as post}
                 <li>
-                    <BlogPostPreview {blogPost} />
+                    <PostPreview {post} />
                 </li>
             {/each}
         </ul>

@@ -1,6 +1,6 @@
 <script lang="ts">
     import {
-        BlogPostPreview,
+        PostPreview,
         Button,
         ButtonIcon,
         ButtonText,
@@ -23,7 +23,7 @@
 
     export let data: TPageData;
 
-    const topBlogPosts = [...data.blogPosts].slice(0, 3);
+    const topPosts = [...data.posts].slice(0, 3);
     /*const topProjects = [...projects].slice(0, 3);*/
 </script>
 
@@ -46,9 +46,9 @@
     </SectionHeader>
 
     <ul class="space-y-6 mt-7">
-        {#each topBlogPosts as blogPost}
+        {#each topPosts as post}
             <li>
-                <BlogPostPreview {blogPost} />
+                <PostPreview {post} />
             </li>
         {/each}
     </ul>
