@@ -34,6 +34,9 @@ export * from './Highlight.svelte';
 export { default as Announcement } from './Announcement.svelte';
 export * from './Announcement.svelte';
 
+export { default as Wysiwyg } from './Wysiwyg.svelte';
+export * from './Wysiwyg.svelte';
+
 export * from './Picture';
 
 export * from './Panel';
@@ -45,3 +48,5 @@ export * from './Table';
 export * from './Collapse';
 
 export * from './Timeline';
+
+export * from './Detail';
