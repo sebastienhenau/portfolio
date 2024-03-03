@@ -60,7 +60,7 @@
                 <Image
                     class="max-w-[6rem]"
                     alt="Sébastien Henau"
-                    src="/images/profile.jpg"
+                    src="/images/profile.webp"
                 />
             </Panel>
         </Highlight>

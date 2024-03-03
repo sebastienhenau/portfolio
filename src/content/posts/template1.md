@@ -3,7 +3,7 @@ title: This is the long title of the template
 description: This is the long description of the template that is long for testing. I can make it even longer to
   create a better testing.
 date: '1 januari 2023'
-image: '/images/placeholder.jpg'
+image: '/images/placeholder.webp'
 tags:
   - Headless Craft CMS
   - Next.js
@@ -27,7 +27,7 @@ lacinia, pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, con
 dolor sit amet, consectetur adipiscing elit. In eget ligula vel ligula imperdiet tempor. Vivamus nec nibh lacinia,
 pulvinar magna sit amet, ultrices ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<PostImage image={{ src: '/images/placeholder.jpg', alt: 'Placeholder' }} />
+<PostImage image={{ src: '/images/placeholder.webp', alt: 'Placeholder' }} />
 
 ### Heading 3
 

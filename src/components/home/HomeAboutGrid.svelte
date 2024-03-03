@@ -25,7 +25,7 @@
             <Panel class="min-w-[5rem] max-w-[6rem] w-full">
                 <Image
                     fit="cover"
-                    src="/images/profile.jpg"
+                    src="/images/profile.webp"
                     ,
                     alt="Sébastien Henau"
                 />
