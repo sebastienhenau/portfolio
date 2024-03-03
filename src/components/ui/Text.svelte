@@ -3,28 +3,37 @@
     context="module"
     lang="ts"
 >
-    export type TTextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+    import type { TTagsText } from '$types';
+
+    export type TTextTag = TTagsText;
     export type TTextType = 'title-1' | 'title-2' | 'title-3' | 'text' | 'label' | 'action';
     export type TTextVariant = 'none' | 'flat' | 'fat' | 'lg' | 'sm';
     export type TTextVariants = TTextVariant[];
+    export type TTextUseHeadingsContext = boolean;
 
     export interface TTextProps {
         tag?: TTextTag;
         type?: TTextType;
         variants?: TTextVariants;
+        useHeadingsContext?: TTextUseHeadingsContext;
     }
 </script>
 
 <script lang="ts">
     import clsx from 'clsx';
+    import { getContext } from 'svelte';
+    import type { THeadingsContext } from '$contexts';
 
     export let tag: TTextTag = 'p';
     export let type: TTextType = 'text';
     export let variants: TTextVariants = ['none'];
+    export let useHeadingsContext: TTextUseHeadingsContext = false;
+
+    const headingsContext = getContext<THeadingsContext>('headings');
 </script>
 
 <svelte:element
-    this={tag}
+    this={useHeadingsContext ? headingsContext.tag : tag}
     class={clsx(
         'font-sans',
         {

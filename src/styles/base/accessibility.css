@@ -1,10 +1,22 @@
 @layer base {
     *:focus-visible {
-        outline: 3px dashed theme('colors.outline');
-        outline-offset: 3px;
+        outline: 5px dashed theme('colors.outline');
+        outline-offset: 5px;
     }
 
     *:focus:not(:focus-visible) {
         outline: none;
+    }
+
+    [data-component='button-group'] {
+        [data-component='action'] {
+            &:focus-visible {
+                z-index: 50;
+            }
+
+            &:focus:not(:focus-visible) {
+                z-index: 0;
+            }
+        }
     }
 }

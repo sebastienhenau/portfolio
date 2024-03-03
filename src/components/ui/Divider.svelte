@@ -4,6 +4,7 @@
 
 <div class={clsx('w-full flex justify-center my-8', $$props.class)}>
     <svg
+        focusable="false"
         fill="none"
         height="6"
         viewBox="0 0 76 6"

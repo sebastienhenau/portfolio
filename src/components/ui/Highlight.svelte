@@ -2,7 +2,9 @@
     context="module"
     lang="ts"
 >
-    export type THighlightTag = 'div';
+    import type { TTagsBlock } from '$types';
+
+    export type THighlightTag = TTagsBlock;
     export type THighlightHorizontalAlignment = 'none' | 'center';
     export type THighlightVerticalAlignment = 'none' | 'center';
 

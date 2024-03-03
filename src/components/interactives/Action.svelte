@@ -5,11 +5,13 @@
     export type TActionHref = string;
     export type TActionType = 'button' | 'submit';
     export type TActionTarget = '_blank' | null;
+    export type TActionAriaLabel = string | null;
 
     export interface TActionProps {
         href?: TActionHref;
         type?: TActionType;
         target?: TActionTarget;
+        ariaLabel?: TActionAriaLabel;
     }
 
     export type TActionElement = HTMLAnchorElement | HTMLButtonElement;
@@ -27,6 +29,7 @@
     export let href: TActionHref = actionWrapperContext?.action?.href || '';
     export let target: TActionTarget = actionWrapperContext?.action?.target || null;
     export let type: TActionType = 'button';
+    export let ariaLabel: TActionAriaLabel = null;
 
     onMount(() => {
         if (actionWrapperContext) {
@@ -37,6 +40,8 @@
 
 {#if !!href}
     <a
+        aria-label={ariaLabel}
+        data-component="action"
         bind:this={element}
         class={clsx(
             {
@@ -51,11 +56,16 @@
         <slot />
     </a>
 {:else if actionWrapperContext}
-    <div class={$$props.class}>
+    <div
+        data-component="action"
+        class={$$props.class}
+    >
         <slot />
     </div>
 {:else}
     <button
+        data-component="action"
+        aria-label={ariaLabel}
         class={$$props.class}
         {type}
         on:click

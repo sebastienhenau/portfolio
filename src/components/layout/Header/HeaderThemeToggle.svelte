@@ -126,6 +126,7 @@
             on:click={onSystemClick}
             size="sm"
             variant="neutral"
+            action={{ ariaLabel: 'Set dark or light mode based on your system preferences' }}
         >
             <ButtonIcon icon={{ name: 'HalfCircle' }} />
         </Button>
@@ -137,6 +138,7 @@
             on:click={onLightModeClick}
             size="sm"
             variant="neutral"
+            action={{ ariaLabel: 'Set light mode' }}
         >
             <ButtonIcon icon={{ name: 'Sun' }} />
         </Button>
@@ -148,6 +150,7 @@
             on:click={onDarkModeClick}
             size="sm"
             variant="neutral"
+            action={{ ariaLabel: 'Set dark mode' }}
         >
             <ButtonIcon icon={{ name: 'Moon' }} />
         </Button>

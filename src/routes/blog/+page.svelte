@@ -15,8 +15,8 @@
 </svelte:head>
 
 <Section>
-    <SectionHeader number="1">
-        <SectionTitle slot="start">Blog</SectionTitle>
+    <SectionHeader>
+        <SectionTitle>Blog</SectionTitle>
 
         <!--<Button
             size="sm"
@@ -29,13 +29,11 @@
         </Button>-->
     </SectionHeader>
 
-    <div class="mt-7">
-        <ul>
-            {#each data.posts as post}
-                <li>
-                    <PostPreview {post} />
-                </li>
-            {/each}
-        </ul>
-    </div>
+    <ul class="mt-7">
+        {#each data.posts as post}
+            <li>
+                <PostPreview {post} />
+            </li>
+        {/each}
+    </ul>
 </Section>

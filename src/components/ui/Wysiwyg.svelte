@@ -2,7 +2,9 @@
     lang="ts"
     context="module"
 >
-    export type TWysiwygTag = 'div';
+    import type { TTagsBlock } from '$types';
+
+    export type TWysiwygTag = TTagsBlock;
 
     export interface TWysiwygProps {
         tag?: TWysiwygTag;

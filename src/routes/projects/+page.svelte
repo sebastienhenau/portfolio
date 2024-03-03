@@ -23,8 +23,8 @@
 </svelte:head>
 
 <Section>
-    <SectionHeader number="1">
-        <SectionTitle slot="start">Projects</SectionTitle>
+    <SectionHeader>
+        <SectionTitle>Projects</SectionTitle>
 
         <!--<Button
             size="sm"

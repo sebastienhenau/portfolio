@@ -36,6 +36,7 @@ const config = {
             $stores: 'src/stores',
             $services: 'src/services',
             $dialogs: 'src/dialogs',
+            $contexts: 'src/contexts',
         },
     },
 };

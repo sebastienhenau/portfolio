@@ -2,7 +2,9 @@
     context="module"
     lang="ts"
 >
-    export type TContainerTag = 'div';
+    import type { TTagsBlock } from '$types';
+
+    export type TContainerTag = TTagsBlock;
 
     export interface TContainerProps {
         tag?: TContainerTag;

@@ -16,6 +16,7 @@
     } from '$components';
     import { educations, experiences } from '$content';
     import { ROUTES_PROJECTS } from '$constants';
+    import { HeadingsContext } from '$contexts';
 </script>
 
 <svelte:head>
@@ -68,79 +69,81 @@
 
 <Divider />
 
-<Section>
-    <SectionHeader number="1">
-        <SectionTitle slot="start">Experience</SectionTitle>
-    </SectionHeader>
+<HeadingsContext>
+    <Section>
+        <SectionHeader number="1">
+            <SectionTitle>Experience</SectionTitle>
+        </SectionHeader>
 
-    <div class="mt-4">
-        <p>
-            I've been fortunate enough to have had the opportunity to learn and work on some challenging projects at
-            Little Miss Robot. Ranging from content websites to data driven web applications to experimental digital
-            experiences. Each project has been a valuable opportunity for growth. This was all made possible through
-            great teamwork with great people!
-        </p>
+        <div class="mt-4">
+            <p>
+                I've been fortunate enough to have had the opportunity to learn and work on some challenging projects at
+                Little Miss Robot. Ranging from content websites to data driven web applications to experimental digital
+                experiences. Each project has been a valuable opportunity for growth. This was all made possible through
+                great teamwork with great people!
+            </p>
 
-        <Timeline class="mt-6">
-            {#each experiences as experience, index}
-                <AboutExperienceTimelineItem
-                    {index}
-                    {experience}
+            <Timeline class="mt-6">
+                {#each experiences as experience, index}
+                    <AboutExperienceTimelineItem
+                        {index}
+                        {experience}
+                    />
+                {/each}
+            </Timeline>
+        </div>
+    </Section>
+
+    <Divider />
+
+    <Section>
+        <SectionHeader number="2">
+            <SectionTitle>Education</SectionTitle>
+        </SectionHeader>
+
+        <div class="mt-4">
+            <p>
+                During my education I landed 2 bachelor degrees. Both degrees complemented each other where I was able
+                to explore UX, visual design, motion design, back-end and front-end development.
+            </p>
+
+            <Timeline class="mt-6">
+                {#each educations as education}
+                    <li>
+                        <AboutEducationTimelineItem {education} />
+                    </li>
+                {/each}
+            </Timeline>
+        </div>
+    </Section>
+
+    <Divider />
+
+    <Section>
+        <SectionHeader number="3">
+            <SectionTitle>Projects</SectionTitle>
+        </SectionHeader>
+
+        <div class="mt-4">
+            <p>
+                Mijn leergierigheid, gedrevenheid en oog voor detail komt tot uiting in mijn projecten, van
+                contentwebsites tot data-driven web-applicaties en experimentele digitale ervaringen. Een deel van de
+                projecten staan opgesomd op mijn website.
+            </p>
+
+            <Button
+                action={{
+                    href: ROUTES_PROJECTS,
+                }}
+                class="mt-6"
+            >
+                <ButtonText>Go to projects</ButtonText>
+
+                <ButtonIcon
+                    class="w-6"
+                    icon={{ name: 'ChevronRight' }}
                 />
-            {/each}
-        </Timeline>
-    </div>
-</Section>
-
-<Divider />
-
-<Section>
-    <SectionHeader number="2">
-        <SectionTitle slot="start">Education</SectionTitle>
-    </SectionHeader>
-
-    <div class="mt-4">
-        <p>
-            During my education I landed 2 bachelor degrees. Both degrees complemented each other where I was able to
-            explore UX, visual design, motion design, back-end and front-end development.
-        </p>
-
-        <Timeline class="mt-6">
-            {#each educations as education}
-                <li>
-                    <AboutEducationTimelineItem {education} />
-                </li>
-            {/each}
-        </Timeline>
-    </div>
-</Section>
-
-<Divider />
-
-<Section>
-    <SectionHeader number="3">
-        <SectionTitle slot="start">Projects</SectionTitle>
-    </SectionHeader>
-
-    <div class="mt-4">
-        <p>
-            Mijn leergierigheid, gedrevenheid en oog voor detail komt tot uiting in mijn projecten, van contentwebsites
-            tot data-driven web-applicaties en experimentele digitale ervaringen. Een deel van de projecten staan
-            opgesomd op mijn website.
-        </p>
-
-        <Button
-            action={{
-                href: ROUTES_PROJECTS,
-            }}
-            class="mt-6"
-        >
-            <ButtonText>Go to projects</ButtonText>
-
-            <ButtonIcon
-                class="w-6"
-                icon={{ name: 'ChevronRight' }}
-            />
-        </Button>
-    </div>
-</Section>
+            </Button>
+        </div>
+    </Section>
+</HeadingsContext>

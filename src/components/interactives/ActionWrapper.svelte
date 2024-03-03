@@ -3,9 +3,10 @@
     context="module"
 >
     import type { TActionProps, TActionElement } from '$components';
+    import type { TTagsBlock } from '$types';
 
     export type TActionWrapperAction = TActionProps;
-    export type TActionWrapperTag = 'div' | 'summary';
+    export type TActionWrapperTag = TTagsBlock;
 
     export interface TActionWrapperProps {
         action?: TActionWrapperAction;

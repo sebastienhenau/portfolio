@@ -2,6 +2,7 @@
     import '$styles/main.css';
     import { fly } from 'svelte/transition';
     import { Container, Header, Menu, Main, Announcement, Text, SkipLink } from '$components';
+    import { HeadingsContext } from '$contexts';
     import type { TLayoutData } from './+layout';
 
     export let data: TLayoutData;
@@ -31,13 +32,15 @@
     <Main
         class="900:col-start-2 900:col-end-3 row-start-2 row-end-3 500:row-start-3 500:row-end-4 900:row-start-2 900:row-end-3 max-900:pb-5"
     >
-        {#key data.url}
-            <div
-                in:fly={{ y: -10, duration: 200, delay: 200 }}
-                out:fly={{ y: 10, duration: 200 }}
-            >
-                <slot />
-            </div>
-        {/key}
+        <HeadingsContext>
+            {#key data.url}
+                <div
+                    in:fly={{ y: -10, duration: 200, delay: 200 }}
+                    out:fly={{ y: 10, duration: 200 }}
+                >
+                    <slot />
+                </div>
+            {/key}
+        </HeadingsContext>
     </Main>
 </Container>

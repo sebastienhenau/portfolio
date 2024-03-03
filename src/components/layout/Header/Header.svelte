@@ -10,6 +10,7 @@
     <Action
         class="flex items-center gap-5"
         href={ROUTES_HOME}
+        ariaLabel="Go to the home page"
     >
         <HeaderLogo />
 

@@ -42,7 +42,7 @@ export default {
                 '--color-accent-base': '14 83% 66%',
                 '--color-accent-contrast': '222 30% 16%',
                 '--color-line': '222 30% 16%',
-                '--color-outline': '0 0% 0%',
+                '--color-outline': '200 100% 50%',
             },
             dark: {
                 '--color-site-base': '223 30% 18%',
@@ -51,7 +51,7 @@ export default {
                 '--color-accent-base': '14 83% 66%',
                 '--color-accent-contrast': '0 0% 0%',
                 '--color-line': '0 0% 0%',
-                '--color-outline': '30 100% 99%',
+                '--color-outline': '200 100% 50%',
             },
         },
         colors: {

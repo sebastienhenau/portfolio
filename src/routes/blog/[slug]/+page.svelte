@@ -1,13 +1,23 @@
 <script lang="ts">
     import { Detail, DetailBackButton, DetailHeader, DetailContent, TagGroup, TagGroupItem, Tag } from '$components';
+    import { HeadingsContext } from '$contexts';
     import { ROUTES_BLOG } from '$constants';
     import type { TPageData } from './+page';
 
     export let data: TPageData;
 
     const { metadata, content } = data;
-    const { title, tags, date } = metadata;
+    const { title, description, tags, date } = metadata;
 </script>
+
+<svelte:head>
+    <title>{`${title} | Sébastien Henau`}</title>
+
+    <meta
+        content={description}
+        name="description"
+    />
+</svelte:head>
 
 <Detail>
     <DetailBackButton href={ROUTES_BLOG}>Back to blog</DetailBackButton>
@@ -27,7 +37,9 @@
         </TagGroup>
     </DetailHeader>
 
-    <DetailContent>
-        <svelte:component this={content} />
-    </DetailContent>
+    <HeadingsContext>
+        <DetailContent>
+            <svelte:component this={content} />
+        </DetailContent>
+    </HeadingsContext>
 </Detail>

@@ -5,7 +5,7 @@
     export type TSectionHeaderNumber = string;
 
     export interface TSectionHeaderProps {
-        number: TSectionHeaderNumber;
+        number?: TSectionHeaderNumber;
     }
 </script>
 
@@ -13,17 +13,34 @@
     import clsx from 'clsx';
     import { Badge } from '$components';
 
-    export let number: TSectionHeaderNumber;
+    export let number: TSectionHeaderNumber = '';
 </script>
 
-<header class={clsx('flex items-center gap-4', $$props.class)}>
-    <Badge>
-        {number}
-    </Badge>
+<header
+    class={clsx(
+        {
+            'flex items-center gap-4': !!number,
+        },
+        $$props.class
+    )}
+>
+    {#if !!number}
+        <Badge>
+            {number}
+        </Badge>
+    {/if}
 
-    <div class="flex-1 flex justify-between items-center gap-4">
-        <slot name="start" />
+    {#if $$slots.start && $$slots.end}
+        <div
+            class={clsx('flex justify-between items-center gap-4', {
+                'flex-1': !!number,
+            })}
+        >
+            <slot name="start" />
 
-        <slot name="end" />
-    </div>
+            <slot name="end" />
+        </div>
+    {:else}
+        <slot />
+    {/if}
 </header>
