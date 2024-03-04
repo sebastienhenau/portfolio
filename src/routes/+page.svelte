@@ -46,11 +46,11 @@
     Home
 </Text>
 
-<HomeAboutGrid />
-
-<Divider />
-
 <HeadingsContext>
+    <HomeAboutGrid />
+
+    <Divider />
+
     <Section>
         <SectionHeader number="1">
             <SectionTitle>Blog</SectionTitle>

@@ -67,7 +67,9 @@
                     ariaLabel: `Read more about ${title}`,
                 }}
             >
-                <ButtonText>Read more</ButtonText>
+                <ButtonText>
+                    Read more<span class="sr-only"> about {title}</span>
+                </ButtonText>
 
                 <ButtonIcon
                     class="w-6"

@@ -1,6 +1,8 @@
 <script>
     import clsx from 'clsx';
     import {
+        Section,
+        SectionTitle,
         Button,
         ButtonText,
         ButtonList,
@@ -14,12 +16,13 @@
     import { ROUTES_ABOUT } from '$constants';
 </script>
 
-<div class={clsx('@container/home-about-grid', $$props.class)}>
+<Section class={clsx('@container/home-about-grid', $$props.class)}>
+    <SectionTitle class="sr-only">About me</SectionTitle>
+
     <div
         class="space-y-6 @600/home-about-grid:space-y-0 @600/home-about-grid:grid @600/home-about-grid:grid-cols-[1fr_15rem] @600/home-about-grid:grid-rows-2-auto @600/home-about-grid:items-stretch @600/home-about-grid:gap-6"
     >
         <Panel
-            tag="article"
             class="col-start-1 col-end-2 row-start-1 row-end-2 p-6 flex flex-wrap gap-6 @400/home-about-grid:flex-nowrap"
         >
             <Panel class="min-w-[5rem] max-w-[6rem] w-full">
@@ -36,7 +39,6 @@
             />
 
             <Text
-                class=""
                 tag="p"
                 type="text"
             >
@@ -109,4 +111,4 @@
             </Button>
         </Highlight>
     </div>
-</div>
+</Section>
