@@ -27,7 +27,7 @@
 <Action
     {...action}
     class={clsx(
-        'inline-flex items-center gap-3',
+        'inline-flex items-center gap-3 underline underline-offset-4 decoration-2 decoration-dashed',
         {
             'text-accent-base': variant === 'default',
             'text-site-contrast-1 hover:text-accent-base transition-colors': variant === 'neutral',

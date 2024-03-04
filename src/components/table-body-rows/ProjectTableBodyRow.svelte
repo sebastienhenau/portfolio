@@ -31,7 +31,7 @@
 
     <TableBodyColumn>
         <Link
-            action={{ href: link, target: '_blank' }}
+            action={{ href: link, target: '_blank', ariaLabel: `Visit ${name} in a new tab window` }}
             variant="neutral"
         >
             <LinkText>

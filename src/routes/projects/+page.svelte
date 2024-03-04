@@ -8,9 +8,9 @@
         TableHeader,
         TableHeaderColumn,
         TableBody,
-        /*ProjectTableBodyRow*/
+        // ProjectTableBodyRow
     } from '$components';
-    /*import { projects } from '$content';*/
+    // import { projects } from '$content';
 </script>
 
 <svelte:head>
