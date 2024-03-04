@@ -110,9 +110,7 @@
 
             <Timeline class="mt-6">
                 {#each educations as education}
-                    <li>
-                        <AboutEducationTimelineItem {education} />
-                    </li>
+                    <AboutEducationTimelineItem {education} />
                 {/each}
             </Timeline>
         </div>
