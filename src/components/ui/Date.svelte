@@ -15,7 +15,7 @@
     export let value: TDateValue;
 </script>
 
-<!-- TODO/ datetime -->
+<!-- TODO: datetime -->
 <time
     class={clsx('inline-block fs-text fsv-flat', $$props.class)}
     datetime=""

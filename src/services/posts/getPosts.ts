@@ -1,6 +1,5 @@
 import type { TPost, TPosts } from '$types';
 
-/* TODO: add pagination */
 const getPosts = async () => {
     const paths = import.meta.glob('/src/content/posts/*.md', {
         eager: true,

@@ -7,6 +7,7 @@
     const { open } = collapseContext || {};
 </script>
 
+<!-- TODO: add aria-expanded="false|true" and aria-controls="#id-on-details" -->
 <ActionWrapper
     class="border-b border-line py-3 pl-5 pr-4 flex justify-between items-center gap-6"
     tag="summary"

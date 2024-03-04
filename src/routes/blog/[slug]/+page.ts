@@ -11,7 +11,6 @@ export interface TPageData {
 
 /**
  * TODO: better error
- * TODO: test alias path?
  * TODO: services?
  */
 export const load: PageLoad = async ({ params }): Promise<TPageData> => {
