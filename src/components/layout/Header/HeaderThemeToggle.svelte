@@ -119,6 +119,7 @@
     </script>
 </svelte:head>
 
+<!-- TODO: size update on breakpoints -->
 <ButtonGroup>
     <ButtonGroupItem selected={theme === '' && isWatchingSystem && isDefaultSet}>
         <Button
