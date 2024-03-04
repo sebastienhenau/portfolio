@@ -5,11 +5,17 @@
     export type TImageSrc = string;
     export type TImageAlt = string;
     export type TImageFit = 'cover' | 'contain';
+    export type TImageWidth = string | number | null;
+    export type TImageHeight = string | number | null;
+    export type TImageLoading = 'eager' | 'lazy';
 
     export interface TImageProps {
         src: TImageSrc;
         alt?: TImageAlt;
         fit?: TImageFit;
+        width?: TImageWidth;
+        height?: TImageHeight;
+        loading?: TImageLoading;
     }
 </script>
 
@@ -21,6 +27,9 @@
     export let src: TImageSrc;
     export let alt: TImageAlt = '';
     export let fit: TImageFit = 'cover';
+    export let width: TImageWidth = null;
+    export let height: TImageHeight = null;
+    export let loading: TImageLoading = 'eager';
 
     const panelContext = getContext<TPanelContext>('panel');
 </script>
@@ -37,4 +46,7 @@
         $$props.class
     )}
     {src}
+    {width}
+    {height}
+    {loading}
 />

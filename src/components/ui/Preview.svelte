@@ -25,11 +25,12 @@
         })}
     >
         {#if !!image}
-            <Panel class="z-10 w-full @550/preview:w-auto">
+            <Panel class="w-full @550/preview:w-[9.5rem] @550/preview:h-[9.5rem] @550/preview:aspect-square">
                 <Image
                     {...image}
-                    class="max-h-[15rem] @550/preview:max-h-auto @550/preview:max-w-[9.5rem]"
                     fit="cover"
+                    width="152"
+                    height="152"
                 />
             </Panel>
 

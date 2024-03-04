@@ -25,12 +25,14 @@
         <Panel
             class="col-start-1 col-end-2 row-start-1 row-end-2 p-6 flex flex-wrap gap-6 @400/home-about-grid:flex-nowrap"
         >
-            <Panel class="min-w-[5rem] max-w-[6rem] w-full">
+            <Panel class="w-[6rem] h-[6rem] aspect-square">
                 <Image
                     fit="cover"
                     src="/images/profile.webp"
                     ,
                     alt="Sébastien Henau"
+                    width="96"
+                    height="96"
                 />
             </Panel>
 

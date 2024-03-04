@@ -27,6 +27,7 @@
         image={{
             src: image,
             alt: title,
+            loading: 'lazy',
         }}
     >
         <Text

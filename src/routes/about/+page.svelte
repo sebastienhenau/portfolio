@@ -56,11 +56,12 @@
             horizontalAlignment="center"
             verticalAlignment="center"
         >
-            <Panel>
+            <Panel class="w-[6rem] h-[6rem] aspect-square">
                 <Image
-                    class="max-w-[6rem]"
                     alt="Sébastien Henau"
                     src="/images/profile.webp"
+                    width="96"
+                    height="96"
                 />
             </Panel>
         </Highlight>
