@@ -5,7 +5,12 @@
     import MenuItem from './MenuItem.svelte';
 </script>
 
-<div class={clsx('sticky max-900:bottom-0 900:top-6 z-40 max-500:full-bleed max-500:px-3 max-500:pb-5', $$props.class)}>
+<div
+    class={clsx(
+        'container-menu sticky max-900:bottom-0 900:top-6 z-40 max-500:full-bleed max-500:px-3 max-500:pb-5',
+        $$props.class
+    )}
+>
     <div class="500:hidden absolute inset-0 bg-site-base pointer-events-none z-0" />
 
     <Panel
@@ -56,3 +61,16 @@
         </PanelContent>
     </Panel>
 </div>
+
+<style lang="postcss">
+    .container-menu {
+        --container-menu-col: theme('gridColumn.span-1');
+
+        grid-row: menu;
+        grid-column: var(--container-menu-col);
+
+        @media screen('900') {
+            --container-menu-col: menu;
+        }
+    }
+</style>

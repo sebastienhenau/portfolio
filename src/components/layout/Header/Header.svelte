@@ -6,7 +6,7 @@
     import { ROUTES_HOME } from '$constants';
 </script>
 
-<header class={clsx('flex justify-between items-center gap-6', $$props.class)}>
+<header class={clsx('container-header flex justify-between items-center gap-6', $$props.class)}>
     <Action
         class="flex items-center gap-5"
         href={ROUTES_HOME}
@@ -37,3 +37,16 @@
         <HeaderThemeToggle />
     </div>
 </header>
+
+<style lang="postcss">
+    .container-header {
+        --container-header-col: theme('gridColumn.span-1');
+
+        grid-row: header;
+        grid-column: var(--container-header-col);
+
+        @media screen('900') {
+            --container-header-col: main;
+        }
+    }
+</style>

@@ -1,8 +1,10 @@
+import type { LayoutLoad } from './$types';
+
 export interface TLayoutData {
-    url: URL;
+    url: string;
 }
 
-export const load = ({ url }: TLayoutData) => {
+export const load: LayoutLoad = ({ url }): TLayoutData => {
     return {
         url: url.pathname,
     };
