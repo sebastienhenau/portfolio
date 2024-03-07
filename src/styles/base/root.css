@@ -15,17 +15,12 @@
          * Makes sure that 1rem = 16px, all rem scale along this percentage.
          */
         font-size: 100%;
-    }
 
-    /**
-     * Customize the default font in tailwind:
-     * https://tailwindcss.com/docs/font-family#customizing-the-default-font
-     */
-    html {
+        /**
+         * Customize the default font in tailwind:
+         * https://tailwindcss.com/docs/font-family#customizing-the-default-font
+         */
         font-family: theme('fontFamily.sans');
-
-        /* TODO: accessibility reduced motion */
-        scroll-behavior: smooth;
     }
 
     body {

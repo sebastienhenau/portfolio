@@ -12,7 +12,19 @@
 </script>
 
 <script lang="ts">
-    import { Date, Preview, Tag, TagGroup, TagGroupItem, Text, Button, ButtonText, ButtonIcon } from '$components';
+    import {
+        Date,
+        Preview,
+        Tag,
+        TagGroup,
+        TagGroupItem,
+        Text,
+        Button,
+        ButtonText,
+        ButtonIcon,
+        Link,
+        LinkText,
+    } from '$components';
     import { insertDynamicRouteParam } from '$utilities';
     import { ROUTES_BLOG_ITEM } from '$constants';
     import { HeadingsContext } from '$contexts';
@@ -20,6 +32,7 @@
     export let post: TPostPreviewPost;
 
     const { slug, title, image, date, description, tags } = post;
+    const href = insertDynamicRouteParam(ROUTES_BLOG_ITEM, 'slug', slug);
 </script>
 
 <HeadingsContext>
@@ -31,15 +44,21 @@
         }}
     >
         <Text
-            class="relative z-50"
             type="title-3"
             useHeadingsContext
         >
-            {title}
+            <Link
+                action={{ href }}
+                variant="neutral"
+            >
+                <LinkText text={{ type: 'title-3' }}>
+                    {title}
+                </LinkText>
+            </Link>
         </Text>
 
         <Date
-            class="text-site-contrast-2 block"
+            class="text-site-contrast-2 block mt-2"
             value={date}
         />
 
@@ -64,8 +83,9 @@
                 variant="neutral"
                 size="sm"
                 action={{
-                    href: insertDynamicRouteParam(ROUTES_BLOG_ITEM, 'slug', slug),
+                    href,
                     ariaLabel: `Read more about ${title}`,
+                    tabIndex: -1,
                 }}
             >
                 <ButtonText>

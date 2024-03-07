@@ -96,7 +96,7 @@
 <Action
     {...action}
     class={clsx(
-        'inline-flex items-center relative z-0 group transition-colors',
+        'inline-flex items-center relative z-0 group motion-safe:transition-colors',
         (!$$slots.left || !$$slots.right) && horizontalAlignClass,
         {
             'px-5': size === 'default' && form === 'default',
@@ -132,7 +132,7 @@
 
     <span
         class={clsx(
-            'absolute inset-0 -z-10 rounded border border-line pointer-events-none transition-transform transition-colors',
+            'absolute inset-0 -z-10 rounded border border-line pointer-events-none motion-safe:transition-transform',
             {
                 'bg-accent-base': (variant === 'default' && !inverse) || $selected,
                 'bg-site-base': variant === 'neutral' && !inverse && !$selected,
@@ -155,7 +155,7 @@
     {#if $$slots.left}
         <span
             class={clsx(
-                'self-stretch border-r border-line flex items-center transition-transform',
+                'self-stretch border-r border-line flex items-center motion-safe:transition-transform',
                 horizontalAlignClass,
                 childAnimationClass,
                 {
@@ -170,10 +170,14 @@
 
     {#if $$slots.center && ($$slots.left || $$slots.right)}
         <span
-            class={clsx('flex-1 flex items-center justify-center transition-transform', childAnimationClass, {
-                'gap-3': size === 'default' || size === 'sm',
-                'gap-2': size === 'xs',
-            })}
+            class={clsx(
+                'flex-1 flex items-center justify-center motion-safe:transition-transform',
+                childAnimationClass,
+                {
+                    'gap-3': size === 'default' || size === 'sm',
+                    'gap-2': size === 'xs',
+                }
+            )}
         >
             <slot name="center" />
         </span>
@@ -184,7 +188,7 @@
     {#if $$slots.right}
         <span
             class={clsx(
-                'self-stretch border-l border-line flex items-center justify-center transition-transform',
+                'self-stretch border-l border-line flex items-center justify-center motion-safe:transition-transform',
                 childAnimationClass,
                 {
                     'px-3': size === 'sm' && form === 'default',

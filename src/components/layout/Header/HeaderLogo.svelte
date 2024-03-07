@@ -1,6 +1,7 @@
 <svg
-    focusable="false"
     class="min-w-[2.5rem] min-h-[2.125rem]"
+    focusable="false"
+    aria-hidden="true"
     width="36"
     height="31"
     viewBox="0 0 36 31"

@@ -23,4 +23,6 @@
     class={clsx('text-inherit inline-flex items-center justify-center w-5 aspect-square h-auto', $$props.class)}
     height="100%"
     width="100%"
+    focusable="false"
+    aria-hidden="true"
 />

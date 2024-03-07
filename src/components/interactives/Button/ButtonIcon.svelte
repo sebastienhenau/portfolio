@@ -26,7 +26,7 @@
     {...icon}
     class={clsx(
         {
-            [clsx(buttonContext.childAnimationClass, 'transition-transform')]:
+            [clsx(buttonContext.childAnimationClass, 'motion-safe:transition-transform')]:
                 !buttonContext.hasLeftSlot && !buttonContext.hasRightSlot,
         },
         $$props.class

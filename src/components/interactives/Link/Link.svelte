@@ -27,10 +27,10 @@
 <Action
     {...action}
     class={clsx(
-        'inline-flex items-center gap-3 underline underline-offset-4 decoration-2 decoration-dashed',
+        'inline-flex items-center gap-3 underline underline-offset-2 decoration-2',
         {
             'text-accent-base': variant === 'default',
-            'text-site-contrast-1 hover:text-accent-base transition-colors': variant === 'neutral',
+            'text-site-contrast-1 hover:text-accent-base motion-safe:transition-colors': variant === 'neutral',
         },
         $$props.class
     )}

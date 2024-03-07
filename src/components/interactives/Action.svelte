@@ -6,12 +6,14 @@
     export type TActionType = 'button' | 'submit';
     export type TActionTarget = '_blank' | null;
     export type TActionAriaLabel = string | null;
+    export type TActionTabIndex = number | null;
 
     export interface TActionProps {
         href?: TActionHref;
         type?: TActionType;
         target?: TActionTarget;
         ariaLabel?: TActionAriaLabel;
+        tabIndex?: TActionTabIndex;
     }
 
     export type TActionElement = HTMLAnchorElement | HTMLButtonElement;
@@ -30,6 +32,7 @@
     export let target: TActionTarget = actionWrapperContext?.action?.target || null;
     export let type: TActionType = 'button';
     export let ariaLabel: TActionAriaLabel = null;
+    export let tabIndex: TActionTabIndex = null;
 
     onMount(() => {
         if (actionWrapperContext) {
@@ -51,6 +54,7 @@
         )}
         {href}
         {target}
+        tabindex={tabIndex}
         rel={target ? clsx({ 'noopener noreferer': target === '_blank' }) : null}
     >
         <slot />
