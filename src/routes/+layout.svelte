@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-    <script>
+    <script lang="ts">
         const localTheme = localStorage.getItem('theme');
         const hasLocalTheme = !!localStorage.theme;
         const isLocalThemeDark = localTheme === 'dark';

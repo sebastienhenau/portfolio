@@ -5,3 +5,4 @@ export * from './educations';
 export * from './projects';
 export * from './breakpoints';
 export * from './tags';
+export * from './theme';
