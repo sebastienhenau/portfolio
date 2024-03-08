@@ -21,7 +21,7 @@
 </script>
 
 <HeadingsContext>
-    <TimelineItem date={{ value: time }}>
+    <TimelineItem yearGroup={{ value: time }}>
         <article class="@container/about-education-item">
             <div
                 class="@550/about-education-item:flex @550/about-education-item:justify-between @550/about-education-item:gap-6 @550/about-education-item:items-center"

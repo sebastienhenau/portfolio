@@ -1,6 +1,6 @@
 <script lang="ts">
     import {
-        Date,
+        YearGroup,
         Link,
         LinkIcon,
         LinkText,
@@ -26,7 +26,7 @@
 
 <TableBodyRow>
     <TableBodyColumn>
-        <Date value={date} />
+        <YearGroup value={date} />
     </TableBodyColumn>
 
     <TableBodyColumn>

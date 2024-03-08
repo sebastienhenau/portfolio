@@ -24,7 +24,7 @@
 </script>
 
 <HeadingsContext>
-    <TimelineItem date={{ value: time }}>
+    <TimelineItem yearGroup={{ value: time }}>
         <Collapse open={index === 0}>
             <CollapseHeader>
                 <Text

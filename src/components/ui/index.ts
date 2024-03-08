@@ -10,9 +10,6 @@ export * from './Dot.svelte';
 export { default as Text } from './Text.svelte';
 export * from './Text.svelte';
 
-export { default as Date } from './Date.svelte';
-export * from './Date.svelte';
-
 export { default as SkipLink } from './SkipLink.svelte';
 export * from './SkipLink.svelte';
 

@@ -2,7 +2,7 @@
 title: This is the long title of the template
 description: This is the long description of the template that is long for testing. I can make it even longer to
   create a better testing.
-date: '1 januari 2023'
+date: '23/01/2024'
 image: '/images/placeholder.webp'
 tags:
   - Headless Craft CMS

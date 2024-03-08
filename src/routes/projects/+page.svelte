@@ -8,9 +8,9 @@
         TableHeader,
         TableHeaderColumn,
         TableBody,
-        // ProjectTableBodyRow
+        ProjectTableBodyRow,
     } from '$components';
-    // import { projects } from '$content';
+    import { projects } from '$content';
 </script>
 
 <svelte:head>
@@ -59,9 +59,9 @@
         </TableHeader>
 
         <TableBody>
-            <!--{#each projects as project}
+            {#each projects as project}
                 <ProjectTableBodyRow {project} />
-            {/each}-->
+            {/each}
         </TableBody>
     </Table>
 </Section>

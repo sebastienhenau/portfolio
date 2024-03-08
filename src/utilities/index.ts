@@ -5,3 +5,4 @@ export * from './env';
 export * from './localStorage';
 export * from './motion';
 export * from './theme';
+export * from './date';

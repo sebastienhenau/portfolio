@@ -7,7 +7,7 @@
         Highlight,
         Divider,
         HomeAboutGrid,
-        /*ProjectTableBodyRow,*/
+        ProjectTableBodyRow,
         Section,
         SectionFooter,
         SectionHeader,
@@ -21,12 +21,12 @@
     import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
     import { HeadingsContext } from '$contexts';
     import type { TPageData } from './+page';
-    /*import { projects } from '$content';*/
+    import { projects } from '$content';
 
     export let data: TPageData;
 
     const topPosts = [...data.posts].slice(0, 3);
-    /*const topProjects = [...projects].slice(0, 3);*/
+    const topProjects = [...projects].slice(0, 3);
 </script>
 
 <svelte:head>
@@ -98,9 +98,9 @@
             </TableHeader>
 
             <TableBody>
-                <!--{#each topProjects as project}
+                {#each topProjects as project}
                     <ProjectTableBodyRow {project} />
-                {/each}-->
+                {/each}
             </TableBody>
         </Table>
 

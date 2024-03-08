@@ -1,4 +1,5 @@
 export * from './ui';
+export * from './dates';
 export * from './interactives';
 export * from './tags';
 export * from './layout';
