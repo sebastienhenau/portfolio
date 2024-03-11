@@ -42,6 +42,7 @@
 </script>
 
 {#if !!href}
+    <!-- TODO: 'underline underline-offset-2 decoration-2', -->
     <a
         aria-label={ariaLabel}
         data-component="action"

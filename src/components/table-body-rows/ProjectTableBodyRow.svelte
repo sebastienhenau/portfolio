@@ -1,6 +1,5 @@
 <script lang="ts">
     import {
-        YearGroup,
         Link,
         LinkIcon,
         LinkText,
@@ -10,6 +9,7 @@
         TagGroup,
         TagGroupItem,
         Text,
+        YearGroup,
     } from '$components';
 
     export let project;
@@ -41,10 +41,12 @@
             <LinkIcon icon={{ name: 'ExternalLink' }} />
         </Link>
 
+        <!-- TODO: link LMR -->
         <Text
             tag="p"
             type="text"
         >
+            <!--Made at <Action href={companyUrl} target="_blank" ariaLabel={`Made at ${company}, visit the website`}>{company}</Action>-->
             Made at {company}
         </Text>
     </TableBodyColumn>

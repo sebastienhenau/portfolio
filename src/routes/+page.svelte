@@ -20,8 +20,8 @@
     } from '$components';
     import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
     import { HeadingsContext } from '$contexts';
-    import type { TPageData } from './+page';
     import { projects } from '$content';
+    import type { TPageData } from './+page';
 
     export let data: TPageData;
 

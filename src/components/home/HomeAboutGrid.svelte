@@ -29,7 +29,6 @@
                 <Image
                     fit="cover"
                     src="/images/profile.webp"
-                    ,
                     alt="Sébastien Henau"
                     width="96"
                     height="96"
