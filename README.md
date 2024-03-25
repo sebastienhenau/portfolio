@@ -23,11 +23,3 @@ data is static, in a future version I will save the data in a separate database.
 | dev     | Start the development environment                   |
 | Build   | Start the build process for deploying on production |
 | Preview | Run the production build locally                    |
-
-## Open issues
-
-- Setup lint-staged
-- Setup commitlint
-- Setup husky
-- Complete README.md
-- Setup linters
