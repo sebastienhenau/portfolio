@@ -1,5 +1,6 @@
 <script lang="ts">
     import {
+        Link,
         Section,
         SectionHeader,
         SectionTitle,
@@ -9,6 +10,7 @@
         TableHeaderColumn,
         TableBody,
         ProjectTableBodyRow,
+        LinkText,
     } from '$components';
     import { projects } from '$content';
 </script>
@@ -37,15 +39,25 @@
         </Button>-->
     </SectionHeader>
 
-    <div class="mt-4">
+    <div class="mt-4 space-y-4">
         <Text
             tag="p"
             type="text"
         >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere aliquet est vitae blandit. Fusce
-            dignissim lorem urna, in eleifend ligula ultricies sed. Nulla scelerisque metus ac nunc cursus fringilla.
-            Vestibulum finibus sodales libero nec molestie. Quisque ac condimentum neque. Phasellus pharetra turpis
-            purus, nec egestas ligula aliquam eu. Suspendisse vel laoreet elit.
+            I have worked on projects ranging from content websites to data driven applications to experimental digital
+            experiences. Currently, I'm working at <Link
+                inline
+                action={{ href: 'http://www.spatie.be', target: '_blank' }}><LinkText>Spatie</LinkText></Link
+            >, mainly focused on front-end development.
+        </Text>
+
+        <Text
+            tag="p"
+            type="text"
+        >
+            In my past experiences I have had the possibility to work on a number of projects. These projects are the
+            result of a <strong>great collaboration</strong> and I've had the pleasure of working with a
+            <strong>great team of people</strong>.
         </Text>
     </div>
 
@@ -53,7 +65,7 @@
         <TableHeader>
             <TableHeaderColumn>Year</TableHeaderColumn>
 
-            <TableHeaderColumn>Name</TableHeaderColumn>
+            <TableHeaderColumn class="@550/table:w-[40%]">Project</TableHeaderColumn>
 
             <TableHeaderColumn class="hidden @550/table:table-cell">Technologies</TableHeaderColumn>
         </TableHeader>

@@ -17,15 +17,14 @@
     import { Text, CollapseContent, TimelineItem, CollapseHeader, Collapse } from '$components';
     import { HeadingsContext } from '$contexts';
 
-    export let index: TAboutExperienceItemIndex;
     export let experience: TAboutExperienceItemExperience;
 
-    const { role, company, description, time } = experience;
+    const { role, company, description, time, current } = experience;
 </script>
 
 <HeadingsContext>
     <TimelineItem yearGroup={{ value: time }}>
-        <Collapse open={index === 0}>
+        <Collapse open={current}>
             <CollapseHeader>
                 <Text
                     type="title-3"

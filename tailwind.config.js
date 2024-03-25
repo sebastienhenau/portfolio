@@ -188,7 +188,7 @@ export default {
                         {
                             className: 'sm',
                             properties: {
-                                'font-size': theme('fontSize.2'),
+                                'font-size': theme('fontSize.3'),
                             },
                         },
                     ],

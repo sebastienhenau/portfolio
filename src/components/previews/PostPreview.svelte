@@ -13,6 +13,7 @@
 
 <script lang="ts">
     import {
+        Link,
         Date,
         Preview,
         Tag,
@@ -22,7 +23,6 @@
         Button,
         ButtonText,
         ButtonIcon,
-        Link,
         LinkText,
     } from '$components';
     import { insertDynamicRouteParam } from '$utilities';
@@ -47,11 +47,8 @@
             type="title-3"
             useHeadingsContext
         >
-            <Link
-                action={{ href }}
-                variant="neutral"
-            >
-                <LinkText text={{ type: 'title-3' }}>
+            <Link action={{ href }}>
+                <LinkText>
                     {title}
                 </LinkText>
             </Link>

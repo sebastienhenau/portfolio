@@ -5,7 +5,7 @@
     import type { TTagsText } from '$types';
 
     export type TTextTag = TTagsText;
-    export type TTextType = 'title-1' | 'title-2' | 'title-3' | 'text' | 'label' | 'action';
+    export type TTextType = 'title-1' | 'title-2' | 'title-3' | 'text' | 'label' | 'action' | 'inherit';
     export type TTextVariant = 'none' | 'flat' | 'fat' | 'lg' | 'sm';
     export type TTextVariants = TTextVariant[];
     export type TTextUseHeadingsContext = boolean;
@@ -45,6 +45,7 @@
             'fsv-sm': (type === 'label' || type === 'action') && variants.includes('sm'),
             'fsv-fat': type === 'text' && variants.includes('fat'),
             'fsv-flat': variants.includes('flat'),
+            'text-inherit': type === 'inherit',
         },
         $$props.class
     )}

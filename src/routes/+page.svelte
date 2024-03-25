@@ -92,7 +92,7 @@
             <TableHeader>
                 <TableHeaderColumn>Year</TableHeaderColumn>
 
-                <TableHeaderColumn>Name</TableHeaderColumn>
+                <TableHeaderColumn class="@550/table:w-[40%]">Project</TableHeaderColumn>
 
                 <TableHeaderColumn class="hidden @550/table:table-cell">Technologies</TableHeaderColumn>
             </TableHeader>

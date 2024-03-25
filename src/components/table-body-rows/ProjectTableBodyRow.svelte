@@ -1,27 +1,20 @@
 <script lang="ts">
     import {
+        Text,
         Link,
-        LinkIcon,
         LinkText,
+        LinkIcon,
         TableBodyColumn,
         TableBodyRow,
         Tag,
         TagGroup,
         TagGroupItem,
-        Text,
         YearGroup,
     } from '$components';
 
     export let project;
 
-    const { name, date, technologies, link, company } = project;
-
-    const limitedTechnologies = [...technologies].splice(0, 3);
-    const remainingTechnologiesAmount = technologies.length - limitedTechnologies.length;
-    const tagGroupItems =
-        remainingTechnologiesAmount > 0
-            ? [...limitedTechnologies, `+${remainingTechnologiesAmount}`]
-            : limitedTechnologies;
+    const { name, date, technologies, link, company, companyUrl } = project;
 </script>
 
 <TableBodyRow>
@@ -29,34 +22,29 @@
         <YearGroup value={date} />
     </TableBodyColumn>
 
-    <TableBodyColumn>
-        <Link
-            action={{ href: link, target: '_blank', ariaLabel: `Visit ${name} in a new tab window` }}
-            variant="neutral"
-        >
-            <LinkText>
+    <TableBodyColumn class="space-y-2">
+        <Link action={{ href: link, target: '_blank', ariaLabel: `Visit ${name} in a new tab window` }}>
+            <LinkText text={{ type: 'title-3' }}>
                 {name}
             </LinkText>
 
             <LinkIcon icon={{ name: 'ExternalLink' }} />
         </Link>
 
-        <!-- TODO: link LMR -->
-        <Text
-            tag="p"
-            type="text"
-        >
-            <!--Made at <Action href={companyUrl} target="_blank" ariaLabel={`Made at ${company}, visit the website`}>{company}</Action>-->
-            Made at {company}
+        <Text class="text-site-contrast-2">
+            Made at <Link
+                inline
+                action={{ href: companyUrl, target: '_blank' }}><LinkText>{company}</LinkText></Link
+            >
         </Text>
     </TableBodyColumn>
 
     <TableBodyColumn class="hidden @550/table:table-cell">
         <TagGroup>
-            {#each tagGroupItems as tagGroupItem}
+            {#each technologies as technology}
                 <TagGroupItem>
                     <Tag>
-                        {tagGroupItem}
+                        {technology}
                     </Tag>
                 </TagGroupItem>
             {/each}

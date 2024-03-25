@@ -83,8 +83,14 @@
                 margin-top: theme('spacing.9');
             }
 
-            & li::marker {
-                color: theme('colors.accent.base');
+            & li {
+                & + li {
+                    margin-top: theme('spacing.3');
+                }
+
+                &::marker {
+                    color: theme('colors.accent.base');
+                }
             }
         }
 

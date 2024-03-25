@@ -1,9 +1,11 @@
 <script>
     import clsx from 'clsx';
     import {
+        Link,
         Section,
         SectionTitle,
         Button,
+        ButtonIcon,
         ButtonText,
         ButtonList,
         ButtonListItem,
@@ -11,7 +13,7 @@
         Text,
         Panel,
         Highlight,
-        ButtonIcon,
+        LinkText,
     } from '$components';
     import { ROUTES_ABOUT } from '$constants';
 </script>
@@ -43,8 +45,11 @@
                 tag="p"
                 type="text"
             >
-                Hello, my name is <strong>Sébastien</strong>. I build digital, interactive and accessible products and
-                work on improving the technical stack at Little Miss Robot.
+                Hello, my name is <strong>Sébastien</strong>, or just <strong>Seba</strong> is fine. I'm a front-end
+                developer working at <Link
+                    inline
+                    action={{ href: 'http://www.spatie.be', target: '_blank' }}><LinkText>Spatie</LinkText></Link
+                >. I build interactive and accessible websites and web applications.
             </Text>
         </Panel>
 
@@ -86,20 +91,6 @@
                     </svelte:fragment>
                 </Button>
             </ButtonListItem>
-
-            <!--<ButtonListItem>
-                <Button variant='neutral' size='sm'>
-                    <ButtonIcon slot='left' icon={{ name: 'Linkedin' }} />
-
-                    <svelte:fragment slot='center'>
-                        <ButtonText>
-                            X.com
-                        </ButtonText>
-
-                        <ButtonIcon icon={{ name: 'TwitterX' }} />
-                    </svelte:fragment>
-                </Button>
-            </ButtonListItem>-->
         </ButtonList>
 
         <Highlight

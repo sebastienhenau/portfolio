@@ -13,6 +13,9 @@
         Panel,
         Image,
         Highlight,
+        Link,
+        Wysiwyg,
+        LinkText,
     } from '$components';
     import { educations, experiences } from '$content';
     import { ROUTES_PROJECTS } from '$constants';
@@ -30,25 +33,30 @@
 
 <div class="@container/about-intro-section">
     <Section
-        class="@600/about-intro-section:grid @600/about-intro-section:grid-cols-2-auto @600/about-intro-section:gap-6 space-y-6 @600/about-intro-section:space-y-0"
+        class="@600/about-intro-section:grid @600/about-intro-section:grid-cols-[auto_1fr] @600/about-intro-section:gap-6 space-y-6 @600/about-intro-section:space-y-0"
     >
         <div
             class="@600/about-intro-section:col-start-2 @600/about-intro-section:col-end-3 @600/about-intro-section:row-span-full"
         >
             <SectionTitle>Hello there 👋</SectionTitle>
 
-            <p class="mt-3">
-                I'm a 30-year-old Belgian developer toggling my way into front-end architectures with my faithful cup of
-                coffee next to me. Located in the heart of Belgium, I wear the hat as one of the lead developers at
-                Little Miss Robot. Together with a great team, I am fortunate enough to contribute to making the
-                internet a better place!
-            </p>
+            <Wysiwyg class="mt-3">
+                <p>
+                    My name is Sébastien, it's the french version of Sebastian. I know it's quite long, so "Seba" is
+                    just fine. I've also had people call me "seblet" or "sebie", they are different, but I'm fine with
+                    all of those!
+                </p>
 
-            <p class="mt-3">
-                When I am not losing myself in lines of code you'll likely catch me navigating running trails,
-                attempting to conquer climbing walls (or just gracefully descend from them), playing some games on my
-                trusty PlayStation or if I have some time left, read a book.
-            </p>
+                <p>
+                    So, who am I? I'm a developer from Belgium mainly focused on front-end development at the moment.
+                    I'm working at <Link
+                        inline
+                        action={{ href: 'http://www.spatie.be', target: '_blank' }}
+                    >
+                        <LinkText>Spatie</LinkText></Link
+                    >, gracefully toggling my way in their front-end architectures, with coffee obviously.
+                </p>
+            </Wysiwyg>
         </div>
 
         <Highlight
@@ -73,23 +81,45 @@
 <HeadingsContext>
     <Section>
         <SectionHeader number="1">
+            <SectionTitle>A little about me</SectionTitle>
+        </SectionHeader>
+
+        <Wysiwyg class="mt-4">
+            <p>
+                I like my spot at <Link
+                    inline
+                    action={{ href: 'http://www.spatie.be', target: '_blank' }}><LinkText>Spatie</LinkText></Link
+                >, but I have other ways of keeping myself busy during my own free time:
+            </p>
+
+            <ul>
+                <li>I like running, if I am not twisting my poor ankle again.</li>
+
+                <li>Conquering some climbing walls, or just ... gracefully descend from them.</li>
+
+                <li>Lazily playing some games in the sofa, when my energy levels are depleted.</li>
+
+                <li>Losing track of time when reading a thriller or a fantasy book.</li>
+            </ul>
+        </Wysiwyg>
+    </Section>
+
+    <Divider />
+
+    <Section>
+        <SectionHeader number="2">
             <SectionTitle>Experience</SectionTitle>
         </SectionHeader>
 
         <div class="mt-4">
             <p>
-                I've been fortunate enough to have had the opportunity to learn and work on some challenging projects at
-                Little Miss Robot. Ranging from content websites to data driven web applications to experimental digital
-                experiences. Each project has been a valuable opportunity for growth. This was all made possible through
-                great teamwork with great people!
+                I graduated in 2017 and have been working ever since as a developer with a focus on front-end
+                development.
             </p>
 
             <Timeline class="mt-6">
-                {#each experiences as experience, index}
-                    <AboutExperienceTimelineItem
-                        {index}
-                        {experience}
-                    />
+                {#each experiences as experience}
+                    <AboutExperienceTimelineItem {experience} />
                 {/each}
             </Timeline>
         </div>
@@ -98,7 +128,7 @@
     <Divider />
 
     <Section>
-        <SectionHeader number="2">
+        <SectionHeader number="3">
             <SectionTitle>Education</SectionTitle>
         </SectionHeader>
 
@@ -119,15 +149,15 @@
     <Divider />
 
     <Section>
-        <SectionHeader number="3">
+        <SectionHeader number="4">
             <SectionTitle>Projects</SectionTitle>
         </SectionHeader>
 
         <div class="mt-4">
             <p>
-                Mijn leergierigheid, gedrevenheid en oog voor detail komt tot uiting in mijn projecten, van
-                contentwebsites tot data-driven web-applicaties en experimentele digitale ervaringen. Een deel van de
-                projecten staan opgesomd op mijn website.
+                I've been fortunate enough to have had the opportunity to learn and work on some challenging projects.
+                Ranging from content websites to data driven web applications to experimental digital experiences. Check
+                out some of the projects I've worked on over the past years!
             </p>
 
             <Button

@@ -1,3 +1,4 @@
+<!-- TODO: simplify -->
 <script
     context="module"
     lang="ts"
@@ -100,13 +101,15 @@
         (!$$slots.left || !$$slots.right) && horizontalAlignClass,
         {
             'px-5': size === 'default' && form === 'default',
-            'h-[2.5rem] gap-3': size === 'default',
+            'h-[2.5rem]': size === 'default',
             'pl-3': size === 'sm' && form === 'default' && !$$slots.left,
             'pr-3': size === 'sm' && form === 'default' && !$$slots.right,
-            'h-[2rem] gap-3': size === 'sm',
+            'h-[2rem]': size === 'sm',
             'pl-2': size === 'xs' && form === 'default' && !$$slots.left,
             'pr-2': size === 'xs' && form === 'default' && !$$slots.right,
-            'h-[1.5rem] gap-2': size === 'xs',
+            'gap-3': size === 'default' || size === 'sm',
+            'h-[1.5rem]': size === 'xs',
+            'gap-2': size === 'xs',
             'aspect-square': form === 'square',
             'w-full': !!buttonGroupItemContext,
             'text-accent-contrast': (variant === 'default' && !inverse) || $selected,
