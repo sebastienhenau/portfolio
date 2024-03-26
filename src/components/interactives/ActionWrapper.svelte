@@ -1,9 +1,6 @@
-<script
-    lang="ts"
-    context="module"
->
-    import type { TActionProps, TActionElement } from '$components';
-    import type { TTagsBlock } from '$types';
+<script lang="ts" context="module">
+    import type { TActionProps, TActionElement } from "$components";
+    import type { TTagsBlock } from "$types";
 
     export type TActionWrapperAction = TActionProps;
     export type TActionWrapperTag = TTagsBlock;
@@ -23,11 +20,11 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { setContext } from 'svelte';
+    import clsx from "clsx";
+    import { setContext } from "svelte";
 
     export let action: TActionWrapperAction = {};
-    export let tag: TActionWrapperTag = 'div';
+    export let tag: TActionWrapperTag = "div";
 
     let actionElement: TActionElement;
     let mouseDownTimeStamp: TActionWrapperMouseDownTimeStamp;
@@ -49,7 +46,7 @@
         }
     };
 
-    setContext<TActionWrapperContext>('actionWrapper', {
+    setContext<TActionWrapperContext>("actionWrapper", {
         action,
         setActionElement,
     });
@@ -58,7 +55,7 @@
 {#if !!action.href}
     <svelte:element
         this={tag}
-        class={clsx('group/action-wrapper relative cursor-pointer', $$props.class)}
+        class={clsx("group/action-wrapper relative cursor-pointer", $$props.class)}
         on:mousedown={onMouseDown}
         on:mouseup={onMouseUp}
         role="button"
@@ -69,9 +66,9 @@
 {:else}
     <svelte:element
         this={tag}
-        class={clsx('group/action-wrapper cursor-pointer', $$props.class)}
-        role={tag !== 'summary' ? 'button' : null}
-        tabindex={tag !== 'summary' ? 0 : null}
+        class={clsx("group/action-wrapper cursor-pointer", $$props.class)}
+        role={tag !== "summary" ? "button" : null}
+        tabindex={tag !== "summary" ? 0 : null}
         on:click
     >
         <slot />

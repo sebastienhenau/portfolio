@@ -1,2 +1,2 @@
-export { default as getPosts } from './getPosts';
-export * from './getPosts';
+export { default as getPosts } from "./getPosts";
+export * from "./getPosts";

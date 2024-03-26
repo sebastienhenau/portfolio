@@ -1,8 +1,8 @@
-import type { TPost } from '$types';
-import { error } from '@sveltejs/kit';
-import type { SvelteComponent } from 'svelte';
+import type { TPost } from "$types";
+import { error } from "@sveltejs/kit";
+import type { SvelteComponent } from "svelte";
 
-import type { PageLoad } from './$types';
+import type { PageLoad } from "./$types";
 
 export interface TPageData {
     metadata: TPost;

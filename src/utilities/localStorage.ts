@@ -1,4 +1,4 @@
-import { isBrowser } from '$utilities';
+import { isBrowser } from "$utilities";
 
 export const getLocalStorageItem = (key: string): string | null => {
     return isBrowser() ? localStorage.getItem(key) : null;

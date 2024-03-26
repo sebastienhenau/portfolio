@@ -1,4 +1,4 @@
-import type { TBreakpointsConfig } from '$types';
+import type { TBreakpointsConfig } from "$types";
 
 /* TODO: convert to em */
 /* TODO: one source of truth with tailwind config */

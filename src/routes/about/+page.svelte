@@ -16,10 +16,10 @@
         Link,
         Wysiwyg,
         LinkText,
-    } from '$components';
-    import { educations, experiences } from '$content';
-    import { ROUTES_PROJECTS } from '$constants';
-    import { HeadingsContext } from '$contexts';
+    } from "$components";
+    import { educations, experiences } from "$content";
+    import { ROUTES_PROJECTS } from "$constants";
+    import { HeadingsContext } from "$contexts";
 </script>
 
 <svelte:head>
@@ -33,7 +33,7 @@
 
 <div class="@container/about-intro-section">
     <Section
-        class="@600/about-intro-section:grid @600/about-intro-section:grid-cols-[auto_1fr] @600/about-intro-section:gap-6 space-y-6 @600/about-intro-section:space-y-0"
+        class="space-y-6 @600/about-intro-section:grid @600/about-intro-section:grid-cols-[auto_1fr] @600/about-intro-section:gap-6 @600/about-intro-section:space-y-0"
     >
         <div
             class="@600/about-intro-section:col-start-2 @600/about-intro-section:col-end-3 @600/about-intro-section:row-span-full"
@@ -49,10 +49,7 @@
 
                 <p>
                     So, who am I? I'm a developer from Belgium mainly focused on front-end development at the moment.
-                    I'm working at <Link
-                        inline
-                        action={{ href: 'http://www.spatie.be', target: '_blank' }}
-                    >
+                    I'm working at <Link inline action={{ href: "http://www.spatie.be", target: "_blank" }}>
                         <LinkText>Spatie</LinkText></Link
                     >, gracefully toggling my way in their front-end architectures, with coffee obviously.
                 </p>
@@ -64,13 +61,8 @@
             horizontalAlignment="center"
             verticalAlignment="center"
         >
-            <Panel class="w-[6rem] h-[6rem] aspect-square">
-                <Image
-                    alt="Sébastien Henau"
-                    src="/images/profile.webp"
-                    width="96"
-                    height="96"
-                />
+            <Panel class="aspect-square h-[6rem] w-[6rem]">
+                <Image alt="Sébastien Henau" src="/images/profile.webp" width="96" height="96" />
             </Panel>
         </Highlight>
     </Section>
@@ -86,9 +78,8 @@
 
         <Wysiwyg class="mt-4">
             <p>
-                I like my spot at <Link
-                    inline
-                    action={{ href: 'http://www.spatie.be', target: '_blank' }}><LinkText>Spatie</LinkText></Link
+                I like my spot at <Link inline action={{ href: "http://www.spatie.be", target: "_blank" }}
+                    ><LinkText>Spatie</LinkText></Link
                 >, but I have other ways of keeping myself busy during my own free time:
             </p>
 
@@ -168,10 +159,7 @@
             >
                 <ButtonText>Go to projects</ButtonText>
 
-                <ButtonIcon
-                    class="w-6"
-                    icon={{ name: 'ChevronRight' }}
-                />
+                <ButtonIcon class="w-6" icon={{ name: "ChevronRight" }} />
             </Button>
         </div>
     </Section>

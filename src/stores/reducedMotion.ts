@@ -1,5 +1,5 @@
-import { doesReducedMotionPreferenceMatch, getReducedMotionPreference } from '$utilities';
-import { readable } from 'svelte/store';
+import { doesReducedMotionPreferenceMatch, getReducedMotionPreference } from "$utilities";
+import { readable } from "svelte/store";
 
 export type TReducedMotionStore = boolean;
 
@@ -12,12 +12,12 @@ const createReducedMotionStore = () => {
         };
 
         if (reducedMotionPreference) {
-            reducedMotionPreference.addEventListener('change', onChangeMotionPreference);
+            reducedMotionPreference.addEventListener("change", onChangeMotionPreference);
         }
 
         return () => {
             if (reducedMotionPreference) {
-                reducedMotionPreference.removeEventListener('change', onChangeMotionPreference);
+                reducedMotionPreference.removeEventListener("change", onChangeMotionPreference);
             }
         };
     });

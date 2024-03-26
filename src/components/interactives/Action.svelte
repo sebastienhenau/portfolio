@@ -1,10 +1,7 @@
-<script
-    context="module"
-    lang="ts"
->
+<script context="module" lang="ts">
     export type TActionHref = string;
-    export type TActionType = 'button' | 'submit';
-    export type TActionTarget = '_blank' | null;
+    export type TActionType = "button" | "submit";
+    export type TActionTarget = "_blank" | null;
     export type TActionAriaLabel = string | null;
     export type TActionTabIndex = number | null;
 
@@ -20,17 +17,17 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { getContext, onMount } from 'svelte';
-    import type { TActionWrapperContext } from '$components';
+    import clsx from "clsx";
+    import { getContext, onMount } from "svelte";
+    import type { TActionWrapperContext } from "$components";
 
-    const actionWrapperContext = getContext<TActionWrapperContext>('actionWrapper');
+    const actionWrapperContext = getContext<TActionWrapperContext>("actionWrapper");
 
     let element: TActionElement;
 
-    export let href: TActionHref = actionWrapperContext?.action?.href || '';
+    export let href: TActionHref = actionWrapperContext?.action?.href || "";
     export let target: TActionTarget = actionWrapperContext?.action?.target || null;
-    export let type: TActionType = 'button';
+    export let type: TActionType = "button";
     export let ariaLabel: TActionAriaLabel = null;
     export let tabIndex: TActionTabIndex = null;
 
@@ -48,32 +45,23 @@
         bind:this={element}
         class={clsx(
             {
-                'before:content-empty before:absolute before:inset-0': actionWrapperContext,
+                "before:absolute before:inset-0 before:content-empty": actionWrapperContext,
             },
             $$props.class
         )}
         {href}
         {target}
         tabindex={tabIndex}
-        rel={target ? clsx({ 'noopener noreferer': target === '_blank' }) : null}
+        rel={target ? clsx({ "noopener noreferer": target === "_blank" }) : null}
     >
         <slot />
     </a>
 {:else if actionWrapperContext}
-    <div
-        data-component="action"
-        class={$$props.class}
-    >
+    <div data-component="action" class={$$props.class}>
         <slot />
     </div>
 {:else}
-    <button
-        data-component="action"
-        aria-label={ariaLabel}
-        class={$$props.class}
-        {type}
-        on:click
-    >
+    <button data-component="action" aria-label={ariaLabel} class={$$props.class} {type} on:click>
         <slot />
     </button>
 {/if}

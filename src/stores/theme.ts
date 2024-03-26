@@ -1,5 +1,5 @@
-import { THEME_LOCAL_KEY } from '$constants';
-import type { TTheme } from '$types';
+import { THEME_LOCAL_KEY } from "$constants";
+import type { TTheme } from "$types";
 import {
     getSystemDarkModePreference,
     getSystemModePreference,
@@ -8,8 +8,8 @@ import {
     removeLocalStorageItem,
     setLocalStorageItem,
     setModeOnDocument,
-} from '$utilities';
-import { get, writable } from 'svelte/store';
+} from "$utilities";
+import { get, writable } from "svelte/store";
 
 export interface TThemeStore {
     mode: TTheme;
@@ -45,12 +45,12 @@ const createThemeStore = () => {
             };
 
             if (systemDarkModePreference) {
-                systemDarkModePreference.addEventListener('change', onChangeSystemDarkModePreference);
+                systemDarkModePreference.addEventListener("change", onChangeSystemDarkModePreference);
             }
 
             return () => {
                 if (systemDarkModePreference) {
-                    systemDarkModePreference.removeEventListener('change', onChangeSystemDarkModePreference);
+                    systemDarkModePreference.removeEventListener("change", onChangeSystemDarkModePreference);
                 }
             };
         }

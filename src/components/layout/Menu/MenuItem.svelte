@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TActionHref, TIconName } from '$components';
+<script context="module" lang="ts">
+    import type { TActionHref, TIconName } from "$components";
 
     export type TMenuItemHref = TActionHref;
     export type TMenuItemIcon = TIconName;
@@ -14,8 +11,8 @@
 </script>
 
 <script lang="ts">
-    import { Button, ButtonText, ButtonIcon, ButtonGroupItem } from '$components';
-    import { page } from '$app/stores';
+    import { Button, ButtonText, ButtonIcon, ButtonGroupItem } from "$components";
+    import { page } from "$app/stores";
 
     export let href: TMenuItemHref;
     export let icon: TMenuItemIcon;
@@ -28,14 +25,11 @@
         action={{ href }}
         horizontalAlign="center"
         horizontalAlignBreakpoints={{
-            500: 'left',
+            500: "left",
         }}
         variant="neutral"
     >
-        <ButtonIcon
-            class="max-500:hidden"
-            icon={{ name: icon }}
-        />
+        <ButtonIcon class="max-500:hidden" icon={{ name: icon }} />
 
         <ButtonText>
             <slot />

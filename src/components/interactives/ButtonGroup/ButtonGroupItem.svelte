@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { Writable } from 'svelte/store';
+<script context="module" lang="ts">
+    import type { Writable } from "svelte/store";
 
     export type TButtonGroupItemSelected = boolean;
 
@@ -16,15 +13,15 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { setContext, afterUpdate } from 'svelte';
-    import { writable } from 'svelte/store';
+    import clsx from "clsx";
+    import { setContext, afterUpdate } from "svelte";
+    import { writable } from "svelte/store";
 
     export let selected: TButtonGroupItemSelected = false;
 
     const reactiveSelected = writable(selected);
 
-    setContext<TButtonGroupItemContext>('buttonGroupItem', {
+    setContext<TButtonGroupItemContext>("buttonGroupItem", {
         selected: reactiveSelected,
     });
 
@@ -35,6 +32,6 @@
     });
 </script>
 
-<li class={clsx('', $$props.class)}>
+<li class={clsx("", $$props.class)}>
     <slot />
 </li>

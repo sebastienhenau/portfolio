@@ -1,9 +1,9 @@
-import { THEME_DARK, THEME_LIGHT, THEME_LOCAL_KEY } from '$constants';
-import type { TTheme } from '$types';
-import { getLocalStorageItem, isBrowser } from '$utilities';
+import { THEME_DARK, THEME_LIGHT, THEME_LOCAL_KEY } from "$constants";
+import type { TTheme } from "$types";
+import { getLocalStorageItem, isBrowser } from "$utilities";
 
 export const getSystemDarkModePreference = (): MediaQueryList | null => {
-    return isBrowser() ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    return isBrowser() ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 };
 
 export const doesSystemDarkModePreferenceMatch = () => {
@@ -14,8 +14,8 @@ export const getSystemModePreference = (): TTheme => {
     return doesSystemDarkModePreferenceMatch() ? THEME_DARK : THEME_LIGHT;
 };
 
-export const getLocalModePreference = (): TTheme | '' => {
-    return getLocalStorageItem(THEME_LOCAL_KEY) as TTheme | '';
+export const getLocalModePreference = (): TTheme | "" => {
+    return getLocalStorageItem(THEME_LOCAL_KEY) as TTheme | "";
 };
 
 export const isLocalThemeDark = () => {
@@ -39,9 +39,9 @@ export const setModeOnDocument = (mode: TTheme) => {
 };
 
 export const setDarkModeOnDocument = () => {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add("dark");
 };
 
 export const setLightModeOnDocument = () => {
-    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.remove("dark");
 };

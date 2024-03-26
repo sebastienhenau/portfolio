@@ -1,7 +1,4 @@
-<script
-    context="module"
-    lang="ts"
->
+<script context="module" lang="ts">
     export type TIconName = string;
 
     export interface TIconProps {
@@ -10,8 +7,8 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { icons } from '$content';
+    import clsx from "clsx";
+    import { icons } from "$content";
 
     export let name: TIconName;
 
@@ -20,7 +17,7 @@
 
 <svelte:component
     this={icon}
-    class={clsx('text-inherit inline-flex items-center justify-center w-5 aspect-square h-auto', $$props.class)}
+    class={clsx("inline-flex aspect-square h-auto w-5 items-center justify-center text-inherit", $$props.class)}
     height="100%"
     width="100%"
     focusable="false"

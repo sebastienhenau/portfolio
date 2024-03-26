@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TExperience } from '$types';
+<script context="module" lang="ts">
+    import type { TExperience } from "$types";
 
     export type TAboutExperienceItemIndex = number;
     export type TAboutExperienceItemExperience = TExperience;
@@ -14,8 +11,8 @@
 </script>
 
 <script lang="ts">
-    import { Text, CollapseContent, TimelineItem, CollapseHeader, Collapse } from '$components';
-    import { HeadingsContext } from '$contexts';
+    import { Text, CollapseContent, TimelineItem, CollapseHeader, Collapse } from "$components";
+    import { HeadingsContext } from "$contexts";
 
     export let experience: TAboutExperienceItemExperience;
 
@@ -26,10 +23,7 @@
     <TimelineItem yearGroup={{ value: time }}>
         <Collapse open={current}>
             <CollapseHeader>
-                <Text
-                    type="title-3"
-                    useHeadingsContext
-                >
+                <Text type="title-3" useHeadingsContext>
                     {role} at {company}
                 </Text>
             </CollapseHeader>

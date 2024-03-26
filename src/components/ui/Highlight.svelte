@@ -1,12 +1,9 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TTagsBlock } from '$types';
+<script context="module" lang="ts">
+    import type { TTagsBlock } from "$types";
 
     export type THighlightTag = TTagsBlock;
-    export type THighlightHorizontalAlignment = 'none' | 'center';
-    export type THighlightVerticalAlignment = 'none' | 'center';
+    export type THighlightHorizontalAlignment = "none" | "center";
+    export type THighlightVerticalAlignment = "none" | "center";
 
     export interface THighlightProps {
         tag?: THighlightTag;
@@ -14,21 +11,21 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
+    import clsx from "clsx";
 
-    export let tag: THighlightTag = 'div';
-    export let horizontalAlignment: THighlightHorizontalAlignment = 'none';
-    export let verticalAlignment: THighlightVerticalAlignment = 'none';
+    export let tag: THighlightTag = "div";
+    export let horizontalAlignment: THighlightHorizontalAlignment = "none";
+    export let verticalAlignment: THighlightVerticalAlignment = "none";
 </script>
 
 <svelte:element
     this={tag}
     class={clsx(
-        'bg-gradient-striped p-7 rounded',
+        "rounded bg-gradient-striped p-7",
         {
-            flex: horizontalAlignment !== 'none' || verticalAlignment !== 'none',
-            'justify-center': horizontalAlignment === 'center',
-            'items-center': verticalAlignment === 'center',
+            flex: horizontalAlignment !== "none" || verticalAlignment !== "none",
+            "justify-center": horizontalAlignment === "center",
+            "items-center": verticalAlignment === "center",
         },
         $$props.class
     )}

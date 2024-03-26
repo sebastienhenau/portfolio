@@ -1,46 +1,32 @@
 {
-  "printWidth": 120,
-  "tabWidth": 4,
-  "useTabs": false,
-  "semi": true,
-  "singleQuote": true,
-  "quoteProps": "as-needed",
-  "trailingComma": "es5",
-  "bracketSpacing": true,
-  "bracketSameLine": false,
-  "arrowParens": "always",
-  "htmlWhitespaceSensitivity": "css",
-  "endOfLine": "lf",
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-svelte"
-  ],
-  "singleAttributePerLine": true,
-  "importOrder": [
-    "^w",
-    "^(@/)(.*|$)",
-    "^components/(.*)$",
-    "^[./]"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "overrides": [
-    {
-      "files": [
-        "*.json",
-        "*.yml",
-        "*.md"
-      ],
-      "options": {
-        "useTabs": false,
-        "tabWidth": 2
-      }
-    },
-    {
-      "files": "*.svelte",
-      "options": {
-        "parser": "svelte"
-      }
-    }
-  ]
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "quoteProps": "as-needed",
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "htmlWhitespaceSensitivity": "css",
+    "endOfLine": "lf",
+    "singleAttributePerLine": false,
+    "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+    "importOrder": ["^w", "^(@/)(.*|$)", "^components/(.*)$", "^[./]"],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "overrides": [
+        {
+            "files": "*.svelte",
+            "options": {
+                "parser": "svelte",
+                "svelteSortOrder": "options-scripts-markup-styles",
+                "svelteStrictMode": false,
+                "svelteAllowShorthand": true,
+                "svelteIndentScriptAndStyle": true
+            }
+        }
+    ]
 }

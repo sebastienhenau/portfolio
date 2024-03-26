@@ -1,19 +1,15 @@
 <script lang="ts">
-    import clsx from 'clsx';
-    import { Text } from '$components';
+    import clsx from "clsx";
+    import { Text } from "$components";
 </script>
 
 <div
     class={clsx(
-        'flex justify-center items-center border border-line rounded bg-site-base w-[1.25rem] h-[1.25rem]',
+        "flex h-[1.25rem] w-[1.25rem] items-center justify-center rounded border border-line bg-site-base",
         $$props.class
     )}
 >
-    <Text
-        tag="p"
-        type="label"
-        variants={['flat', 'sm']}
-    >
+    <Text tag="p" type="label" variants={["flat", "sm"]}>
         <slot />
     </Text>
 </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import clsx from 'clsx';
+    import clsx from "clsx";
 </script>
 
-<th class={clsx('text-left p-3', $$props.class)}>
+<th class={clsx("p-3 text-left", $$props.class)}>
     <slot />
 </th>

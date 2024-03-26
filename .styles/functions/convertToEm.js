@@ -1,4 +1,4 @@
-const { extractUnitFromString, extractNumberFromString } = require('../utils');
+const { extractUnitFromString, extractNumberFromString } = require("../utils");
 
 const convertPxToEm = (value) => {
     return value / 16;
@@ -9,9 +9,9 @@ module.exports = (value, withUnit = true) => {
     const number = extractNumberFromString(value);
     let result = null;
 
-    if (unit === 'px') {
+    if (unit === "px") {
         result = convertPxToEm(number);
-    } else if (unit === 'rem') {
+    } else if (unit === "rem") {
         result = number;
     } else {
         return value;

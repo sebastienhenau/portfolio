@@ -1,9 +1,6 @@
-<script
-    context="module"
-    lang="ts"
->
+<script context="module" lang="ts">
     export type TDateValue = string;
-    export type TDateFormat = 'DD/MM/YYYY' | 'YYYY';
+    export type TDateFormat = "DD/MM/YYYY" | "YYYY";
 
     export interface TDateProps {
         value: TDateValue;
@@ -11,14 +8,14 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { getDateFromDDMMYYYY, getFormattedDate } from '$utilities';
+    import clsx from "clsx";
+    import { getDateFromDDMMYYYY, getFormattedDate } from "$utilities";
 
     export let value: TDateValue;
-    export let format: TDateFormat = 'DD/MM/YYYY';
+    export let format: TDateFormat = "DD/MM/YYYY";
 
     const getDate = (): [string, string] => {
-        if (format === 'YYYY') {
+        if (format === "YYYY") {
             return [value, value];
         } else {
             const date = getDateFromDDMMYYYY(value);
@@ -33,9 +30,6 @@
 </script>
 
 <!-- TODO: datetime -->
-<time
-    class={clsx('inline-block fs-text fsv-flat', $$props.class)}
-    {datetime}
->
+<time class={clsx("inline-block fs-text fsv-flat", $$props.class)} {datetime}>
     {date}
 </time>

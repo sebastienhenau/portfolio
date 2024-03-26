@@ -1,10 +1,10 @@
 <script lang="ts">
-    import clsx from 'clsx';
+    import clsx from "clsx";
 </script>
 
 <div
     class={clsx(
-        'w-[0.625rem] h-[0.625rem] border border-line rounded-full bg-site-base point-events-none',
+        "point-events-none h-[0.625rem] w-[0.625rem] rounded-full border border-line bg-site-base",
         $$props.class
     )}
 />

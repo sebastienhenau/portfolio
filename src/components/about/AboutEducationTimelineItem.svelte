@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TEducation } from '$types';
+<script context="module" lang="ts">
+    import type { TEducation } from "$types";
 
     export type TAboutEducationItemEducation = TEducation;
 
@@ -12,8 +9,8 @@
 </script>
 
 <script lang="ts">
-    import { Tag, Text, TimelineItem } from '$components';
-    import { HeadingsContext } from '$contexts';
+    import { Tag, Text, TimelineItem } from "$components";
+    import { HeadingsContext } from "$contexts";
 
     export let education: TAboutEducationItemEducation;
 
@@ -24,13 +21,10 @@
     <TimelineItem yearGroup={{ value: time }}>
         <article class="@container/about-education-item">
             <div
-                class="@550/about-education-item:flex @550/about-education-item:justify-between @550/about-education-item:gap-6 @550/about-education-item:items-center"
+                class="@550/about-education-item:flex @550/about-education-item:items-center @550/about-education-item:justify-between @550/about-education-item:gap-6"
             >
                 <div class="@550/about-education-item:flex-1">
-                    <Text
-                        type="title-3"
-                        useHeadingsContext
-                    >
+                    <Text type="title-3" useHeadingsContext>
                         {name}
                     </Text>
 

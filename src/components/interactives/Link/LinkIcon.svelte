@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TIconProps } from '$components';
+<script context="module" lang="ts">
+    import type { TIconProps } from "$components";
 
     export type TLinkIconIcon = TIconProps;
 
@@ -12,13 +9,10 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { Icon } from '$components';
+    import clsx from "clsx";
+    import { Icon } from "$components";
 
     export let icon: TLinkIconIcon;
 </script>
 
-<Icon
-    {...icon}
-    class={clsx('text-inherit', $$props.class)}
-/>
+<Icon {...icon} class={clsx("text-inherit", $$props.class)} />

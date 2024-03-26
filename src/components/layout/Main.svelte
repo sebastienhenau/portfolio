@@ -1,7 +1,4 @@
-<script
-    lang="ts"
-    context="module"
->
+<script lang="ts" context="module">
     export type TMainUrl = string;
 
     export interface TMainProps {
@@ -10,19 +7,16 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { fly } from 'svelte/transition';
-    import { HeadingsContext } from '$contexts';
-    import { reducedMotion } from '$stores';
+    import clsx from "clsx";
+    import { fly } from "svelte/transition";
+    import { HeadingsContext } from "$contexts";
+    import { reducedMotion } from "$stores";
 
     export let url: TMainUrl;
 </script>
 
-<main
-    id="main"
-    class={clsx('container-main relative 900:pl-7 max-900:pb-5', $$props.class)}
->
-    <div class="max-900:hidden absolute top-0 left-0 w-border h-full bg-gradient-vertical-dashed -translate-x-1/2" />
+<main id="main" class={clsx("container-main relative max-900:pb-5 900:pl-7", $$props.class)}>
+    <div class="absolute left-0 top-0 h-full w-border -translate-x-1/2 bg-gradient-vertical-dashed max-900:hidden" />
 
     {#key url}
         <div
@@ -42,12 +36,12 @@
 
 <style lang="postcss">
     .container-main {
-        --container-main-col: theme('gridColumn.span-1');
+        --container-main-col: theme("gridColumn.span-1");
 
         grid-row: main;
         grid-column: var(--container-main-col);
 
-        @media screen('900') {
+        @media screen("900") {
             --container-main-col: main;
         }
     }

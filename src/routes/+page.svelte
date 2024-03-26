@@ -17,11 +17,11 @@
         TableHeader,
         TableHeaderColumn,
         Text,
-    } from '$components';
-    import { ROUTES_BLOG, ROUTES_PROJECTS } from '$constants';
-    import { HeadingsContext } from '$contexts';
-    import { projects } from '$content';
-    import type { TPageData } from './+page';
+    } from "$components";
+    import { ROUTES_BLOG, ROUTES_PROJECTS } from "$constants";
+    import { HeadingsContext } from "$contexts";
+    import { projects } from "$content";
+    import type { TPageData } from "./+page";
 
     export let data: TPageData;
 
@@ -38,13 +38,7 @@
     />
 </svelte:head>
 
-<Text
-    class="sr-only"
-    type="title-1"
-    useHeadingsContext
->
-    Home
-</Text>
+<Text class="sr-only" type="title-1" useHeadingsContext>Home</Text>
 
 <HeadingsContext>
     <HomeAboutGrid />
@@ -56,7 +50,7 @@
             <SectionTitle>Blog</SectionTitle>
         </SectionHeader>
 
-        <ul class="space-y-6 mt-7">
+        <ul class="mt-7 space-y-6">
             {#each topPosts as post}
                 <li>
                     <PostPreview {post} />
@@ -65,17 +59,11 @@
         </ul>
 
         <SectionFooter class="mt-7">
-            <Highlight
-                verticalAlignment="center"
-                horizontalAlignment="center"
-            >
+            <Highlight verticalAlignment="center" horizontalAlignment="center">
                 <Button action={{ href: ROUTES_BLOG }}>
                     <ButtonText>Go to all posts</ButtonText>
 
-                    <ButtonIcon
-                        class="w-6"
-                        icon={{ name: 'ChevronRight' }}
-                    />
+                    <ButtonIcon class="w-6" icon={{ name: "ChevronRight" }} />
                 </Button>
             </Highlight>
         </SectionFooter>
@@ -105,17 +93,11 @@
         </Table>
 
         <SectionFooter class="mt-7">
-            <Highlight
-                verticalAlignment="center"
-                horizontalAlignment="center"
-            >
+            <Highlight verticalAlignment="center" horizontalAlignment="center">
                 <Button action={{ href: ROUTES_PROJECTS }}>
                     <ButtonText>Go to all projects</ButtonText>
 
-                    <ButtonIcon
-                        class="w-6"
-                        icon={{ name: 'ChevronRight' }}
-                    />
+                    <ButtonIcon class="w-6" icon={{ name: "ChevronRight" }} />
                 </Button>
             </Highlight>
         </SectionFooter>

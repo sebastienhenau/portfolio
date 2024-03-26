@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TPost } from '$types';
+<script context="module" lang="ts">
+    import type { TPost } from "$types";
 
     export type TPostPreviewPost = TPost;
 
@@ -24,15 +21,15 @@
         ButtonText,
         ButtonIcon,
         LinkText,
-    } from '$components';
-    import { insertDynamicRouteParam } from '$utilities';
-    import { ROUTES_BLOG_ITEM } from '$constants';
-    import { HeadingsContext } from '$contexts';
+    } from "$components";
+    import { insertDynamicRouteParam } from "$utilities";
+    import { ROUTES_BLOG_ITEM } from "$constants";
+    import { HeadingsContext } from "$contexts";
 
     export let post: TPostPreviewPost;
 
     const { slug, title, image, date, description, tags } = post;
-    const href = insertDynamicRouteParam(ROUTES_BLOG_ITEM, 'slug', slug);
+    const href = insertDynamicRouteParam(ROUTES_BLOG_ITEM, "slug", slug);
 </script>
 
 <HeadingsContext>
@@ -40,13 +37,10 @@
         image={{
             src: image,
             alt: title,
-            loading: 'lazy',
+            loading: "lazy",
         }}
     >
-        <Text
-            type="title-3"
-            useHeadingsContext
-        >
+        <Text type="title-3" useHeadingsContext>
             <Link action={{ href }}>
                 <LinkText>
                     {title}
@@ -54,17 +48,14 @@
             </Link>
         </Text>
 
-        <Date
-            class="text-site-contrast-2 block mt-2"
-            value={date}
-        />
+        <Date class="mt-2 block text-site-contrast-2" value={date} />
 
         <p class="mt-4">
             {description}
         </p>
 
         <footer
-            class="mt-5 flex @700/preview:flex-wrap flex-col @700/preview:flex-row @700/preview:justify-end items-end @700/preview:items-baseline gap-5 @700/preview:gap-7"
+            class="mt-5 flex flex-col items-end gap-5 @700/preview:flex-row @700/preview:flex-wrap @700/preview:items-baseline @700/preview:justify-end @700/preview:gap-7"
         >
             <TagGroup class="w-full @700/preview:w-auto @700/preview:flex-1">
                 {#each tags as tag}
@@ -89,10 +80,7 @@
                     Read more<span class="sr-only"> about {title}</span>
                 </ButtonText>
 
-                <ButtonIcon
-                    class="w-6"
-                    icon={{ name: 'ChevronRight' }}
-                />
+                <ButtonIcon class="w-6" icon={{ name: "ChevronRight" }} />
             </Button>
         </footer>
     </Preview>

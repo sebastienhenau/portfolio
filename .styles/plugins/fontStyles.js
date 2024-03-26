@@ -1,7 +1,7 @@
-import plugin from 'tailwindcss/plugin';
+import plugin from "tailwindcss/plugin";
 
 export default plugin(({ addBase, addUtilities, theme }) => {
-    const { variants, config } = theme('fontStyles');
+    const { variants, config } = theme("fontStyles");
 
     const generateBreakpoints = (breakpoints) => {
         return breakpoints.reduce((obj, { name, properties }) => {
@@ -30,7 +30,7 @@ export default plugin(({ addBase, addUtilities, theme }) => {
         };
     };
 
-    const generateBase = (items, parent = '') => {
+    const generateBase = (items, parent = "") => {
         return items.reduce((obj, item) => {
             return {
                 ...obj,
@@ -67,7 +67,7 @@ export default plugin(({ addBase, addUtilities, theme }) => {
     addBase(generateBase(config));
 
     addUtilities({
-        ...generateUtilities(config, '.fs-'),
-        ...generateUtilities(variants, '.fsv-'),
+        ...generateUtilities(config, ".fs-"),
+        ...generateUtilities(variants, ".fsv-"),
     });
 });

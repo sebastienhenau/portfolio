@@ -1,21 +1,21 @@
-import type { TPost, TPosts } from '$types';
+import type { TPost, TPosts } from "$types";
 
 const getPosts = async () => {
-    const paths = import.meta.glob('/src/content/posts/*.md', {
+    const paths = import.meta.glob("/src/content/posts/*.md", {
         eager: true,
     });
 
     const posts = Object.entries(paths)
         .reduce<TPosts>((result, [path, file]) => {
-            const slug = path.split('/').at(-1)?.replace('.md', '') || '';
+            const slug = path.split("/").at(-1)?.replace(".md", "") || "";
 
-            if (!(file && typeof file === 'object' && 'metadata' in file && slug)) {
+            if (!(file && typeof file === "object" && "metadata" in file && slug)) {
                 return result;
             }
 
             const post = {
                 slug,
-                ...(file.metadata as Omit<TPost, 'slug'>),
+                ...(file.metadata as Omit<TPost, "slug">),
             };
 
             if (!post.published) {

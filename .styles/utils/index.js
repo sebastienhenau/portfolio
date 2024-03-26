@@ -1,4 +1,4 @@
 module.exports = {
-    extractNumberFromString: require('./extractNumberFromString'),
-    extractUnitFromString: require('./extractUnitFromString'),
+    extractNumberFromString: require("./extractNumberFromString"),
+    extractUnitFromString: require("./extractUnitFromString"),
 };

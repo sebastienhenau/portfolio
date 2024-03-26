@@ -10,7 +10,7 @@
         TagGroup,
         TagGroupItem,
         YearGroup,
-    } from '$components';
+    } from "$components";
 
     export let project;
 
@@ -23,19 +23,16 @@
     </TableBodyColumn>
 
     <TableBodyColumn class="space-y-2">
-        <Link action={{ href: link, target: '_blank', ariaLabel: `Visit ${name} in a new tab window` }}>
-            <LinkText text={{ type: 'title-3' }}>
+        <Link action={{ href: link, target: "_blank", ariaLabel: `Visit ${name} in a new tab window` }}>
+            <LinkText text={{ type: "title-3" }}>
                 {name}
             </LinkText>
 
-            <LinkIcon icon={{ name: 'ExternalLink' }} />
+            <LinkIcon icon={{ name: "ExternalLink" }} />
         </Link>
 
         <Text class="text-site-contrast-2">
-            Made at <Link
-                inline
-                action={{ href: companyUrl, target: '_blank' }}><LinkText>{company}</LinkText></Link
-            >
+            Made at <Link inline action={{ href: companyUrl, target: "_blank" }}><LinkText>{company}</LinkText></Link>
         </Text>
     </TableBodyColumn>
 

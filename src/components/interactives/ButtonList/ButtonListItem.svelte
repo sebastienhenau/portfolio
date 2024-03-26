@@ -1,7 +1,7 @@
 <script lang="ts">
-    import clsx from 'clsx';
+    import clsx from "clsx";
 </script>
 
-<li class={clsx('', $$props.class)}>
+<li class={clsx("", $$props.class)}>
     <slot />
 </li>

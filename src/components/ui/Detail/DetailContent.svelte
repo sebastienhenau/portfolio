@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Wysiwyg } from '$components';
+    import { Wysiwyg } from "$components";
 </script>
 
 <Wysiwyg class={$$props.class}>

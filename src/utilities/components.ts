@@ -1,5 +1,5 @@
-import type { TBreakpoint, TBreakpointIdentifier } from '$types';
-import clsx from 'clsx';
+import type { TBreakpoint, TBreakpointIdentifier } from "$types";
+import clsx from "clsx";
 
 type TGetComponentResponsiveClassConfig<TKeys extends string> = {
     [key in TKeys]?: {
@@ -49,14 +49,14 @@ export const getComponentResponsiveClass = <TValue extends string, TBreakpoints 
         const breakpointClass = getComponentClassByBreakpoint<TValue>(config, breakpointValue, breakpointKey);
 
         return clsx(result, breakpointClass);
-    }, '');
+    }, "");
 };
 
 export const getComponentClassByDefaultValue = <TKey extends string>(
     config: TGetComponentResponsiveClassConfig<TKey>,
     key: TKey
 ): string => {
-    const { defaultValue = '' } = config[key] || {};
+    const { defaultValue = "" } = config[key] || {};
 
     return defaultValue;
 };
@@ -68,5 +68,5 @@ export const getComponentClassByBreakpoint = <TKey extends string>(
 ): string => {
     const { breakpoints = {} } = config[key] || {};
 
-    return breakpoints[breakpoint] ?? '';
+    return breakpoints[breakpoint] ?? "";
 };

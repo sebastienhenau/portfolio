@@ -1,6 +1,6 @@
 @layer base {
     *:focus-visible {
-        outline: 5px dashed theme('colors.outline');
+        outline: 5px dashed theme("colors.outline");
         outline-offset: 5px;
     }
 
@@ -8,8 +8,8 @@
         outline: none;
     }
 
-    [data-component='button-group'] {
-        [data-component='action'] {
+    [data-component="button-group"] {
+        [data-component="action"] {
             &:focus-visible {
                 z-index: 50;
             }

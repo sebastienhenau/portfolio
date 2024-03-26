@@ -1,5 +1,5 @@
 <svg
-    class="min-w-[2.5rem] min-h-[2.125rem]"
+    class="min-h-[2.125rem] min-w-[2.5rem]"
     focusable="false"
     aria-hidden="true"
     width="36"
@@ -7,19 +7,12 @@
     viewBox="0 0 36 31"
 >
     <path
-        class="stroke-site-contrast-1 fill-site-base"
+        class="fill-site-base stroke-site-contrast-1"
         stroke-width="2"
         d="M1.438 16.249a4 4 0 0 0 4.1 3.898l-.101-3.999-.1-3.998a4 4 0 0 0-3.899 4.099Zm32.999 0a4 4 0 0 1-4.1 3.898l.101-3.999.1-3.998a4 4 0 0 1 3.899 4.099Z"
     />
 
-    <ellipse
-        class="fill-site-base stroke-site-contrast-1"
-        cx="18"
-        cy="16"
-        stroke-width="2"
-        rx="13"
-        ry="14"
-    />
+    <ellipse class="fill-site-base stroke-site-contrast-1" cx="18" cy="16" stroke-width="2" rx="13" ry="14" />
 
     <path
         class="fill-site-contrast-1"
@@ -30,7 +23,7 @@
     />
 
     <path
-        class="stroke-site-contrast-1 fill-transparent"
+        class="fill-transparent stroke-site-contrast-1"
         stroke-width="2"
         d="M7.848 13.646a1 1 0 0 1 1-1h6.693a1 1 0 0 1 1 1v1.21a4 4 0 0 1-4 4h-.693a4 4 0 0 1-4-4v-1.21Zm11.804 0a1 1 0 0 1 1-1h6.694a1 1 0 0 1 1 1v1.21a4 4 0 0 1-4 4h-.694a4 4 0 0 1-4-4v-1.21Zm-3.103.247h3.105"
     />
@@ -61,27 +54,11 @@
         clip-rule="evenodd"
     />
 
-    <circle
-        class="fill-site-contrast-1"
-        cx="12.201"
-        cy="15.799"
-        r="1"
-    />
+    <circle class="fill-site-contrast-1" cx="12.201" cy="15.799" r="1" />
 
-    <path
-        class="fill-site-contrast-1"
-        d="M12.148 15.7h-2.75s1.375-1.2 2.75-1.2 2.75 1.2 2.75 1.2h-2.75Z"
-    />
+    <path class="fill-site-contrast-1" d="M12.148 15.7h-2.75s1.375-1.2 2.75-1.2 2.75 1.2 2.75 1.2h-2.75Z" />
 
-    <circle
-        class="fill-site-contrast-1"
-        cx="24.004"
-        cy="15.799"
-        r="1"
-    />
+    <circle class="fill-site-contrast-1" cx="24.004" cy="15.799" r="1" />
 
-    <path
-        class="fill-site-contrast-1"
-        d="M23.951 15.7h-2.75s1.375-1.2 2.75-1.2 2.75 1.2 2.75 1.2h-2.75Z"
-    />
+    <path class="fill-site-contrast-1" d="M23.951 15.7h-2.75s1.375-1.2 2.75-1.2 2.75 1.2 2.75 1.2h-2.75Z" />
 </svg>

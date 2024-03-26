@@ -1,8 +1,5 @@
-<script
-    lang="ts"
-    context="module"
->
-    import type { TBreakpointIdentifier } from '$types';
+<script lang="ts" context="module">
+    import type { TBreakpointIdentifier } from "$types";
 
     export type TPictureSourceSrcset = string;
     export type TPictureSourceType = string;
@@ -16,15 +13,11 @@
 </script>
 
 <script lang="ts">
-    import { getBreakpointMediaQuery } from '$utilities';
+    import { getBreakpointMediaQuery } from "$utilities";
 
     export let srcset: TPictureSourceSrcset;
     export let type: TPictureSourceType;
     export let media: TPictureSourceMedia;
 </script>
 
-<source
-    {srcset}
-    {type}
-    media={getBreakpointMediaQuery(media)}
-/>
+<source {srcset} {type} media={getBreakpointMediaQuery(media)} />

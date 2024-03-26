@@ -20,7 +20,7 @@
          * Customize the default font in tailwind:
          * https://tailwindcss.com/docs/font-family#customizing-the-default-font
          */
-        font-family: theme('fontFamily.sans');
+        font-family: theme("fontFamily.sans");
     }
 
     body {

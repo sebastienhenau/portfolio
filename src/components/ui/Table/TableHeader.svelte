@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Panel } from '$components';
+    import { Panel } from "$components";
 </script>
 
 <thead class={$$props.class}>

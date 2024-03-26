@@ -1,7 +1,4 @@
-<script
-    lang="ts"
-    context="module"
->
+<script lang="ts" context="module">
     export type TSkipLinkHref = string;
 
     export interface TSkipLinkProps {
@@ -10,8 +7,8 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { Button, ButtonText } from '$components';
+    import clsx from "clsx";
+    import { Button, ButtonText } from "$components";
 
     export let href: TSkipLinkHref;
 </script>
@@ -20,7 +17,7 @@
 
 <Button
     class={clsx(
-        '!absolute !-left-[999px] !top-auto [:not(:focus)]!w-[1px] [:not(:focus)]!h-[1px] [:not(:focus)]!overflow-hidden !-z-[999] focus:!z-[999] focus:!top-4 focus:!left-4',
+        "[:not(:focus)]!w-[1px] [:not(:focus)]!h-[1px] [:not(:focus)]!overflow-hidden !absolute !-left-[999px] !top-auto !-z-[999] focus:!left-4 focus:!top-4 focus:!z-[999]",
         $$props.class
     )}
     action={{ href: `#${href}` }}

@@ -1,8 +1,5 @@
-<script
-    lang="ts"
-    context="module"
->
-    import type { TTagsBlock } from '$types';
+<script lang="ts" context="module">
+    import type { TTagsBlock } from "$types";
 
     export type TWysiwygTag = TTagsBlock;
 
@@ -12,14 +9,11 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
+    import clsx from "clsx";
 
-    export let tag: TWysiwygTag = 'div';
+    export let tag: TWysiwygTag = "div";
 </script>
 
-<svelte:element
-    this={tag}
-    class={clsx('wysiwyg', $$props.class)}
->
+<svelte:element this={tag} class={clsx("wysiwyg", $$props.class)}>
     <slot />
 </svelte:element>

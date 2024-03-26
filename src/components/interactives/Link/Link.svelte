@@ -1,8 +1,5 @@
-<script
-    context="module"
-    lang="ts"
->
-    import type { TActionProps } from '$components';
+<script context="module" lang="ts">
+    import type { TActionProps } from "$components";
 
     export type TInlineLinkAction = TActionProps;
     export type TLinkInline = boolean;
@@ -19,15 +16,15 @@
 </script>
 
 <script lang="ts">
-    import clsx from 'clsx';
-    import { Action } from '$components';
-    import { setContext } from 'svelte';
+    import clsx from "clsx";
+    import { Action } from "$components";
+    import { setContext } from "svelte";
 
     export let action: TInlineLinkAction = {};
     export let inline: TLinkInline = false;
     export let wrap: TLinkWrap = true;
 
-    setContext<TLinkContext>('link', {
+    setContext<TLinkContext>("link", {
         inline,
     });
 </script>
@@ -36,10 +33,10 @@
     {...action}
     underlined
     class={clsx(
-        'underline underline-offset-2 decoration-2 text-inherit hover:text-accent-base motion-safe:transition-colors',
+        "text-inherit underline decoration-2 underline-offset-2 hover:text-accent-base motion-safe:transition-colors",
         {
-            'inline-block space-x-2': !inline,
-            'whitespace-nowrap': !wrap,
+            "inline-block space-x-2": !inline,
+            "whitespace-nowrap": !wrap,
         },
         $$props.class
     )}

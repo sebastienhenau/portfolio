@@ -1,19 +1,19 @@
-import { BREAKPOINTS } from '$constants';
+import { BREAKPOINTS } from "$constants";
 import type {
     TBreakpoint,
     TBreakpointConfig,
     TBreakpointConfigMaxMediaQuery,
     TBreakpointConfigMinMediaQuery,
     TBreakpointIdentifier,
-} from '$types';
+} from "$types";
 
 export const isMaxBreakpointIdentifier = (identifier: TBreakpointIdentifier): boolean => {
-    return identifier.includes('max');
+    return identifier.includes("max");
 };
 
 export const getBreakpointByIdentifier = (identifier: TBreakpointIdentifier): TBreakpointConfig => {
     const key = isMaxBreakpointIdentifier(identifier)
-        ? (identifier.split('-')[1] as TBreakpoint)
+        ? (identifier.split("-")[1] as TBreakpoint)
         : (identifier as TBreakpoint);
 
     return BREAKPOINTS[key];

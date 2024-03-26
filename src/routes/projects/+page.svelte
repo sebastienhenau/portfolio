@@ -11,8 +11,8 @@
         TableBody,
         ProjectTableBodyRow,
         LinkText,
-    } from '$components';
-    import { projects } from '$content';
+    } from "$components";
+    import { projects } from "$content";
 </script>
 
 <svelte:head>
@@ -40,21 +40,15 @@
     </SectionHeader>
 
     <div class="mt-4 space-y-4">
-        <Text
-            tag="p"
-            type="text"
-        >
+        <Text tag="p" type="text">
             I have worked on projects ranging from content websites to data driven applications to experimental digital
             experiences. Currently, I'm working at <Link
                 inline
-                action={{ href: 'http://www.spatie.be', target: '_blank' }}><LinkText>Spatie</LinkText></Link
+                action={{ href: "http://www.spatie.be", target: "_blank" }}><LinkText>Spatie</LinkText></Link
             >, mainly focused on front-end development.
         </Text>
 
-        <Text
-            tag="p"
-            type="text"
-        >
+        <Text tag="p" type="text">
             In my past experiences I have had the possibility to work on a number of projects. These projects are the
             result of a <strong>great collaboration</strong> and I've had the pleasure of working with a
             <strong>great team of people</strong>.

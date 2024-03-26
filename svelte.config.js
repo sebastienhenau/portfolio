@@ -1,16 +1,16 @@
 // import adapter from '@sveltejs/adapter-auto';
-import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { mdsvex } from 'mdsvex';
+import adapter from "@sveltejs/adapter-vercel";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { mdsvex } from "mdsvex";
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-    extensions: ['.md'],
+    extensions: [".md"],
 };
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    extensions: ['.svelte', '.md'],
+    extensions: [".svelte", ".md"],
 
     /**
      * Consult https://kit.svelte.dev/docs/integrations#preprocessors for more information about preprocessors
@@ -26,17 +26,17 @@ const config = {
         adapter: adapter(),
 
         alias: {
-            $styles: 'src/styles',
-            $components: 'src/components',
-            $content: 'src/content',
-            $hooks: 'src/hooks',
-            $types: 'src/types',
-            $constants: 'src/constants',
-            $utilities: 'src/utilities',
-            $stores: 'src/stores',
-            $services: 'src/services',
-            $dialogs: 'src/dialogs',
-            $contexts: 'src/contexts',
+            $styles: "src/styles",
+            $components: "src/components",
+            $content: "src/content",
+            $hooks: "src/hooks",
+            $types: "src/types",
+            $constants: "src/constants",
+            $utilities: "src/utilities",
+            $stores: "src/stores",
+            $services: "src/services",
+            $dialogs: "src/dialogs",
+            $contexts: "src/contexts",
         },
     },
 };
