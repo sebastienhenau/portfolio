@@ -2,23 +2,23 @@
     import {
         AboutEducationTimelineItem,
         AboutExperienceTimelineItem,
-        Timeline,
         Button,
-        ButtonText,
         ButtonIcon,
+        ButtonText,
         Divider,
+        Highlight,
+        Image,
+        Link,
+        LinkText,
+        Panel,
         Section,
         SectionHeader,
         SectionTitle,
-        Panel,
-        Image,
-        Highlight,
-        Link,
+        Timeline,
         Wysiwyg,
-        LinkText,
     } from "$components";
-    import { educations, experiences } from "$content";
     import { ROUTES_PROJECTS } from "$constants";
+    import { educations, experiences } from "$content";
     import { HeadingsContext } from "$contexts";
 </script>
 
@@ -49,9 +49,11 @@
 
                 <p>
                     So, who am I? I'm a developer from Belgium mainly focused on front-end development at the moment.
-                    I'm working at <Link inline action={{ href: "http://www.spatie.be", target: "_blank" }}>
-                        <LinkText>Spatie</LinkText></Link
-                    >, gracefully toggling my way in their front-end architectures, with coffee obviously.
+                    I'm working at
+                    <Link action={{ href: "http://www.spatie.be", target: "_blank" }} inline>
+                        <LinkText>Spatie</LinkText>
+                    </Link>
+                    , gracefully toggling my way in their front-end architectures, with coffee obviously.
                 </p>
             </Wysiwyg>
         </div>
@@ -62,7 +64,7 @@
             verticalAlignment="center"
         >
             <Panel class="aspect-square h-[6rem] w-[6rem]">
-                <Image alt="Sébastien Henau" src="/images/profile.webp" width="96" height="96" />
+                <Image alt="Sébastien Henau" height="96" src="/images/profile.webp" width="96" />
             </Panel>
         </Highlight>
     </Section>
@@ -78,19 +80,21 @@
 
         <Wysiwyg class="mt-4">
             <p>
-                I like my spot at <Link inline action={{ href: "http://www.spatie.be", target: "_blank" }}
-                    ><LinkText>Spatie</LinkText></Link
-                >, but I have other ways of keeping myself busy during my own free time:
+                I like my spot at
+                <Link action={{ href: "http://www.spatie.be", target: "_blank" }} inline>
+                    <LinkText>Spatie</LinkText>
+                </Link>
+                , but I have other ways of keeping myself busy during my own free time:
             </p>
 
             <ul>
-                <li>I like running, if I am not twisting my poor ankle again.</li>
+                <li>🏃🏻‍♂️I like <strong>running</strong>, if I am not twisting my poor ankle again.</li>
 
-                <li>Conquering some climbing walls, or just ... gracefully descend from them.</li>
+                <li>🧗🏻‍♂️Conquering some <strong>climbing</strong> walls, or just ... gracefully descend from them.</li>
 
-                <li>Lazily playing some games in the sofa, when my energy levels are depleted.</li>
+                <li>👾 Lazily playing some <strong>games</strong> in the sofa, when my energy levels are depleted.</li>
 
-                <li>Losing track of time when reading a thriller or a fantasy book.</li>
+                <li>📚 Losing track of time when <strong>reading</strong> a thriller or a fantasy book.</li>
             </ul>
         </Wysiwyg>
     </Section>
